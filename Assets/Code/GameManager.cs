@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public TextMeshProUGUI scoreText;
+    public Image lifeBar;
+    public float healtAmount = 100f;
     private int score;
     void Start()
     {
@@ -25,5 +28,10 @@ public class GameManager : MonoBehaviour
         score += scoreToAdd;
         scoreText.text = "score: " + score;
        
+    }
+    public void takeDamage(float damage)
+    {
+       healtAmount -= damage;
+        lifeBar.fillAmount = healtAmount / 100F;
     }
 }
