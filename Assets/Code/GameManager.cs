@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -12,10 +12,13 @@ public class GameManager : MonoBehaviour
     public Image lifeBar;
     public float healtAmount = 100f;
     private int score;
+
     void Start()
     {
         score = 0;
         UpdateScore(0);
+  
+
     }
 
     // Update is called once per frame
@@ -34,4 +37,5 @@ public class GameManager : MonoBehaviour
        healtAmount -= damage;
         lifeBar.fillAmount = healtAmount / 100F;
     }
+
 }

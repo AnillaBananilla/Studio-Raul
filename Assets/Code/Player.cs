@@ -5,11 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float horizontalInput;
-    public float speed = 50.0f;
-    public float fuerzaSalto = 10f;
-    public Rigidbody2D rb;
-
+    public CharacterController2D controller;
+ 
+    public float speed = 10.0f;
     void Start()
     {
         
@@ -18,14 +16,12 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal");
-        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+        
+        bool jump = false;
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            
-            rb.velocity = new Vector2(rb.velocity.x, fuerzaSalto);
+            jump = true;
         }
-
+        controller.Move(Input.GetAxis("Horizontal") * (speed/100), false, jump);
     }
-
 }
