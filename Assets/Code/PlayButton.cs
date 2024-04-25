@@ -9,6 +9,7 @@ public class PlayButton : MonoBehaviour
     public GameObject titleScreen;
     public GameObject uiGame;
     private Button playButton;
+    public GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class PlayButton : MonoBehaviour
     }
     void PlayGame()
     {
+        gameManager.isGameActive = true;
         titleScreen.SetActive(false);
         uiGame.SetActive(true);
     }

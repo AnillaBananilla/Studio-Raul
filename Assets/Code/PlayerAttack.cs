@@ -8,7 +8,8 @@ public class PlayerAttack : MonoBehaviour
     public Transform attackCheck;
     public float attackRadius = 2.0f;
     public LayerMask enemyLayer;
-
+    public Animator animator;
+    public GameManager gameManager;
     void Start()
     {
         
@@ -17,15 +18,25 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gameManager.isGameActive == true)
+        {
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-          Collider2D[] enemies =  Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
+            animator.SetTrigger("Attack_Trigger");
+            Collider2D[] enemies =  Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
             for (int counter = 0; counter < enemies.Length; counter++)
             {
                 enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
                 enemies[counter].GetComponent<Healt>().Damage(1);
             }
         }
+        }
+        else
+        {
+            return;
+        }
+
     }
     private void OnDrawGizmosSelected()
     {

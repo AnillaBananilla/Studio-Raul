@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Image lifeBar;
     public float healtAmount = 100f;
     private int score;
+    public bool isGameActive = false;
 
     void Start()
     {
