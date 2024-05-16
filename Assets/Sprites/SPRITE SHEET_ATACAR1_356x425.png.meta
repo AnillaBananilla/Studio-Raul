@@ -1,0 +1,791 @@
+fileFormatVersion: 2
+guid: 48194cbed9acaf04cae7b5b800c15744
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 0
+        width: 304
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6cb4cad290b8d46b236080df1890d8
+      internalID: -1877629796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_1
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 0
+        width: 309
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d519496bbaab124ab3a79485f07947a
+      internalID: 2047537879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_2
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 0
+        width: 313
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c37a1d7d961bf14bbd2a46ae44d4ccd
+      internalID: -279499589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_3
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 0
+        width: 306
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c0ac7fecbc0e54aa85258bee51fb38
+      internalID: 17837540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_4
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 0
+        width: 308
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aacd3f92c7bc4f84e92a7d46cd74e736
+      internalID: 1524842276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_5
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 0
+        width: 260
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 220e610ec871ea94189ead50d0d9031b
+      internalID: -825178690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_6
+      rect:
+        serializedVersion: 2
+        x: 2132
+        y: 0
+        width: 178
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ec49ddeb41f244a8f37a0f48530b96
+      internalID: -1836735819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_7
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 0
+        width: 177
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b8e070c71fcc1046b04f056913dbd02
+      internalID: -247788194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_8
+      rect:
+        serializedVersion: 2
+        x: 2815
+        y: 0
+        width: 197
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3200cecde72e4824493b737464e28d3c
+      internalID: -1128859909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_9
+      rect:
+        serializedVersion: 2
+        x: 3171
+        y: 0
+        width: 196
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbce7005060adb84aa4aec08a020327f
+      internalID: -477916855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_10
+      rect:
+        serializedVersion: 2
+        x: 3475
+        y: 0
+        width: 239
+        height: 423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21229fd224e9aa948b6d8874a6f2f23a
+      internalID: 1475191834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_11
+      rect:
+        serializedVersion: 2
+        x: 3831
+        y: 0
+        width: 238
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e56aefcfa7d0b9048ade34ffc6be004c
+      internalID: -1239327560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_12
+      rect:
+        serializedVersion: 2
+        x: 4196
+        y: 0
+        width: 238
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dde9ab519cf56c4bb5ecbf71ba27c97
+      internalID: 1990015849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_13
+      rect:
+        serializedVersion: 2
+        x: 4552
+        y: 0
+        width: 238
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc30b02f0bea100449a3225ebab81df2
+      internalID: 1254889187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_14
+      rect:
+        serializedVersion: 2
+        x: 4973
+        y: 0
+        width: 313
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f31359fd04700b48b6e45808507bc24
+      internalID: 987215344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_15
+      rect:
+        serializedVersion: 2
+        x: 5328
+        y: 0
+        width: 333
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b9566354f1f114ebb45f6436227861
+      internalID: 1698141845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_16
+      rect:
+        serializedVersion: 2
+        x: 5684
+        y: 0
+        width: 332
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64db5eba4c1016d4bb5cfc635830f692
+      internalID: -1428897504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_17
+      rect:
+        serializedVersion: 2
+        x: 6040
+        y: 0
+        width: 332
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f5c7db89fc78b4e9f4473dba2e4a94
+      internalID: -2032857019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_18
+      rect:
+        serializedVersion: 2
+        x: 6392
+        y: 0
+        width: 336
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eed990b7f89aa724cb527ea33496c09f
+      internalID: 1858295398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_19
+      rect:
+        serializedVersion: 2
+        x: 6747
+        y: 0
+        width: 341
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ab08cbd5701584db2466e0583734c6
+      internalID: 953394915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_20
+      rect:
+        serializedVersion: 2
+        x: 7102
+        y: 0
+        width: 318
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825ae8eb396b1cf498e08a7166419d7b
+      internalID: 1482510008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_21
+      rect:
+        serializedVersion: 2
+        x: 7458
+        y: 0
+        width: 304
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14343366a6b658b43bd7733378720ae4
+      internalID: 1546741039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_22
+      rect:
+        serializedVersion: 2
+        x: 7814
+        y: 2
+        width: 299
+        height: 423
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d51032d14af0f14a9179632902061a9
+      internalID: -912623366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_23
+      rect:
+        serializedVersion: 2
+        x: 8169
+        y: 0
+        width: 300
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0478dd3a4766ccd43b7e25f44a6e3496
+      internalID: -1533976561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_24
+      rect:
+        serializedVersion: 2
+        x: 8518
+        y: 0
+        width: 299
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9098f714870f0f64682d86656b6c43fa
+      internalID: -972062635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_25
+      rect:
+        serializedVersion: 2
+        x: 8876
+        y: 0
+        width: 304
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175ece94b0fa5da47bfdf4b46b6ffdf4
+      internalID: -2130009021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_26
+      rect:
+        serializedVersion: 2
+        x: 9232
+        y: 0
+        width: 304
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81e2191160aebdc48a66d78ac3ef2d56
+      internalID: 1139803402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_27
+      rect:
+        serializedVersion: 2
+        x: 8956
+        y: 8
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22c248801f1c2b4999ec71ebdc7a4ec
+      internalID: 1823567031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_ATACAR1_356x425_28
+      rect:
+        serializedVersion: 2
+        x: 9311
+        y: 7
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c0a9bf5c0884347ab04e2a27498243
+      internalID: -608432815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3171dcca8d0067644a4f482e3be1fd74
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SPRITE SHEET_ATACAR1_356x425_0: -1877629796
+      SPRITE SHEET_ATACAR1_356x425_1: 2047537879
+      SPRITE SHEET_ATACAR1_356x425_10: 1475191834
+      SPRITE SHEET_ATACAR1_356x425_11: -1239327560
+      SPRITE SHEET_ATACAR1_356x425_12: 1990015849
+      SPRITE SHEET_ATACAR1_356x425_13: 1254889187
+      SPRITE SHEET_ATACAR1_356x425_14: 987215344
+      SPRITE SHEET_ATACAR1_356x425_15: 1698141845
+      SPRITE SHEET_ATACAR1_356x425_16: -1428897504
+      SPRITE SHEET_ATACAR1_356x425_17: -2032857019
+      SPRITE SHEET_ATACAR1_356x425_18: 1858295398
+      SPRITE SHEET_ATACAR1_356x425_19: 953394915
+      SPRITE SHEET_ATACAR1_356x425_2: -279499589
+      SPRITE SHEET_ATACAR1_356x425_20: 1482510008
+      SPRITE SHEET_ATACAR1_356x425_21: 1546741039
+      SPRITE SHEET_ATACAR1_356x425_22: -912623366
+      SPRITE SHEET_ATACAR1_356x425_23: -1533976561
+      SPRITE SHEET_ATACAR1_356x425_24: -972062635
+      SPRITE SHEET_ATACAR1_356x425_25: -2130009021
+      SPRITE SHEET_ATACAR1_356x425_26: 1139803402
+      SPRITE SHEET_ATACAR1_356x425_27: 1823567031
+      SPRITE SHEET_ATACAR1_356x425_28: -608432815
+      SPRITE SHEET_ATACAR1_356x425_3: 17837540
+      SPRITE SHEET_ATACAR1_356x425_4: 1524842276
+      SPRITE SHEET_ATACAR1_356x425_5: -825178690
+      SPRITE SHEET_ATACAR1_356x425_6: -1836735819
+      SPRITE SHEET_ATACAR1_356x425_7: -247788194
+      SPRITE SHEET_ATACAR1_356x425_8: -1128859909
+      SPRITE SHEET_ATACAR1_356x425_9: -477916855
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
