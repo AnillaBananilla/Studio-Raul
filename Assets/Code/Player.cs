@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     public float speed = 10.0f;
     public Animator animator;
     public GameManager gameManager;
+
     void Start()
     {
         
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (gameManager.isGameActive == true)
         {
 
