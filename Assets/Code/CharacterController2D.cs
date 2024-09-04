@@ -41,7 +41,7 @@ public class CharacterController2D : MonoBehaviour
             OnCrouchEvent = new BoolEvent();
     }
 
-    private void FixedUpdate()
+    private void FixedUpdate() // FUNCION IMPORTANTE
     {
         bool wasGrounded = m_Grounded;
         m_Grounded = false;
@@ -125,11 +125,14 @@ public class CharacterController2D : MonoBehaviour
             }
         }
         // If the player should jump...
-        if (m_Grounded && jump)
+        if (m_Grounded && jump)         //TODO: AÑADIR COYOTE TIME
         {
             // Add a vertical force to the player.
             m_Grounded = false;
             m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            /* Propuesta 1 (3/9/24, 1:10 pm):
+             * if (jump)
+             */
         }
     }
 
