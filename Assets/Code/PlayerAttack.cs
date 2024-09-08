@@ -34,9 +34,14 @@ public class PlayerAttack : MonoBehaviour
         }
         else
         {
-            return;
+            return; //???
         }
 
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            animator.SetTrigger("Attack_Trigger");
+
+        }
     }
     private void OnDrawGizmosSelected()
     {

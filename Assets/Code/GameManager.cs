@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public Image lifeBar;
     public float healtAmount = 100f;
     private int score;
-    public bool isGameActive = false;
+    public bool isGameActive = true; // Default: false
     public CanvasGroup canvasGroupLogo;
     public CanvasGroup canvasGroupLogoColored;
     public CanvasGroup canvasGroupLogoMenu;
