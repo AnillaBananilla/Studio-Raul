@@ -13,9 +13,9 @@ public class GameManager : MonoBehaviour
     public float healtAmount = 100f;
     private int score;
     public bool isGameActive = true; // Default: false
-    public CanvasGroup canvasGroupLogo;
-    public CanvasGroup canvasGroupLogoColored;
-    public CanvasGroup canvasGroupLogoMenu;
+   // public CanvasGroup canvasGroupLogo;
+   // public CanvasGroup canvasGroupLogoColored;
+    //public CanvasGroup canvasGroupLogoMenu;
     public float fadeInDuration = 1.5f;
     public float fadeOutDuration = 1.5f;
 
@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
        // StartCoroutine(FadeIn(canvasGroupLogo, 2));
       //  StartCoroutine(FadeOut(canvasGroupLogo));
        // StartCoroutine(FadeIn(canvasGroupLogoColored, 8));
-        StartCoroutine(FadeIn(canvasGroupLogoMenu, 0f));
+       // StartCoroutine(FadeIn(canvasGroupLogoMenu, 0f));
 
     }
 

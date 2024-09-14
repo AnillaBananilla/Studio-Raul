@@ -21,6 +21,7 @@ public class Droplets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        [SerializeField] private GameObject TheBullet;
+        [SerializeField] Transform spawnpoint;
     }
 }
