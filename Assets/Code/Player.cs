@@ -4,32 +4,71 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
     public CharacterController2D controller;
- 
+
     public float speed = 10.0f;
     public Animator animator;
     public GameManager gameManager;
+    public float walkSpeed = 10f;
+    public float runSpeed = 50f;
+    private bool isSprinting = false; // Para controlar si el personaje está corriendo
+
+    private int maxJumps = 1; // Número máximo de saltos
+    private int jumpCount = 0; // Contador de saltos
+    private bool isGrounded; // Para saber si el jugador está en el suelo
 
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
         if (gameManager.isGameActive == true)
         {
+            float inputH = Input.GetAxis("Horizontal");
 
-        bool jump = false;
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            jump = true;
-        }
-        animator.SetBool("Move_Bool", Input.GetAxis("Horizontal") != 0);
-        controller.Move(Input.GetAxis("Horizontal") * (speed/100), false, jump);
+            bool jump = false;
+
+            // Si el jugador toca el suelo, reinicia el contador de saltos
+            isGrounded = controller.IsGrounded();
+            if (isGrounded)
+            {
+                jumpCount = 0;
+            }
+
+            // Salto: verifica si el jugador puede saltar (en el suelo o en el aire si no ha alcanzado el límite)
+            if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
+            {
+                jump = true;
+                jumpCount++; // Aumenta el contador de saltos
+            }
+
+            // Velocidad de carrera
+            float currentSpeed = isSprinting ? runSpeed : walkSpeed;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                isSprinting = true;
+            }
+            else
+            {
+                isSprinting = false;
+            }
+
+            // Animación del movimiento
+            if (Mathf.Abs(inputH) > 0)
+            {
+                animator.SetFloat("Speed", currentSpeed);
+            }
+            else
+            {
+                animator.SetFloat("Speed", 0);
+            }
+
+            // Movimiento del personaje
+            controller.Move(inputH * (currentSpeed / 10), false, jump);
+
+            animator.SetBool("Move_Bool", Input.GetAxis("Horizontal") != 0);
         }
     }
 }
