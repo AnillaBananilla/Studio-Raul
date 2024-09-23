@@ -11,24 +11,10 @@ public class PlayerAttack : MonoBehaviour
     public Animator animator;
     public GameManager gameManager;
 
-    private bool[] attackCollection = {true, false}; // 0 = melee, 1 = ranged
+    [SerializeField] private GameObject TheBullet;
+    [SerializeField] Transform spawnpoint;
     private int selectedAttack;
 
-    public string CurrentAttack
-    {
-        get
-        {
-            switch (selectedAttack)
-            {
-                case 0:
-                    return "Melee";
-                case 1:
-                    return "Ranged";
-                default:
-                    return "Melee";
-            }
-        }
-    }
 
     void Start()
     {
@@ -41,20 +27,27 @@ public class PlayerAttack : MonoBehaviour
         if (gameManager.isGameActive == true)
         {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            MeleeAttack();
-        }
-        }
-        else
-        {
-            return; // termina la funcion
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                switch (selectedAttack)
+                {
+                    case 0:
+                        MeleeAttack();
+                        break;
+
+                    case 1:
+                        Shoot();
+                        break;
+
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                changeAttack();
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-
-        }
+        
     }
     private void OnDrawGizmosSelected()
     {
@@ -80,5 +73,25 @@ public class PlayerAttack : MonoBehaviour
         BulletClone.transform.position = spawnpoint.position;
         BulletClone.transform.rotation = spawnpoint.rotation;
         BulletClone.GetComponent<Rigidbody2D>().AddForce(spawnpoint.forward * 1000.0f);
+    }
+
+    private void changeAttack()
+    {
+        switch (selectedAttack)
+        {
+            case 0:
+                if (GameManager.instance.RangeAttack)
+                {
+                    selectedAttack = 1;
+                    Debug.Log("SHOOT");
+                }
+
+                break;
+
+            case 1:
+                selectedAttack = 0;
+                Debug.Log("PUNCH");
+                break;
+        }
     }
 }

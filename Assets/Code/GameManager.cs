@@ -12,24 +12,48 @@ public class GameManager : MonoBehaviour
     public Image lifeBar;
     public float healtAmount = 100f;
     private int score;
-    public bool isGameActive = true; // Default: false
-   // public CanvasGroup canvasGroupLogo;
-   // public CanvasGroup canvasGroupLogoColored;
-    //public CanvasGroup canvasGroupLogoMenu;
+    public bool isGameActive = false; // Default: false
+    public CanvasGroup canvasGroupLogo;
+    public CanvasGroup canvasGroupLogoColored;
+    public CanvasGroup canvasGroupLogoMenu;
     public float fadeInDuration = 1.5f;
     public float fadeOutDuration = 1.5f;
 
     private float fadeSpeed;
+
+    private bool _RangeAttack = false;
+
+    public bool RangeAttack
+    {
+        get { return _RangeAttack; }
+    }
+
+
+
+    private static GameManager _instance; //Aparentemente hacerlo static es importante
+                                           
+
+    public static GameManager instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<GameManager>(); //Intenta buscar uno
+            }
+            return _instance; //Ahora tengo un singleton.
+        }
+    }
 
     void Start()
     {
         score = 0;
         UpdateScore(0);
         fadeSpeed = 1f / fadeInDuration;
-       // StartCoroutine(FadeIn(canvasGroupLogo, 2));
-      //  StartCoroutine(FadeOut(canvasGroupLogo));
-       // StartCoroutine(FadeIn(canvasGroupLogoColored, 8));
-       // StartCoroutine(FadeIn(canvasGroupLogoMenu, 0f));
+        StartCoroutine(FadeIn(canvasGroupLogo, 2));
+        StartCoroutine(FadeOut(canvasGroupLogo));
+        StartCoroutine(FadeIn(canvasGroupLogoColored, 8));
+        StartCoroutine(FadeIn(canvasGroupLogoMenu, 0f));
 
     }
 
@@ -76,5 +100,11 @@ public class GameManager : MonoBehaviour
             canvasGroup.alpha = Mathf.Clamp01(currentAlpha);
             yield return null;
         }
+    }
+
+    public void RangeUpgrade()
+    {
+        _RangeAttack = true;
+        Debug.Log("NOW YOU CAN SHOOT");
     }
 }

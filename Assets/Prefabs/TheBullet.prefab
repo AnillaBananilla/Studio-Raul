@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6939903509621653578}
   - component: {fileID: 6480159087050908479}
   - component: {fileID: -4850484078185765253}
+  - component: {fileID: 4380682716485311148}
   m_Layer: 0
   m_Name: TheBullet
   m_TagString: Untagged
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 1, g: 0.07075471, b: 0.10082338, a: 1}
   m_FlipX: 0
@@ -112,3 +113,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &4380682716485311148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4932257948283262647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6a043180237f647a4d68dd3fcac56d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
