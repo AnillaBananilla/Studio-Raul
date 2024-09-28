@@ -72,7 +72,6 @@ public class PlayerAttack : MonoBehaviour
         GameObject BulletClone = GameObject.Instantiate(TheBullet);
         BulletClone.transform.position = spawnpoint.position;
         BulletClone.transform.rotation = spawnpoint.rotation;
-        BulletClone.GetComponent<Rigidbody2D>().AddForce(spawnpoint.forward * 1000.0f);
     }
 
     private void changeAttack()
