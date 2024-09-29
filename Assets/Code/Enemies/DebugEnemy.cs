@@ -2,20 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Puddle : MonoBehaviour
+public class DebugEnemy : MonoBehaviour
 {
-    private IEnumerator CR_Countdown()
+    //privates
+
+    private IEnumerator Tick()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(3);
-            Destroy(this.gameObject);
-        }
+        yield return null; //CAMBIAR
+
     }
+
+    // publics
+    public int HP;
+
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(CR_Countdown());
+        
     }
 
     // Update is called once per frame
@@ -23,5 +26,6 @@ public class Puddle : MonoBehaviour
     {
         
     }
+
 
 }
