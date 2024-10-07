@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             GoToInventory();
@@ -91,6 +90,8 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
     }
+<<<<<<< Updated upstream
+=======
 
     public void RangeUpgrade()
     {
