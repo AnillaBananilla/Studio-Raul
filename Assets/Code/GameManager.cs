@@ -12,10 +12,20 @@ public class GameManager : MonoBehaviour
     public Image lifeBar;
     public float healtAmount = 100f;
     private int score;
+<<<<<<< Updated upstream
     public bool isGameActive = false;
+=======
+    public bool isGameActive = false; // Default: false
+
+>>>>>>> Stashed changes
     public CanvasGroup canvasGroupLogo;
     public CanvasGroup canvasGroupLogoColored;
     public CanvasGroup canvasGroupLogoMenu;
+
+    public GameObject AchievementScreen;
+    public GameObject MissionScreen;
+    public GameObject InventoryScreen;
+
     public float fadeInDuration = 1.5f;
     public float fadeOutDuration = 1.5f;
 
@@ -37,6 +47,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GoToInventory();
+        }
     }
     public void UpdateScore(int scoreToAdd)
     {
@@ -77,4 +91,39 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
     }
+
+    public void RangeUpgrade()
+    {
+        _RangeAttack = true;
+        Debug.Log("NOW YOU CAN SHOOT");
+    }
+
+    public void GoToAchievements()
+    {
+        MissionScreen.SetActive(false);
+        AchievementScreen.SetActive(true);
+        InventoryScreen.SetActive(false);
+    }
+
+    public void GoToMissions()
+    {
+        AchievementScreen.SetActive(false);
+        InventoryScreen.SetActive(false);
+        MissionScreen.SetActive(true);
+    }
+
+    public void GoToInventory()
+    {
+        MissionScreen.SetActive(false);
+        AchievementScreen.SetActive(false);
+        InventoryScreen.SetActive(true);
+    }
+
+    public void CloseMenu()
+    {
+        MissionScreen.SetActive(false);
+        InventoryScreen.SetActive(false);
+        AchievementScreen.SetActive(false);
+    }
+>>>>>>> Stashed changes
 }
