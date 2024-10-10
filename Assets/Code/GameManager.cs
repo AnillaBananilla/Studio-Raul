@@ -7,17 +7,17 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private static GameManager _instance;
     // Start is called before the first frame update
     public TextMeshProUGUI scoreText;
     public Image lifeBar;
     public float healtAmount = 100f;
     private int score;
-<<<<<<< Updated upstream
-    public bool isGameActive = false;
-=======
+    private bool _RangeAttack = false;
+
     public bool isGameActive = false; // Default: false
 
->>>>>>> Stashed changes
+
     public CanvasGroup canvasGroupLogo;
     public CanvasGroup canvasGroupLogoColored;
     public CanvasGroup canvasGroupLogoMenu;
@@ -30,6 +30,18 @@ public class GameManager : MonoBehaviour
     public float fadeOutDuration = 1.5f;
 
     private float fadeSpeed;
+
+    public static GameManager instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = GameObject.FindObjectOfType<GameManager>(); //Intenta buscar uno
+            }
+            return _instance; //Ahora tengo un singleton.
+        }
+    }
 
     void Start()
     {
@@ -90,8 +102,7 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
     }
-<<<<<<< Updated upstream
-=======
+
 
     public void RangeUpgrade()
     {
@@ -126,5 +137,4 @@ public class GameManager : MonoBehaviour
         InventoryScreen.SetActive(false);
         AchievementScreen.SetActive(false);
     }
->>>>>>> Stashed changes
 }
