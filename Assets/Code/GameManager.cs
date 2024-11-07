@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         UpdateScore(0);
-        fadeSpeed = 1f / fadeInDuration;
+        fadeSpeed = 0f / fadeInDuration;
        // StartCoroutine(FadeIn(canvasGroupLogo, 2));
       //  StartCoroutine(FadeOut(canvasGroupLogo));
        // StartCoroutine(FadeIn(canvasGroupLogoColored, 8));
