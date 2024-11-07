@@ -6,14 +6,9 @@ public class DebugEnemy : MonoBehaviour
 {
     //privates
 
-    private IEnumerator Tick()
-    {
-        yield return null; //CAMBIAR
-
-    }
 
     // publics
-    public int HP;
+    public int HP = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +20,16 @@ public class DebugEnemy : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Damage(int damage)
+    {
+        HP -= damage;
+    }
+
+    private void Die()
+    {
+        Destroy(this.gameObject);
     }
 
 

@@ -7,31 +7,29 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    private static GameManager _instance;
     // Start is called before the first frame update
     public TextMeshProUGUI scoreText;
     public Image lifeBar;
     public float healtAmount = 100f;
     private int score;
+    private bool _RangeAttack = false;
+
     public bool isGameActive = false; // Default: false
+
+
     public CanvasGroup canvasGroupLogo;
     public CanvasGroup canvasGroupLogoColored;
     public CanvasGroup canvasGroupLogoMenu;
+
+    public GameObject AchievementScreen;
+    public GameObject MissionScreen;
+    public GameObject InventoryScreen;
+
     public float fadeInDuration = 1.5f;
     public float fadeOutDuration = 1.5f;
 
     private float fadeSpeed;
-
-    private bool _RangeAttack = false;
-
-    public bool RangeAttack
-    {
-        get { return _RangeAttack; }
-    }
-
-
-
-    private static GameManager _instance; //Aparentemente hacerlo static es importante
-                                           
 
     public static GameManager instance
     {
@@ -60,7 +58,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GoToInventory();
+        }
     }
     public void UpdateScore(int scoreToAdd)
     {
@@ -102,9 +103,38 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
     public void RangeUpgrade()
     {
         _RangeAttack = true;
         Debug.Log("NOW YOU CAN SHOOT");
+    }
+
+    public void GoToAchievements()
+    {
+        MissionScreen.SetActive(false);
+        AchievementScreen.SetActive(true);
+        InventoryScreen.SetActive(false);
+    }
+
+    public void GoToMissions()
+    {
+        AchievementScreen.SetActive(false);
+        InventoryScreen.SetActive(false);
+        MissionScreen.SetActive(true);
+    }
+
+    public void GoToInventory()
+    {
+        MissionScreen.SetActive(false);
+        AchievementScreen.SetActive(false);
+        InventoryScreen.SetActive(true);
+    }
+
+    public void CloseMenu()
+    {
+        MissionScreen.SetActive(false);
+        InventoryScreen.SetActive(false);
+        AchievementScreen.SetActive(false);
     }
 }
