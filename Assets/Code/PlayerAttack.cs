@@ -10,6 +10,9 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyLayer;
     public Animator animator;
     public GameManager gameManager;
+    public GameObject bulletPrefab;
+    public Transform Spawnpoint;
+    public CharacterController2D controller;
     void Start()
     {
         

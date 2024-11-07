@@ -18,9 +18,9 @@ public class GameManager : MonoBehaviour
     public bool isGameActive = false; // Default: false
 
 
-    public CanvasGroup canvasGroupLogo;
+    /*public CanvasGroup canvasGroupLogo;
     public CanvasGroup canvasGroupLogoColored;
-    public CanvasGroup canvasGroupLogoMenu;
+    public CanvasGroup canvasGroupLogoMenu;*/
 
     public GameObject AchievementScreen;
     public GameObject MissionScreen;
@@ -48,10 +48,10 @@ public class GameManager : MonoBehaviour
         score = 0;
         UpdateScore(0);
         fadeSpeed = 1f / fadeInDuration;
-        StartCoroutine(FadeIn(canvasGroupLogo, 2));
+       /* StartCoroutine(FadeIn(canvasGroupLogo, 2));
         StartCoroutine(FadeOut(canvasGroupLogo));
         StartCoroutine(FadeIn(canvasGroupLogoColored, 8));
-        StartCoroutine(FadeIn(canvasGroupLogoMenu, 0f));
+        StartCoroutine(FadeIn(canvasGroupLogoMenu, 0f));*/
 
     }
 

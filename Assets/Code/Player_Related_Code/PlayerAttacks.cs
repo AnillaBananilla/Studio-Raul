@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAttack : MonoBehaviour
+public class PlayerAttacks : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform attackCheck;
@@ -43,7 +43,7 @@ public class PlayerAttack : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                changeAttack();
+                //changeAttack();
             }
         }
 
@@ -74,23 +74,5 @@ public class PlayerAttack : MonoBehaviour
         BulletClone.transform.rotation = spawnpoint.rotation;
     }
 
-    private void changeAttack()
-    {
-        switch (selectedAttack)
-        {
-            case 0:
-                if (GameManager.instance.RangeAttack)
-                {
-                    selectedAttack = 1;
-                    Debug.Log("SHOOT");
-                }
-
-                break;
-
-            case 1:
-                selectedAttack = 0;
-                Debug.Log("PUNCH");
-                break;
-        }
-    }
+    
 }
