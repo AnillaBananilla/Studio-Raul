@@ -8,6 +8,7 @@ public class Healt : MonoBehaviour
     // Start is called before the first frame update
     private int currentHealt;
     public int maxHealt;
+
     void Start()
     {
         currentHealt = maxHealt;
@@ -21,6 +22,7 @@ public class Healt : MonoBehaviour
     public void Damage(int damage)
     {
         currentHealt -= damage;
+
         if (currentHealt <= 0)
         {
             Die();
