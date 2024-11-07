@@ -32,6 +32,25 @@ public class PlayerAttack : MonoBehaviour
             }
         }
         }
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+        {
+            animator.SetTrigger("Attack_Trigger");
+            GameObject newBullet = GameObject.Instantiate(bulletPrefab);
+            newBullet.transform.position = Spawnpoint.position;
+
+            // Determinar la direcci�n de disparo
+            Vector2 shootDirection = controller.IsFacingRight() ? Vector2.right : Vector2.left;
+
+            // Agregar una fuerza en Y, por ejemplo, hacia arriba
+            float verticalForce = 0.2f; // Ajusta este valor seg�n necesites
+            shootDirection += Vector2.up * verticalForce;
+
+            // Normalizar la direcci�n si es necesario
+            shootDirection.Normalize();
+
+            // Aplicar la fuerza al proyectil
+            newBullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * 2000.0f);
+        }
         else
         {
             return;

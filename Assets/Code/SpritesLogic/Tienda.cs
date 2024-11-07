@@ -33,7 +33,7 @@ public class Tienda : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInside = true;
-            Debug.Log("Jugador entró al área.");
+ 
         }
     }
     private void OnTriggerExit2D(Collider2D other)
@@ -42,7 +42,7 @@ public class Tienda : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInside = false;
-            Debug.Log("Jugador salió del área.");
+
         }
     }
 }

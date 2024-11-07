@@ -61,7 +61,8 @@ public class EnemyMovment : MonoBehaviour
             if (Vector2.Distance(transform.position, movePoints[pointIndex]) < 0.02f)
             {
                 pointIndex++;
-                spriteRenderer.flipX = !spriteRenderer.flipX;
+                transform.Rotate(0, 180, 0);
+      
             }
             if (pointIndex >= movePoints.Length)
             {
