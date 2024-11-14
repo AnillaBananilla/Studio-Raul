@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class Achievement
+public abstract class Mission
 {
     public string title;
     public string description;
@@ -14,7 +14,7 @@ public abstract class Achievement
 
     private Image displayImage;
 
-    public Achievement(string Title, Image pending, Image cleared)
+    public Mission(string Title, Image pending, Image cleared)
     {
         this.title = Title;
         clear = false;
@@ -27,5 +27,4 @@ public abstract class Achievement
         this.clear = true;
         this.displayImage = ClearImage;
     }
-
 }
