@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class InventoryScreen : MonoBehaviour
 {
 
+    public List<GameObject> Elements = new List<GameObject>();
+
 
     void Start()
     {

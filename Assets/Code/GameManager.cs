@@ -12,24 +12,27 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public Image lifeBar;
     public float healtAmount = 100f;
-    private int score;
+    public int score;
     private bool _RangeAttack = false;
 
     public bool isGameActive = false; // Default: false
 
 
-    /*public CanvasGroup canvasGroupLogo;
+    public CanvasGroup canvasGroupLogo;
     public CanvasGroup canvasGroupLogoColored;
-    public CanvasGroup canvasGroupLogoMenu;*/
+    public CanvasGroup canvasGroupLogoMenu;
 
     public GameObject AchievementScreen;
     public GameObject MissionScreen;
     public GameObject InventoryScreen;
+    public GameObject ShopScreen;
 
     public float fadeInDuration = 1.5f;
     public float fadeOutDuration = 1.5f;
 
     private float fadeSpeed;
+
+    public Item EquippedItem;
 
     public static GameManager instance
     {
@@ -48,10 +51,14 @@ public class GameManager : MonoBehaviour
         score = 0;
         UpdateScore(0);
         fadeSpeed = 1f / fadeInDuration;
-       /* StartCoroutine(FadeIn(canvasGroupLogo, 2));
+
+        StartCoroutine(FadeIn(canvasGroupLogo, 2));
         StartCoroutine(FadeOut(canvasGroupLogo));
         StartCoroutine(FadeIn(canvasGroupLogoColored, 8));
-        StartCoroutine(FadeIn(canvasGroupLogoMenu, 0f));*/
+        StartCoroutine(FadeIn(canvasGroupLogoMenu, 0f));
+
+
+        EventManager.m_Instance.AddListener<EquipItemEvent>(EquipItem);
 
     }
 
@@ -130,11 +137,22 @@ public class GameManager : MonoBehaviour
         AchievementScreen.SetActive(false);
         InventoryScreen.SetActive(true);
     }
+    public void OpenShop()
+    {
+        ShopScreen.SetActive(true);
+    }
 
     public void CloseMenu()
     {
         MissionScreen.SetActive(false);
         InventoryScreen.SetActive(false);
         AchievementScreen.SetActive(false);
+        ShopScreen.SetActive(false);
+
+    }
+
+    public void EquipItem(EquipItemEvent e)
+    {
+        EquippedItem = e.eventItem;
     }
 }

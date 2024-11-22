@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
 
 
     public List<Item> MyItems; //?
+    public Item EquippedItem;
 
     private static InventoryManager _instance;
 
@@ -25,7 +26,9 @@ public class InventoryManager : MonoBehaviour
     void Start()
     {
         //EventManager.m_Instance.AddListener<BuyItemEvent>(AddItem);
-        
+        EventManager.m_Instance.AddListener<EquipItemEvent>(EquipItem);
+
+
         MyItems = new List<Item>();
     }
 
@@ -35,8 +38,13 @@ public class InventoryManager : MonoBehaviour
         
     }
 
-    public void AddItem(Item i)
+    public void AddItem(Item _item)
     {
-        MyItems.Add(i);
+        MyItems.Add(_item);
+    }
+
+    public void EquipItem(EquipItemEvent _e)
+    {
+        EquippedItem = _e.eventItem;
     }
 }

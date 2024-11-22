@@ -22,6 +22,7 @@ public class CharacterController2D : MonoBehaviour
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
 
+
     [Header("Events")]
     [Space]
 
@@ -32,6 +33,10 @@ public class CharacterController2D : MonoBehaviour
 
     public BoolEvent OnCrouchEvent;
     private bool m_wasCrouching = false;
+
+    void Start() {
+        
+    }
 
     private void Awake()
     {
@@ -162,12 +167,20 @@ public class CharacterController2D : MonoBehaviour
         theScale.x *= -1;
         transform.localScale = theScale;
     }
+
     public bool IsGrounded()
     {
         return m_Grounded;
     }
+
     public bool IsFacingRight()
     {
         return m_FacingRight;
+    }
+    
+
+    public void UseItem()
+    {
+        InventoryManager.instance.EquippedItem.UseItem();
     }
 }
