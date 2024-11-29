@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public Image lifeBar;
     public float healtAmount = 100f;
-    private int score;
+    public int score;
     private bool _RangeAttack = false;
 
     public bool isGameActive = false; // Default: false
