@@ -13,13 +13,17 @@ public class Player : MonoBehaviour
     public float runSpeed = 50f;
     private bool isSprinting = false; // Para controlar si el personaje está corriendo
 
+    public float fallingSpeed = 0.0f;
+
     private int maxJumps = 1; // Número máximo de saltos
     private int jumpCount = 0; // Contador de saltos
     private bool isGrounded; // Para saber si el jugador está en el suelo
 
+    private Rigidbody2D rb;
+
     void Start()
     {
-
+        rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -28,6 +32,7 @@ public class Player : MonoBehaviour
         {
             float inputH = Input.GetAxis("Horizontal");
 
+
             bool jump = false;
 
             // Si el jugador toca el suelo, reinicia el contador de saltos
@@ -35,6 +40,7 @@ public class Player : MonoBehaviour
             if (isGrounded)
             {
                 jumpCount = 0;
+                fallingSpeed = 0;
             }
 
             // Salto: verifica si el jugador puede saltar (en el suelo o en el aire si no ha alcanzado el límite)
@@ -65,10 +71,22 @@ public class Player : MonoBehaviour
                 animator.SetFloat("Speed", 0);
             }
 
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log(rb.velocity.y); //Cosas de Debug
+            }
+
+            if (rb.velocity.y <= -0.2 && rb.velocity.y >= -20)
+            {
+                rb.AddForce(new Vector2(0, -2));
+            }
+
             // Movimiento del personaje
             controller.Move(inputH * (currentSpeed / 10), false, jump);
 
             animator.SetBool("Move_Bool", Input.GetAxis("Horizontal") != 0);
         }
+
+        
     }
 }
