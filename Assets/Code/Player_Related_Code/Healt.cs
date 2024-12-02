@@ -38,7 +38,9 @@ public class Healt : MonoBehaviour
     }
     public void Die()
     {
-        Destroy(gameObject);
+        EventManager.m_Instance.InvokeEvent<DieEvent>(new DieEvent());
+        currentHealt = maxHealt;
+        //Destroy(gameObject);
     }
 
 }

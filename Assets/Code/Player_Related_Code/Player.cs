@@ -6,6 +6,8 @@ public class Player : MonoBehaviour
 {
     public CharacterController2D controller;
 
+    public Transform RespawnPoint;
+
     public float speed = 10.0f;
     public Animator animator;
     public GameManager gameManager;
@@ -24,6 +26,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        EventManager.m_Instance.AddListener<DieEvent>(Die);
     }
 
     void Update()
@@ -88,5 +91,10 @@ public class Player : MonoBehaviour
         }
 
         
+    }
+
+    public void Die(DieEvent e)
+    {
+        this.gameObject.transform.position = RespawnPoint.position;
     }
 }

@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public bool isGameActive = false; // Default: false
 
+    public Transform RespawnPoint;
+    public bool Dead = false;
 
     public CanvasGroup canvasGroupLogo;
     public CanvasGroup canvasGroupLogoColored;
@@ -154,5 +156,10 @@ public class GameManager : MonoBehaviour
     public void EquipItem(EquipItemEvent e)
     {
         EquippedItem = e.eventItem;
+    }
+
+    public void Die()
+    {
+        
     }
 }
