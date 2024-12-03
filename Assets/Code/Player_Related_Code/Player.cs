@@ -79,9 +79,9 @@ public class Player : MonoBehaviour
                 Debug.Log(rb.velocity.y); //Cosas de Debug
             }
 
-            if (rb.velocity.y <= -0.2 && rb.velocity.y >= -20)
+            if (rb.velocity.y <= -0.2 && rb.velocity.y >= -40)
             {
-                rb.AddForce(new Vector2(0, -2));
+                rb.AddForce(new Vector2(0, -6));
             }
 
             // Movimiento del personaje

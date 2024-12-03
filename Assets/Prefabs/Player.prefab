@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 2183864195244654727}
   - component: {fileID: 8713336511384627643}
   - component: {fileID: 4181379590947395050}
-  - component: {fileID: 2475599894521296253}
   - component: {fileID: 6746334668807706239}
   m_Layer: 7
   m_Name: Player
@@ -211,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba909d575f897d44858101ffaa08bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealt: 20
+  maxHealt: 25
 --- !u!114 &2183864195244654727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2183864195244654727}
+  RespawnPoint: {fileID: 0}
   speed: 10
   animator: {fileID: 4181379590947395050}
   gameManager: {fileID: 0}
@@ -280,19 +280,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2475599894521296253
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4232790519060732940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ba909d575f897d44858101ffaa08bc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealt: 5
 --- !u!114 &6746334668807706239
 MonoBehaviour:
   m_ObjectHideFlags: 0
