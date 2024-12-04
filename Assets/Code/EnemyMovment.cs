@@ -39,6 +39,7 @@ public class EnemyMovment : MonoBehaviour
     {
         if (target != null)
         {
+            
             if (Vector2.Distance(transform.position, target.position) < 0.2f)
             {
                 return;
@@ -65,7 +66,7 @@ public class EnemyMovment : MonoBehaviour
             if (Vector2.Distance(transform.position, movePoints[pointIndex]) < 0.02f)
             {
                 pointIndex++;
-                transform.Rotate(0, 180, 0);
+                transform.Rotate(0, 180, 0); // Aquí se voltea cuando llega a su punto
       
             }
             if (pointIndex >= movePoints.Length)

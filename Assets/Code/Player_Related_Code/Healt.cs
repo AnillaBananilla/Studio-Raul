@@ -38,9 +38,17 @@ public class Healt : MonoBehaviour
     }
     public void Die()
     {
-        EventManager.m_Instance.InvokeEvent<DieEvent>(new DieEvent());
-        currentHealt = maxHealt;
-        //Destroy(gameObject);
+        if (this.gameObject.CompareTag("Player"))
+        {
+            EventManager.m_Instance.InvokeEvent<DieEvent>(new DieEvent());
+            currentHealt = maxHealt;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        //
     }
 
 }
