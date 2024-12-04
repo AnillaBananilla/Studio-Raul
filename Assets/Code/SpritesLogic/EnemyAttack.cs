@@ -14,7 +14,7 @@ public class EnemyAttack : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" && !cooldown)
         {
-            Debug.Log("I see you");
+            //Debug.Log("I see you");
             cooldown = true;
             GameObject Player = collision.gameObject;
             Player.GetComponent<Healt>().Damage(Damage);
@@ -25,6 +25,8 @@ public class EnemyAttack : MonoBehaviour
 
             // Aplica la fuerza de retroceso
             direction = (Player.transform.position - transform.position).normalized;
+            Player.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
+            Debug.Log(direction * Recoilforce);
             Player.GetComponent<Rigidbody2D>().velocity = direction * Recoilforce;
 
             // Inicia la corrutina para volver el color a blanco después de 1 segundo

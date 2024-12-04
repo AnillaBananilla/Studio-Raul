@@ -81,7 +81,7 @@ public class Player : MonoBehaviour
 
             if (rb.velocity.y <= -0.2 && rb.velocity.y >= -40)
             {
-                rb.AddForce(new Vector2(0, -6));
+                rb.AddForce(new Vector2(0, -8));
             }
 
             // Movimiento del personaje
