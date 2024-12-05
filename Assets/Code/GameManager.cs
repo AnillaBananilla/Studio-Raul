@@ -20,9 +20,7 @@ public class GameManager : MonoBehaviour
     public Transform RespawnPoint;
     public bool Dead = false;
 
-    public CanvasGroup canvasGroupLogo;
-    public CanvasGroup canvasGroupLogoColored;
-    public CanvasGroup canvasGroupLogoMenu;
+
 
     public GameObject AchievementScreen;
     public GameObject MissionScreen;
@@ -54,10 +52,7 @@ public class GameManager : MonoBehaviour
         UpdateScore(0);
         fadeSpeed = 1f / fadeInDuration;
 
-        StartCoroutine(FadeIn(canvasGroupLogo, 2));
-        StartCoroutine(FadeOut(canvasGroupLogo));
-        StartCoroutine(FadeIn(canvasGroupLogoColored, 8));
-        StartCoroutine(FadeIn(canvasGroupLogoMenu, 0f));
+
 
 
         EventManager.m_Instance.AddListener<EquipItemEvent>(EquipItem);

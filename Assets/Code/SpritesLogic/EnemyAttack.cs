@@ -12,7 +12,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && !cooldown)
+        if (collision.gameObject.tag == "Player" )
         {
             //Debug.Log("I see you");
             cooldown = true;
