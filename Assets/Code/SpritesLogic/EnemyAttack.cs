@@ -29,7 +29,7 @@ public class EnemyAttack : MonoBehaviour
             Debug.Log(direction * Recoilforce);
             Player.GetComponent<Rigidbody2D>().velocity = direction * Recoilforce;
 
-            // Inicia la corrutina para volver el color a blanco después de 1 segundo
+            // Inicia la corrutina para volver el color a blanco despuï¿½s de 1 segundo
             StartCoroutine(ResetColor(playerSprite));
             StartCoroutine(AttackCooldown());
             

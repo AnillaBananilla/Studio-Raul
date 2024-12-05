@@ -47,7 +47,7 @@ public class EnemyMovment : MonoBehaviour
 
             //transform.position = Vector2.MoveTowards(transform.position, target.position, Speed * Time.deltaTime);
 
-            // Maggie debería moverse en horizontal, no?
+            // Maggie deberï¿½a moverse en horizontal, no?
             // - Emi
             transform.position = Vector2.MoveTowards( transform.position, new Vector2(target.position.x, transform.position.y), Speed * Time.deltaTime);
 
@@ -66,7 +66,7 @@ public class EnemyMovment : MonoBehaviour
             if (Vector2.Distance(transform.position, movePoints[pointIndex]) < 0.02f)
             {
                 pointIndex++;
-                transform.Rotate(0, 180, 0); // Aquí se voltea cuando llega a su punto
+                transform.Rotate(0, 180, 0);
       
             }
             if (pointIndex >= movePoints.Length)
