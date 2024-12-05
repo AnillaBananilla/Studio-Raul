@@ -13,6 +13,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
     public CharacterController2D controller;
+
     void Start()
     {
         
