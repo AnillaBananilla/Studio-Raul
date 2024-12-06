@@ -3487,9 +3487,8 @@ MonoBehaviour:
   healtAmount: 100
   score: 0
   isGameActive: 1
-  canvasGroupLogo: {fileID: 0}
-  canvasGroupLogoColored: {fileID: 0}
-  canvasGroupLogoMenu: {fileID: 105237058}
+  RespawnPoint: {fileID: 0}
+  Dead: 0
   AchievementScreen: {fileID: 2084612512}
   MissionScreen: {fileID: 1469172494}
   InventoryScreen: {fileID: 153067607}
@@ -6981,11 +6980,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1584939941}
+  RespawnPoint: {fileID: 0}
   speed: 100
   animator: {fileID: 1584939949}
   gameManager: {fileID: 767169391}
   walkSpeed: 10
   runSpeed: 50
+  fallingSpeed: 0
 --- !u!114 &1584939941
 MonoBehaviour:
   m_ObjectHideFlags: 0
