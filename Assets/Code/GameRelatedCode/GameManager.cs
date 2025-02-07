@@ -7,9 +7,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager _instance;
-    // Start is called before the first frame update
-    public TextMeshProUGUI scoreText;
+    private static GameManager _instance;           // Asignar aca el unico game manager.
+    public TextMeshProUGUI scoreText;               // Dejemos esto pendiente.
     public Image lifeBar;
     public float healtAmount = 100f;
     public int score;
@@ -22,10 +21,10 @@ public class GameManager : MonoBehaviour
 
 
 
-    public GameObject AchievementScreen;
-    public GameObject MissionScreen;
-    public GameObject InventoryScreen;
-    public GameObject ShopScreen;
+    public GameObject AchievementScreen;        //Pendiente por terminar
+    public GameObject MissionScreen;            //Pendiente por terminar
+    public GameObject InventoryScreen;          //Pendiente por terminar
+    public GameObject ShopScreen;               //Pendiente por terminar
 
     public float fadeInDuration = 1.5f;
     public float fadeOutDuration = 1.5f;
