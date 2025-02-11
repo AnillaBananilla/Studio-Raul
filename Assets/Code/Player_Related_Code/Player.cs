@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    // Este script maneja información del jugador. Puedes hacer que el jugador se mueva llamando al Controlador2d
     public CharacterController2D controller;
 
     public Transform RespawnPoint;
 
+    //Información que se toman en cuenta en las físicas.
     public float speed = 10.0f;
     public Animator animator;
     public GameManager gameManager;
@@ -17,9 +19,15 @@ public class Player : MonoBehaviour
 
     public float fallingSpeed = 0.0f;
 
+    //Contador de saltos
     private int maxJumps = 1; // Número máximo de saltos
     private int jumpCount = 0; // Contador de saltos
     private bool isGrounded; // Para saber si el jugador está en el suelo
+
+    //Stats
+    public int HP = 5;
+    private int MaxHP = 5;
+    private int PeakHP = 8;
 
     private Rigidbody2D rb;
 
@@ -91,6 +99,12 @@ public class Player : MonoBehaviour
         }
 
         
+    }
+
+    public void HPUpgrade()
+    {
+        MaxHP++;
+        HP = MaxHP;
     }
 
     public void Die(DieEvent e)
