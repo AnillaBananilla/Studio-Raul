@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public float healtAmount = 100f;
     public int score;
     private bool _RangeAttack = false;
+    public float pintureAmount = 100f;
+    public Image pintureBar;
 
     public bool isGameActive = false; // Default: false
 
@@ -155,5 +157,15 @@ public class GameManager : MonoBehaviour
     public void Die()
     {
         
+    }
+    public void usePinture(float pinture)
+    {
+        pintureAmount -= pinture;
+        pintureBar.fillAmount = pintureAmount / 100F;
+    }
+    public void recivePinture(float pinture)
+    {
+        pintureAmount += pinture;
+        pintureBar.fillAmount = pintureAmount / 100F;
     }
 }
