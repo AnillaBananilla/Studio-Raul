@@ -1,33 +1,41 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    // Este script maneja información del jugador. Puedes hacer que el jugador se mueva llamando al Controlador2d
+    // Este script maneja informaciÃ³n del jugador. Puedes hacer que el jugador se mueva llamando al Controlador2d
     public CharacterController2D controller;
 
     public Transform RespawnPoint;
 
-    //Información que se toman en cuenta en las físicas.
+    //InformaciÃ³n que se toman en cuenta en las fÃ­sicas.
     public float speed = 10.0f;
     public Animator animator;
     public GameManager gameManager;
     public float walkSpeed = 10f;
     public float runSpeed = 50f;
-    private bool isSprinting = false; // Para controlar si el personaje está corriendo
+    private bool isSprinting = false; // Para controlar si el personaje estÃ¡ corriendo
 
     public float fallingSpeed = 0.0f;
 
     //Contador de saltos
-    private int maxJumps = 1; // Número máximo de saltos
+    private int maxJumps = 1; // NÃºmero mÃ¡ximo de saltos
     private int jumpCount = 0; // Contador de saltos
-    private bool isGrounded; // Para saber si el jugador está en el suelo
+    private bool isGrounded; // Para saber si el jugador estÃ¡ en el suelo
+    int valueToPrint = 0;
 
     //Stats
     public int HP = 5;
     private int MaxHP = 5;
     private int PeakHP = 8;
+
+    private enum ColorState { Azul, Amarillo, Rojo } // Enumerador de colores
+    private ColorState currentColor = ColorState.Azul; // Color inicial
+    public Image imageToChange; // ArrÃ¡stralo desde el Inspector
 
     private Rigidbody2D rb;
 
@@ -35,6 +43,7 @@ public class Player : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         EventManager.m_Instance.AddListener<DieEvent>(Die);
+        
     }
 
     void Update()
@@ -54,7 +63,7 @@ public class Player : MonoBehaviour
                 fallingSpeed = 0;
             }
 
-            // Salto: verifica si el jugador puede saltar (en el suelo o en el aire si no ha alcanzado el límite)
+            // Salto: verifica si el jugador puede saltar (en el suelo o en el aire si no ha alcanzado el lÃ­mite)
             if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
             {
                 jump = true;
@@ -72,7 +81,7 @@ public class Player : MonoBehaviour
                 isSprinting = false;
             }
 
-            // Animación del movimiento
+            // AnimaciÃ³n del movimiento
             if (Mathf.Abs(inputH) > 0)
             {
                 animator.SetFloat("Speed", currentSpeed);
@@ -96,6 +105,10 @@ public class Player : MonoBehaviour
             controller.Move(inputH * (currentSpeed / 10), false, jump);
 
             animator.SetBool("Move_Bool", Input.GetAxis("Horizontal") != 0);
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                ChangeColor();
+            }
         }
 
         
@@ -111,4 +124,34 @@ public class Player : MonoBehaviour
     {
         this.gameObject.transform.position = RespawnPoint.position;
     }
+
+    private void ChangeColor()
+    {
+        // Ciclar el color entre Azul â†’ Amarillo â†’ Rojo â†’ Azul...
+        currentColor = (ColorState)(((int)currentColor + 1) % 3);
+
+        switch (currentColor)
+        {
+            case ColorState.Azul:
+                valueToPrint = 10;
+                Debug.Log("Valor impreso: " + valueToPrint);
+                imageToChange.color = Color.blue;
+                break;
+            case ColorState.Amarillo:
+                valueToPrint = 20;
+                Debug.Log("Valor impreso: " + valueToPrint);
+                imageToChange.color = Color.yellow;
+                break;
+            case ColorState.Rojo:
+                valueToPrint = 30;
+                Debug.Log("Valor impreso: " + valueToPrint);
+                imageToChange.color = Color.red;
+                break;
+        }
+    }
+    public string GetCurrentColor()
+    {
+        return currentColor.ToString();
+    }
+
 }
