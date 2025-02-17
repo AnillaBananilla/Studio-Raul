@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-	public CharacterController2D controller;
+	public MetroidCharacterController2D controller;
 	public Animator animator;
 
 	public float runSpeed = 40f;

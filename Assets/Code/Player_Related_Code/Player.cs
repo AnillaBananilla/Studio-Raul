@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     // Este script maneja información del jugador. Puedes hacer que el jugador se mueva llamando al Controlador2d
-    public CharacterController2D controller;
+    public MetroidCharacterController2D controller;
 
     public Transform RespawnPoint;
 
