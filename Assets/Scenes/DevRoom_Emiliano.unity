@@ -7251,9 +7251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49b845cd62d0ad94cb228e527cfaf00f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 4200
+  m_JumpForce: 8000
   m_MovementSmoothing: 0.05
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 8
@@ -7262,6 +7262,7 @@ MonoBehaviour:
   canDoubleJump: 1
   m_DashForce: 25
   life: 10
+  maxlife: 10
   invincible: 0
   OnFallEvent:
     m_PersistentCalls:
@@ -7280,7 +7281,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 1647750416}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584939939}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2dbf712573106746aacf282970e1654, type: 3}
   m_Name: 
@@ -7638,9 +7639,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1930651469195822174, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: m_Mass
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2183864195244654727, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2183864195244654727, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       propertyPath: m_CrouchDisableCollider
