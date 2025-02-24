@@ -1,27 +1,25 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro; // Si usas TextMeshPro
 
 public class Dialog : MonoBehaviour
 {
-    public GameObject titleScreen;
+    public TextMeshProUGUI dialogueText; // Referencia al TextMeshPro UI
+    public float typeSpeed = 0.05f; // Velocidad de escritura
 
-
-    private void OnTriggerEnter2D(Collider2D other)
+    public void StartTypewriter(string message)
     {
-        // Verifica si el objeto que entra al collider es el jugador
-        if (other.CompareTag("Player"))
-        {
-            titleScreen.SetActive(true);
-        }
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        // Verifica si el objeto que entra al collider es el jugador
-        if (other.CompareTag("Player"))
-        {
-            titleScreen.SetActive(false);
-        }
+        StopAllCoroutines(); // Detener cualquier otro diálogo en curso
+        StartCoroutine(TypeText(message));
     }
 
+    private IEnumerator TypeText(string message)
+    {
+        dialogueText.text = ""; // Limpiar el texto antes de comenzar
+        foreach (char letter in message)
+        {
+            dialogueText.text += letter; // Agregar letra por letra
+            yield return new WaitForSeconds(typeSpeed); // Pausa entre letras
+        }
+    }
 }
