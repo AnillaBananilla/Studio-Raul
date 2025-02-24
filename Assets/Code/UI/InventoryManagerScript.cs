@@ -12,6 +12,9 @@ public class InventoryManagerScripts : MonoBehaviour
     public TextMeshProUGUI equippedItemText;
     public RectTransform selectionIndicator;
 
+    public int infiniteThreshold = 33; // Variable pública para el umbral de infinito
+    public PlayerInventory playerInventory; // Referencia al ScriptableObject del inventario
+
     private class InventoryItem
     {
         public string name;
@@ -37,6 +40,7 @@ public class InventoryManagerScripts : MonoBehaviour
     void Start()
     {
         inventoryUI.SetActive(false);
+        AddItemToInventory("Sin Item", -1); // "Sin Item" siempre debe estar en el inventario
         PopulateInventory();
     }
 
@@ -67,12 +71,7 @@ public class InventoryManagerScripts : MonoBehaviour
         if (isInventoryOpen)
         {
             UpdateInventoryUI();
-
-            if (inventoryItems.Count > 0)
-            {
-                selectedIndex = Mathf.Clamp(selectedIndex, 0, inventoryItems.Count - 1);
-                MoveSelectionIndicator(selectedIndex);
-            }
+            MoveSelectionIndicator(selectedIndex);
         }
     }
 
@@ -104,12 +103,10 @@ public class InventoryManagerScripts : MonoBehaviour
 
     private void PopulateInventory()
     {
-        string[] itemNames = { "Item1", "Item2", "Item3", "Item4", "Item5", "Item6" };
-        int[] itemQuantities = { 5, 2, 0, 37, 1, 3 };
-
-        for (int i = 0; i < itemNames.Length; i++)
+        // Recorre la lista de ítems del ScriptableObject
+        foreach (PlayerInventory.InventoryItem item in playerInventory.items)
         {
-            AddItemToInventory(itemNames[i], itemQuantities[i]);
+            AddItemToInventory(item.name, item.quantity);
         }
 
         UpdateInventoryUI();
@@ -117,34 +114,34 @@ public class InventoryManagerScripts : MonoBehaviour
 
     private void AddItemToInventory(string itemName, int quantity)
     {
-        if (quantity <= 0) return;
+        if (quantity == 0 && itemName != "Sin Item") return; // Evita añadir items con cantidad 0
 
         GameObject newButton = Instantiate(itemButtonPrefab, itemListContainer);
         Button button = newButton.GetComponent<Button>();
         TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
 
-        GameObject quantityTextObj = new GameObject("QuantityText");
-        TextMeshProUGUI quantityText = quantityTextObj.AddComponent<TextMeshProUGUI>();
+        TextMeshProUGUI quantityText = new GameObject("QuantityText").AddComponent<TextMeshProUGUI>();
         quantityText.transform.SetParent(newButton.transform);
         quantityText.rectTransform.anchoredPosition = new Vector2(50, 0);
         quantityText.fontSize = 20;
         quantityText.color = Color.white;
 
-        if (buttonText != null)
-        {
-            buttonText.text = $"{itemName} x{quantity}";
-        }
-
-        int index = inventoryItems.Count;
-        button.onClick.AddListener(() => EquipItem(index));
-
         InventoryItem newItem = new InventoryItem(itemName, quantity, button, buttonText, quantityText);
         inventoryItems.Add(newItem);
+
+        UpdateItemUI(newItem);
+        button.onClick.AddListener(() => EquipItem(inventoryItems.IndexOf(newItem)));
+    }
+
+    private void UpdateItemUI(InventoryItem item)
+    {
+        item.buttonText.text = item.quantity > infiniteThreshold ? $"{item.name}" : $"{item.name} x{item.quantity}";
+        item.quantityText.text = item.quantity > infiniteThreshold ? "" : "x" + item.quantity;
     }
 
     private void EquipItem(int index)
     {
-        if (index >= 0 && index < inventoryItems.Count && inventoryItems[index].quantity > 0)
+        if (index >= 0 && index < inventoryItems.Count)
         {
             equippedItemText.text = "Equipped: " + inventoryItems[index].name;
             selectedIndex = index;
@@ -169,7 +166,7 @@ public class InventoryManagerScripts : MonoBehaviour
         {
             InventoryItem item = inventoryItems[i];
 
-            if (item.quantity <= 0)
+            if (item.quantity == 0 && item.name != "Sin Item")
             {
                 Destroy(item.button.gameObject);
                 inventoryItems.RemoveAt(i);
@@ -178,16 +175,12 @@ public class InventoryManagerScripts : MonoBehaviour
                 {
                     selectedIndex = Mathf.Max(0, inventoryItems.Count - 1);
                 }
+
+                EquipItem(selectedIndex);
             }
             else
             {
-                item.buttonText.text = item.quantity > 32
-                    ? $"{item.name}"  // Si es infinito, no mostrar cantidad
-                    : $"{item.name} x{item.quantity}"; // Mostrar cantidad normalmente
-
-                item.quantityText.text = item.quantity > 32
-                    ? "" // No mostrar texto de cantidad si es infinito
-                    : "x" + item.quantity; // Mostrar cantidad si no es infinito
+                UpdateItemUI(item);
             }
         }
 
@@ -203,24 +196,31 @@ public class InventoryManagerScripts : MonoBehaviour
         {
             InventoryItem equippedItem = inventoryItems[selectedIndex];
 
-            if (equippedItem.quantity > 0)
+            if (equippedItem.quantity > 0 || equippedItem.quantity > infiniteThreshold) // Ítems con cantidad > infiniteThreshold son infinitos
             {
-                // Si la cantidad es mayor a 32, no se reduce
-                if (equippedItem.quantity > 32)
+                Debug.Log("Used: " + equippedItem.name);
+
+                // Solo restar la cantidad si el ítem no es infinito
+                if (equippedItem.quantity <= infiniteThreshold)
                 {
-                    Debug.Log("Used: " + equippedItem.name + " (infinite)");
+                    equippedItem.quantity--;
+                    playerInventory.items[selectedIndex].quantity = equippedItem.quantity; // Actualiza el ScriptableObject
+
+                    if (equippedItem.quantity == 0)
+                    {
+                        EquipItem(0); // Equipar el primer ítem disponible
+                    }
                 }
                 else
                 {
-                    Debug.Log("Used: " + equippedItem.name);
-                    equippedItem.quantity--;
+                    Debug.Log("Ítem infinito usado: " + equippedItem.name);
                 }
 
                 UpdateInventoryUI();
             }
-            else
+            else if (equippedItem.name == "Sin Item")
             {
-                Debug.Log("No item left to use.");
+                Debug.Log("Sin Item seleccionado, nada que usar.");
             }
         }
     }
