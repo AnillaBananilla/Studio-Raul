@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    // Este script maneja información del jugador. Puedes hacer que el jugador se mueva llamando al Controlador2d
-    public CharacterController2D controller;
+    // Este script maneja informaci�n del jugador. Puedes hacer que el jugador se mueva llamando al Controlador2d
+    public MetroidCharacterController2D controller;
 
     public Transform RespawnPoint;
 
