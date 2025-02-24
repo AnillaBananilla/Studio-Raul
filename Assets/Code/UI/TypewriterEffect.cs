@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using TMPro; // Si usas TextMeshPro
 
-public class Dialog : MonoBehaviour
+public class TypewriterEffect : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText; // Referencia al TextMeshPro UI
     public float typeSpeed = 0.05f; // Velocidad de escritura

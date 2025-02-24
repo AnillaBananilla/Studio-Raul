@@ -6,9 +6,9 @@ using TMPro;
 public class DialogShop : MonoBehaviour
 {
     public GameObject titleScreen;
-    public Dialog typewriterEffect; // Referencia al script del efecto
+    public TypewriterEffect typewriterEffect; // Referencia al script del efecto
     public TextMeshProUGUI dialogueText; // Referencia al texto donde se mostrará el diálogo
-    public string[] messages; // Array de mensajes
+    private string[] messages; // Array de mensajes
     private int currentDialogueIndex = 0; // Índice del mensaje actual
     private bool isPlayerInside = false; // Verifica si el jugador está en el área
 
@@ -35,9 +35,9 @@ public class DialogShop : MonoBehaviour
     {
         messages = new string[]
         {
-        "¡Bienvenido a la tienda, viajero!",
-        "Aquí encontrarás pociones y espadas.",
-        "Vuelve pronto y que tengas una gran aventura."
+        "¡Hola viajero, como te ecuentras!?",
+        "Te ves algo decaido, pero no te preocupes",
+        "yo te dare una mision para que tengas una gran aventura!"
         };
     }
 
@@ -51,7 +51,6 @@ public class DialogShop : MonoBehaviour
 
     private void ShowNextDialogue()
     {
-        if (messages.Length == 0) return;
 
         if (typewriterEffect != null)
         {
@@ -62,7 +61,8 @@ public class DialogShop : MonoBehaviour
 
         if (currentDialogueIndex >= messages.Length)
         {
-            currentDialogueIndex = 0; // Reinicia el diálogo si llega al final
+            titleScreen.SetActive(false);
+            isPlayerInside = false; // Para que no se pueda seguir presionando Enter
         }
     }
 }
