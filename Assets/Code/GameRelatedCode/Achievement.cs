@@ -5,19 +5,9 @@ using UnityEngine.UI;
 
 public abstract class Achievement
 {
-
-    // TO DO:
-    /*
-     * Hacer que tenga una función de completarse
-     * Hacer que tenga acceso a los datos del GameManager y del Jugador
-     * Investigar si sus propiedades pueden ser asignadas desde el inspector
-     * Investigar si las propiedades de sus hijos pueden ser asiganadas desde el inspector
-     * Investigar si se pueden leer imágenes desde la carpeta de assets
-     * 
-     */
-    private string title;
-    private string description;
-    private bool clear;
+    public string title;
+    public string description;
+    public bool clear;
 
     public Image PendingImage;
     public Image ClearImage;

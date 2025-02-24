@@ -407,7 +407,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Les Quests
+  m_text: Les Quetes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 735e319ecfc57974abf50180483db227, type: 2}
   m_sharedMaterial: {fileID: 3155880310067863865, guid: 735e319ecfc57974abf50180483db227, type: 2}
@@ -1176,7 +1176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000013828278, y: -0.000017166138}
+  m_AnchoredPosition: {x: -0.000013828278, y: 0.00097630045}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &4217218975568412083
@@ -1453,6 +1453,7 @@ GameObject:
   - component: {fileID: 1869613631007831942}
   - component: {fileID: 729275366698251172}
   - component: {fileID: 4222556993074521291}
+  - component: {fileID: 3038679716662848840}
   m_Layer: 5
   m_Name: MissionScreen
   m_TagString: Untagged
@@ -1557,10 +1558,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 7046845460740154310}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 745d83751dfc29d4290f1dbe1fb37470, type: 3}
+  m_Script: {fileID: 11500000, guid: a9a983e946161864faa4647b6abcd473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Display: {fileID: 0}
+--- !u!114 &3038679716662848840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7046845460740154310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb04b7c7b1752174c8b4d791b4c39319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7140482911464022522
 GameObject:
   m_ObjectHideFlags: 0

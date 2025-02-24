@@ -6,17 +6,16 @@ using UnityEngine.UI;
 
 public class InventoryScreen : MonoBehaviour
 {
-    public Button ItemSlot_1, ItemSlot_2, ItemSlot_3;
-    public Button Equipped_1, Equipped_2, Equipped_3;
 
-    private int equipped_index = 0;
+    public List<GameObject> Elements = new List<GameObject>();
+
 
     void Start()
     {
         this.gameObject.SetActive(false);
     }
 
-    void Update()
+    public void EquipItem()
     {
         
     }

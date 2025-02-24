@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8278341249539685115}
   - component: {fileID: 4671101790154448995}
   - component: {fileID: 5987145351136687483}
+  - component: {fileID: 2909670867413395827}
   m_Layer: 5
   m_Name: AchievementsScreen
   m_TagString: Untagged
@@ -117,7 +118,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 2747689827295534431}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86baad96001d60745a9c35c3784bb821, type: 3}
+  m_Script: {fileID: 11500000, guid: 0a9abb22e5da3f846b170e83c5385a84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2909670867413395827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2747689827295534431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18963e0b0df0cd4abf9cf8903f75293, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2912522019881759058

@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -13,9 +16,12 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
     public CharacterController2D controller;
+
+
+
     void Start()
     {
-        
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
@@ -37,6 +43,8 @@ public class PlayerAttack : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Mouse1))
         {
+            if (gameManager.pintureAmount > 0)
+            {
             animator.SetTrigger("Attack_Trigger");
             GameObject newBullet = GameObject.Instantiate(bulletPrefab);
             newBullet.transform.position = Spawnpoint.position;
@@ -53,6 +61,18 @@ public class PlayerAttack : MonoBehaviour
 
             // Aplicar la fuerza al proyectil
             newBullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * 2000.0f);
+            gameManager.usePinture(20);
+            }
+            else
+            {
+                animator.SetTrigger("Attack_Trigger");
+                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
+                for (int counter = 0; counter < enemies.Length; counter++)
+                {
+                    enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
+                    enemies[counter].GetComponent<Healt>().Damage(1);
+                }
+            }
         }
         else
         {
@@ -65,4 +85,5 @@ public class PlayerAttack : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(attackCheck.position, attackRadius);
     }
+
 }
