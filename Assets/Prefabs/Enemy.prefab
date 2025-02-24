@@ -230,6 +230,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealt: 3
+  coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
+  coinOffsetY: 0
+  coinSpawnChance: 50
 --- !u!114 &3016547530978325202
 MonoBehaviour:
   m_ObjectHideFlags: 0
