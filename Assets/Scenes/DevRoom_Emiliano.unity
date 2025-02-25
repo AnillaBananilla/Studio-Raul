@@ -7932,6 +7932,10 @@ PrefabInstance:
       propertyPath: m_Mass
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1966126653198981499, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: orthographic size
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2183864195244654727, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -7987,6 +7991,14 @@ PrefabInstance:
     - target: {fileID: 7117687904199485703, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417383264513607599, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 8417383264513607599, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -20.84
       objectReference: {fileID: 0}
     - target: {fileID: 8713336511384627643, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       propertyPath: speed
