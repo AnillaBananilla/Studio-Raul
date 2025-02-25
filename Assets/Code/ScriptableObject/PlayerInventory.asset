@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
   items:
-  - name: 0
+  - name: NoItem
     quantity: 0
   - name: Item1
     quantity: 45
   - name: Item2
-    quantity: 1
+    quantity: 5
   - name: Item3
-    quantity: 1
+    quantity: 4
   - name: Item4
-    quantity: 1
-  - name: Item5
     quantity: 2
+  - name: Item5
+    quantity: 0
   - name: Item6
     quantity: 0

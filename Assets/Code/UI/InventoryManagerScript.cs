@@ -20,6 +20,8 @@ public class InventoryManagerScripts : MonoBehaviour
     private bool isInventoryOpen = false;
     private string currentlyEquippedItem = "";
 
+    public TextMeshProUGUI equippedItemDisplayText;
+
     void Start()
     {
         inventoryUI.SetActive(false);
@@ -133,7 +135,7 @@ public class InventoryManagerScripts : MonoBehaviour
             var buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
             var quantityText = button.transform.Find("QuantityText")?.GetComponent<TextMeshProUGUI>();
 
-            if (item.quantity == 0 && item.name != "Sin Item")
+            if (item.quantity == 0 && item.name != "No Item")
             {
                 button.gameObject.SetActive(false); // Desactiva el botón si la cantidad es 0
             }
@@ -165,24 +167,27 @@ public class InventoryManagerScripts : MonoBehaviour
             {
                 // Desequipar el ítem
                 currentlyEquippedItem = "";
-                equippedItemText.text = "Sin Item equipado";
+                equippedItemText.text = "No item selected";
+                equippedItemDisplayText.text = "NoItem";
                 selectedIndex = 0; // Regresar al Index 0
                 MoveSelectionIndicator(selectedIndex); // Actualizar el indicador de selección
-                Debug.Log("Ítem desequipado: " + item.name);
+                Debug.Log("Unequipped item: " + item.name);
             }
             else
             {
                 // Equipar el nuevo ítem
                 currentlyEquippedItem = item.name;
                 equippedItemText.text = "Equipped: " + item.name;
+                equippedItemDisplayText.text = item.name;
                 selectedIndex = index;
                 MoveSelectionIndicator(selectedIndex);
-                Debug.Log("Ítem equipado: " + item.name);
+                Debug.Log("Equipped item: " + item.name);
             }
         }
         else
         {
             equippedItemText.text = "No item selected";
+            equippedItemDisplayText.text = "Noitem";
         }
     }
 
@@ -212,8 +217,8 @@ public class InventoryManagerScripts : MonoBehaviour
             // Si el Index 0 está seleccionado, mostrar "Sin Item equipado"
             if (selectedIndex == 0)
             {
-                Debug.Log("Sin Item equipado");
-                equippedItemText.text = "Sin Item equipado";
+                Debug.Log("No Equipped item");
+                equippedItemText.text = "No Equipped item";
                 return;
             }
 
@@ -232,14 +237,14 @@ public class InventoryManagerScripts : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Ítem infinito usado: " + equippedItem.name);
+                    Debug.Log("Infinite Item used: " + equippedItem.name);
                 }
 
                 UpdateInventoryUI(); // Actualiza la UI después de usar el ítem
             }
-            else if (equippedItem.name == "Sin Item")
+            else if (equippedItem.name == "NoItem")
             {
-                Debug.Log("Sin Item seleccionado, nada que usar.");
+                Debug.Log("No Item Selected, cant do anything");
             }
         }
     }
