@@ -7,7 +7,10 @@ public class PlayerMovement : MonoBehaviour {
 	public MetroidCharacterController2D controller;
 	public Animator animator;
 
+	public float walkSpeed = 10f; //Mine
 	public float runSpeed = 40f;
+
+	private bool isSprinting = false;
 
 	float horizontalMove = 0f;
 	bool jump = false;
@@ -22,17 +25,40 @@ public class PlayerMovement : MonoBehaviour {
 
 		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-		if (Input.GetKeyDown(KeyCode.Z))
+		if (Input.GetKeyDown(KeyCode.Space))
 		{
 			jump = true;
 		}
 
-		if (Input.GetKeyDown(KeyCode.C))
+		if (Input.GetKeyDown(KeyCode.E))
 		{
 			dash = true;
 		}
 
-		/*if (Input.GetAxisRaw("Dash") == 1 || Input.GetAxisRaw("Dash") == -1) //RT in Unity 2017 = -1, RT in Unity 2019 = 1
+        // Velocidad de carrera
+        float currentSpeed = isSprinting ? runSpeed : walkSpeed;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isSprinting = true;
+			runSpeed = 75f;
+        }
+        else
+        {
+            isSprinting = false;
+			runSpeed = 40f;
+        }
+        /* Animación del movimiento
+        if (Mathf.Abs(inputH) > 0)
+        {
+            animator.SetFloat("Speed", currentSpeed);
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0);
+        }*/
+
+
+        /*if (Input.GetAxisRaw("Dash") == 1 || Input.GetAxisRaw("Dash") == -1) //RT in Unity 2017 = -1, RT in Unity 2019 = 1
 		{
 			if (dashAxis == false)
 			{
@@ -46,7 +72,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 		*/
 
-	}
+    }
 
 	public void OnFall()
 	{

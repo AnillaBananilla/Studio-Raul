@@ -129,6 +129,7 @@ public class MetroidCharacterController2D : MonoBehaviour
 				m_Rigidbody2D.velocity = new Vector2(0, m_Rigidbody2D.velocity.y);
 			}
 		}
+
 	}
 
 

@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6923b1103325a9948a6dd1c82da40cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 2183864195244654727}
+  controller: {fileID: 0}
   RespawnPoint: {fileID: 0}
   speed: 15
   animator: {fileID: 5496304658721404160}
@@ -472,6 +472,7 @@ MonoBehaviour:
   walkSpeed: 10
   runSpeed: 20
   fallingSpeed: 0
+  HP: 5
 --- !u!114 &6746334668807706239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -653,8 +654,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6737246028711627553}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.22, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.0000002533197, w: 1}
+  m_LocalPosition: {x: 1.2199999, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
