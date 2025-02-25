@@ -15,32 +15,14 @@ public class InventoryManagerScripts : MonoBehaviour
     public int infiniteThreshold = 33; // Variable pública para el umbral de infinito
     public PlayerInventory playerInventory; // Referencia al ScriptableObject del inventario
 
-    private class InventoryItem
-    {
-        public string name;
-        public int quantity;
-        public Button button;
-        public TextMeshProUGUI buttonText;
-        public TextMeshProUGUI quantityText;
-
-        public InventoryItem(string name, int quantity, Button button, TextMeshProUGUI buttonText, TextMeshProUGUI quantityText)
-        {
-            this.name = name;
-            this.quantity = quantity;
-            this.button = button;
-            this.buttonText = buttonText;
-            this.quantityText = quantityText;
-        }
-    }
-
-    private List<InventoryItem> inventoryItems = new List<InventoryItem>();
+    private List<Button> itemButtons = new List<Button>(); // Lista para mantener referencias a los botones
     private int selectedIndex = 0;
     private bool isInventoryOpen = false;
+    private string currentlyEquippedItem = "";
 
     void Start()
     {
         inventoryUI.SetActive(false);
-        AddItemToInventory("Sin Item", -1); // "Sin Item" siempre debe estar en el inventario
         PopulateInventory();
     }
 
@@ -77,7 +59,7 @@ public class InventoryManagerScripts : MonoBehaviour
 
     private void HandleKeyboardNavigation()
     {
-        if (inventoryItems.Count == 0)
+        if (playerInventory.items.Count == 0)
         {
             equippedItemText.text = "No item selected";
             return;
@@ -85,11 +67,15 @@ public class InventoryManagerScripts : MonoBehaviour
 
         if (Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.leftArrowKey.wasPressedThisFrame)
         {
-            selectedIndex = (selectedIndex - 1 + inventoryItems.Count) % inventoryItems.Count;
+            // Navegación hacia la izquierda, evitando el Index 0
+            selectedIndex = (selectedIndex - 1 + playerInventory.items.Count) % playerInventory.items.Count;
+            if (selectedIndex == 0) selectedIndex = playerInventory.items.Count - 1; // Evitar Index 0
         }
         else if (Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.rightArrowKey.wasPressedThisFrame)
         {
-            selectedIndex = (selectedIndex + 1) % inventoryItems.Count;
+            // Navegación hacia la derecha, evitando el Index 0
+            selectedIndex = (selectedIndex + 1) % playerInventory.items.Count;
+            if (selectedIndex == 0) selectedIndex = 1; // Evitar Index 0
         }
 
         MoveSelectionIndicator(selectedIndex);
@@ -103,19 +89,24 @@ public class InventoryManagerScripts : MonoBehaviour
 
     private void PopulateInventory()
     {
-        // Recorre la lista de ítems del ScriptableObject
-        foreach (PlayerInventory.InventoryItem item in playerInventory.items)
+        // Limpia los botones existentes
+        foreach (var button in itemButtons)
         {
-            AddItemToInventory(item.name, item.quantity);
+            Destroy(button.gameObject);
+        }
+        itemButtons.Clear();
+
+        // Crea botones para cada ítem en el ScriptableObject
+        for (int i = 0; i < playerInventory.items.Count; i++)
+        {
+            AddItemButton(playerInventory.items[i], i);
         }
 
         UpdateInventoryUI();
     }
 
-    private void AddItemToInventory(string itemName, int quantity)
+    private void AddItemButton(PlayerInventory.InventoryItem item, int index)
     {
-        if (quantity == 0 && itemName != "Sin Item") return; // Evita añadir items con cantidad 0
-
         GameObject newButton = Instantiate(itemButtonPrefab, itemListContainer);
         Button button = newButton.GetComponent<Button>();
         TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
@@ -126,25 +117,68 @@ public class InventoryManagerScripts : MonoBehaviour
         quantityText.fontSize = 20;
         quantityText.color = Color.white;
 
-        InventoryItem newItem = new InventoryItem(itemName, quantity, button, buttonText, quantityText);
-        inventoryItems.Add(newItem);
+        buttonText.text = item.name;
+        quantityText.text = item.quantity > infiniteThreshold ? "" : "x" + item.quantity;
 
-        UpdateItemUI(newItem);
-        button.onClick.AddListener(() => EquipItem(inventoryItems.IndexOf(newItem)));
+        button.onClick.AddListener(() => EquipItem(index));
+        itemButtons.Add(button);
     }
 
-    private void UpdateItemUI(InventoryItem item)
+    public void UpdateInventoryUI()
     {
-        item.buttonText.text = item.quantity > infiniteThreshold ? $"{item.name}" : $"{item.name} x{item.quantity}";
-        item.quantityText.text = item.quantity > infiniteThreshold ? "" : "x" + item.quantity;
+        for (int i = 0; i < playerInventory.items.Count; i++)
+        {
+            var item = playerInventory.items[i];
+            var button = itemButtons[i];
+            var buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+            var quantityText = button.transform.Find("QuantityText")?.GetComponent<TextMeshProUGUI>();
+
+            if (item.quantity == 0 && item.name != "Sin Item")
+            {
+                button.gameObject.SetActive(false); // Desactiva el botón si la cantidad es 0
+            }
+            else
+            {
+                button.gameObject.SetActive(true); // Reactiva el botón si la cantidad es mayor que 0
+                buttonText.text = item.name;
+                if (quantityText != null)
+                {
+                    quantityText.text = item.quantity > infiniteThreshold ? "" : "x" + item.quantity;
+                }
+            }
+        }
+
+        if (playerInventory.items.Count == 0)
+        {
+            equippedItemText.text = "No item selected";
+        }
     }
 
     private void EquipItem(int index)
     {
-        if (index >= 0 && index < inventoryItems.Count)
+        if (index >= 0 && index < playerInventory.items.Count)
         {
-            equippedItemText.text = "Equipped: " + inventoryItems[index].name;
-            selectedIndex = index;
+            var item = playerInventory.items[index];
+
+            // Verificar si el ítem ya está equipado
+            if (currentlyEquippedItem == item.name)
+            {
+                // Desequipar el ítem
+                currentlyEquippedItem = "";
+                equippedItemText.text = "Sin Item equipado";
+                selectedIndex = 0; // Regresar al Index 0
+                MoveSelectionIndicator(selectedIndex); // Actualizar el indicador de selección
+                Debug.Log("Ítem desequipado: " + item.name);
+            }
+            else
+            {
+                // Equipar el nuevo ítem
+                currentlyEquippedItem = item.name;
+                equippedItemText.text = "Equipped: " + item.name;
+                selectedIndex = index;
+                MoveSelectionIndicator(selectedIndex);
+                Debug.Log("Ítem equipado: " + item.name);
+            }
         }
         else
         {
@@ -154,57 +188,42 @@ public class InventoryManagerScripts : MonoBehaviour
 
     private void MoveSelectionIndicator(int index)
     {
-        if (inventoryItems.Count > 0 && selectionIndicator != null)
+        if (itemButtons.Count > 0 && selectionIndicator != null)
         {
-            selectionIndicator.position = inventoryItems[index].button.transform.position;
-        }
-    }
-
-    private void UpdateInventoryUI()
-    {
-        for (int i = inventoryItems.Count - 1; i >= 0; i--)
-        {
-            InventoryItem item = inventoryItems[i];
-
-            if (item.quantity == 0 && item.name != "Sin Item")
+            // Ocultar el indicador si está en Index 0
+            if (index == 0)
             {
-                Destroy(item.button.gameObject);
-                inventoryItems.RemoveAt(i);
-
-                if (selectedIndex >= inventoryItems.Count)
-                {
-                    selectedIndex = Mathf.Max(0, inventoryItems.Count - 1);
-                }
-
-                EquipItem(selectedIndex);
+                selectionIndicator.gameObject.SetActive(false);
             }
             else
             {
-                UpdateItemUI(item);
+                selectionIndicator.gameObject.SetActive(true);
+                selectionIndicator.position = itemButtons[index].transform.position;
             }
-        }
-
-        if (inventoryItems.Count == 0)
-        {
-            equippedItemText.text = "No item selected";
         }
     }
 
     private void UseEquippedItem()
     {
-        if (inventoryItems.Count > 0 && selectedIndex >= 0 && selectedIndex < inventoryItems.Count)
+        if (playerInventory.items.Count > 0 && selectedIndex >= 0 && selectedIndex < playerInventory.items.Count)
         {
-            InventoryItem equippedItem = inventoryItems[selectedIndex];
+            var equippedItem = playerInventory.items[selectedIndex];
 
-            if (equippedItem.quantity > 0 || equippedItem.quantity > infiniteThreshold) // Ítems con cantidad > infiniteThreshold son infinitos
+            // Si el Index 0 está seleccionado, mostrar "Sin Item equipado"
+            if (selectedIndex == 0)
+            {
+                Debug.Log("Sin Item equipado");
+                equippedItemText.text = "Sin Item equipado";
+                return;
+            }
+
+            if (equippedItem.quantity > 0 || equippedItem.quantity > infiniteThreshold)
             {
                 Debug.Log("Used: " + equippedItem.name);
 
-                // Solo restar la cantidad si el ítem no es infinito
                 if (equippedItem.quantity <= infiniteThreshold)
                 {
-                    equippedItem.quantity--;
-                    playerInventory.items[selectedIndex].quantity = equippedItem.quantity; // Actualiza el ScriptableObject
+                    equippedItem.quantity--; // Modifica directamente el ScriptableObject
 
                     if (equippedItem.quantity == 0)
                     {
@@ -216,7 +235,7 @@ public class InventoryManagerScripts : MonoBehaviour
                     Debug.Log("Ítem infinito usado: " + equippedItem.name);
                 }
 
-                UpdateInventoryUI();
+                UpdateInventoryUI(); // Actualiza la UI después de usar el ítem
             }
             else if (equippedItem.name == "Sin Item")
             {

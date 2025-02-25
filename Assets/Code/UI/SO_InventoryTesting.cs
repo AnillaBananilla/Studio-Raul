@@ -48,8 +48,8 @@ public class SO_InventoryTesting : MonoBehaviour
             item.quantity++;
             Debug.Log($"Se ha sumado +1 a {itemName}. Nueva cantidad: {item.quantity}");
 
-            // Sincroniza la cantidad con el InventoryManagerScripts
-            //inventoryManager.AddItem(itemName, 1);
+            // Actualiza la UI del inventario
+            inventoryManager.UpdateInventoryUI();
         }
         else
         {
