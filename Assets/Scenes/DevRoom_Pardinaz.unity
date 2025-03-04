@@ -9931,6 +9931,11 @@ MonoBehaviour:
   controller: {fileID: 1584939940}
   animator: {fileID: 1584939941}
   runSpeed: 40
+  pressMenu: 0
+  pressEquip: 0
+  isNavigatingLeft: 0
+  isNavigatingRight: 0
+  isSelecting: 0
 --- !u!114 &1584939952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9952,6 +9957,36 @@ MonoBehaviour:
   runSpeed: 50
   fallingSpeed: 0
   HP: 5
+--- !u!114 &1584939959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584939939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: cff59c40c3eb3ea4fae1665614ba7aec, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1594436189
 GameObject:
   m_ObjectHideFlags: 0
@@ -10376,6 +10411,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4232790519060732940, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1584939951}
+    - targetCorrespondingSourceObject: {fileID: 4232790519060732940, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1584939959}
     - targetCorrespondingSourceObject: {fileID: 2439876135312862392, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 783372024}
@@ -10854,6 +10892,7 @@ MonoBehaviour:
   selectionIndicator: {fileID: 1425899}
   infiniteThreshold: 33
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
+  playerMovement: {fileID: 1584939951}
   equippedItemDisplayText: {fileID: 1858466776}
 --- !u!4 &1696164155
 Transform:
