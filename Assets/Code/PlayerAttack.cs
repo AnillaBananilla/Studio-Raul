@@ -12,7 +12,7 @@ public class PlayerAttack : MonoBehaviour
     public GameManager gameManager;
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
-    public CharacterController2D controller;
+    //public MetroidCharacterController2D controller;
 
     void Start()
     {

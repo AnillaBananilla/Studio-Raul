@@ -32,9 +32,7 @@ public class Droplets : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player"))
         {
-            
-            //Destroy(this.gameObject); // Actualizar a object pooling
-            if (!collision.gameObject.CompareTag("Obstacle"))
+            if (!collision.gameObject.CompareTag("Obstacle") && (!collision.gameObject.CompareTag("PlayerProjectile")))
             {
                 GameObject Puddle = GameObject.Instantiate(puddle);
                 Puddle.transform.position = this.gameObject.transform.position;
