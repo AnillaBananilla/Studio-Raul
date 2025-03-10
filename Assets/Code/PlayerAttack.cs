@@ -15,7 +15,7 @@ public class PlayerAttack : MonoBehaviour
     public GameManager gameManager;
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
-    public CharacterController2D controller;
+    //public MetroidCharacterController2D controller;
 
 
 
@@ -46,18 +46,20 @@ public class PlayerAttack : MonoBehaviour
             if (gameManager.pintureAmount > 0)
             {
             animator.SetTrigger("Attack_Trigger");
-            GameObject newBullet = GameObject.Instantiate(bulletPrefab);
-            newBullet.transform.position = Spawnpoint.position;
+            // GameObject newBullet = GameObject.Instantiate(bulletPrefab);
+            //newBullet.transform.position = Spawnpoint.position;
 
+            Droplets newBullet = null;
+            PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects);
             // Determinar la direcci�n de disparo
-            Vector2 shootDirection = controller.IsFacingRight() ? Vector2.right : Vector2.left;
+            ///Vector2 shootDirection = controller.IsFacingRight() ? Vector2.right : Vector2.left;
 
             // Agregar una fuerza en Y, por ejemplo, hacia arriba
             float verticalForce = 0.2f; // Ajusta este valor seg�n necesites
-            shootDirection += Vector2.up * verticalForce;
+            ///shootDirection += Vector2.up * verticalForce;
 
             // Normalizar la direcci�n si es necesario
-            shootDirection.Normalize();
+            ///shootDirection.Normalize();
 
             // Aplicar la fuerza al proyectil
             newBullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * 2000.0f);
