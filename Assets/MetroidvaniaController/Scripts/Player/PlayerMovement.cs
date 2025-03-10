@@ -1,78 +1,55 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour
+{
+    public MetroidCharacterController2D controller;
+    public Animator animator;
+    public float runSpeed = 40f;
 
-	public MetroidCharacterController2D controller;
-	public Animator animator;
+    private Vector2 moveInput;
+    private bool jump = false;
+    private bool dash = false;
+	private bool menuOpen = false;
 
-	public float walkSpeed = 10f; //Mine
-	public float runSpeed = 40f;
+	public bool pressMenu = false;
+	public bool pressEquip = false;
+	public bool isNavigatingLeft;
+	public bool isNavigatingRight;
+	public bool isSelecting;
+    private PlayerInput playerInput;
 
-	private bool isSprinting = false;
-
-	float horizontalMove = 0f;
-	bool jump = false;
-	bool dash = false;
-
-	//bool dashAxis = false;
-	
-	// Update is called once per frame
-	void Update () {
-
-		horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
-
-		animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			jump = true;
-		}
-
-		if (Input.GetKeyDown(KeyCode.E))
-		{
-			dash = true;
-		}
-
-        // Velocidad de carrera
-        float currentSpeed = isSprinting ? runSpeed : walkSpeed;
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            isSprinting = true;
-			runSpeed = 75f;
-        }
-        else
-        {
-            isSprinting = false;
-			runSpeed = 40f;
-        }
-        /* Animación del movimiento
-        if (Mathf.Abs(inputH) > 0)
-        {
-            animator.SetFloat("Speed", currentSpeed);
-        }
-        else
-        {
-            animator.SetFloat("Speed", 0);
-        }*/
-
-
-        /*if (Input.GetAxisRaw("Dash") == 1 || Input.GetAxisRaw("Dash") == -1) //RT in Unity 2017 = -1, RT in Unity 2019 = 1
-		{
-			if (dashAxis == false)
-			{
-				dashAxis = true;
-				dash = true;
-			}
-		}
-		else
-		{
-			dashAxis = false;
-		}
-		*/
-
+    void Start()
+    {
+        playerInput = GetComponent<PlayerInput>();
     }
+
+    void Update()
+    {
+        if(!menuOpen){
+		moveInput = playerInput.actions["Move"].ReadValue<Vector2>();
+        jump = playerInput.actions["Jump"].WasPerformedThisFrame();
+        dash = playerInput.actions["Dash"].WasPerformedThisFrame();
+		}
+		
+		pressMenu = playerInput.actions["OpenMenu"].WasPerformedThisFrame();
+   		pressEquip = playerInput.actions["Equip"].WasPerformedThisFrame();
+
+		isNavigatingLeft = playerInput.actions["NavigateLeft"].WasPerformedThisFrame();
+    	isNavigatingRight = playerInput.actions["NavigateRight"].WasPerformedThisFrame();
+		isSelecting = playerInput.actions["SelectItem"].WasPerformedThisFrame();
+		
+
+        animator.SetFloat("Speed", Mathf.Abs(moveInput.x * runSpeed));
+    }
+
+    void FixedUpdate()
+    {
+        controller.Move(moveInput.x * runSpeed * Time.fixedDeltaTime, jump, dash);
+		jump = false;
+		dash = false;
+    }
+
 
 	public void OnFall()
 	{
@@ -82,13 +59,5 @@ public class PlayerMovement : MonoBehaviour {
 	public void OnLanding()
 	{
 		animator.SetBool("IsJumping", false);
-	}
-
-	void FixedUpdate ()
-	{
-		// Move our character
-		controller.Move(horizontalMove * Time.fixedDeltaTime, jump, dash);
-		jump = false;
-		dash = false;
 	}
 }
