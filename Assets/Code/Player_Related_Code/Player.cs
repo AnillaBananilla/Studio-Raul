@@ -48,7 +48,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (gameManager.isGameActive == true)
+        if (gameManager.isGameActive == false)
         {
             float inputH = Input.GetAxis("Horizontal");
 

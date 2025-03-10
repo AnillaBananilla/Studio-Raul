@@ -3092,7 +3092,6 @@ MonoBehaviour:
   titleScreen: {fileID: 933840677}
   typewriterEffect: {fileID: 0}
   dialogueText: {fileID: 0}
-  messages: []
 --- !u!1 &297476918
 GameObject:
   m_ObjectHideFlags: 0
@@ -6713,7 +6712,7 @@ Transform:
   m_GameObject: {fileID: 622327025}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1514, y: -67.5, z: 0}
+  m_LocalPosition: {x: -1482.33, y: -55.26, z: 0}
   m_LocalScale: {x: 1.8739262, y: 1.8739262, z: 1.8739262}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12430,7 +12429,7 @@ Transform:
   m_GameObject: {fileID: 1095588086}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1501.4, y: -67.8, z: 0}
+  m_LocalPosition: {x: -1469.73, y: -55.56, z: 0}
   m_LocalScale: {x: 1.8739262, y: 1.8739262, z: 1.8739262}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13926,7 +13925,6 @@ MonoBehaviour:
   titleScreen: {fileID: 933840677}
   typewriterEffect: {fileID: 1472238596}
   dialogueText: {fileID: 0}
-  messages: []
 --- !u!61 &1262384253
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16973,7 +16971,7 @@ Transform:
   m_GameObject: {fileID: 1592872698}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1507.2, y: -67.3, z: 0}
+  m_LocalPosition: {x: -1475.5299, y: -55.06, z: 0}
   m_LocalScale: {x: 1.8739262, y: 1.8739262, z: 1.8739262}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18379,7 +18377,7 @@ Transform:
   m_GameObject: {fileID: 1696085606}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1519.52, y: -67.63, z: 0}
+  m_LocalPosition: {x: -1487.85, y: -55.389996, z: 0}
   m_LocalScale: {x: 1.8739262, y: 1.8739262, z: 1.8739262}
   m_ConstrainProportionsScale: 0
   m_Children: []
