@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 4301568100170071921}
   - component: {fileID: 5042065327474259978}
   - component: {fileID: 2313131910502528050}
-  - component: {fileID: 3016547530978325202}
   - component: {fileID: 7090623907291698760}
   - component: {fileID: 4101998725103515918}
   - component: {fileID: 2273368546285000310}
@@ -230,23 +229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealt: 3
---- !u!114 &3016547530978325202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4463981528911551623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cc9207e1f9fc644ba4c42772f750796, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 1
-  Recoilforce: 3000
-  Playerlayer:
-    serializedVersion: 2
-    m_Bits: 128
+  coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
+  coinOffsetY: 0
+  coinSpawnChance: 50
 --- !u!61 &7090623907291698760
 BoxCollider2D:
   m_ObjectHideFlags: 0

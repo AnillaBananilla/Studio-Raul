@@ -8,10 +8,12 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;           // Asignar aca el unico game manager.
-    public TextMeshProUGUI scoreText;               // Dejemos esto pendiente.
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI keyText;
     public Image lifeBar;
     public float healtAmount = 100f;
     public int score;
+    public int key;
     private bool _RangeAttack = false;
     public float pintureAmount = 100f;
     public Image pintureBar;
@@ -51,6 +53,8 @@ public class GameManager : MonoBehaviour
     {
         score = 0;
         UpdateScore(0);
+        key = 0;
+        UpdateKey(0);
         fadeSpeed = 1f / fadeInDuration;
 
 
@@ -74,6 +78,17 @@ public class GameManager : MonoBehaviour
         scoreText.text = "score: " + score;
        
     }
+    public void UpdateKey(int keyToAdd)
+    {
+        key += keyToAdd;
+        Debug.Log("keys: " + key);
+
+    }
+    public bool HasKey()
+    {
+        return key > 0;
+    }
+
     public void takeDamage(float damage)
     {
        healtAmount -= damage;

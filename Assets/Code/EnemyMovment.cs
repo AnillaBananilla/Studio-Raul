@@ -45,10 +45,6 @@ public class EnemyMovment : MonoBehaviour
                 return;
             }
 
-            //transform.position = Vector2.MoveTowards(transform.position, target.position, Speed * Time.deltaTime);
-
-            // Maggie deber�a moverse en horizontal, no?
-            // - Emi
             transform.position = Vector2.MoveTowards( transform.position, new Vector2(target.position.x, transform.position.y), Speed * Time.deltaTime);
 
             return;
