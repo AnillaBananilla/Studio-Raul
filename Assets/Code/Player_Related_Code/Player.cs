@@ -7,8 +7,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    // Este script maneja informaci�n del jugador. Puedes hacer que el jugador se mueva llamando al Controlador2d
-    public CharacterController2D controller;
+
 
     public Transform RespawnPoint;
 
@@ -56,12 +55,7 @@ public class Player : MonoBehaviour
             bool jump = false;
 
             // Si el jugador toca el suelo, reinicia el contador de saltos
-            isGrounded = controller.IsGrounded();
-            if (isGrounded)
-            {
-                jumpCount = 0;
-                fallingSpeed = 0;
-            }
+     
 
             // Salto: verifica si el jugador puede saltar (en el suelo o en el aire si no ha alcanzado el límite)
             if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
@@ -101,8 +95,7 @@ public class Player : MonoBehaviour
                 rb.AddForce(new Vector2(0, -8));
             }
 
-            // Movimiento del personaje
-            controller.Move(inputH * (currentSpeed / 10), false, jump);
+            
 
             animator.SetBool("Move_Bool", Input.GetAxis("Horizontal") != 0);
             if (Input.GetKeyDown(KeyCode.Tab))

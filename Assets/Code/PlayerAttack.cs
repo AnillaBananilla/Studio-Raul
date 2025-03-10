@@ -15,6 +15,9 @@ public class PlayerAttack : MonoBehaviour
     public GameManager gameManager;
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
+    public Vector2 shootDirection;
+
+
     //public MetroidCharacterController2D controller;
 
 
@@ -78,7 +81,7 @@ public class PlayerAttack : MonoBehaviour
                 return;
             }
         }
-    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
