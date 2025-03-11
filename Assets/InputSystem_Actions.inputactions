@@ -345,7 +345,7 @@
                 {
                     "name": "",
                     "id": "3fc46fbf-8ea8-471d-8fe3-e805d063e5c8",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",

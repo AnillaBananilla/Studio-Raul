@@ -5003,16 +5003,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 718379981}
+  keyText: {fileID: 0}
   lifeBar: {fileID: 1652768799}
   healtAmount: 100
   score: 0
+  key: 0
+  pintureAmount: 100
+  pintureBar: {fileID: 0}
   isGameActive: 1
   RespawnPoint: {fileID: 0}
   Dead: 0
   AchievementScreen: {fileID: 2084612512}
   MissionScreen: {fileID: 1469172494}
   InventoryScreen: {fileID: 153067607}
-  ShopScreen: {fileID: 0}
+  ShopScreen: {fileID: 1995270574}
   fadeInDuration: 1
   fadeOutDuration: 1
 --- !u!4 &767169392
@@ -8814,11 +8818,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!4 &1371740667 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5541760183245931176, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
-  m_PrefabInstance: {fileID: 1647750416}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1382961107
 GameObject:
   m_ObjectHideFlags: 0
@@ -9864,78 +9863,16 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4232790519060732940, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
   m_PrefabInstance: {fileID: 1647750416}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1584939940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584939939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49b845cd62d0ad94cb228e527cfaf00f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_JumpForce: 8000
-  m_MovementSmoothing: 0.05
-  m_AirControl: 1
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 8
-  m_GroundCheck: {fileID: 1371740667}
-  m_WallCheck: {fileID: 1873104139}
-  canDoubleJump: 1
-  m_DashForce: 25
-  life: 10
-  maxlife: 10
-  invincible: 0
-  OnFallEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  OnLandEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!95 &1584939941 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5496304658721404160, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
   m_PrefabInstance: {fileID: 1647750416}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1584939945 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2183864195244654727, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
-  m_PrefabInstance: {fileID: 1647750416}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584939939}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2dbf712573106746aacf282970e1654, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1584939950 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1685305275353857865, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
   m_PrefabInstance: {fileID: 1647750416}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1584939951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584939939}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8644d33345e77614ba3ace9c18398d0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1584939940}
-  animator: {fileID: 1584939941}
-  runSpeed: 40
-  pressMenu: 0
-  pressEquip: 0
-  isNavigatingLeft: 0
-  isNavigatingRight: 0
-  isSelecting: 0
 --- !u!114 &1584939952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9943,12 +9880,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584939939}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6923b1103325a9948a6dd1c82da40cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1584939940}
   RespawnPoint: {fileID: 1453409176}
   speed: 10
   animator: {fileID: 1584939941}
@@ -9957,6 +9893,7 @@ MonoBehaviour:
   runSpeed: 50
   fallingSpeed: 0
   HP: 5
+  imageToChange: {fileID: 0}
 --- !u!114 &1584939959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9987,6 +9924,17 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1584939960 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7063098561385409780, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+  m_PrefabInstance: {fileID: 1647750416}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584939939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8644d33345e77614ba3ace9c18398d0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1594436189
 GameObject:
   m_ObjectHideFlags: 0
@@ -10251,6 +10199,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 60781257444361122, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 60781257444361122, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: m_WallCheck
+      value: 
+      objectReference: {fileID: 1873104139}
     - target: {fileID: 1502352070729434716, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       propertyPath: attackCheck
       value: 
@@ -10335,6 +10291,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7773631273301756402, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1584939941}
+    - target: {fileID: 7773631273301756402, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: Spawnpoint
+      value: 
+      objectReference: {fileID: 1910171832}
+    - target: {fileID: 7773631273301756402, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: attackCheck
+      value: 
+      objectReference: {fileID: 1873104139}
+    - target: {fileID: 7773631273301756402, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 767169391}
+    - target: {fileID: 7773631273301756402, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 4932257948283262647, guid: ee563cce76786da45a8b8c8cd3f9c098, type: 3}
     - target: {fileID: 8417383264513607599, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -10382,7 +10358,7 @@ PrefabInstance:
     - target: {fileID: 8713336511384627643, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 1584939945}
+      objectReference: {fileID: 0}
     - target: {fileID: 8713336511384627643, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       propertyPath: gameManager
       value: 
@@ -10404,13 +10380,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4232790519060732940, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1584939940}
-    - targetCorrespondingSourceObject: {fileID: 4232790519060732940, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1584939952}
-    - targetCorrespondingSourceObject: {fileID: 4232790519060732940, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1584939951}
     - targetCorrespondingSourceObject: {fileID: 4232790519060732940, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1584939959}
@@ -10892,7 +10862,7 @@ MonoBehaviour:
   selectionIndicator: {fileID: 1425899}
   infiniteThreshold: 33
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
-  playerMovement: {fileID: 1584939951}
+  playerMovement: {fileID: 1584939960}
   equippedItemDisplayText: {fileID: 1858466776}
 --- !u!4 &1696164155
 Transform:
@@ -10944,6 +10914,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealt: 5
+  coinPrefab: {fileID: 0}
+  coinOffsetY: -5
+  coinSpawnChance: 50
 --- !u!58 &1698722177
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12771,6 +12744,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &1910171832 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6876535824355477473, guid: 6a0182f4f9a3f804b8ce127ae03ff80e, type: 3}
+  m_PrefabInstance: {fileID: 1647750416}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1928580981 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1522699748990271259, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
