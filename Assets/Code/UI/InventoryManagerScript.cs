@@ -15,7 +15,7 @@ public class InventoryManagerScripts : MonoBehaviour
     public int infiniteThreshold = 33; // Variable p�blica para el umbral de infinito
     public PlayerInventory playerInventory; // Referencia al ScriptableObject del inventario
 
-    public PlayerMovement playerMovement;
+    public InputHandler inputHandler;
 
     private List<Button> itemButtons = new List<Button>(); // Lista para mantener referencias a los botones
     private int selectedIndex = 0;
@@ -32,7 +32,7 @@ public class InventoryManagerScripts : MonoBehaviour
 
     void Update()
 {
-    if (playerMovement.pressMenu) 
+    if (inputHandler.pressMenu) 
     {
         ToggleInventory();
     }
@@ -42,7 +42,7 @@ public class InventoryManagerScripts : MonoBehaviour
         HandleKeyboardNavigation();
     }
 
-    if (playerMovement.pressEquip && !inventoryUI.activeSelf) 
+    if (inputHandler.pressEquip && !inventoryUI.activeSelf) 
     {
         UseEquippedItem();
     }
@@ -74,14 +74,14 @@ public class InventoryManagerScripts : MonoBehaviour
             return;
         }
             //Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.leftArrowKey.wasPressedThisFrame || 
-        if (playerMovement.isNavigatingLeft)
+        if (inputHandler.isNavigatingLeft)
         {
             // Navegacion hacia la izquierda, evitando el Index 0
             selectedIndex = (selectedIndex - 1 + playerInventory.items.Count) % playerInventory.items.Count;
             if (selectedIndex == 0) selectedIndex = playerInventory.items.Count - 1; // Evitar Index 0
         }
         //Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.rightArrowKey.wasPressedThisFrame || 
-        else if (playerMovement.isNavigatingRight)
+        else if (inputHandler.isNavigatingRight)
         {
             // Navegacion hacia la derecha, evitando el Index 0
             selectedIndex = (selectedIndex + 1) % playerInventory.items.Count;
@@ -90,7 +90,7 @@ public class InventoryManagerScripts : MonoBehaviour
 
         MoveSelectionIndicator(selectedIndex);
         //Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame || 
-        if (playerMovement.isSelecting) 
+        if (inputHandler.isSelecting) 
         {
             EquipItem(selectedIndex);
             //ToggleInventory();

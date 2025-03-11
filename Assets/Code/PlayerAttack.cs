@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public InputHandler inputHandler;
+
     // Start is called before the first frame update
     public Transform attackCheck;
     public float attackRadius = 2.0f;
@@ -18,10 +20,6 @@ public class PlayerAttack : MonoBehaviour
     public Vector2 shootDirection;
 
 
-    //public MetroidCharacterController2D controller;
-
-
-
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -30,10 +28,10 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.isGameActive == false)
+        if (gameManager.isGameActive == true)
         {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (inputHandler.attack)
         {
             animator.SetTrigger("Attack_Trigger");
             Collider2D[] enemies =  Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
@@ -43,6 +41,10 @@ public class PlayerAttack : MonoBehaviour
                 enemies[counter].GetComponent<Healt>().Damage(1);
             }
         }
+            /*
+
+            //esto no debe estar, está obsoleto, debe ser como 
+            // el "inputHandler.attack" del ataque de arriba
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
             animator.SetTrigger("Attack_Trigger");
@@ -74,7 +76,7 @@ public class PlayerAttack : MonoBehaviour
                         enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
                         enemies[counter].GetComponent<Healt>().Damage(1);
                     }
-                }
+                }*/
             }
             else
             {
