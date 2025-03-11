@@ -120,7 +120,7 @@ public class InventoryManagerScripts : MonoBehaviour
         GameObject newButton = Instantiate(itemButtonPrefab, itemListContainer);
         Button button = newButton.GetComponent<Button>();
         TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
-
+        /*
         TextMeshProUGUI quantityText = new GameObject("QuantityText").AddComponent<TextMeshProUGUI>();
         quantityText.transform.SetParent(newButton.transform);
         quantityText.rectTransform.anchoredPosition = new Vector2(50, 0);
@@ -129,7 +129,7 @@ public class InventoryManagerScripts : MonoBehaviour
 
         buttonText.text = item.name;
         quantityText.text = item.quantity > infiniteThreshold ? "" : "x" + item.quantity;
-
+        */
         button.onClick.AddListener(() => EquipItem(index));
         itemButtons.Add(button);
     }
