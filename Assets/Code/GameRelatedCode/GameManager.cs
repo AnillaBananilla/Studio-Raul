@@ -168,11 +168,6 @@ public class GameManager : MonoBehaviour
     {
         EquippedItem = e.eventItem;
     }
-
-    public void Die()
-    {
-        
-    }
     public void usePinture(float pinture)
     {
         pintureAmount -= pinture;
