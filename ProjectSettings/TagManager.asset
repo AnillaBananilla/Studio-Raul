@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - Companion
   - Hazard
+  - PlayerProjectile
+  - Platform
   layers:
   - Default
   - TransparentFX
