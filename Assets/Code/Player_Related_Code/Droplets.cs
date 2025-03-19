@@ -11,7 +11,8 @@ public class Droplets : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1);
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            PoolManager.Instance.ReturnObjectToPool(this.gameObject);
         }
     }
     // Start is called before the first frame update
@@ -31,10 +32,21 @@ public class Droplets : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player"))
         {
-            GameObject Puddle = GameObject.Instantiate(puddle);
-            Puddle.transform.position = this.gameObject.transform.position;
-            Destroy(this.gameObject); // Actualizar a object pooling
+            if (!collision.gameObject.CompareTag("Obstacle") && (!collision.gameObject.CompareTag("PlayerProjectile")))
+            {
+                GameObject Puddle = GameObject.Instantiate(puddle);
+                Puddle.transform.position = this.gameObject.transform.position;
+                PoolManager.Instance.ReturnObjectToPool(this.gameObject);
+            }
+            else
+            {
+                PoolManager.Instance.ReturnObjectToPool(this.gameObject);
+
+            }
+                
+
         }
+
     }
             
 }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Companion
+  - Hazard
   layers:
   - Default
   - TransparentFX

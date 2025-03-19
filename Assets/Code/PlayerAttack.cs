@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class PlayerAttack : MonoBehaviour
 {
+    public InputHandler inputHandler;
+
     // Start is called before the first frame update
     public Transform attackCheck;
     public float attackRadius = 2.0f;
@@ -15,8 +17,7 @@ public class PlayerAttack : MonoBehaviour
     public GameManager gameManager;
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
-    public CharacterController2D controller;
-
+    public Vector2 shootDirection;
 
 
     void Start()
@@ -27,10 +28,10 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.isGameActive == false)
+        if (gameManager.isGameActive == true)
         {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (inputHandler.attack)
         {
             animator.SetTrigger("Attack_Trigger");
             Collider2D[] enemies =  Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
@@ -40,23 +41,27 @@ public class PlayerAttack : MonoBehaviour
                 enemies[counter].GetComponent<Healt>().Damage(1);
             }
         }
+            /*
+
+            //esto no debe estar, está obsoleto, debe ser como 
+            // el "inputHandler.attack" del ataque de arriba
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                if (gameManager.pintureAmount > 0)
-                {
-                    animator.SetTrigger("Attack_Trigger");
-                    GameObject newBullet = GameObject.Instantiate(bulletPrefab);
-                    newBullet.transform.position = Spawnpoint.position;
+            animator.SetTrigger("Attack_Trigger");
+            // GameObject newBullet = GameObject.Instantiate(bulletPrefab);
+            //newBullet.transform.position = Spawnpoint.position;
 
-                    // Determinar la direcci�n de disparo
-                    Vector2 shootDirection = controller.IsFacingRight() ? Vector2.right : Vector2.left;
+            Droplets newBullet = null;
+            PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects);
+            // Determinar la direcci�n de disparo
+            ///Vector2 shootDirection = controller.IsFacingRight() ? Vector2.right : Vector2.left;
 
-                    // Agregar una fuerza en Y, por ejemplo, hacia arriba
-                    float verticalForce = 0.2f; // Ajusta este valor seg�n necesites
-                    shootDirection += Vector2.up * verticalForce;
+            // Agregar una fuerza en Y, por ejemplo, hacia arriba
+            float verticalForce = 0.2f; // Ajusta este valor seg�n necesites
+            ///shootDirection += Vector2.up * verticalForce;
 
-                    // Normalizar la direcci�n si es necesario
-                    shootDirection.Normalize();
+            // Normalizar la direcci�n si es necesario
+            ///shootDirection.Normalize();
 
                     // Aplicar la fuerza al proyectil
                     newBullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * 2000.0f);
@@ -71,14 +76,14 @@ public class PlayerAttack : MonoBehaviour
                         enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
                         enemies[counter].GetComponent<Healt>().Damage(1);
                     }
-                }
+                }*/
             }
             else
             {
                 return;
             }
         }
-    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
