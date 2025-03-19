@@ -16,23 +16,18 @@ public class InputHandler : MonoBehaviour
 
 	[Header("Sobre ataque")]
 	public bool attack;
-    public bool canAttack;
+    public UnlockPincel unlockPincel;
     public PlayerSkills playerSkills;
 
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
-        Skill attackSkill = playerSkills.skills.Find(skill => skill.name == "Attack");
 
-        if (attackSkill != null && attackSkill.isUnlocked)
-        {
-            canAttack = true; 
-        }
     }
 
     void Update()
     {
-        if (canAttack)
+        if (unlockPincel.canAttack)
         {
             attack = playerInput.actions["Attack"].WasPerformedThisFrame();
         }
