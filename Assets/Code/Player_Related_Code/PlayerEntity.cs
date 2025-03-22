@@ -13,25 +13,27 @@ public class PlayerEntity : Entity
     public int MaxItems = 1;
     public int MaxPaint = 3;
 
-    public string[] EquippedItems = new string[3]; //Por Revisar
+    public string[] EquippedItems = new string[3]; //Por Revisar. No sé como podemos acceder a ítems desde acá.
     public PlayerInventory Inventory;
 
     public char CurrentColor = 'n';
     public int Money;
 
-    private int CPaint = 3;
-    private int MPaint = 3;
-    private int YPaint = 3;
+    public int CPaint = 3;
+    public int MPaint = 3;
+    public int YPaint = 3;
 
 
     public override void Attack()
     {
         //Colocar aquí las animaciones de Ataque. PlayerAttack.cs ya tiene la lógica.
+        Debug.Log("YOU ATTACK");
     }
 
     public override void Die()
     {
         //Mandar a la pantalla del inicio
+        Debug.Log("YOU DIED");
     }
 
     public void Fall()
@@ -41,7 +43,14 @@ public class PlayerEntity : Entity
 
     public override void TakeDamage(int Damage, char color)
     {
-        throw new System.NotImplementedException();
+        // Checar si el jugador tiene equipado algún item de reducción de daño, deducir la protección.
+        ///if (Equipped Items
+        HP -= Damage;
+        if (HP < 0)
+        {
+            HP = 0;
+            Die();
+        }
     }
 
     // Start is called before the first frame update

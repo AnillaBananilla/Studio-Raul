@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public float pintureAmount = 100f;
     public Image pintureBar;
 
+    public PlayerEntity Drew;
+
     public bool isGameActive = false; // Default: false
 
     public Transform RespawnPoint;
@@ -177,5 +179,20 @@ public class GameManager : MonoBehaviour
     {
         pintureAmount += pinture;
         pintureBar.fillAmount = pintureAmount / 100F;
+    }
+
+    public void LoadData()
+    {
+        PlayerData LoadedData = SaveManager.LoadPlayerData();
+        Drew.transform.position = new Vector2(LoadedData.position[0], LoadedData.position[1]);
+    }
+
+    public void SaveData()
+    {
+        Drew.HP = Drew.MaxHP;
+        Drew.MPaint = Drew.MaxPaint;
+        Drew.CPaint = Drew.MaxPaint;
+        Drew.YPaint = Drew.MaxPaint;
+        SaveManager.SavePlayerData(Drew);
     }
 }
