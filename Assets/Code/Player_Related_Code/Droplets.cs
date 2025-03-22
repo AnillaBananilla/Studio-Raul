@@ -25,7 +25,7 @@ public class Droplets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.up * Time.deltaTime * 25f;
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
