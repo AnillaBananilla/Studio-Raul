@@ -18,6 +18,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
     public Vector2 shootDirection;
+    public GameObject spawnPrefab;
 
 
     void Start()
@@ -35,10 +36,17 @@ public class PlayerAttack : MonoBehaviour
             {
                 animator.SetTrigger("Attack_Trigger");
                 Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
+
                 for (int counter = 0; counter < enemies.Length; counter++)
                 {
                     enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
                     enemies[counter].GetComponent<Healt>().Damage(1);
+
+                    // Obtener la posición del enemigo
+                    Vector3 enemyPosition = enemies[counter].transform.position;
+
+                    // Instanciar un objeto en esa posición
+                    Instantiate(spawnPrefab, enemyPosition, Quaternion.identity);
                 }
             }
 
