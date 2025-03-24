@@ -28,66 +28,55 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.isGameActive == true)
+        if (gameManager.isGameActive == false)
         {
 
-        if (inputHandler.attack)
-        {
-            animator.SetTrigger("Attack_Trigger");
-            Collider2D[] enemies =  Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
-            for (int counter = 0; counter < enemies.Length; counter++)
+            if (inputHandler.attack)
             {
-                enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
-                enemies[counter].GetComponent<Healt>().Damage(1);
+                animator.SetTrigger("Attack_Trigger");
+                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
+                for (int counter = 0; counter < enemies.Length; counter++)
+                {
+                    enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
+                    enemies[counter].GetComponent<Healt>().Damage(1);
+                }
             }
-        }
-            /*
+
 
             //esto no debe estar, está obsoleto, debe ser como 
             // el "inputHandler.attack" del ataque de arriba
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (inputHandler.attackPaint)
             {
-            animator.SetTrigger("Attack_Trigger");
-            // GameObject newBullet = GameObject.Instantiate(bulletPrefab);
-            //newBullet.transform.position = Spawnpoint.position;
+                animator.SetTrigger("Attack_Trigger");
 
-            Droplets newBullet = null;
-            PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects);
-            // Determinar la direcci�n de disparo
-            ///Vector2 shootDirection = controller.IsFacingRight() ? Vector2.right : Vector2.left;
+                Droplets newBullet = null;
+                PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects);
 
-            // Agregar una fuerza en Y, por ejemplo, hacia arriba
-            float verticalForce = 0.2f; // Ajusta este valor seg�n necesites
-            ///shootDirection += Vector2.up * verticalForce;
-
-            // Normalizar la direcci�n si es necesario
-            ///shootDirection.Normalize();
-
-                    // Aplicar la fuerza al proyectil
-                    newBullet.GetComponent<Rigidbody2D>().AddForce(shootDirection * 2000.0f);
-                    gameManager.usePinture(20);
-                }
-                else
+                if (newBullet != null)
                 {
-                    animator.SetTrigger("Attack_Trigger");
-                    Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
-                    for (int counter = 0; counter < enemies.Length; counter++)
+                    Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
+                    if (rb != null)
                     {
-                        enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
-                        enemies[counter].GetComponent<Healt>().Damage(1);
+                        // Detectar dirección del personaje
+                        float direction = transform.localScale.x > 0 ? 1f : -1f;
+
+                        // Aplicar fuerza en la dirección correcta
+                        Vector2 forceDirection = new Vector2(1f * direction, 0.5f) * 20f;
+                        rb.AddForce(forceDirection, ForceMode2D.Impulse);
                     }
-                }*/
-            }
-            else
-            {
-                return;
+                }
             }
         }
+        else
+        {
+            return;
+        }
+        }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(attackCheck.position, attackRadius);
-    }
+        private void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.yellow;
+            Gizmos.DrawWireSphere(attackCheck.position, attackRadius);
+        }
 
 }
