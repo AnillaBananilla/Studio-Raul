@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Healt : MonoBehaviour
 {
-    private int currentHealt;
+    public int currentHealt;
     public int maxHealt;
 
     public GameObject coinPrefab;
@@ -19,7 +19,7 @@ public class Healt : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     public void Damage(int damage)
