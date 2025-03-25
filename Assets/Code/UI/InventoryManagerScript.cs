@@ -262,6 +262,8 @@ public class InventoryManagerScripts : MonoBehaviour
         {
             Debug.Log("No Item Selected, can't do anything");
         }
+
+        
     }
 }
 }
