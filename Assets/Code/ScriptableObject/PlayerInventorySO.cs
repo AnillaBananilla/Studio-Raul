@@ -11,5 +11,7 @@ public class PlayerInventory : ScriptableObject
     {
         public string name;
         public int quantity;
+        public bool isConsumable; // Si es `false`, será equipable
+        public bool isEquipped;   // Solo para equipables
     }
 }

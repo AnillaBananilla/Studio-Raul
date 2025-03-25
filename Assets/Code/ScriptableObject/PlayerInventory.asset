@@ -15,17 +15,37 @@ MonoBehaviour:
   items:
   - name: NoItem
     quantity: 0
+    isConsumable: 0
+    isEquipped: 0
   - name: Item1
-    quantity: 33
+    quantity: 34
+    isConsumable: 0
+    isEquipped: 0
   - name: Item2
-    quantity: 33
+    quantity: 2
+    isConsumable: 0
+    isEquipped: 0
   - name: Item3
-    quantity: 33
+    quantity: 1
+    isConsumable: 0
+    isEquipped: 0
   - name: Item4
-    quantity: 33
+    quantity: 2
+    isConsumable: 0
+    isEquipped: 0
   - name: Item5
-    quantity: 33
+    quantity: 2
+    isConsumable: 0
+    isEquipped: 0
   - name: Item6
-    quantity: 3
+    quantity: 4
+    isConsumable: 1
+    isEquipped: 1
   - name: Item7
     quantity: 4
+    isConsumable: 1
+    isEquipped: 0
+  - name: Item8
+    quantity: 4
+    isConsumable: 1
+    isEquipped: 0
