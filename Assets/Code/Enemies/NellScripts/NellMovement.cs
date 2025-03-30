@@ -33,6 +33,7 @@ public class NellMovement : MonoBehaviour
 
     private Healt enemyHealth;
     private int previousHealth;
+    private NellAttack attack;
 
 
     void Start()
@@ -42,6 +43,7 @@ public class NellMovement : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
         enemyHealth = GetComponent<Healt>();
+        attack = GetComponent<NellAttack>();
         previousHealth = enemyHealth.currentHealt;
     }
 
@@ -50,6 +52,10 @@ public class NellMovement : MonoBehaviour
     {
         CheckForTarget();
         Move();
+        if(target != null){
+            //aquí agrego que dispare el Nell cuando el jugador esté en el rango
+            attack.Shoot();
+        }
         if(previousHealth != enemyHealth.currentHealt){
             StartCoroutine(stunTime());
             previousHealth = enemyHealth.currentHealt;
@@ -59,7 +65,7 @@ public class NellMovement : MonoBehaviour
     private void Move()
     {
         if (target != null)
-        {
+        {   
             
             if (Vector2.Distance(transform.position, target.position) < 0.2f)
             {
@@ -80,8 +86,6 @@ public class NellMovement : MonoBehaviour
             }
             return;
         }
-
-
 
         if (pointIndex <= movePoints.Length - 1)
         {
