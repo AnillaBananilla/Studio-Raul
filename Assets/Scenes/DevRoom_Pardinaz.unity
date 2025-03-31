@@ -1038,7 +1038,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
   inventoryManager: {fileID: 1696164154}
+  itemID: 
   itemName: Item5
+  icon: {fileID: 0}
+  isConsumable: 0
+  initialQuantity: 1
+  attackModifier: 0
+  defenseModifier: 0
+  healthModifier: 0
 --- !u!114 &136223060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3078,7 +3085,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
   inventoryManager: {fileID: 1696164154}
+  itemID: 
   itemName: Item6
+  icon: {fileID: 0}
+  isConsumable: 0
+  initialQuantity: 1
+  attackModifier: 0
+  defenseModifier: 0
+  healthModifier: 0
 --- !u!114 &454580280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4078,7 +4092,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
   inventoryManager: {fileID: 1696164154}
+  itemID: 
   itemName: Item4
+  icon: {fileID: 0}
+  isConsumable: 0
+  initialQuantity: 1
+  attackModifier: 0
+  defenseModifier: 0
+  healthModifier: 0
 --- !u!114 &562657222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4901,7 +4922,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
   inventoryManager: {fileID: 1696164154}
+  itemID: 
   itemName: Item1
+  icon: {fileID: 0}
+  isConsumable: 0
+  initialQuantity: 1
+  attackModifier: 0
+  defenseModifier: 0
+  healthModifier: 0
 --- !u!114 &661111734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5584,7 +5612,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
   inventoryManager: {fileID: 1696164154}
+  itemID: 
   itemName: Item2
+  icon: {fileID: 0}
+  isConsumable: 0
+  initialQuantity: 1
+  attackModifier: 0
+  defenseModifier: 0
+  healthModifier: 0
 --- !u!114 &735414719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8093,7 +8128,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
   inventoryManager: {fileID: 1696164154}
+  itemID: 
   itemName: Item3
+  icon: {fileID: 0}
+  isConsumable: 0
+  initialQuantity: 1
+  attackModifier: 0
+  defenseModifier: 0
+  healthModifier: 0
 --- !u!114 &1167943936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11289,6 +11331,7 @@ MonoBehaviour:
   deleteButton: {fileID: 545517115}
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
   inputHandler: {fileID: 940859883}
+  isInventoryOpen: 0
 --- !u!4 &1696164155
 Transform:
   m_ObjectHideFlags: 0
@@ -12187,7 +12230,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
   inventoryManager: {fileID: 1696164154}
+  itemID: 
   itemName: Item7
+  icon: {fileID: 0}
+  isConsumable: 0
+  initialQuantity: 1
+  attackModifier: 0
+  defenseModifier: 0
+  healthModifier: 0
 --- !u!114 &1833103854
 MonoBehaviour:
   m_ObjectHideFlags: 0

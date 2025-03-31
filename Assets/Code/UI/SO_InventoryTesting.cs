@@ -3,21 +3,27 @@ using UnityEngine.UI;
 
 public class SO_InventoryTesting : MonoBehaviour
 {
-    public PlayerInventory playerInventory; // Referencia al ScriptableObject
-    public InventoryManagerScripts inventoryManager; // Referencia al InventoryManagerScripts
-    public string itemName; // Nombre del ítem al que quieres sumar +1
+    public PlayerInventory playerInventory;
+    public InventoryManagerScripts inventoryManager;
+    
+    [Header("Item to Add")]
+    public string itemID;
+    public string itemName;
+    public Sprite icon;
+    public bool isConsumable;
+    public int initialQuantity = 1;
+    public int attackModifier;
+    public int defenseModifier;
+    public int healthModifier;
 
     private Button button;
 
     void Start()
     {
-        // Obtén el componente Button
         button = GetComponent<Button>();
-
-        // Asigna la función al evento onClick del botón
         if (button != null)
         {
-            button.onClick.AddListener(AddItem);
+            button.onClick.AddListener(AddTestItem);
         }
         else
         {
@@ -25,35 +31,37 @@ public class SO_InventoryTesting : MonoBehaviour
         }
     }
 
-    private void AddItem()
+    private void AddTestItem()
     {
-        if (playerInventory == null)
+        if (playerInventory == null || inventoryManager == null)
         {
-            Debug.LogError("No se ha asignado un ScriptableObject de inventario.");
+            Debug.LogError("Faltan referencias al inventario o manager");
             return;
         }
 
-        if (inventoryManager == null)
+        PlayerInventory.InventoryItem newItem = new PlayerInventory.InventoryItem
         {
-            Debug.LogError("No se ha asignado un InventoryManagerScripts.");
-            return;
-        }
+            itemID = this.itemID,
+            itemName = this.itemName,
+            quantity = this.initialQuantity,
+            isConsumable = this.isConsumable,
+            icon = this.icon,
+            attackModifier = this.attackModifier,
+            defenseModifier = this.defenseModifier,
+            healthModifier = this.healthModifier
+        };
 
-        // Busca el ítem en el inventario por su nombre
-        PlayerInventory.InventoryItem item = playerInventory.items.Find(i => i.name == itemName);
-
-        if (item != null)
+        if (playerInventory.AddItem(newItem))
         {
-            // Suma +1 a la cantidad del ítem en el ScriptableObject
-            item.quantity++;
-            Debug.Log($"Se ha sumado +1 a {itemName}. Nueva cantidad: {item.quantity}");
-
-            // Actualiza la UI del inventario
-            inventoryManager.UpdateInventoryUI();
+            Debug.Log($"Item {itemName} aÃ±adido al inventario");
+            if (inventoryManager.isInventoryOpen)
+            {
+                inventoryManager.InitializeInventoryUI();
+            }
         }
         else
         {
-            Debug.LogWarning($"No se encontró el ítem con nombre {itemName} en el inventario.");
+            Debug.LogWarning("No se pudo aÃ±adir el item. Inventario lleno.");
         }
     }
 }

@@ -12,40 +12,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c53f1ad5834bd4dbc76a3ea9d05045, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
-  items:
-  - name: NoItem
+  mainItems:
+  - itemID: NoItem
+    itemName: NoItem
     quantity: 0
     isConsumable: 0
-    isEquipped: 0
-  - name: Item1
-    quantity: 34
-    isConsumable: 0
-    isEquipped: 0
-  - name: Item2
-    quantity: 2
-    isConsumable: 0
-    isEquipped: 0
-  - name: Item3
+    icon: {fileID: 21300000, guid: d9326d5e097ffb146ab1257473eb424d, type: 3}
+    attackModifier: 0
+    defenseModifier: 0
+    healthModifier: 0
+  - itemID: Item1
+    itemName: Item1
     quantity: 1
     isConsumable: 0
-    isEquipped: 0
-  - name: Item4
-    quantity: 2
+    icon: {fileID: 21300000, guid: d9326d5e097ffb146ab1257473eb424d, type: 3}
+    attackModifier: 0
+    defenseModifier: 0
+    healthModifier: 0
+  - itemID: Item2
+    itemName: Item2
+    quantity: 1
     isConsumable: 0
-    isEquipped: 0
-  - name: Item5
-    quantity: 2
+    icon: {fileID: 21300000, guid: d9326d5e097ffb146ab1257473eb424d, type: 3}
+    attackModifier: 0
+    defenseModifier: 0
+    healthModifier: 0
+  - itemID: 
+    itemName: 
+    quantity: 12
     isConsumable: 0
-    isEquipped: 0
-  - name: Item6
-    quantity: 4
-    isConsumable: 1
-    isEquipped: 1
-  - name: Item7
-    quantity: 4
-    isConsumable: 1
-    isEquipped: 0
-  - name: Item8
-    quantity: 4
-    isConsumable: 1
-    isEquipped: 0
+    icon: {fileID: 0}
+    attackModifier: 0
+    defenseModifier: 0
+    healthModifier: 0
+  - itemID: 
+    itemName: 
+    quantity: 0
+    isConsumable: 0
+    icon: {fileID: 0}
+    attackModifier: 0
+    defenseModifier: 0
+    healthModifier: 0
+  - itemID: 
+    itemName: 
+    quantity: 0
+    isConsumable: 0
+    icon: {fileID: 0}
+    attackModifier: 0
+    defenseModifier: 0
+    healthModifier: 0
+  - itemID: 
+    itemName: 
+    quantity: 0
+    isConsumable: 0
+    icon: {fileID: 0}
+    attackModifier: 0
+    defenseModifier: 0
+    healthModifier: 0
+  - itemID: 
+    itemName: 
+    quantity: 0
+    isConsumable: 0
+    icon: {fileID: 0}
+    attackModifier: 0
+    defenseModifier: 0
+    healthModifier: 0
+  equippedItems: []
+  equippedConsumable:
+    itemID: 
+    itemName: 
+    quantity: 0
+    isConsumable: 0
+    icon: {fileID: 0}
+    attackModifier: 0
+    defenseModifier: 0
+    healthModifier: 0
