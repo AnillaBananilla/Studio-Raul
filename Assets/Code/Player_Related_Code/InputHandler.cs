@@ -17,6 +17,7 @@ public class InputHandler : MonoBehaviour
 	[Header("Sobre ataque")]
 	public bool attack;
     public bool attackPaint;
+    public bool changeColor;
     public UnlockPincel unlockPincel;
     public PlayerSkills playerSkills;
 
@@ -32,6 +33,7 @@ public class InputHandler : MonoBehaviour
         {
             attack = playerInput.actions["Attack"].WasPerformedThisFrame();
             attackPaint = playerInput.actions["AttackPaint"].WasPerformedThisFrame();
+            changeColor = playerInput.actions["ChangeColor"].WasPerformedThisFrame();
         }
         
 
