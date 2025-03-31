@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEngine.EventSystems.EventTrigger;
 
 public class PlayerEntity : Entity
@@ -22,6 +23,12 @@ public class PlayerEntity : Entity
     public int CPaint = 3;
     public int MPaint = 3;
     public int YPaint = 3;
+
+    public int GetScene()
+    {
+        //Debug.Log(SceneManager.GetActiveScene().buildIndex);
+        return SceneManager.GetActiveScene().buildIndex;
+    }
 
 
     public override void Attack()

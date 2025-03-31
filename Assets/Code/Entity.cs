@@ -9,10 +9,18 @@ public abstract class Entity : MonoBehaviour
     public bool IsImmune = false;
 
     public abstract void Attack();
-    public abstract void TakeDamage(int Damage, char color);
+    public abstract void TakeDamage(int Damage, char color); // Usually sets IsImmune to true
 
     public abstract void Die();
 
+    protected IEnumerator Immunity(int iSeconds) //Sets IsImmune back to false.
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(iSeconds);
+            IsImmune = false;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()

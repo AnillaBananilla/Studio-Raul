@@ -28,17 +28,21 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.isGameActive == false)
+        if (gameManager.isGameActive)
         {
 
             if (inputHandler.attack)
             {
                 animator.SetTrigger("Attack_Trigger");
+
+
                 Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
                 for (int counter = 0; counter < enemies.Length; counter++)
                 {
-                    enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
-                    enemies[counter].GetComponent<Healt>().Damage(1);
+                    enemies[counter].GetComponent<EnemyEntity>().TakeDamage(5, 'r');
+                    //enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
+                    //enemies[counter].GetComponent<Healt>().Damage(1); //OBSOLETE
+
                 }
             }
 

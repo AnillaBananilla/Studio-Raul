@@ -8,7 +8,7 @@ public class BallAttack : MonoBehaviour
     public float puddleDuration = 5f; // Tiempo que dura el charco
     public float puddleOffsetY = -5f; // Valor para bajar el charco en Y
     private SpriteRenderer spriteRenderer;
-    private Player playerReference; // Referencia al script Player
+    private PlayerOBSOLETE playerReference; // Referencia al script Player
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class BallAttack : MonoBehaviour
 
         if (playerObject != null)
         {
-            playerReference = playerObject.GetComponent<Player>();
+            playerReference = playerObject.GetComponent<PlayerOBSOLETE>();
         }
         else
         {

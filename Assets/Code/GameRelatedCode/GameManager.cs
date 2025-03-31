@@ -180,6 +180,11 @@ public class GameManager : MonoBehaviour
         pintureAmount += pinture;
         pintureBar.fillAmount = pintureAmount / 100F;
     }
+    
+    public void LoadScene()
+    {
+        SaveManager.OpenSavedScene();
+    }
 
     public void LoadData()
     {

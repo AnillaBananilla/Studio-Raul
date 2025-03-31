@@ -1,6 +1,8 @@
 using UnityEngine;
 using System.IO;
+using UnityEngine.SceneManagement;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections;
 
 public static class SaveManager
 {
@@ -18,6 +20,7 @@ public static class SaveManager
 
     public static PlayerData LoadPlayerData()
     {
+        
         string dataPath = Application.persistentDataPath + "/player.save";
 
         if (File.Exists(dataPath))
@@ -33,6 +36,24 @@ public static class SaveManager
             Debug.LogError("No se encontró el archivo de guardado");
             return null;
         }
+        
     }
+
+    public static void OpenSavedScene()
+    {
+        SceneManager.LoadScene(LoadPlayerData().SceneIndex);
+        Countdown();
+        GameManager.instance.LoadData();
+    }
+
+    private static IEnumerator Countdown()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+            
+        }
+    }
+
 
 }
