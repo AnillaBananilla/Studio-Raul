@@ -24,6 +24,8 @@ public class PlayerAttack : MonoBehaviour
     private ColorState currentColor = ColorState.Azul; // Color inicial
     public Image imageToChange; // Arrástralo desde el Inspector
     int valueToPrint = 0;
+    public Animator[] animators; // Array de Animators de los sprites
+    private int currentIndex = 0; // Índice del sprite actual
 
 
     void Start()
@@ -118,31 +120,49 @@ public class PlayerAttack : MonoBehaviour
         }
     private void ChangeColor()
     {
-        // Ciclar el color entre Azul → Amarillo → Rojo → Azul...
+       
         currentColor = (ColorState)(((int)currentColor + 1) % 3);
-        
+        PlayNextAnimation();
         switch (currentColor)
         {
             case ColorState.Azul:
                 valueToPrint = 10;
                 Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.blue;
+                imageToChange.color = Color.cyan;
                 break;
             case ColorState.Amarillo:
                 valueToPrint = 20;
                 Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.yellow;
+                imageToChange.color = Color.magenta;
                 break;
             case ColorState.Rojo:
                 valueToPrint = 30;
                 Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.red;
+                imageToChange.color = Color.yellow;
                 break;
         }
     }
     public string GetCurrentColor()
     {
         return currentColor.ToString();
+    }
+    void PlayNextAnimation()
+    {
+        // Obtener la gota anterior antes de cambiar el índice
+        int previousIndex = currentIndex;
+
+        // Avanzar al siguiente sprite en la secuencia
+        currentIndex = (currentIndex + 1) % animators.Length;
+
+        // Asegurar que los triggers anteriores no interfieran
+        animators[currentIndex].ResetTrigger("decrecerGota");
+        animators[previousIndex].ResetTrigger("crecerGota");
+
+        // Activar la animación de crecimiento de la nueva gota
+        animators[currentIndex].SetTrigger("crecerGota");
+
+        // Activar la animación de reducción de la gota anterior
+        animators[previousIndex].SetTrigger("decrecerGota");
     }
 
 }

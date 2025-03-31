@@ -5879,7 +5879,7 @@ MonoBehaviour:
   healtAmount: 100
   score: 0
   key: 0
-  pintureAmount: 50
+  pintureAmount: 100
   pintureBar: {fileID: 1281210340}
   isGameActive: 0
   RespawnPoint: {fileID: 0}
@@ -10888,11 +10888,27 @@ PrefabInstance:
     - target: {fileID: 8788348150728157412, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 3233382000285564904, guid: c4835c539a3fc424eb96027530580a0a, type: 3}
+      objectReference: {fileID: 4932257948283262647, guid: ee563cce76786da45a8b8c8cd3f9c098, type: 3}
     - target: {fileID: 8788348150728157412, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
       propertyPath: imageToChange
       value: 
       objectReference: {fileID: 1281210340}
+    - target: {fileID: 8788348150728157412, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: animators.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8788348150728157412, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: animators.Array.data[0]
+      value: 
+      objectReference: {fileID: 2025970463}
+    - target: {fileID: 8788348150728157412, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: animators.Array.data[1]
+      value: 
+      objectReference: {fileID: 2137883376}
+    - target: {fileID: 8788348150728157412, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: animators.Array.data[2]
+      value: 
+      objectReference: {fileID: 1302078673}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11237,7 +11253,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.29, y: 0.21}
+  m_Size: {x: 0.38, y: 0.24}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -11311,7 +11327,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 0.38, y: 0.24}
-    newSize: {x: 0.29, y: 0.21}
+    newSize: {x: 0.38, y: 0.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -13796,8 +13812,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1206747014, guid: 7866ed154744b354fa5b889d99fc73c5, type: 3}
+  m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
@@ -14217,6 +14233,7 @@ GameObject:
   - component: {fileID: 1302078670}
   - component: {fileID: 1302078672}
   - component: {fileID: 1302078671}
+  - component: {fileID: 1302078673}
   m_Layer: 5
   m_Name: gota3
   m_TagString: Untagged
@@ -14281,6 +14298,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302078669}
   m_CullTransparentMesh: 1
+--- !u!95 &1302078673
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302078669}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ab960a04ebf3ebd4a8a40dd3f48fc285, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1306834452
 GameObject:
   m_ObjectHideFlags: 0
@@ -19854,8 +19892,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 7.696}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1097.2109, y: -156.143}
-  m_SizeDelta: {x: 2279.764, y: 145.283}
+  m_AnchoredPosition: {x: -1097.2109, y: -179.129}
+  m_SizeDelta: {x: 2279.764, y: 176.279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1822043909
 MonoBehaviour:
@@ -21480,6 +21518,7 @@ GameObject:
   - component: {fileID: 2025970460}
   - component: {fileID: 2025970462}
   - component: {fileID: 2025970461}
+  - component: {fileID: 2025970463}
   m_Layer: 5
   m_Name: gota1
   m_TagString: Untagged
@@ -21544,6 +21583,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2025970459}
   m_CullTransparentMesh: 1
+--- !u!95 &2025970463
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025970459}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 103af03d74fdd9f4eb10b2ad56b84300, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2029293323
 GameObject:
   m_ObjectHideFlags: 0
@@ -22600,6 +22660,7 @@ GameObject:
   - component: {fileID: 2137883373}
   - component: {fileID: 2137883375}
   - component: {fileID: 2137883374}
+  - component: {fileID: 2137883376}
   m_Layer: 5
   m_Name: gota2
   m_TagString: Untagged
@@ -22664,6 +22725,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2137883372}
   m_CullTransparentMesh: 1
+--- !u!95 &2137883376
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137883372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b46bde23c64c184d90827e62a468e1e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2145910638
 GameObject:
   m_ObjectHideFlags: 0

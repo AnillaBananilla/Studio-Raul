@@ -175,7 +175,6 @@ public class GameManager : MonoBehaviour
     }
     public void usePinture(float pinture)
     {
-        Debug.Log("siiiiiiiiii");
         pintureAmount -= pinture;
         pintureBar.fillAmount = pintureAmount / 100F;
     }

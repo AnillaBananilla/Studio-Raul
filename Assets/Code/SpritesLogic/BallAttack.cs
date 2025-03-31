@@ -8,7 +8,7 @@ public class BallAttack : MonoBehaviour
     public float puddleDuration = 5f; // Tiempo que dura el charco
     public float puddleOffsetY = -5f; // Valor para bajar el charco en Y
     private SpriteRenderer spriteRenderer;
-    private Player playerReference; // Referencia al script Player
+    private PlayerAttack playerReference; // Referencia al script Player
 
     void Start()
     {
@@ -18,7 +18,7 @@ public class BallAttack : MonoBehaviour
 
         if (playerObject != null)
         {
-            playerReference = playerObject.GetComponent<Player>();
+            playerReference = playerObject.GetComponent<PlayerAttack>();
         }
         else
         {
@@ -35,13 +35,13 @@ public class BallAttack : MonoBehaviour
         switch (playerReference.GetCurrentColor())
         {
             case "Azul":
-                spriteRenderer.color = Color.blue;
+                spriteRenderer.color = Color.cyan;
                 break;
             case "Amarillo":
-                spriteRenderer.color = Color.yellow;
+                spriteRenderer.color = Color.magenta;
                 break;
             case "Rojo":
-                spriteRenderer.color = Color.red;
+                spriteRenderer.color = Color.yellow;
                 break;
         }
     }
