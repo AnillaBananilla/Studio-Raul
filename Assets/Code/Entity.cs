@@ -8,8 +8,27 @@ public abstract class Entity : MonoBehaviour
     public int ATT;
     public bool IsImmune = false;
 
+    public SpriteRenderer image;
+
     public abstract void Attack();
-    public abstract void TakeDamage(int Damage, char color); // Usually sets IsImmune to true
+    public void TakeDamage(int Damage, char color)
+    {
+
+        if (!IsImmune)
+        {
+            HP -= Damage;
+            IsImmune = true;
+
+            if (HP <= 0)
+            {
+                Die();
+            }
+            this.GetComponent<SpriteRenderer>().color = Color.red;
+
+            StartCoroutine(Immunity(2));
+        }
+    }
+    
 
     public abstract void Die();
 
@@ -19,6 +38,7 @@ public abstract class Entity : MonoBehaviour
         {
             yield return new WaitForSeconds(iSeconds);
             IsImmune = false;
+
         }
     }
 
