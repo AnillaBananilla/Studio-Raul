@@ -36,7 +36,7 @@ public class InventoryManagerScripts : MonoBehaviour
     private void Start()
     {
         ConfigureGrids();
-        inventoryUI.SetActive(false);
+        inventoryUI.SetActive(isInventoryOpen);
         
         equipButton.onClick.AddListener(ToggleEquipItem);
         deleteButton.onClick.AddListener(DeleteItem);
@@ -64,12 +64,17 @@ public class InventoryManagerScripts : MonoBehaviour
 
     private void Update()
     {
-        if (!isInventoryOpen) return;
 
         if (consumableIndex >= 0 && inputHandler.useItem)
         {
             UseConsumableItem();
         }
+
+        if (inputHandler.pressMenu) 
+    {
+        ToggleInventory();
+        Debug.Log("Abrir menu");
+    }
     }
 
     private void InitializeInventory()
@@ -107,17 +112,18 @@ public class InventoryManagerScripts : MonoBehaviour
     }
 
     private void SelectItem(int index)
+{
+    if (index >= 0 && index < playerInventory.items.Count && playerInventory.items[index].quantity > 0)
     {
-        if (index >= 0 && index < playerInventory.items.Count && playerInventory.items[index].quantity > 0)
-        {
-            selectedIndex = index;
-            MoveSelectionIndicator(selectedIndex);
-            
-            var item = playerInventory.items[selectedIndex];
-            equipButton.interactable = true;
-            deleteButton.interactable = true;
-        }
+        selectedIndex = index;
+        MoveSelectionIndicator(selectedIndex);
+        
+        var item = playerInventory.items[selectedIndex];
+        equipButton.interactable = true;
+        deleteButton.interactable = true;
+        equipButton.GetComponentInChildren<TextMeshProUGUI>().text = item.isEquipped ? "Desequipar" : "Equipar";
     }
+}
 
     public void ToggleInventory()
     {
@@ -137,48 +143,34 @@ public class InventoryManagerScripts : MonoBehaviour
     }
 
     public void ToggleEquipItem()
+{
+    if (selectedIndex < 0 || selectedIndex >= playerInventory.items.Count)
+        return;
+
+    var item = playerInventory.items[selectedIndex];
+
+    if (item.isEquipped)
     {
-        if (selectedIndex < 0 || selectedIndex >= playerInventory.items.Count)
-            return;
-
-        var item = playerInventory.items[selectedIndex];
-
-        if (item.isConsumable)
-        {
-            // Manejar consumible
-            if (consumableIndex >= 0)
-            {
-                playerInventory.items[consumableIndex].isEquipped = false;
-            }
-            
-            consumableIndex = selectedIndex;
-            item.isEquipped = true;
-            Debug.Log($"Consumible equipado: {item.name}");
-        }
-        else
-        {
-            // Manejar equipables (con límite de 4)
-            if (item.isEquipped)
-            {
-                item.isEquipped = false;
-                equippedCount--;
-                Debug.Log($"Desequipado: {item.name}");
-            }
-            else if (equippedCount < 4) // LÍMITE DE 4 EQUIPABLES
-            {
-                item.isEquipped = true;
-                equippedCount++;
-                Debug.Log($"Equipado: {item.name}");
-            }
-            else
-            {
-                Debug.Log("No puedes equipar más de 4 items");
-                return;
-            }
-        }
-
-        UpdateInventoryUI();
+        // Si está equipado, lo desequipamos
+        item.isEquipped = false;
+        equippedCount--;
+        Debug.Log($"Unequipped: {item.name}");
     }
+    else if (equippedCount < 4)
+    {
+        // Si no está equipado, lo equipamos
+        item.isEquipped = true;
+        equippedCount++;
+        Debug.Log($"Equipped: {item.name}");
+    }
+    else
+    {
+        Debug.Log("Cannot equip more than 4 items.");
+        return;
+    }
+
+    UpdateInventoryUI();
+}
 
     private void UseConsumableItem()
     {
@@ -230,44 +222,68 @@ public class InventoryManagerScripts : MonoBehaviour
     }
 
     public void UpdateInventoryUI()
+{
+    ClearGrid(mainInventoryGrid.transform);
+    ClearGrid(equippedItemsGrid.transform);
+    ClearGrid(consumableSlotGrid.transform);
+
+    for (int i = 0; i < playerInventory.items.Count; i++)
     {
-        ClearGrid(equippedItemsGrid.transform);
-        ClearGrid(consumableSlotGrid.transform);
+        var item = playerInventory.items[i];
 
-        for (int i = 0; i < playerInventory.items.Count; i++)
+        if (item.isEquipped)
         {
-            var item = playerInventory.items[i];
-            if (i < itemButtons.Count)
-            {
-                var button = itemButtons[i];
-                var buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-                buttonText.text = $"{item.name} x{item.quantity}";
-                button.gameObject.SetActive(item.quantity > 0);
-
-                if (item.isEquipped && item.quantity > 0)
-                {
-                    if (item.isConsumable)
-                    {
-                        CreateItemInSlot(item, consumableSlotGrid.transform);
-                    }
-                    else if (equippedCount <= 4) // Verificación adicional
-                    {
-                        CreateItemInSlot(item, equippedItemsGrid.transform);
-                    }
-                }
-            }
+            // Mostrar en el Grid de Equipados
+            CreateEquippedItemButton(item, i);
         }
-
-        MoveSelectionIndicator(selectedIndex);
+        else
+        {
+            // Mostrar en el Grid Principal
+            CreateItemInMainInventory(item, i);
+        }
     }
+
+    
+
+    MoveSelectionIndicator(selectedIndex);
+}
+
+private void CreateItemInMainInventory(PlayerInventory.InventoryItem item, int index)
+{
+    GameObject newButton = Instantiate(itemButtonPrefab, mainInventoryGrid.transform);
+    Button button = newButton.GetComponent<Button>();
+    TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+
+    buttonText.text = $"{item.name} x{item.quantity}";
+    button.onClick.AddListener(() => SelectItem(index));
+
+    itemButtons.Add(button);
+}
+
+private void CreateEquippedItemButton(PlayerInventory.InventoryItem item, int index)
+{
+    GameObject newButton = Instantiate(itemButtonPrefab, equippedItemsGrid.transform);
+    Button button = newButton.GetComponent<Button>();
+    TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+
+    buttonText.text = item.name;
+    button.onClick.AddListener(() => SelectEquippedItem(index));
+
+    itemButtons.Add(button);
+}
+
 
     private void CreateItemInSlot(PlayerInventory.InventoryItem item, Transform parent)
-    {
-        var itemUI = Instantiate(itemButtonPrefab, parent);
-        var buttonText = itemUI.GetComponentInChildren<TextMeshProUGUI>();
-        buttonText.text = item.isConsumable ? $"{item.name} x{item.quantity}" : item.name;
-        itemUI.GetComponent<Button>().interactable = false;
-    }
+{
+    var itemUI = Instantiate(itemButtonPrefab, parent);
+    var buttonText = itemUI.GetComponentInChildren<TextMeshProUGUI>();
+    buttonText.text = item.isConsumable ? $"{item.name} x{item.quantity}" : item.name;
+
+    Button button = itemUI.GetComponent<Button>();
+    button.interactable = true;
+    int itemIndex = playerInventory.items.IndexOf(item);
+    button.onClick.AddListener(() => SelectEquippedItem(itemIndex));
+}
 
     private void MoveSelectionIndicator(int index)
     {
@@ -281,4 +297,19 @@ public class InventoryManagerScripts : MonoBehaviour
             selectionIndicator.gameObject.SetActive(false);
         }
     }
+
+    private void SelectEquippedItem(int index)
+{
+    selectedIndex = index;
+    MoveSelectionIndicator(selectedIndex);
+
+    equipButton.interactable = true;
+    deleteButton.interactable = true;
+
+    // Cambiar el texto del botón a "Unequip"
+    equipButton.GetComponentInChildren<TextMeshProUGUI>().text = "Unequip";
+}
+
+
+
 }

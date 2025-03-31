@@ -45,6 +45,12 @@ public class PlayerMovementNew : MonoBehaviour
     public float maxFallSpeed = 18f;
     public float fallSpeedMulti = 2f;
 
+    // Agrega esto al inicio de la clase
+[SerializeField] private PlayerStats playerStats;
+
+// Modifica estas líneas en Update():
+
+
     void Update()
     {
             if (!canMove)
@@ -53,7 +59,7 @@ public class PlayerMovementNew : MonoBehaviour
                 return;
             }
 
-            currSpeed = isRunning ? runSpeed : walkSpeed;
+            currSpeed = isRunning ? playerStats.GetTotalRunSpeed() : playerStats.GetTotalMoveSpeed();
             
             GroundCheck();
             RoofCheck();
