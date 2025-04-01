@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 4749155432632805270}
   - component: {fileID: 147979335240988526}
   - component: {fileID: 6761058616186723206}
+  - component: {fileID: 6979550663975489004}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -347,6 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressMenu: 0
   pressEquip: 0
+  useItem: 0
   isNavigatingLeft: 0
   isNavigatingRight: 0
   isSelecting: 0
@@ -520,6 +522,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 41a1534c-6bf3-467b-9e2f-b9e2b38c4bff
+    m_ActionName: Player/UseItem[/Keyboard/q,/XInputControllerWindows/leftShoulder]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -557,6 +563,30 @@ MonoBehaviour:
   baseGravity: 2
   maxFallSpeed: 18
   fallSpeedMulti: 2
+  playerStats: {fileID: 6979550663975489004}
+--- !u!114 &6979550663975489004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2930406216059960602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8a5843b5ee971f4c9e58e670704284d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseMoveSpeed: 10
+  baseRunSpeed: 40
+  baseMaxHealth: 100
+  baseDamage: 10
+  baseDamageReduction: 0
+  moveSpeedModifier: 1
+  runSpeedModifier: 1
+  maxHealthModifier: 0
+  damageModifier: 0
+  damageReductionModifier: 0
+  paintConsumptionChanceModifier: 1
 --- !u!1 &3732127342997179822
 GameObject:
   m_ObjectHideFlags: 0

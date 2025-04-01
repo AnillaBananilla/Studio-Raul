@@ -8,8 +8,9 @@ TagManager:
   - Ground
   - Companion
   - Hazard
+  - Obstacle
   - PlayerProjectile
-  - Platform
+  - Coin
   layers:
   - Default
   - TransparentFX

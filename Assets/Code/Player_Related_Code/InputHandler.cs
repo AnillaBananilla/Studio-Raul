@@ -6,6 +6,8 @@ public class InputHandler : MonoBehaviour
 	[Header("Acciones referentes al inventario")]
 	public bool pressMenu = false;
 	public bool pressEquip = false;
+
+	public bool useItem = false;
 	public bool isNavigatingLeft;
 	public bool isNavigatingRight;
 	public bool isSelecting;
@@ -30,6 +32,7 @@ public class InputHandler : MonoBehaviour
 		//acciones relacionadas al inventario
 		pressMenu = playerInput.actions["OpenMenu"].WasPerformedThisFrame();
    		pressEquip = playerInput.actions["Equip"].WasPerformedThisFrame();
+		useItem = playerInput.actions["UseItem"].WasPerformedThisFrame();
 
 		isNavigatingLeft = playerInput.actions["NavigateLeft"].WasPerformedThisFrame();
     	isNavigatingRight = playerInput.actions["NavigateRight"].WasPerformedThisFrame();

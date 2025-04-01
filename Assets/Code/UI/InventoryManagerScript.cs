@@ -6,262 +6,386 @@ using TMPro;
 
 public class InventoryManagerScripts : MonoBehaviour
 {
+    [Header("UI References")]
     public GameObject inventoryUI;
-    public Transform itemListContainer;
+    public GridLayoutGroup mainInventoryGrid; // Grid 2x4
+    public GridLayoutGroup equippedItemsGrid; // Grid 1x4 (vertical)
+    public GridLayoutGroup consumableSlotGrid; // Grid 1x1
     public GameObject itemButtonPrefab;
-    public TextMeshProUGUI equippedItemText;
     public RectTransform selectionIndicator;
 
-    public int infiniteThreshold = 33; // Variable p�blica para el umbral de infinito
-    public PlayerInventory playerInventory; // Referencia al ScriptableObject del inventario
+    [Header("Grid Settings")]
+    public Vector2 mainCellSize = new Vector2(150, 150);
+    public Vector2 equippedCellSize = new Vector2(120, 120);
+    public Vector2 consumableCellSize = new Vector2(100, 100);
 
+    [Header("Buttons")]
+    public Button equipButton;
+    public Button deleteButton;
+
+    [Header("Inventory Data")]
+    public PlayerInventory playerInventory;
     public InputHandler inputHandler;
 
-    private List<Button> itemButtons = new List<Button>(); // Lista para mantener referencias a los botones
-    private int selectedIndex = 0;
+    private List<Button> itemButtons = new List<Button>();
+    private int selectedIndex = -1;
     private bool isInventoryOpen = false;
-    private string currentlyEquippedItem = "";
+    private int equippedCount = 0;
+    private int consumableIndex = -1;
 
-    public TextMeshProUGUI equippedItemDisplayText;
-
-    void Start()
+    private void Start()
     {
-        inventoryUI.SetActive(false);
-        PopulateInventory();
+        ConfigureGrids();
+        inventoryUI.SetActive(isInventoryOpen);
+        
+        equipButton.onClick.AddListener(ToggleEquipItem);
+        deleteButton.onClick.AddListener(DeleteItem);
+        
+        InitializeInventory();
     }
 
-    void Update()
-{
-    if (inputHandler.pressMenu) 
+    private void ConfigureGrids()
     {
-        ToggleInventory();
+        // Configurar grid principal (2 columnas x 4 filas)
+        mainInventoryGrid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+        mainInventoryGrid.constraintCount = 2;
+        mainInventoryGrid.cellSize = mainCellSize;
+
+        // Configurar grid equipados (1 columna x 4 filas)
+        equippedItemsGrid.constraint = GridLayoutGroup.Constraint.FixedRowCount;
+        equippedItemsGrid.constraintCount = 4;
+        equippedItemsGrid.cellSize = equippedCellSize;
+
+        // Configurar slot de consumible (1x1)
+        consumableSlotGrid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
+        consumableSlotGrid.constraintCount = 1;
+        consumableSlotGrid.cellSize = consumableCellSize;
     }
 
-    if (isInventoryOpen)
+    private void Update()
     {
-        HandleKeyboardNavigation();
-    }
-
-    if (inputHandler.pressEquip && !inventoryUI.activeSelf) 
-    {
-        UseEquippedItem();
-    }
-}
-
-
-    private void ToggleInventory()
-{
-    isInventoryOpen = !isInventoryOpen;
-    inventoryUI.SetActive(isInventoryOpen);
-    Time.timeScale = isInventoryOpen ? 0f : 1f;
-
-    if (isInventoryOpen)
-    {
-        UpdateInventoryUI();
-        MoveSelectionIndicator(selectedIndex);
-    }
-    else
-    {
-        selectionIndicator.gameObject.SetActive(false); // Oculta el indicador cuando se cierra el inventario
-    }
-}
-
-    private void HandleKeyboardNavigation()
-    {
-        if (playerInventory.items.Count == 0)
+        if (consumableIndex >= 0 && inputHandler.useItem)
         {
-            equippedItemText.text = "No item selected";
-            return;
-        }
-            //Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.leftArrowKey.wasPressedThisFrame || 
-        if (inputHandler.isNavigatingLeft)
-        {
-            // Navegacion hacia la izquierda, evitando el Index 0
-            selectedIndex = (selectedIndex - 1 + playerInventory.items.Count) % playerInventory.items.Count;
-            if (selectedIndex == 0) selectedIndex = playerInventory.items.Count - 1; // Evitar Index 0
-        }
-        //Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.rightArrowKey.wasPressedThisFrame || 
-        else if (inputHandler.isNavigatingRight)
-        {
-            // Navegacion hacia la derecha, evitando el Index 0
-            selectedIndex = (selectedIndex + 1) % playerInventory.items.Count;
-            if (selectedIndex == 0) selectedIndex = 1; // Evitar Index 0
+            UseConsumableItem();
         }
 
-        MoveSelectionIndicator(selectedIndex);
-        //Keyboard.current.spaceKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame || 
-        if (inputHandler.isSelecting) 
+        if (inputHandler.pressMenu) 
         {
-            EquipItem(selectedIndex);
-            //ToggleInventory();
+            ToggleInventory();
+            Debug.Log("Abrir menu");
         }
     }
 
-    private void PopulateInventory()
+    private void InitializeInventory()
     {
-        // Limpia los botones existentes
-        foreach (var button in itemButtons)
-        {
-            Destroy(button.gameObject);
-        }
+        ClearGrid(mainInventoryGrid.transform);
+        ClearGrid(equippedItemsGrid.transform);
+        ClearGrid(consumableSlotGrid.transform);
         itemButtons.Clear();
+        equippedCount = 0;
+        consumableIndex = -1;
 
-        // Crea botones para cada �tem en el ScriptableObject
+        // Primero contar los items equipados
+        foreach (var item in playerInventory.items)
+        {
+            if (item.isEquipped)
+            {
+                if (item.isConsumable)
+                {
+                    consumableIndex = playerInventory.items.IndexOf(item);
+                }
+                else
+                {
+                    equippedCount++;
+                }
+            }
+        }
+
         for (int i = 0; i < playerInventory.items.Count; i++)
         {
+            // Saltar el item con nombre "NoItem" en el índice 0
+            if (i == 0 && playerInventory.items[i].name == "NoItem") 
+                continue;
+                
             AddItemButton(playerInventory.items[i], i);
         }
 
         UpdateInventoryUI();
     }
 
+    private void ClearGrid(Transform grid)
+    {
+        foreach (Transform child in grid)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
     private void AddItemButton(PlayerInventory.InventoryItem item, int index)
     {
-        GameObject newButton = Instantiate(itemButtonPrefab, itemListContainer);
+        GameObject newButton = Instantiate(itemButtonPrefab, mainInventoryGrid.transform);
         Button button = newButton.GetComponent<Button>();
         TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
-        /*
-        TextMeshProUGUI quantityText = new GameObject("QuantityText").AddComponent<TextMeshProUGUI>();
-        quantityText.transform.SetParent(newButton.transform);
-        quantityText.rectTransform.anchoredPosition = new Vector2(50, 0);
-        quantityText.fontSize = 20;
-        quantityText.color = Color.white;
 
-        buttonText.text = item.name;
-        quantityText.text = item.quantity > infiniteThreshold ? "" : "x" + item.quantity;
-        */
-        button.onClick.AddListener(() => EquipItem(index));
+        buttonText.text = $"{item.name} x{item.quantity}";
+        button.onClick.AddListener(() => SelectItem(index));
         itemButtons.Add(button);
     }
 
-    public void UpdateInventoryUI()
+    private void SelectItem(int index)
 {
-    for (int i = 0; i < playerInventory.items.Count; i++)
+    // Verificamos que la cantidad sea mayor que 0
+    if (index >= 0 && index < playerInventory.items.Count && playerInventory.items[index].quantity > 0)
     {
-        var item = playerInventory.items[i];
-        var button = itemButtons[i];
-        var buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-        var quantityText = button.transform.Find("QuantityText")?.GetComponent<TextMeshProUGUI>();
-
-        if (item.quantity == 0 && item.name != "No Item")
-        {
-            button.gameObject.SetActive(false); // Desactiva el botón si la cantidad es 0
-
-            // Si el ítem seleccionado se agotó, regresar al índice 0
-            if (selectedIndex == i)
-            {
-                selectedIndex = 0; // Regresar al índice 0
-                MoveSelectionIndicator(selectedIndex); // Mover el indicador de selección
-            }
-        }
-        else
-        {
-            button.gameObject.SetActive(true); // Reactiva el botón si la cantidad es mayor que 0
-            buttonText.text = item.name;
-            if (quantityText != null)
-            {
-                quantityText.text = item.quantity > infiniteThreshold ? "" : "x" + item.quantity;
-            }
-        }
-    }
-
-    // Si no hay ítems disponibles, ocultar el indicador de selección
-    if (playerInventory.items.Count == 0 || selectedIndex >= playerInventory.items.Count)
-    {
-        selectionIndicator.gameObject.SetActive(false);
-        equippedItemText.text = "No item selected";
+        selectedIndex = index;
+        MoveSelectionIndicator(selectedIndex);
+        
+        var item = playerInventory.items[selectedIndex];
+        equipButton.interactable = true;
+        deleteButton.interactable = true;
+        equipButton.GetComponentInChildren<TextMeshProUGUI>().text = item.isEquipped ? "UNEQUIP" : "EQUIP";
     }
 }
 
-    private void EquipItem(int index)
+    public void ToggleInventory()
     {
-    if (index >= 0 && index < playerInventory.items.Count)
-    {
-        var item = playerInventory.items[index];
+        isInventoryOpen = !isInventoryOpen;
+        inventoryUI.SetActive(isInventoryOpen);
+        Time.timeScale = isInventoryOpen ? 0f : 1f;
 
-        // Verificar si el ítem ya está equipado
-        if (currentlyEquippedItem == item.name)
+        if (isInventoryOpen)
         {
-            // Desequipar el ítem
-            currentlyEquippedItem = "";
-            equippedItemText.text = "No item selected";
-            equippedItemDisplayText.text = "NoItem";
-            selectedIndex = 0; // Regresar al Index 0
-            MoveSelectionIndicator(selectedIndex); // Actualizar el indicador de selección
-            Debug.Log("Unequipped item: " + item.name);
+            UpdateInventoryUI();
+            if (selectedIndex >= 0) MoveSelectionIndicator(selectedIndex);
         }
         else
         {
-            // Equipar el nuevo ítem
-            currentlyEquippedItem = item.name;
-            equippedItemText.text = "Equipped: " + item.name;
-            equippedItemDisplayText.text = item.name;
-            selectedIndex = index;
-            MoveSelectionIndicator(selectedIndex);
-            Debug.Log("Equipped item: " + item.name);
+            selectionIndicator.gameObject.SetActive(false);
         }
     }
-    else
-    {
-        equippedItemText.text = "No item selected";
-        equippedItemDisplayText.text = "Noitem";
-    }
-    }
 
-    private void MoveSelectionIndicator(int index)
-{
-    if (index >= 0 && index < itemButtons.Count && itemButtons[index].gameObject.activeSelf)
+    public void ToggleEquipItem()
     {
-        selectionIndicator.gameObject.SetActive(true);
-        selectionIndicator.position = itemButtons[index].transform.position;
-    }
-    else
-    {
-        selectionIndicator.gameObject.SetActive(false); // Oculta el indicador si el índice no es válido o el botón está desactivado
-    }
-}
-
-       private void UseEquippedItem()
-{
-    if (playerInventory.items.Count > 0 && selectedIndex >= 0 && selectedIndex < playerInventory.items.Count)
-    {
-        var equippedItem = playerInventory.items[selectedIndex];
-
-        // Si el Index 0 está seleccionado, mostrar "Sin Item equipado"
-        if (selectedIndex == 0)
-        {
-            Debug.Log("No Equipped item");
-            equippedItemText.text = "No Equipped item";
+        if (selectedIndex < 0 || selectedIndex >= playerInventory.items.Count)
             return;
-        }
 
-        if (equippedItem.quantity > 0 || equippedItem.quantity > infiniteThreshold)
+        var item = playerInventory.items[selectedIndex];
+
+        if (item.isEquipped)
         {
-            Debug.Log("Used: " + equippedItem.name);
-
-            if (equippedItem.quantity <= infiniteThreshold)
+            // Si está equipado, lo desequipamos
+            item.isEquipped = false;
+            if (item.isConsumable)
             {
-                equippedItem.quantity--; // Modifica directamente el ScriptableObject
-
-                if (equippedItem.quantity == 0)
-                {
-                    // Regresar al índice 0 cuando el ítem se agota
-                    selectedIndex = 0;
-                    EquipItem(selectedIndex); // Equipar el ítem en el índice 0
-                    MoveSelectionIndicator(selectedIndex); // Mover el indicador de selección
-                }
+                consumableIndex = -1;
             }
             else
             {
-                Debug.Log("Infinite Item used: " + equippedItem.name);
+                equippedCount--;
             }
-
-            UpdateInventoryUI(); // Actualiza la UI después de usar el ítem
+            Debug.Log($"Unequipped: {item.name}");
         }
-        else if (equippedItem.name == "NoItem")
+        else
         {
-            Debug.Log("No Item Selected, can't do anything");
+            // Verificar límites antes de equipar
+            if (item.isConsumable)
+            {
+                if (consumableIndex >= 0)
+                {
+                    Debug.Log("Ya hay un consumible equipado");
+                    return;
+                }
+                consumableIndex = selectedIndex;
+            }
+            else
+            {
+                if (equippedCount >= 4)
+                {
+                    Debug.Log("No puedes equipar más de 4 items");
+                    return;
+                }
+                equippedCount++;
+            }
+            item.isEquipped = true;
+            Debug.Log($"Equipped: {item.name}");
+        }
+
+        UpdateInventoryUI();
+    }
+
+    private void UseConsumableItem()
+    {
+        if (consumableIndex < 0 || consumableIndex >= playerInventory.items.Count)
+            return;
+
+        var item = playerInventory.items[consumableIndex];
+        
+        if (!item.isConsumable || item.quantity <= 0)
+            return;
+
+        ApplyConsumableEffect(item);
+        item.quantity--;
+
+        if (item.quantity <= 0)
+        {
+            item.isEquipped = false;
+            consumableIndex = -1;
+            Debug.Log("Consumible agotado");
+        }
+
+        UpdateInventoryUI();
+    }
+
+    private void ApplyConsumableEffect(PlayerInventory.InventoryItem item)
+    {
+        Debug.Log($"Efecto aplicado: {item.name}");
+        // Implementar efectos específicos aquí
+    }
+
+    public void DeleteItem()
+{
+    if (selectedIndex < 0 || selectedIndex >= playerInventory.items.Count)
+        return;
+
+    var item = playerInventory.items[selectedIndex];
+
+    if (item.isEquipped)
+    {
+        if (item.isConsumable && consumableIndex == selectedIndex)
+            consumableIndex = -1;
+        else
+            equippedCount--;
+    }
+
+    // En lugar de eliminar el item, establecemos la cantidad a 0
+    item.quantity = item.quantity-1;
+    if(item.quantity == 0){
+item.isEquipped = false; // También lo desequipamos por seguridad
+selectedIndex = -1;
+    selectionIndicator.gameObject.SetActive(false);
+    equipButton.interactable = false;
+    deleteButton.interactable = false;
+    }
+    
+
+    // Actualizamos el inventario
+    UpdateInventoryUI();
+    
+    // Deseleccionamos el item
+    
+}
+
+    public void UpdateInventoryUI()
+{
+    ClearGrid(mainInventoryGrid.transform);
+    ClearGrid(equippedItemsGrid.transform);
+    ClearGrid(consumableSlotGrid.transform);
+    itemButtons.Clear();
+
+    // Mostrar items equipados primero
+    for (int i = 0; i < playerInventory.items.Count; i++)
+    {
+        var item = playerInventory.items[i];
+        
+        // Saltar si es "NoItem" en índice 0 o si cantidad es 0
+        if ((i == 0 && item.name == "NoItem") || item.quantity <= 0)
+            continue;
+
+        if (item.isEquipped)
+        {
+            if (item.isConsumable)
+            {
+                CreateItemInSlot(item, consumableSlotGrid.transform, i);
+            }
+            else
+            {
+                CreateEquippedItemButton(item, i);
+            }
+        }
+    }
+
+    // Mostrar items no equipados
+    for (int i = 0; i < playerInventory.items.Count; i++)
+    {
+        var item = playerInventory.items[i];
+        
+        // Saltar si es "NoItem" en índice 0, si está equipado o si cantidad es 0
+        if ((i == 0 && item.name == "NoItem") || item.isEquipped || item.quantity <= 0)
+            continue;
+
+        CreateItemInMainInventory(item, i);
+    }
+
+    MoveSelectionIndicator(selectedIndex);
+
+    // Desactivar botones si el item seleccionado tiene cantidad 0
+    if (selectedIndex >= 0 && selectedIndex < playerInventory.items.Count)
+    {
+        if (playerInventory.items[selectedIndex].quantity <= 0)
+        {
+            equipButton.interactable = false;
+            deleteButton.interactable = false;
+            selectedIndex = -1;
+            selectionIndicator.gameObject.SetActive(false);
         }
     }
 }
+
+    private void CreateItemInMainInventory(PlayerInventory.InventoryItem item, int index)
+    {
+        GameObject newButton = Instantiate(itemButtonPrefab, mainInventoryGrid.transform);
+        Button button = newButton.GetComponent<Button>();
+        TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+
+        buttonText.text = $"{item.name} x{item.quantity}";
+        button.onClick.AddListener(() => SelectItem(index));
+
+        itemButtons.Add(button);
+    }
+
+    private void CreateEquippedItemButton(PlayerInventory.InventoryItem item, int index)
+    {
+        GameObject newButton = Instantiate(itemButtonPrefab, equippedItemsGrid.transform);
+        Button button = newButton.GetComponent<Button>();
+        TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+
+        buttonText.text = item.name;
+        button.onClick.AddListener(() => SelectEquippedItem(index));
+
+        itemButtons.Add(button);
+    }
+
+    private void CreateItemInSlot(PlayerInventory.InventoryItem item, Transform parent, int index)
+    {
+        var itemUI = Instantiate(itemButtonPrefab, parent);
+        var buttonText = itemUI.GetComponentInChildren<TextMeshProUGUI>();
+        buttonText.text = item.isConsumable ? $"{item.name} x{item.quantity}" : item.name;
+
+        Button button = itemUI.GetComponent<Button>();
+        button.interactable = true;
+        button.onClick.AddListener(() => SelectEquippedItem(index));
+        itemButtons.Add(button);
+    }
+
+    private void MoveSelectionIndicator(int index)
+    {
+        if (index >= 0 && index < itemButtons.Count && itemButtons[index].gameObject.activeSelf)
+        {
+            //selectionIndicator.gameObject.SetActive(true);
+            //selectionIndicator.position = itemButtons[index].transform.position;
+        }
+        else
+        {
+            //selectionIndicator.gameObject.SetActive(false);
+        }
+    }
+
+    private void SelectEquippedItem(int index)
+    {
+        selectedIndex = index;
+        var item = playerInventory.items[selectedIndex];
+        equipButton.GetComponentInChildren<TextMeshProUGUI>().text = item.isEquipped ? "UNEQUIP" : "EQUIP";
+        equipButton.interactable = true;
+        deleteButton.interactable = true;
+    }
 }
