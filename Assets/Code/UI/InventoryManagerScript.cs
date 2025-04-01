@@ -37,7 +37,7 @@ public class InventoryManagerScripts : MonoBehaviour
     private void Start()
     {
         ConfigureGrids();
-        inventoryUI.SetActive(isInventoryOpen);
+        inventoryUI.SetActive(false);
         
         equipButton.onClick.AddListener(ToggleEquipItem);
         deleteButton.onClick.AddListener(DeleteItem);
@@ -62,10 +62,14 @@ public class InventoryManagerScripts : MonoBehaviour
 
     private void Update()
     {
+<<<<<<< HEAD
         if (inputHandler.pressMenu)
         {
             ToggleInventory();
         }
+=======
+        if (!isInventoryOpen) return;
+>>>>>>> parent of 0a308b1 (UI OpenFix, now its time to item)
 
         // Uso de consumible directamente con inputHandler.useItem
         if (inputHandler.useItem && playerInventory.equippedConsumable != null)
@@ -73,6 +77,56 @@ public class InventoryManagerScripts : MonoBehaviour
             UseConsumableItem();
         }
     }
+<<<<<<< HEAD
+=======
+
+    private void InitializeInventory()
+    {
+        ClearGrid(mainInventoryGrid.transform);
+        ClearGrid(equippedItemsGrid.transform);
+        ClearGrid(consumableSlotGrid.transform);
+        itemButtons.Clear();
+
+        for (int i = 0; i < playerInventory.items.Count; i++)
+        {
+            AddItemButton(playerInventory.items[i], i);
+        }
+
+        UpdateInventoryUI();
+    }
+
+    private void ClearGrid(Transform grid)
+    {
+        foreach (Transform child in grid)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+
+    private void AddItemButton(PlayerInventory.InventoryItem item, int index)
+    {
+        GameObject newButton = Instantiate(itemButtonPrefab, mainInventoryGrid.transform);
+        Button button = newButton.GetComponent<Button>();
+        TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+
+        buttonText.text = $"{item.name} x{item.quantity}";
+        button.onClick.AddListener(() => SelectItem(index));
+        itemButtons.Add(button);
+    }
+
+    private void SelectItem(int index)
+    {
+        if (index >= 0 && index < playerInventory.items.Count && playerInventory.items[index].quantity > 0)
+        {
+            selectedIndex = index;
+            MoveSelectionIndicator(selectedIndex);
+            
+            var item = playerInventory.items[selectedIndex];
+            equipButton.interactable = true;
+            deleteButton.interactable = true;
+        }
+    }
+>>>>>>> parent of 0a308b1 (UI OpenFix, now its time to item)
 
     public void ToggleInventory()
     {
@@ -199,9 +253,62 @@ public class InventoryManagerScripts : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
     private void UpdateButtonStates()
     {
         bool hasSelection = selectedIndex != -1 || playerInventory.equippedConsumable != null;
+=======
+    public void ToggleEquipItem()
+    {
+        if (selectedIndex < 0 || selectedIndex >= playerInventory.items.Count)
+            return;
+
+        var item = playerInventory.items[selectedIndex];
+
+        if (item.isConsumable)
+        {
+            // Manejar consumible
+            if (consumableIndex >= 0)
+            {
+                playerInventory.items[consumableIndex].isEquipped = false;
+            }
+            
+            consumableIndex = selectedIndex;
+            item.isEquipped = true;
+            Debug.Log($"Consumible equipado: {item.name}");
+        }
+        else
+        {
+            // Manejar equipables (con límite de 4)
+            if (item.isEquipped)
+            {
+                item.isEquipped = false;
+                equippedCount--;
+                Debug.Log($"Desequipado: {item.name}");
+            }
+            else if (equippedCount < 4) // LÍMITE DE 4 EQUIPABLES
+            {
+                item.isEquipped = true;
+                equippedCount++;
+                Debug.Log($"Equipado: {item.name}");
+            }
+            else
+            {
+                Debug.Log("No puedes equipar más de 4 items");
+                return;
+            }
+        }
+
+        UpdateInventoryUI();
+    }
+
+    private void UseConsumableItem()
+    {
+        if (consumableIndex < 0 || consumableIndex >= playerInventory.items.Count)
+            return;
+
+        var item = playerInventory.items[consumableIndex];
+>>>>>>> parent of 0a308b1 (UI OpenFix, now its time to item)
         
         // Configurar botón Equipar/Desequipar
         if (isSelectedFromMain && selectedIndex >= 0 && selectedIndex < playerInventory.mainItems.Count)
@@ -307,4 +414,60 @@ public class InventoryManagerScripts : MonoBehaviour
 
         InitializeInventoryUI();
     }
+<<<<<<< HEAD
+=======
+
+    public void UpdateInventoryUI()
+    {
+        ClearGrid(equippedItemsGrid.transform);
+        ClearGrid(consumableSlotGrid.transform);
+
+        for (int i = 0; i < playerInventory.items.Count; i++)
+        {
+            var item = playerInventory.items[i];
+            if (i < itemButtons.Count)
+            {
+                var button = itemButtons[i];
+                var buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+                buttonText.text = $"{item.name} x{item.quantity}";
+                button.gameObject.SetActive(item.quantity > 0);
+
+                if (item.isEquipped && item.quantity > 0)
+                {
+                    if (item.isConsumable)
+                    {
+                        CreateItemInSlot(item, consumableSlotGrid.transform);
+                    }
+                    else if (equippedCount <= 4) // Verificación adicional
+                    {
+                        CreateItemInSlot(item, equippedItemsGrid.transform);
+                    }
+                }
+            }
+        }
+
+        MoveSelectionIndicator(selectedIndex);
+    }
+
+    private void CreateItemInSlot(PlayerInventory.InventoryItem item, Transform parent)
+    {
+        var itemUI = Instantiate(itemButtonPrefab, parent);
+        var buttonText = itemUI.GetComponentInChildren<TextMeshProUGUI>();
+        buttonText.text = item.isConsumable ? $"{item.name} x{item.quantity}" : item.name;
+        itemUI.GetComponent<Button>().interactable = false;
+    }
+
+    private void MoveSelectionIndicator(int index)
+    {
+        if (index >= 0 && index < itemButtons.Count && itemButtons[index].gameObject.activeSelf)
+        {
+            selectionIndicator.gameObject.SetActive(true);
+            selectionIndicator.position = itemButtons[index].transform.position;
+        }
+        else
+        {
+            selectionIndicator.gameObject.SetActive(false);
+        }
+    }
+>>>>>>> parent of 0a308b1 (UI OpenFix, now its time to item)
 }
