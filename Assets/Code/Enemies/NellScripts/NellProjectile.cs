@@ -19,6 +19,10 @@ public class NellProjectile : MonoBehaviour
         if(player != null){
             Vector2 moveDir = (player.position - transform.position).normalized * speed;
             projectileRb.velocity = moveDir;
+
+            //for rotating the projectile in direction to the player
+            float angle = Mathf.Atan2(moveDir.y, moveDir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.Euler(0, 0, angle);
         }
         Destroy(this.gameObject, 2);
     }

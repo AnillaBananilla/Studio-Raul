@@ -526,6 +526,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 41a1534c-6bf3-467b-9e2f-b9e2b38c4bff
     m_ActionName: Player/UseItem[/Keyboard/q,/XInputControllerWindows/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6761058616186723206}
+        m_TargetAssemblyTypeName: PlayerMovementNew, Assembly-CSharp
+        m_MethodName: Drop
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a0c90f33-697a-4ef0-8c5a-218a719eaf04
+    m_ActionName: Player/Drop[/Keyboard/s,/XInputControllerWindows/leftStick/down]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -556,6 +572,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  isGrounded: 0
+  isOnPlatform: 0
+  isDropping: 0
   upColl: {fileID: 2006857880688812653}
   crouchColl: {fileID: 8108098812152798841}
   roofCheckPos: {fileID: 1606428481335303681}
