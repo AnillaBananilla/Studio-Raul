@@ -143,7 +143,7 @@ public class InventoryManagerScripts : MonoBehaviour
         var item = playerInventory.items[selectedIndex];
         equipButton.interactable = true;
         deleteButton.interactable = true;
-        equipButton.GetComponentInChildren<TextMeshProUGUI>().text = item.isEquipped ? "Desequipar" : "Equipar";
+        equipButton.GetComponentInChildren<TextMeshProUGUI>().text = item.isEquipped ? "UNEQUIP" : "EQUIP";
     }
 }
 
@@ -258,17 +258,21 @@ public class InventoryManagerScripts : MonoBehaviour
     }
 
     // En lugar de eliminar el item, establecemos la cantidad a 0
-    item.quantity = 0;
-    item.isEquipped = false; // También lo desequipamos por seguridad
+    item.quantity = item.quantity-1;
+    if(item.quantity == 0){
+item.isEquipped = false; // También lo desequipamos por seguridad
+selectedIndex = -1;
+    selectionIndicator.gameObject.SetActive(false);
+    equipButton.interactable = false;
+    deleteButton.interactable = false;
+    }
+    
 
     // Actualizamos el inventario
     UpdateInventoryUI();
     
     // Deseleccionamos el item
-    selectedIndex = -1;
-    selectionIndicator.gameObject.SetActive(false);
-    equipButton.interactable = false;
-    deleteButton.interactable = false;
+    
 }
 
     public void UpdateInventoryUI()
@@ -380,7 +384,7 @@ public class InventoryManagerScripts : MonoBehaviour
     {
         selectedIndex = index;
         var item = playerInventory.items[selectedIndex];
-        equipButton.GetComponentInChildren<TextMeshProUGUI>().text = item.isEquipped ? "Desequipar" : "Equipar";
+        equipButton.GetComponentInChildren<TextMeshProUGUI>().text = item.isEquipped ? "UNEQUIP" : "EQUIP";
         equipButton.interactable = true;
         deleteButton.interactable = true;
     }
