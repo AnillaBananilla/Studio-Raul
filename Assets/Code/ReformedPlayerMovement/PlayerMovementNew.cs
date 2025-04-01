@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,6 +31,11 @@ public class PlayerMovementNew : MonoBehaviour
     public Transform groundCheckPos;
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     public LayerMask groundLayer;
+
+    [Header("Dropping")]
+    public bool isGrounded;
+    public bool isOnPlatform;
+    public bool isDropping = false;
 
     [Header("Crouch")]
     public CapsuleCollider2D upColl;
@@ -116,6 +122,10 @@ public class PlayerMovementNew : MonoBehaviour
         if (Physics2D.OverlapBox(groundCheckPos.position, groundCheckSize, 0, groundLayer))
         {
             jumpsLeft = maxJumps;
+            isGrounded = true;
+        }
+        else{
+            isGrounded = false;
         }
     }
 
@@ -127,7 +137,7 @@ public class PlayerMovementNew : MonoBehaviour
             upColl.enabled = false;
             animator.SetBool("isCrouching", true);
         }
-        else if(context.canceled && canGetUp)
+        else if(context.canceled && canGetUp && !isDropping)
         {
             crouchColl.enabled = false;
             upColl.enabled = true;
@@ -145,7 +155,7 @@ public class PlayerMovementNew : MonoBehaviour
         else 
         {
             canGetUp = true;
-            if (!Keyboard.current.ctrlKey.isPressed)
+            if (!Keyboard.current.ctrlKey.isPressed && !isDropping)
             {
                 crouchColl.enabled = false;
                 upColl.enabled = true;
@@ -153,6 +163,34 @@ public class PlayerMovementNew : MonoBehaviour
             }
         }
     } 
+
+    public void Drop(InputAction.CallbackContext context){
+        if(context.performed && isGrounded && isOnPlatform && upColl.enabled){
+            StartCoroutine(DisablePlayerCollider(0.5f));
+        }
+    }
+
+    private IEnumerator DisablePlayerCollider(float disableTime){
+        isDropping = true; 
+        upColl.enabled = false;
+        yield return new WaitForSeconds(disableTime);
+        upColl.enabled = true;
+        isDropping = false; 
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Platform")){
+            isOnPlatform = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Platform")){
+            isOnPlatform = false;
+        }
+    }
 
     private void Gravity()
     {
