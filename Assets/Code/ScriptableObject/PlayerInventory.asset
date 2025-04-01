@@ -24,23 +24,23 @@ MonoBehaviour:
   - name: Item2
     quantity: 2
     isConsumable: 0
-    isEquipped: 0
+    isEquipped: 1
   - name: Item3
     quantity: 1
     isConsumable: 0
-    isEquipped: 0
+    isEquipped: 1
   - name: Item4
-    quantity: 2
+    quantity: 4
     isConsumable: 0
     isEquipped: 0
   - name: Item5
     quantity: 2
     isConsumable: 0
-    isEquipped: 0
+    isEquipped: 1
   - name: Item6
     quantity: 4
     isConsumable: 1
-    isEquipped: 1
+    isEquipped: 0
   - name: Item7
     quantity: 4
     isConsumable: 1
