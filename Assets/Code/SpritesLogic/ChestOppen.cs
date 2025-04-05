@@ -22,8 +22,8 @@ public class ChestOppen : MonoBehaviour
         if (isPlayerNear && Input.GetKeyDown(KeyCode.Mouse0))
         {
             anim.SetTrigger("chestTrigger");
-            Vector3 puddlePosition = new Vector3(transform.position.x + prefabOffsetX, transform.position.y + prefabOffsetY, transform.position.z);
-            GameObject puddle = Instantiate(prefab, puddlePosition, Quaternion.identity);
+            Vector3 coinPosition = new Vector3(transform.position.x + prefabOffsetX, transform.position.y + prefabOffsetY, transform.position.z);
+            GameObject coin = Instantiate(prefab, coinPosition, Quaternion.identity);
 
            
             Debug.Log("Cofre abierto");

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static PlayerSkills;
 
 public class InputHandler : MonoBehaviour
 {
@@ -17,16 +18,26 @@ public class InputHandler : MonoBehaviour
 
 	[Header("Sobre ataque")]
 	public bool attack;
+    public bool attackPaint;
+    public bool changeColor;
+    public UnlockPincel unlockPincel;
+    public PlayerSkills playerSkills;
 
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
+
     }
 
     void Update()
     {
-		//acciones relacionadas a ataque
-		attack = playerInput.actions["Attack"].WasPerformedThisFrame();
+        if (unlockPincel.canAttack)
+        {
+            attack = playerInput.actions["Attack"].WasPerformedThisFrame();
+            attackPaint = playerInput.actions["AttackPaint"].WasPerformedThisFrame();
+            changeColor = playerInput.actions["ChangeColor"].WasPerformedThisFrame();
+        }
+        
 
 
 		//acciones relacionadas al inventario

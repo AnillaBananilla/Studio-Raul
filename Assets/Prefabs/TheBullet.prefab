@@ -161,4 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6a043180237f647a4d68dd3fcac56d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  puddle: {fileID: 1349021975010296192, guid: bf3731923eb7fb449b53c322ebb79eb7, type: 3}
+  puddlePrefab: {fileID: 652211882406287768, guid: 2da2bb66fe8ec584cb2babe438498bb7, type: 3}
+  puddleDuration: 5
+  puddleOffsetY: -5

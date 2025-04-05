@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
     private bool isSprinting = false; // Para controlar si el personaje está corriendo
 
     public float fallingSpeed = 0.0f;
-
+    public InputHandler inputHandler;
     //Contador de saltos
     private int maxJumps = 1; // Número máximo de saltos
     private int jumpCount = 0; // Contador de saltos
@@ -98,7 +98,7 @@ public class Player : MonoBehaviour
             
 
             animator.SetBool("Move_Bool", Input.GetAxis("Horizontal") != 0);
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (inputHandler.changeColor)
             {
                 ChangeColor();
             }
@@ -122,7 +122,7 @@ public class Player : MonoBehaviour
     {
         // Ciclar el color entre Azul → Amarillo → Rojo → Azul...
         currentColor = (ColorState)(((int)currentColor + 1) % 3);
-
+        Debug.Log("Valor impreso: " );
         switch (currentColor)
         {
             case ColorState.Azul:

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Healt : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class Healt : MonoBehaviour
 
     public GameObject coinPrefab;
     public float coinOffsetY = -5f;
-    [Range(0, 100)] public float coinSpawnChance = 50f; // Probabilidad en porcentaje
+    [Range(0, 100)] public float coinSpawnChance = 50f;
+    public Animator animator;
+    public GameObject damageTextPrefab; // Prefab del texto de da�o
+    public Vector3 damageTextOffset = new Vector3(0, 3f, 0); // Offset para la posici�n del texto
 
     void Start()
     {
@@ -19,12 +23,12 @@ public class Healt : MonoBehaviour
 
     void Update()
     {
-        
     }
 
     public void Damage(int damage)
     {
         currentHealt -= damage;
+        ShowDamageText(-damage); 
 
         if (currentHealt <= 0)
         {
@@ -52,12 +56,28 @@ public class Healt : MonoBehaviour
         {
             Destroy(gameObject);
 
-            // Determinar si se debe crear la moneda con base en la probabilidad
             if (UnityEngine.Random.Range(0f, 100f) <= coinSpawnChance)
             {
                 Vector3 coinPosition = new Vector3(transform.position.x, transform.position.y + coinOffsetY, transform.position.z);
                 Instantiate(coinPrefab, coinPosition, Quaternion.identity);
             }
+        }
+    }
+
+    private void ShowDamageText(int damage)
+    {
+        if (damageTextPrefab != null)
+        {
+            GameObject damageTextInstance = Instantiate(damageTextPrefab, transform.position, Quaternion.identity);
+
+            // Buscar el TextMeshPro dentro del prefab
+            TextMeshProUGUI textMesh = damageTextInstance.GetComponentInChildren<TextMeshProUGUI>();
+            if (textMesh != null)
+            {
+                textMesh.text = damage.ToString();
+            }
+         
+            Destroy(damageTextInstance, 1f); // Destruir el texto despu�s de 1 segundo
         }
     }
 }
