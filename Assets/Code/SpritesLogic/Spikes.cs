@@ -11,7 +11,7 @@ public class Spikes : MonoBehaviour
     private GameManager gameManagerX;
 
 
-    public int pointValue;
+    private int pointValue;
     void Start()
     {
         gameManagerX = GameObject.Find("GameManager").GetComponent<GameManager>();
