@@ -11,7 +11,7 @@ public abstract class Entity : MonoBehaviour
     public SpriteRenderer image;
 
     public abstract void Attack();
-    public void TakeDamage(int Damage, char color)
+    public virtual void TakeDamage(int Damage, char color)
     {
 
         if (!IsImmune)
@@ -26,6 +26,23 @@ public abstract class Entity : MonoBehaviour
             this.GetComponent<SpriteRenderer>().color = Color.red;
 
             StartCoroutine(Immunity(2));
+        }
+    }
+
+    public virtual void TakeDamage(int Damage)
+    {
+        if (!IsImmune)
+        {
+            HP -= Damage;
+            IsImmune = true;
+
+            if (HP <= 0)
+            {
+                Die();
+            }
+            this.GetComponent<SpriteRenderer>().color = Color.red;
+
+            StartCoroutine(Immunity(1));
         }
     }
     

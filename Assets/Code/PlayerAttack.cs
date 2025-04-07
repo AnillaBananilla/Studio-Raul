@@ -41,8 +41,6 @@ public class PlayerAttack : MonoBehaviour
                 {
                     enemies[counter].GetComponent<EnemyEntity>().TakeDamage(5, 'r');
                     //enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
-                    
-
                 }
             }
 

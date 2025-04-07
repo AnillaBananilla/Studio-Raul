@@ -14,7 +14,7 @@ public class BushAttackDecision : AIDecision
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerProjectile")
         {
             Debug.Log("OUCH!");
             TouchCounter++;
@@ -27,6 +27,12 @@ public class BushAttackDecision : AIDecision
             
         }
     }
+
+    public void TookDamage()
+    {
+        TouchCounter++;
+    }
+
     public override void OnEnterState()
     {
         base.OnEnterState();

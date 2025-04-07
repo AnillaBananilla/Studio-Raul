@@ -10,7 +10,7 @@ public class Droplets : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
             //Destroy(this.gameObject);
             PoolManager.Instance.ReturnObjectToPool(this.gameObject);
         }
@@ -32,7 +32,7 @@ public class Droplets : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player"))
         {
-            if (!collision.gameObject.CompareTag("Obstacle") && (!collision.gameObject.CompareTag("PlayerProjectile")))
+            if (collision.gameObject.CompareTag("Ground"))
             {
                 GameObject Puddle = GameObject.Instantiate(puddle);
                 Puddle.transform.position = this.gameObject.transform.position;
@@ -40,6 +40,11 @@ public class Droplets : MonoBehaviour
             }
             else
             {
+                if (collision.gameObject.CompareTag("Enemy"))
+                {
+                    collision.gameObject.GetComponent<Entity>().TakeDamage(35);
+                    //collision.gameObject.GetComponent<AttackReceiver>().ReceiveDamage(35);
+                }
                 PoolManager.Instance.ReturnObjectToPool(this.gameObject);
 
             }

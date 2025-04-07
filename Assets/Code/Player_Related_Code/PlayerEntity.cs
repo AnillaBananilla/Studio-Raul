@@ -48,18 +48,6 @@ public class PlayerEntity : Entity
         //El jugador recibe 5 puntos de daño y respawnea en la última entrada que tomó si sobrevive
     }
 
-    public override void TakeDamage(int Damage, char color)
-    {
-        // Checar si el jugador tiene equipado algún item de reducción de daño, deducir la protección.
-        ///if (Equipped Items
-        HP -= Damage;
-        if (HP < 0)
-        {
-            HP = 0;
-            Die();
-        }
-    }
-
     // Start is called before the first frame update
     void Start()
     {
