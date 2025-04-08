@@ -2732,7 +2732,7 @@ MonoBehaviour:
   equipButton: {fileID: 6744662158595237099}
   deleteButton: {fileID: 9189037872145771300}
   playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
-  inputHandler: {fileID: 0}
+  inputHandler: {fileID: 4749155432632805270, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
 --- !u!1 &6930288832329470050
 GameObject:
   m_ObjectHideFlags: 0

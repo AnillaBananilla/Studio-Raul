@@ -20,8 +20,6 @@ public class NellMovement : MonoBehaviour
     private Vector3[] movePoints;
     public Rigidbody2D rb;
 
-    
-
     [Header("Detection")]
     public float detectionRadius = 13.0f;
 
