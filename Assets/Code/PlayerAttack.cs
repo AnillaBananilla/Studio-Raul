@@ -36,7 +36,7 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.isGameActive == false)
+        if (gameManager.isGameActive == true)
         {
 
             if (inputHandler.attack)
