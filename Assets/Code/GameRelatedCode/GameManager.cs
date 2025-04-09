@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        scoreText.text = "score: " + score;
+        //scoreText.text = "score: " + score;
        
     }
     public void UpdateKey(int keyToAdd)
@@ -92,7 +92,7 @@ public class GameManager : MonoBehaviour
     public void takeDamage(float damage)
     {
        healtAmount -= damage;
-        lifeBar.fillAmount = healtAmount / 100F;
+        //lifeBar.fillAmount = healtAmount / 100F;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {
