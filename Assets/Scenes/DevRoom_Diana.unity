@@ -3366,6 +3366,7 @@ MonoBehaviour:
   key: 0
   pintureAmount: 100
   pintureBar: {fileID: 1645445840}
+  Drew: {fileID: 0}
   isGameActive: 1
   RespawnPoint: {fileID: 1453409176}
   Dead: 0
@@ -6431,6 +6432,7 @@ GameObject:
   - component: {fileID: 1572831580}
   - component: {fileID: 1572831585}
   - component: {fileID: 1572831586}
+  - component: {fileID: 1572831587}
   m_Layer: 6
   m_Name: Nell_Placeholder
   m_TagString: Enemy
@@ -6450,7 +6452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba909d575f897d44858101ffaa08bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealt: 0
+  currentHealt: 5
   maxHealt: 5
   coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
   coinOffsetY: 0
@@ -6627,6 +6629,22 @@ MonoBehaviour:
   projectileOrigin: {fileID: 1553641856}
   fireRate: 1
   player: {fileID: 1584939950}
+--- !u!114 &1572831587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1572831578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf6f83cde316294aa1035627cdfff8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 5
+  ATT: 30
+  IsImmune: 0
+  image: {fileID: 0}
 --- !u!4 &1576637572 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1522699748990271259, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
