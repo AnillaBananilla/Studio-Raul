@@ -11,26 +11,35 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MinimapTesting.unity
     guid: c58f1d295bd10f944b37c37d2cb7553c
-<<<<<<< HEAD
   - enabled: 1
-    path: Assets/Scenes/MainTitle_NOTHING'S HERE.unity
-    guid: 48cc1d48ca9905d44909eedcd3a35c83
+    path: Assets/Scenes/MainMenu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/DevRoom_Pardinaz.unity
-    guid: df94201567644bf4c9b09ed8dbcafd8d
-  - enabled: 1
-    path: Assets/Scenes/DevRoom_Emiliano.unity
-    guid: c628c758dd6dc6a48a8442378f9b0908
-  - enabled: 1
-    path: Assets/Scenes/DevRoom_Diana.unity
-    guid: 339153b16f17d3a4f9ea3e5e72e2392e
+    path: Assets/Scenes/CutScene1.unity
+    guid: 8d6de1f36b088084aac0937abbf45625
   - enabled: 1
     path: Assets/Scenes/DevRoom_Alfonso.unity
     guid: d76618a8996bd1b4a94d17b94b3ee65e
   - enabled: 1
-    path: Assets/Scenes/CutScene1.unity
-    guid: 12df67cf3587d6d44b3be4ad9ea66c20
-=======
->>>>>>> c27c3e31f4fe0be7eee1453ae5200e7151a6c33a
+    path: Assets/Scenes/DevRoom_Diana.unity
+    guid: 339153b16f17d3a4f9ea3e5e72e2392e
+  - enabled: 1
+    path: Assets/Scenes/DevRoom_Emiliano.unity
+    guid: c628c758dd6dc6a48a8442378f9b0908
+  - enabled: 1
+    path: Assets/Scenes/DevRoom_Main.unity
+    guid: 6a9f41319ef859a43a9f800888c29231
+  - enabled: 1
+    path: Assets/Scenes/DevRoom_Pardinaz.unity
+    guid: df94201567644bf4c9b09ed8dbcafd8d
+  - enabled: 1
+    path: Assets/Scenes/MainTitle_NOTHING'S HERE.unity
+    guid: 48cc1d48ca9905d44909eedcd3a35c83
+  - enabled: 1
+    path: Assets/Scenes/SampleScene 1.unity
+    guid: 20691fd495be44043a84001462cc719b
+  - enabled: 1
+    path: Assets/Scenes/TheDevRoom2.unity
+    guid: a0824eecd05fab04baf83ff6b28b39f2
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: cff59c40c3eb3ea4fae1665614ba7aec, type: 3}

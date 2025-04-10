@@ -69,10 +69,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            GoToInventory();
-        }
+        
     }
     public void UpdateScore(int scoreToAdd)
     {
@@ -94,7 +91,7 @@ public class GameManager : MonoBehaviour
     public void takeDamage(float damage)
     {
        healtAmount -= damage;
-        //lifeBar.fillAmount = healtAmount / 100F;
+       lifeBar.fillAmount = healtAmount / 100F;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {

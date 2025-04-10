@@ -299,7 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 119508353}
   rawImage: {fileID: 1196940094}
-  nextSceneName: DevRoom_Pardinaz
+  nextSceneName: DevRoom_Diana
   skipButton: {fileID: 1786741863}
 --- !u!1 &697416447
 GameObject:
