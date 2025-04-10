@@ -23,6 +23,8 @@ public class InputHandler : MonoBehaviour
     public UnlockPincel unlockPincel;
     public PlayerSkills playerSkills;
 
+    public bool pressPause;
+
     void Start()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -48,5 +50,6 @@ public class InputHandler : MonoBehaviour
 		isNavigatingLeft = playerInput.actions["NavigateLeft"].WasPerformedThisFrame();
     	isNavigatingRight = playerInput.actions["NavigateRight"].WasPerformedThisFrame();
 		isSelecting = playerInput.actions["SelectItem"].WasPerformedThisFrame();
+        pressPause = playerInput.actions["Pause"].WasPerformedThisFrame();
     }
 }
