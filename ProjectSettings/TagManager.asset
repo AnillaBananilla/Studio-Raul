@@ -11,6 +11,8 @@ TagManager:
   - Obstacle
   - PlayerProjectile
   - Coin
+  - Platform
+  - NellProjectile
   layers:
   - Default
   - TransparentFX

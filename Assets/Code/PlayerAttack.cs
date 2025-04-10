@@ -47,7 +47,7 @@ public class PlayerAttack : MonoBehaviour
                 for (int counter = 0; counter < enemies.Length; counter++)
                 {
                     enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
-                    enemies[counter].GetComponent<Healt>().Damage(1);
+                    enemies[counter].GetComponent<Healt>().Damage(25);
 
                     // Obtener la posición del enemigo
                     Vector3 enemyPosition = enemies[counter].transform.position;
@@ -57,21 +57,23 @@ public class PlayerAttack : MonoBehaviour
                 }
             }
 
-
-            //esto no debe estar, está obsoleto, debe ser como 
-            // el "inputHandler.attack" del ataque de arriba
             if (inputHandler.attackPaint)
-            {
+            {   //si sigue habiendo pintura, entonces se realizan estas acciones
                 if (gameManager.pintureAmount > 0)
-                {
+                {   //se inicia la animación
                     animator.SetTrigger("Attack_Trigger");
-                    gameManager.usePinture(20);
+                    gameManager.usePinture(1);
                     Droplets newBullet = null;
+                    //el pool manager spawnea alguna bala
                     PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects);
 
+                    //en caso de existir la bala y no ser null se hace lo siguiente
                     if (newBullet != null)
                     {
+                        //se obtiene el RB de la bala
                         Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
+                        //al detectarlo, entonces se realizan los pasos de detectar la dirección 
+                        // del personaje y aplicarle fuerza en esa dirección a la bala
                         if (rb != null)
                         {
                             // Detectar dirección del personaje
@@ -80,6 +82,7 @@ public class PlayerAttack : MonoBehaviour
                             // Aplicar fuerza en la dirección correcta
                             Vector2 forceDirection = new Vector2(1f * direction, 0.5f) * 20f;
                             rb.AddForce(forceDirection, ForceMode2D.Impulse);
+                            
                         }
                     }
                     
@@ -92,7 +95,7 @@ public class PlayerAttack : MonoBehaviour
                     for (int counter = 0; counter < enemies.Length; counter++)
                     {
                         enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
-                        enemies[counter].GetComponent<Healt>().Damage(1);
+                        enemies[counter].GetComponent<Healt>().Damage(25);
 
                         // Obtener la posición del enemigo
                         Vector3 enemyPosition = enemies[counter].transform.position;
@@ -163,6 +166,13 @@ public class PlayerAttack : MonoBehaviour
 
         // Activar la animación de reducción de la gota anterior
         animators[previousIndex].SetTrigger("decrecerGota");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("PlayerProjectile")){
+            gameManager.takeDamage(25);
+        }
     }
 
 }
