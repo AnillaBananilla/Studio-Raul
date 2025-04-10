@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelNavigator : MonoBehaviour
 {
@@ -20,6 +21,15 @@ public class LevelNavigator : MonoBehaviour
     public void UpdateMap(int ID)
     {
         currentAreaID = ID;
-        Debug.Log(currentAreaID);
+        //Debug.Log(currentAreaID);
+    }
+
+    public void GoToScene1()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void GoToScene0()
+    {
+        SceneManager.LoadScene(0);
     }
 }

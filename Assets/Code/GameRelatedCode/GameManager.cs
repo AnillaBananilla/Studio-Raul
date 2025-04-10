@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     public float pintureAmount = 100f;
     public Image pintureBar;
 
+    public PlayerEntity Drew;
+
     public bool isGameActive = false; // Default: false
 
     public Transform RespawnPoint;
@@ -75,7 +77,7 @@ public class GameManager : MonoBehaviour
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
-        scoreText.text = "score: " + score;
+        //scoreText.text = "score: " + score;
        
     }
     public void UpdateKey(int keyToAdd)
@@ -92,7 +94,7 @@ public class GameManager : MonoBehaviour
     public void takeDamage(float damage)
     {
        healtAmount -= damage;
-        lifeBar.fillAmount = healtAmount / 100F;
+        //lifeBar.fillAmount = healtAmount / 100F;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {
@@ -168,11 +170,6 @@ public class GameManager : MonoBehaviour
     {
         EquippedItem = e.eventItem;
     }
-
-    public void Die()
-    {
-        
-    }
     public void usePinture(float pinture)
     {
         pintureAmount -= pinture;
@@ -182,5 +179,25 @@ public class GameManager : MonoBehaviour
     {
         pintureAmount += pinture;
         pintureBar.fillAmount = pintureAmount / 100F;
+    }
+    
+    public void LoadScene()
+    {
+        SaveManager.OpenSavedScene();
+    }
+
+    public void LoadData()
+    {
+        PlayerData LoadedData = SaveManager.LoadPlayerData();
+        Drew.transform.position = new Vector2(LoadedData.position[0], LoadedData.position[1]);
+    }
+
+    public void SaveData()
+    {
+        Drew.HP = Drew.MaxHP;
+        Drew.MPaint = Drew.MaxPaint;
+        Drew.CPaint = Drew.MaxPaint;
+        Drew.YPaint = Drew.MaxPaint;
+        SaveManager.SavePlayerData(Drew);
     }
 }
