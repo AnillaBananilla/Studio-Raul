@@ -6,17 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/SampleScene 1.unity
-    guid: 20691fd495be44043a84001462cc719b
-  - enabled: 1
-    path: Assets/Scenes/TheDevRoom2.unity
-    guid: a0824eecd05fab04baf83ff6b28b39f2
+    path: Assets/Scenes/SaveTestingScene.unity
+    guid: 955b7f6cef8391348a5919afd0e57208
   - enabled: 1
     path: Assets/Scenes/MinimapTesting.unity
     guid: c58f1d295bd10f944b37c37d2cb7553c
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/MainTitle_NOTHING'S HERE.unity
     guid: 48cc1d48ca9905d44909eedcd3a35c83
@@ -35,5 +30,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CutScene1.unity
     guid: 12df67cf3587d6d44b3be4ad9ea66c20
+=======
+>>>>>>> c27c3e31f4fe0be7eee1453ae5200e7151a6c33a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: cff59c40c3eb3ea4fae1665614ba7aec, type: 3}
