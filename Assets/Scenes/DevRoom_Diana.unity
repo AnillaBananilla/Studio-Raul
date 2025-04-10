@@ -1337,7 +1337,7 @@ GameObject:
   - component: {fileID: 209786896}
   m_Layer: 0
   m_Name: DeathPlane
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3883,6 +3883,7 @@ MonoBehaviour:
   key: 0
   pintureAmount: 100
   pintureBar: {fileID: 0}
+  Drew: {fileID: 0}
   isGameActive: 1
   RespawnPoint: {fileID: 0}
   Dead: 0
@@ -7809,6 +7810,9 @@ MonoBehaviour:
   coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
   coinOffsetY: 0
   coinSpawnChance: 50
+  animator: {fileID: 0}
+  damageTextPrefab: {fileID: 0}
+  damageTextOffset: {x: 0, y: 3, z: 0}
 --- !u!50 &1572831581
 Rigidbody2D:
   serializedVersion: 4
@@ -8748,6 +8752,9 @@ MonoBehaviour:
   coinPrefab: {fileID: 0}
   coinOffsetY: -5
   coinSpawnChance: 50
+  animator: {fileID: 0}
+  damageTextPrefab: {fileID: 0}
+  damageTextOffset: {x: 0, y: 3, z: 0}
 --- !u!58 &1698722177
 CircleCollider2D:
   m_ObjectHideFlags: 0
