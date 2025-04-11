@@ -5881,13 +5881,11 @@ MonoBehaviour:
   key: 0
   pintureAmount: 100
   pintureBar: {fileID: 1281210340}
+  Drew: {fileID: 0}
   isGameActive: 0
   RespawnPoint: {fileID: 0}
   Dead: 0
-  AchievementScreen: {fileID: 0}
-  MissionScreen: {fileID: 0}
-  InventoryScreen: {fileID: 0}
-  ShopScreen: {fileID: 0}
+  playerStats: {fileID: 0}
   fadeInDuration: 1
   fadeOutDuration: 1
 --- !u!4 &571154887
@@ -10835,6 +10833,10 @@ PrefabInstance:
       propertyPath: unlockPincel
       value: 
       objectReference: {fileID: 529661221}
+    - target: {fileID: 7406043260029691577, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07108879
+      objectReference: {fileID: 0}
     - target: {fileID: 8788348150728157412, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
       propertyPath: gameManager
       value: 

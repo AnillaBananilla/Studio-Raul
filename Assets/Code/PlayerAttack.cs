@@ -19,7 +19,6 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
     public Vector2 shootDirection;
-    public GameObject spawnPrefab;
     private enum ColorState { Azul, Amarillo, Rojo } // Enumerador de colores
     private ColorState currentColor = ColorState.Azul; // Color inicial
     public Image imageToChange; // Arrástralo desde el Inspector
@@ -36,9 +35,6 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameManager.isGameActive == true)
-        {
-
             if (inputHandler.attack)
             {
                 animator.SetTrigger("Attack_Trigger");
@@ -53,7 +49,7 @@ public class PlayerAttack : MonoBehaviour
                     Vector3 enemyPosition = enemies[counter].transform.position;
 
                     // Instanciar un objeto en esa posición
-                    Instantiate(spawnPrefab, enemyPosition, Quaternion.identity);
+  
                 }
             }
 
@@ -100,12 +96,10 @@ public class PlayerAttack : MonoBehaviour
                         // Obtener la posición del enemigo
                         Vector3 enemyPosition = enemies[counter].transform.position;
 
-                        // Instanciar un objeto en esa posición
-                        Instantiate(spawnPrefab, enemyPosition, Quaternion.identity);
                     }
                 }
             }
-        }
+        
         if (inputHandler.changeColor)
         {
             ChangeColor();
@@ -114,7 +108,7 @@ public class PlayerAttack : MonoBehaviour
         {
             return;
         }
-        }
+    }
 
         private void OnDrawGizmosSelected()
         {

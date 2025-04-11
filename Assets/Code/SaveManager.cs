@@ -6,7 +6,7 @@ using System.Collections;
 
 public static class SaveManager
 {
-    public static void SavePlayerData(PlayerEntity Player)
+    public static void SavePlayerData(PlayerStats Player)
     {
         PlayerData playerData = new PlayerData(Player);
         string dataPath = Application.persistentDataPath + "/player.save"; //Puede tener la terminacion que quiera, porque es binario
