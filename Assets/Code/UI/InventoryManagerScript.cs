@@ -163,8 +163,8 @@ public class InventoryManagerScripts : MonoBehaviour
         else
         {
             selectionIndicator.gameObject.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            //Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.visible = false;
         }
     }
 

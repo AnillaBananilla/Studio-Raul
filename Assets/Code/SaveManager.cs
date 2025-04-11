@@ -33,7 +33,7 @@ public static class SaveManager
         }
         else
         {
-            Debug.LogError("No se encontró el archivo de guardado");
+            Debug.LogError("No se encontrï¿½ el archivo de guardado");
             return null;
         }
         

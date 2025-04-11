@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     public Transform RespawnPoint;
     public bool Dead = false;
+    public PlayerStats playerStats;
 
 
 
@@ -58,10 +59,6 @@ public class GameManager : MonoBehaviour
         key = 0;
         UpdateKey(0);
         fadeSpeed = 1f / fadeInDuration;
-
-
-
-
         EventManager.m_Instance.AddListener<EquipItemEvent>(EquipItem);
 
     }
@@ -89,9 +86,10 @@ public class GameManager : MonoBehaviour
     }
 
     public void takeDamage(float damage)
-    {
-       healtAmount -= damage;
-       lifeBar.fillAmount = healtAmount / 100F;
+    {   
+        float appliedDamage = damage - playerStats.currentDamageReduction;
+        healtAmount -= appliedDamage;
+        lifeBar.fillAmount = healtAmount / 100F;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {

@@ -170,9 +170,12 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("PlayerProjectile")){
+        if(collision.gameObject.CompareTag("NellProjectile")){
             gameManager.takeDamage(25);
         }
+        /*else if(collision.gameObject.CompareTag("ArbolilloPunch")){
+            gameManager.takeDamage(15);
+        }*/
     }
 
 }
