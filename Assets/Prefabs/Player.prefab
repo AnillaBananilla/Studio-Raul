@@ -361,6 +361,7 @@ MonoBehaviour:
   changeColor: 0
   unlockPincel: {fileID: 0}
   playerSkills: {fileID: 11400000, guid: b3cfeabb160c7a747890bc39bb7f1751, type: 2}
+  pressPause: 0
 --- !u!114 &147979335240988526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -558,6 +559,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 9dbf50ea-68ed-4109-a499-e7de2a645bd2
     m_ActionName: Player/ChangeColor[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cc2269c4-a630-43f6-860e-fe57d06c2e26
+    m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -611,17 +616,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a5843b5ee971f4c9e58e670704284d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMoveSpeed: 15
-  baseRunSpeed: 25
-  baseMaxHealth: 100
-  baseDamage: 10
-  baseDamageReduction: 0
-  moveSpeedModifier: 1
-  runSpeedModifier: 1
-  maxHealthModifier: 0
-  damageModifier: 0
-  damageReductionModifier: 0
-  paintConsumptionChanceModifier: 1
+  playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
+  currentMoveSpeed: 15
+  currentRunSpeed: 25
+  currentMaxHealth: 100
+  currentDamage: 10
+  currentDamageReduction: 0
 --- !u!114 &3643443144228755534
 MonoBehaviour:
   m_ObjectHideFlags: 0

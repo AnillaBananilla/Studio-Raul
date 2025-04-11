@@ -64,7 +64,7 @@ public class PlayerMovementNew : MonoBehaviour
                 return;
             }
 
-            currSpeed = isRunning ? playerStats.GetTotalRunSpeed() : playerStats.GetTotalMoveSpeed();
+            currSpeed = isRunning ? playerStats.currentRunSpeed : playerStats.currentMoveSpeed;
             
             GroundCheck();
             RoofCheck();

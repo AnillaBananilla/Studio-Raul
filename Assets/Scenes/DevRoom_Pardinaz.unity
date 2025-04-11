@@ -6452,7 +6452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4563815235898629315, guid: 42a85d5356a346d4992864deadbc2196, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6026047173505697236, guid: 42a85d5356a346d4992864deadbc2196, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6498,6 +6498,22 @@ PrefabInstance:
       propertyPath: inputHandler
       value: 
       objectReference: {fileID: 940859883}
+    - target: {fileID: 6081626810672560482, guid: 42a85d5356a346d4992864deadbc2196, type: 3}
+      propertyPath: equippedCellSize.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081626810672560482, guid: 42a85d5356a346d4992864deadbc2196, type: 3}
+      propertyPath: equippedCellSize.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081626810672560482, guid: 42a85d5356a346d4992864deadbc2196, type: 3}
+      propertyPath: consumableCellSize.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081626810672560482, guid: 42a85d5356a346d4992864deadbc2196, type: 3}
+      propertyPath: consumableCellSize.y
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 6508509324245325215, guid: 42a85d5356a346d4992864deadbc2196, type: 3}
       propertyPath: m_Name
       value: InventoryManager

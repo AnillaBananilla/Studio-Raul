@@ -1,26 +1,27 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Asegúrate de incluir este namespace para TextMeshPro
+using TMPro; // Asegurate de incluir este namespace para TextMeshPro
 
 public class ButtonSpriteSelector : MonoBehaviour
 {
     public Color newColor; // El color que quieres aplicar al SpriteRenderer
+    public Sprite[] itemsImage;
 
     void Start()
     {
-        // Obtén el componente Button
+        // Obten el componente Button
         Button button = GetComponent<Button>();
         
 
         if (button != null)
         {
-            // Obtén el componente TextMeshProUGUI del botón
+            // Obten el componente TextMeshProUGUI del boton
             TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
 
-            // Verifica si el texto del botón contiene "Item1", "Item2" o "Item3"
+            // Verifica si el texto del boton contiene "Item1", "Item2" o "Item3"
             if (buttonText != null)
             {
-                // Busca el componente Image dentro del botón
+                // Busca el componente Image dentro del boton
                 Image image = button.GetComponentInChildren<Image>();
 
                 if (image != null)
@@ -32,36 +33,36 @@ public class ButtonSpriteSelector : MonoBehaviour
                     {
                         if (buttonText.text.Contains("Item1"))
                         {
-                            image1.color = Color.green;
+                            image1.sprite = itemsImage[0];
                         }else if (buttonText.text.Contains("Item2"))
                         {
-                            image1.color = Color.red;
+                            image1.sprite = itemsImage[1];
                         }
                         else if (buttonText.text.Contains("Item3"))
                         {
-                            image1.color = Color.cyan;
+                            image1.sprite = itemsImage[2];
                         }
                         else if (buttonText.text.Contains("Item4"))
                         {
-                            image1.color = Color.magenta;
+                            image1.sprite = itemsImage[3];
                         }
                         else if (buttonText.text.Contains("Item5"))
                         {
-                            image1.color = Color.yellow;
+                            image1.sprite = itemsImage[4];
                         }
                         else if (buttonText.text.Contains("Item6"))
                         {
-                            image1.color = Color.white;
+                            image1.sprite = itemsImage[5];
                         }
                     }
                     else
                     {
-                        Debug.LogWarning("No se encontró un SpriteRenderer en el objeto Image del botón.");
+                        Debug.LogWarning("No se encontro un SpriteRenderer en el objeto Image del boton.");
                     }
                 }
                 else
                 {
-                    Debug.LogWarning("No se encontró un componente Image en el botón.");
+                    Debug.LogWarning("No se encontro un componente Image en el boton.");
                 }
             }
         }

@@ -48,11 +48,11 @@ public class InventoryManagerScripts : MonoBehaviour
     {
         // Configurar grid principal (2 columnas x 4 filas)
         mainInventoryGrid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-        mainInventoryGrid.constraintCount = 2;
+        mainInventoryGrid.constraintCount = 4;
         mainInventoryGrid.cellSize = mainCellSize;
 
         // Configurar grid equipados (1 columna x 4 filas)
-        equippedItemsGrid.constraint = GridLayoutGroup.Constraint.FixedRowCount;
+        equippedItemsGrid.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
         equippedItemsGrid.constraintCount = 4;
         equippedItemsGrid.cellSize = equippedCellSize;
 
