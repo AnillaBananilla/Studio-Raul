@@ -4,6 +4,7 @@ public class PlayerStats : MonoBehaviour
 {
     [Header("Inventory Scanner")]
     public PlayerInventory playerInventory;
+    public InputHandler inputHandler;
     
     [Header("Current Stats")]
     public float currentMoveSpeed = 15f;
@@ -48,6 +49,13 @@ public class PlayerStats : MonoBehaviour
             currentDamageReduction = damageReductionModifier;
         }else{
             currentDamageReduction = 0;
+        }if(playerInventory.items[5].isEquipped && inputHandler.useItem){
+            //Item 5 es Poción de rosa - Aumenta 30 puntos de salud
+            Debug.Log("Aumenta salud 30");
+        }
+        if(playerInventory.items[6].isEquipped && inputHandler.useItem){
+            //Item 6 es Vial del doctor - Aumenta 50 puntos de salud  
+            Debug.Log("Aumenta salud 50 cuando su vida cae por debajo del 35, TODAVÍA NO PROGRAMADO, FALTA VARIABLE EN VALIDACION");
         }
     }
 }

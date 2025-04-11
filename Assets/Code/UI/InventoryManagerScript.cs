@@ -156,11 +156,15 @@ public class InventoryManagerScripts : MonoBehaviour
         if (isInventoryOpen)
         {
             UpdateInventoryUI();
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             if (selectedIndex >= 0) MoveSelectionIndicator(selectedIndex);
         }
         else
         {
             selectionIndicator.gameObject.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
