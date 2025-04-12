@@ -12,21 +12,30 @@ public class Healt : MonoBehaviour
     public GameObject coinPrefab;
     public float coinOffsetY = -5f;
     [Range(0, 100)] public float coinSpawnChance = 50f;
-    public Animator animator;
+    
     public GameObject damageTextPrefab; // Prefab del texto de da�o
     public Vector3 damageTextOffset = new Vector3(0, 3f, 0); // Offset para la posici�n del texto
 
     void Start()
     {
+
         currentHealt = maxHealt;
+
     }
 
     void Update()
     {
+
     }
 
     public void Damage(int damage)
     {
+        // TODO:
+        /*
+         * Que se apliquen los cambios en daño de Player Stats.
+         * Meter un switch que cheque el tag del enemigo, y modifique el daño que recibe.
+         * 
+         */
         currentHealt -= damage;
         ShowDamageText(-damage); 
 
@@ -38,6 +47,9 @@ public class Healt : MonoBehaviour
 
     public void Heal(int heal)
     {
+        /* TODO
+        * Que se aplique el boost de curas
+        */
         currentHealt += heal;
         if (currentHealt > maxHealt)
         {
@@ -54,13 +66,13 @@ public class Healt : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
 
             if (UnityEngine.Random.Range(0f, 100f) <= coinSpawnChance)
             {
                 Vector3 coinPosition = new Vector3(transform.position.x, transform.position.y + coinOffsetY, transform.position.z);
                 Instantiate(coinPrefab, coinPosition, Quaternion.identity);
             }
+            Destroy(gameObject);
         }
     }
 

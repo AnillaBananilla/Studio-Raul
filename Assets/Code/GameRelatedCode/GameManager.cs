@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static PlayerSkills;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class GameManager : MonoBehaviour
     public float healtAmount = 100f;
     public int score;
     public int key;
-    
+
+
+    public PlayerSkills SkillList;
+
     public float pintureAmount = 100f;
     public Image pintureBar;
 
@@ -119,6 +123,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public bool BrushSkill()
+    {
+        Skill pincelSkill = SkillList.skills.Find(skill => skill.name == "Pincel");
+        return pincelSkill.isUnlocked;
+    }
 
     /*
     public void GoToAchievements()
