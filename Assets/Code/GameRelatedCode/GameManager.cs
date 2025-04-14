@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static PlayerSkills;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,23 +15,26 @@ public class GameManager : MonoBehaviour
     public float healtAmount = 100f;
     public int score;
     public int key;
-    private bool _RangeAttack = false;
+
+
+    public PlayerSkills SkillList;
+
     public float pintureAmount = 100f;
     public Image pintureBar;
 
-    public PlayerEntity Drew;
 
-    public bool isGameActive = false; // Default: false
 
     public Transform RespawnPoint;
     public bool Dead = false;
+    public PlayerStats playerStats;
 
 
-
+    /*
     public GameObject AchievementScreen;        //Pendiente por terminar
     public GameObject MissionScreen;            //Pendiente por terminar
     public GameObject InventoryScreen;          //Pendiente por terminar
     public GameObject ShopScreen;               //Pendiente por terminar
+    */
 
     public float fadeInDuration = 1.5f;
     public float fadeOutDuration = 1.5f;
@@ -58,11 +62,7 @@ public class GameManager : MonoBehaviour
         key = 0;
         UpdateKey(0);
         fadeSpeed = 1f / fadeInDuration;
-
-
-
-
-        EventManager.m_Instance.AddListener<EquipItemEvent>(EquipItem);
+        //EventManager.m_Instance.AddListener<EquipItemEvent>(EquipItem);
 
     }
 
@@ -89,9 +89,10 @@ public class GameManager : MonoBehaviour
     }
 
     public void takeDamage(float damage)
-    {
-       healtAmount -= damage;
-       lifeBar.fillAmount = healtAmount / 100F;
+    {   
+        float appliedDamage = damage - playerStats.currentDamageReduction;
+        healtAmount -= appliedDamage;
+        lifeBar.fillAmount = healtAmount / 100F;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {
@@ -122,13 +123,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
-    public void RangeUpgrade()
+    public bool BrushSkill()
     {
-        _RangeAttack = true;
-        Debug.Log("NOW YOU CAN SHOOT");
+        Skill pincelSkill = SkillList.skills.Find(skill => skill.name == "Pincel");
+        return pincelSkill.isUnlocked;
     }
 
+    /*
     public void GoToAchievements()
     {
         MissionScreen.SetActive(false);
@@ -162,11 +163,13 @@ public class GameManager : MonoBehaviour
         ShopScreen.SetActive(false);
 
     }
-
+ 
     public void EquipItem(EquipItemEvent e)
     {
         EquippedItem = e.eventItem;
     }
+    */
+
     public void usePinture(float pinture)
     {
         pintureAmount -= pinture;
@@ -178,6 +181,7 @@ public class GameManager : MonoBehaviour
         pintureBar.fillAmount = pintureAmount / 100F;
     }
     
+    
     public void LoadScene()
     {
         SaveManager.OpenSavedScene();
@@ -186,15 +190,12 @@ public class GameManager : MonoBehaviour
     public void LoadData()
     {
         PlayerData LoadedData = SaveManager.LoadPlayerData();
-        Drew.transform.position = new Vector2(LoadedData.position[0], LoadedData.position[1]);
+       
     }
 
     public void SaveData()
     {
-        Drew.HP = Drew.MaxHP;
-        Drew.MPaint = Drew.MaxPaint;
-        Drew.CPaint = Drew.MaxPaint;
-        Drew.YPaint = Drew.MaxPaint;
-        SaveManager.SavePlayerData(Drew);
+        
+        //SaveManager.SavePlayerData(Drew);
     }
 }

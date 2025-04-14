@@ -335,7 +335,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4932257948283262647, guid: ee563cce76786da45a8b8c8cd3f9c098, type: 3}
   Spawnpoint: {fileID: 5582594945399449335}
   shootDirection: {x: 0, y: 0}
-  spawnPrefab: {fileID: 684302022464180486, guid: f70b7fca2370d4b49884cad23b9530b0, type: 3}
   imageToChange: {fileID: 0}
   animators: []
 --- !u!114 &4749155432632805270
@@ -601,7 +600,7 @@ MonoBehaviour:
   roofCheckPos: {fileID: 1606428481335303681}
   roofCheckSize: {x: 0.5, y: 0.5}
   baseGravity: 2
-  maxFallSpeed: 18
+  maxFallSpeed: 60
   fallSpeedMulti: 2
   playerStats: {fileID: 6979550663975489004}
 --- !u!114 &6979550663975489004

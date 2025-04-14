@@ -27,7 +27,7 @@ public class Spikes : MonoBehaviour
      
         if (other.gameObject.CompareTag("Player"))
         {
-            gameManagerX.takeDamage(20);
+            gameManagerX.takeDamage(20); //Corregir para que le pegue a healt
         }
     }
   

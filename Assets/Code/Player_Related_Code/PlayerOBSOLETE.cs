@@ -47,61 +47,58 @@ public class PlayerOBSOLETE : MonoBehaviour
 
     void Update()
     {
-        if (gameManager.isGameActive == false)
+        float inputH = Input.GetAxis("Horizontal");
+
+
+        bool jump = false;
+
+        // Si el jugador toca el suelo, reinicia el contador de saltos
+
+
+        // Salto: verifica si el jugador puede saltar (en el suelo o en el aire si no ha alcanzado el límite)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
         {
-            float inputH = Input.GetAxis("Horizontal");
+            jump = true;
+            jumpCount++; // Aumenta el contador de saltos
+        }
+
+        // Velocidad de carrera
+        float currentSpeed = isSprinting ? runSpeed : walkSpeed;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
+        }
+
+        // Animación del movimiento
+        if (Mathf.Abs(inputH) > 0)
+        {
+            animator.SetFloat("Speed", currentSpeed);
+        }
+        else
+        {
+            animator.SetFloat("Speed", 0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log(rb.velocity.y); //Cosas de Debug
+        }
+
+        if (rb.velocity.y <= -0.2 && rb.velocity.y >= -40)
+        {
+            rb.AddForce(new Vector2(0, -8));
+        }
 
 
-            bool jump = false;
 
-            // Si el jugador toca el suelo, reinicia el contador de saltos
-     
-
-            // Salto: verifica si el jugador puede saltar (en el suelo o en el aire si no ha alcanzado el límite)
-            if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
-            {
-                jump = true;
-                jumpCount++; // Aumenta el contador de saltos
-            }
-
-            // Velocidad de carrera
-            float currentSpeed = isSprinting ? runSpeed : walkSpeed;
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                isSprinting = true;
-            }
-            else
-            {
-                isSprinting = false;
-            }
-
-            // Animación del movimiento
-            if (Mathf.Abs(inputH) > 0)
-            {
-                animator.SetFloat("Speed", currentSpeed);
-            }
-            else
-            {
-                animator.SetFloat("Speed", 0);
-            }
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log(rb.velocity.y); //Cosas de Debug
-            }
-
-            if (rb.velocity.y <= -0.2 && rb.velocity.y >= -40)
-            {
-                rb.AddForce(new Vector2(0, -8));
-            }
-
-            
-
-            animator.SetBool("Move_Bool", Input.GetAxis("Horizontal") != 0);
-            if (inputHandler.changeColor)
-            {
-                ChangeColor();
-            }
+        animator.SetBool("Move_Bool", Input.GetAxis("Horizontal") != 0);
+        if (inputHandler.changeColor)
+        {
+            ChangeColor();
         }
 
         
