@@ -11,6 +11,9 @@ public class LevelCheckpoint : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             LevelNavigator.Instance.UpdateMap(ID);
+
+            EventManager.m_Instance.InvokeEvent<MapUpdateEvent>(new MapUpdateEvent());
+            Debug.Log("MAP UPDATE");
         }
     }
 }

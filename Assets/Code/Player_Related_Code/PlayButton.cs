@@ -26,7 +26,7 @@ public class PlayButton : MonoBehaviour
     }
     void PlayGame()
     {
-        gameManager.isGameActive = true;
+        //gameManager.isGameActive = true;
         titleScreen.SetActive(false);
         pailLogo.SetActive(false);
         titleScreen.SetActive(false);

@@ -64,7 +64,7 @@ public class PlayerMovementNew : MonoBehaviour
                 return;
             }
 
-            currSpeed = isRunning ? playerStats.GetTotalRunSpeed() : playerStats.GetTotalMoveSpeed();
+            currSpeed = isRunning ? playerStats.currentRunSpeed : playerStats.currentMoveSpeed;
             
             GroundCheck();
             RoofCheck();
@@ -105,13 +105,13 @@ public class PlayerMovementNew : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 jumpsLeft--;
-                animator.SetTrigger("Jump");
+                //animator.SetTrigger("Jump");
             }
             else if (context.canceled)
             {
                 rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
                 jumpsLeft--;
-                animator.SetTrigger("Jump");
+                //animator.SetTrigger("Jump");
             }
         }
     }

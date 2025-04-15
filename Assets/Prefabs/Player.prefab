@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 147979335240988526}
   - component: {fileID: 6761058616186723206}
   - component: {fileID: 6979550663975489004}
+  - component: {fileID: 3643443144228755534}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -334,6 +335,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 4932257948283262647, guid: ee563cce76786da45a8b8c8cd3f9c098, type: 3}
   Spawnpoint: {fileID: 5582594945399449335}
   shootDirection: {x: 0, y: 0}
+  imageToChange: {fileID: 0}
+  animators: []
 --- !u!114 &4749155432632805270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,8 +356,11 @@ MonoBehaviour:
   isNavigatingRight: 0
   isSelecting: 0
   attack: 0
-  canAttack: 0
-  playerSkills: {fileID: 0}
+  attackPaint: 0
+  changeColor: 0
+  unlockPincel: {fileID: 0}
+  playerSkills: {fileID: 11400000, guid: b3cfeabb160c7a747890bc39bb7f1751, type: 2}
+  pressPause: 0
 --- !u!114 &147979335240988526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +550,18 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a0c90f33-697a-4ef0-8c5a-218a719eaf04
     m_ActionName: Player/Drop[/Keyboard/s,/XInputControllerWindows/leftStick/down]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fe4ce5f5-0bf0-4c02-9a0e-5362f6e0792b
+    m_ActionName: Player/AttackPaint[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9dbf50ea-68ed-4109-a499-e7de2a645bd2
+    m_ActionName: Player/ChangeColor[/Keyboard/tab]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: cc2269c4-a630-43f6-860e-fe57d06c2e26
+    m_ActionName: Player/Pause[/Keyboard/escape,/XInputControllerWindows/start]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
@@ -582,7 +600,7 @@ MonoBehaviour:
   roofCheckPos: {fileID: 1606428481335303681}
   roofCheckSize: {x: 0.5, y: 0.5}
   baseGravity: 2
-  maxFallSpeed: 18
+  maxFallSpeed: 60
   fallSpeedMulti: 2
   playerStats: {fileID: 6979550663975489004}
 --- !u!114 &6979550663975489004
@@ -597,17 +615,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a5843b5ee971f4c9e58e670704284d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseMoveSpeed: 10
-  baseRunSpeed: 40
-  baseMaxHealth: 100
-  baseDamage: 10
-  baseDamageReduction: 0
-  moveSpeedModifier: 1
-  runSpeedModifier: 1
-  maxHealthModifier: 0
-  damageModifier: 0
-  damageReductionModifier: 0
-  paintConsumptionChanceModifier: 1
+  playerInventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
+  inputHandler: {fileID: 4749155432632805270}
+  currentMoveSpeed: 15
+  currentRunSpeed: 25
+  currentMaxHealth: 100
+  currentDamage: 10
+  currentDamageReduction: 0
+--- !u!114 &3643443144228755534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2930406216059960602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba909d575f897d44858101ffaa08bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealt: 100
+  maxHealt: 100
+  coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
+  coinOffsetY: -5
+  coinSpawnChance: 50
+  animator: {fileID: 0}
+  damageTextPrefab: {fileID: 0}
+  damageTextOffset: {x: 0, y: 3, z: 0}
 --- !u!1 &3732127342997179822
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,7 +670,7 @@ Transform:
   m_GameObject: {fileID: 3732127342997179822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4.237623}
+  m_LocalPosition: {x: -14.881808, y: 0, z: -4.237623}
   m_LocalScale: {x: 0.5924288, y: 0.56065834, z: 0.42376232}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -33,7 +33,7 @@ public class Droplets : MonoBehaviour
         }
         else
         {
-            Debug.LogError("No se encontr� el objeto Player en la escena.");
+            Debug.LogError("No se encontr� el objeto Player en la escena.");
         }
 
         UpdateColor();
@@ -67,7 +67,7 @@ public class Droplets : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player"))
         {
-            if (!collision.gameObject.CompareTag("Obstacle") && (!collision.gameObject.CompareTag("PlayerProjectile")))
+            if (collision.gameObject.CompareTag("Ground"))
             {
                 GameObject Puddle = GameObject.Instantiate(puddlePrefab);
                 Puddle.transform.position = this.gameObject.transform.position;
@@ -80,6 +80,13 @@ public class Droplets : MonoBehaviour
             }
             else
             {
+                //En este método, al tocar la gota de pintura a una entidad con
+                //tag enemigo, esta le hace daño. Es 35 porque ese daño hace Drew,
+                //pero con modificaciones de stats debe cambiar ese valor
+                if (collision.gameObject.CompareTag("Enemy"))
+                {
+                    collision.gameObject.GetComponent<Healt>().Damage(35);
+                }
                 PoolManager.Instance.ReturnObjectToPool(this.gameObject);
 
             }

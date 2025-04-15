@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scenes/SampleScene 1.unity.meta
 guid: 20691fd495be44043a84001462cc719b
+========
+guid: 955b7f6cef8391348a5919afd0e57208
+>>>>>>>> Emi_Branch_17/03:Assets/Scenes/SaveTestingScene.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

@@ -11,7 +11,7 @@ public class Spikes : MonoBehaviour
     private GameManager gameManagerX;
 
 
-    public int pointValue;
+    private int pointValue;
     void Start()
     {
         gameManagerX = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -27,7 +27,7 @@ public class Spikes : MonoBehaviour
      
         if (other.gameObject.CompareTag("Player"))
         {
-            gameManagerX.takeDamage(20);
+            gameManagerX.takeDamage(20); //Corregir para que le pegue a healt
         }
     }
   

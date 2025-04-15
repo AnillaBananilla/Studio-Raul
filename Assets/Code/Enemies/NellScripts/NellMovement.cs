@@ -20,8 +20,6 @@ public class NellMovement : MonoBehaviour
     private Vector3[] movePoints;
     public Rigidbody2D rb;
 
-    
-
     [Header("Detection")]
     public float detectionRadius = 13.0f;
 
@@ -143,4 +141,5 @@ public class NellMovement : MonoBehaviour
         yield return new WaitForSeconds(3f);
         speed = ogSpeed;
     }
+
 }
