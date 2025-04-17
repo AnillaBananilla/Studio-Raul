@@ -5879,6 +5879,7 @@ MonoBehaviour:
   healtAmount: 100
   score: 0
   key: 0
+  SkillList: {fileID: 11400000, guid: b3cfeabb160c7a747890bc39bb7f1751, type: 2}
   pintureAmount: 100
   pintureBar: {fileID: 1281210340}
   RespawnPoint: {fileID: 0}

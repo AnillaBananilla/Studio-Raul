@@ -33,7 +33,7 @@ public class InputHandler : MonoBehaviour
 
     void Update()
     {
-        if (unlockPincel.canAttack)
+        if (GameManager.instance.BrushSkill())
         {
             attack = playerInput.actions["Attack"].WasPerformedThisFrame();
             attackPaint = playerInput.actions["AttackPaint"].WasPerformedThisFrame();

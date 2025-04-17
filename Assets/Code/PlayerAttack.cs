@@ -5,12 +5,14 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.XR;
+using Unity.VisualScripting;
 
 public class PlayerAttack : MonoBehaviour
 {
     public InputHandler inputHandler;
 
-    // Start is called before the first frame update
+    public Healt PlayerHP;
+
     public Transform attackCheck;
     public float attackRadius = 2.0f;
     public LayerMask enemyLayer;
@@ -165,7 +167,9 @@ public class PlayerAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("NellProjectile")){
-            gameManager.takeDamage(25);
+            //gameManager.takeDamage(25);
+            PlayerHP.Damage(25);
+            GameManager.instance.lifeBar.fillAmount = PlayerHP.currentHealt / 100F;
         }
         /*else if(collision.gameObject.CompareTag("ArbolilloPunch")){
             gameManager.takeDamage(15);
