@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using static PlayerSkills;
 
@@ -22,7 +23,6 @@ public class InputHandler : MonoBehaviour
     public bool changeColor;
     public UnlockPincel unlockPincel;
     public PlayerSkills playerSkills;
-
     public bool pressPause;
 
     void Start()
@@ -33,17 +33,18 @@ public class InputHandler : MonoBehaviour
 
     void Update()
     {
+
+
         if (unlockPincel.canAttack)
         {
             attack = playerInput.actions["Attack"].WasPerformedThisFrame();
             attackPaint = playerInput.actions["AttackPaint"].WasPerformedThisFrame();
             changeColor = playerInput.actions["ChangeColor"].WasPerformedThisFrame();
         }
-        
 
 
-		//acciones relacionadas al inventario
-		pressMenu = playerInput.actions["OpenMenu"].WasPerformedThisFrame();
+        //acciones relacionadas al inventario
+        pressMenu = playerInput.actions["OpenMenu"].WasPerformedThisFrame();
    		pressEquip = playerInput.actions["Equip"].WasPerformedThisFrame();
 		useItem = playerInput.actions["UseItem"].WasPerformedThisFrame();
 
@@ -52,4 +53,5 @@ public class InputHandler : MonoBehaviour
 		isSelecting = playerInput.actions["SelectItem"].WasPerformedThisFrame();
         pressPause = playerInput.actions["Pause"].WasPerformedThisFrame();
     }
+
 }
