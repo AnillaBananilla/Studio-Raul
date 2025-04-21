@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int score;
     public int key;
 
+    public PlayerInventory Inventory;
 
     public PlayerSkills SkillList;
 
@@ -26,14 +27,13 @@ public class GameManager : MonoBehaviour
 
     public Transform RespawnPoint;
     public bool Dead = false;
+    public Healt PlayerHP;
     public PlayerStats playerStats;
 
 
     /*
-    public GameObject AchievementScreen;        //Pendiente por terminar
-    public GameObject MissionScreen;            //Pendiente por terminar
-    public GameObject InventoryScreen;          //Pendiente por terminar
-    public GameObject ShopScreen;               //Pendiente por terminar
+    TO DO:
+    Añadir una lista de booleanos, o lo que sea, que indiquen el progreso del juego.
     */
 
     public float fadeInDuration = 1.5f;
@@ -129,47 +129,6 @@ public class GameManager : MonoBehaviour
         return pincelSkill.isUnlocked;
     }
 
-    /*
-    public void GoToAchievements()
-    {
-        MissionScreen.SetActive(false);
-        AchievementScreen.SetActive(true);
-        InventoryScreen.SetActive(false);
-    }
-
-    public void GoToMissions()
-    {
-        AchievementScreen.SetActive(false);
-        InventoryScreen.SetActive(false);
-        MissionScreen.SetActive(true);
-    }
-
-    public void GoToInventory()
-    {
-        MissionScreen.SetActive(false);
-        AchievementScreen.SetActive(false);
-        InventoryScreen.SetActive(true);
-    }
-    public void OpenShop()
-    {
-        ShopScreen.SetActive(true);
-    }
-
-    public void CloseMenu()
-    {
-        MissionScreen.SetActive(false);
-        InventoryScreen.SetActive(false);
-        AchievementScreen.SetActive(false);
-        ShopScreen.SetActive(false);
-
-    }
- 
-    public void EquipItem(EquipItemEvent e)
-    {
-        EquippedItem = e.eventItem;
-    }
-    */
-
     public void usePinture(float pinture)
     {
         pintureAmount -= pinture;
@@ -184,18 +143,32 @@ public class GameManager : MonoBehaviour
     
     public void LoadScene()
     {
-        SaveManager.OpenSavedScene();
+        
     }
 
     public void LoadData()
     {
-        PlayerData LoadedData = SaveManager.LoadPlayerData();
-       
+        PlayerData Save = SaveManager.LoadPlayerData();
+        //Cargar los datos del jugador:
+        PlayerHP.gameObject.transform.position = new Vector3(Save.position[0], Save.position[1], -1.2563f); //Position
+        score = Save.Money;
+        PlayerHP.currentHealt = Save.HP;
+        //Cargar los items
+        int i = 0;
+        foreach (int amount in Save.ItemAmounts)
+        {
+            Inventory.items[i].quantity = amount;
+            i++;
+        }
+        usePinture(0);
+
+       //To Do:
+       //Cargar los datos de misiones terminadas e items almacenados.
     }
 
     public void SaveData()
     {
-        
+        SaveManager.SavePlayerData(instance);
         //SaveManager.SavePlayerData(Drew);
     }
 }

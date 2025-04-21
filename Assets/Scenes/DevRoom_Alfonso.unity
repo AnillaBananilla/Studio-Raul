@@ -19166,7 +19166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   titleScreen: {fileID: 0}
-  typewriterEffect: {fileID: 0}
+  typewriterEffect: {fileID: 162278177}
   dialogueText: {fileID: 0}
 --- !u!61 &1708626227
 BoxCollider2D:
@@ -19789,6 +19789,10 @@ PrefabInstance:
     - target: {fileID: 510786907562800288, guid: 7ce4d1e8382bb434da2ac7a7c4e23096, type: 3}
       propertyPath: m_Name
       value: PauseManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 510786907562800288, guid: 7ce4d1e8382bb434da2ac7a7c4e23096, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4691243982179703059, guid: 7ce4d1e8382bb434da2ac7a7c4e23096, type: 3}
       propertyPath: m_Pivot.x

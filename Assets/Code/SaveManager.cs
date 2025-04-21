@@ -6,9 +6,9 @@ using System.Collections;
 
 public static class SaveManager
 {
-    public static void SavePlayerData(PlayerStats Player)
+    public static void SavePlayerData(GameManager Game)
     {
-        PlayerData playerData = new PlayerData(Player);
+        PlayerData playerData = new PlayerData(Game);
         string dataPath = Application.persistentDataPath + "/player.save"; //Puede tener la terminacion que quiera, porque es binario
         FileStream fileStream = new FileStream(dataPath, FileMode.Create); //Crea el archivo
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -39,11 +39,9 @@ public static class SaveManager
         
     }
 
-    public static void OpenSavedScene()
+    public static void OpenSavedScene() //Might Have to delete.
     {
-        SceneManager.LoadScene(LoadPlayerData().SceneIndex);
-        Countdown();
-        GameManager.instance.LoadData();
+
     }
 
     private static IEnumerator Countdown()

@@ -5,7 +5,7 @@ using TMPro;
 
 public class DialogShop : MonoBehaviour
 {
-    public GameObject titleScreen;
+    public GameObject titleScreen; //Es la referencia al Transform vacio de la escena,se usa paraactivarlo y desactivarlo
     public TypewriterEffect typewriterEffect; // Referencia al script del efecto
     public TextMeshProUGUI dialogueText; // Referencia al texto donde se mostrará el diálogo
     private string[] messages; // Array de mensajes

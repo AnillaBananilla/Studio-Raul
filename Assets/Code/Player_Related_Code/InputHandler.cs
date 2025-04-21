@@ -13,6 +13,9 @@ public class InputHandler : MonoBehaviour
 	public bool isNavigatingRight;
 	public bool isSelecting;
 
+    [Header("Interacción con el entorno")]
+    public bool interacting = false;
+
 	[Header("Instancia del playerInput del player")]
     private PlayerInput playerInput;
 
@@ -51,5 +54,6 @@ public class InputHandler : MonoBehaviour
     	isNavigatingRight = playerInput.actions["NavigateRight"].WasPerformedThisFrame();
 		isSelecting = playerInput.actions["SelectItem"].WasPerformedThisFrame();
         pressPause = playerInput.actions["Pause"].WasPerformedThisFrame();
+        interacting = playerInput.actions["Interact"].WasPerformedThisFrame();
     }
 }
