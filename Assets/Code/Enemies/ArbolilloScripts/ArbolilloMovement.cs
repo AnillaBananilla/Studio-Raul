@@ -1,82 +1,93 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Collections;
 using UnityEngine;
 
 public class ArbolilloMovement : MonoBehaviour
 {
-    private enum EnemyState { Patrolling, Burrowing, Emerging }
-    private EnemyState currentState = EnemyState.Patrolling;
-
     [Header("Puntos de patrullaje")]
     public Transform[] movePointsReference;
 
+
+    [Header("Info para Localizar al jugador")]
+    public Transform player;
+
+
     [Header("Movement")]
-    public float speed = 5.0f;
+    public float speed = 10.0f;
     private int pointIndex = 0;
     private Vector3[] movePoints;
     public Rigidbody2D rb;
 
+
     [Header("Detection")]
     public float detectionRadius = 13.0f;
+
     public LayerMask playerLayer;
+
     private Transform target = null;
 
-    [Header("Burrow Behaviour")]
-    public bool isAttacked = false;
-    public float burrowDuration = 0.5f;
-    public float distanceInFrontOfPlayer = 1.5f;
-    public float emergeDuration = 0.3f;
-
-    private Collider2D enemyCollider;
     private SpriteRenderer spriteRenderer;
-    private Animator animator;
+    
+    //Referencias de salud
     private Healt enemyHealth;
     private int previousHealth;
+
+    [Header("Timing Enterrado")]
+    public float undergroundDuration = 3f;
+    public float stayActiveAfterEmerging = 2f;
+    public float emergeDistanceFromPlayer = 1f;
+    public bool canTakeDamage = true;
+    
+    [Header("Partículas de tierra")]
+    public ParticleSystem dustParticles;
+
+    //estados arbolillo y collider
+    private enum EnemyState { Pasivo, Enterrado, Emergido }
+    private EnemyState currentState = EnemyState.Pasivo;
+    private bool hasBeenAggroed = false;
+    private CapsuleCollider2D arbolliloCollider;
+
 
     void Start()
     {
         PrepareMovePositions();
         transform.position = movePoints[pointIndex];
-
-        rb = GetComponent<Rigidbody2D>();
-        enemyCollider = GetComponent<Collider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>();
+        arbolliloCollider = GetComponent<CapsuleCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
         enemyHealth = GetComponent<Healt>();
         previousHealth = enemyHealth.currentHealt;
     }
-
     void Update()
     {
-        CheckForTarget();
-        DetectIfAttacked();
-
-        switch (currentState)
-        {
-            case EnemyState.Patrolling:
-                Patrol();
-                break;
-            case EnemyState.Burrowing:
-                break;
-            case EnemyState.Emerging:
-                // Optional: delay or reset
-                break;
+        CheckDamage();
+        previousHealth = enemyHealth.currentHealt;
+        if(currentState == EnemyState.Pasivo){
+            CheckForTarget();
+            Patrol();
         }
     }
 
+    private void CheckDamage(){
+        if(currentState == EnemyState.Pasivo && previousHealth != enemyHealth.currentHealt){
+            hasBeenAggroed = true;
+            StartCoroutine(UndergroundLoop());
+        }
+    }
     private void Patrol()
     {
         if (pointIndex <= movePoints.Length - 1)
         {
-            Vector3 patrolTarget = new Vector3(movePoints[pointIndex].x, transform.position.y, transform.position.z);
-            transform.position = Vector2.MoveTowards(transform.position, patrolTarget, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, movePoints[pointIndex], speed * Time.deltaTime);
+            
 
-            if (Mathf.Abs(transform.position.x - patrolTarget.x) < 0.02f)
+            if (Vector2.Distance(transform.position, movePoints[pointIndex]) < 0.02f)
             {
                 pointIndex++;
                 transform.Rotate(0, 180, 0);
+      
             }
-
             if (pointIndex >= movePoints.Length)
             {
                 pointIndex = 0;
@@ -90,80 +101,105 @@ public class ArbolilloMovement : MonoBehaviour
 
         if (targetCollider != null)
         {
-            target = targetCollider.transform;
+           
+            target = targetCollider.gameObject.transform;
         }
         else
         {
             target = null;
-        }
-    }
 
-    private void DetectIfAttacked()
-    {
-        if (previousHealth != enemyHealth.currentHealt)
-        {
-            Debug.Log("Arbolillo was attacked!");
-            isAttacked = true;
-            previousHealth = enemyHealth.currentHealt;
-
-            if (target != null && currentState == EnemyState.Patrolling)
-            {
-                currentState = EnemyState.Burrowing;
-                StartCoroutine(BurrowTowardPlayer());
-            }
-        }
-    }
-
-    private IEnumerator BurrowTowardPlayer()
-    {
-        // Become invulnerable
-        enemyCollider.enabled = false;
-        
-        // Optional visual cue
-        spriteRenderer.color = new Color(1, 1, 1, 0.5f);
-        animator.SetTrigger("Burrow");
-
-        yield return new WaitForSeconds(burrowDuration);
-
-        if (target != null)
-        {
-            float groundY = transform.position.y;
-            Vector3 inFrontOfPlayer = target.position + new Vector3(target.localScale.x * distanceInFrontOfPlayer, 0, 0);
-
-            while (Vector2.Distance(transform.position, inFrontOfPlayer) > 0.1f)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, new Vector3(inFrontOfPlayer.x, groundY, transform.position.z), speed * Time.deltaTime);
-                yield return null;
-            }
         }
 
-        // Reappear
-        animator.SetTrigger("Emerge");
-        spriteRenderer.color = new Color(1, 1, 1, 1f);
-
-        yield return new WaitForSeconds(emergeDuration);
-
-        enemyCollider.enabled = true;
-        currentState = EnemyState.Emerging;
-
-        // Optional: return to patrolling or stay in combat
-        yield return new WaitForSeconds(1f);
-        currentState = EnemyState.Patrolling;
-        isAttacked = false;
     }
-
     private void PrepareMovePositions()
     {
         movePoints = new Vector3[movePointsReference.Length];
+
         for (int i = 0; i < movePointsReference.Length; i++)
         {
             movePoints[i] = movePointsReference[i].position;
         }
     }
-
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
+    }
+
+    //método de comportamiento 
+    IEnumerator GoUnderground(){
+        currentState = EnemyState.Enterrado;
+        canTakeDamage = false;
+
+        // Desactivar sprite y colisión
+        spriteRenderer.enabled = false;
+        arbolliloCollider.enabled = false;
+
+        if (dustParticles != null)
+        {
+            dustParticles.Play();
+        }
+
+        float elapsed = 0f;
+        //tiempo antes de que se guarde la posición del jugador
+        float delayBeforeLockTarget = 0.1f;
+
+        float groundY = transform.position.y;
+        Vector2 targetPosition = transform.position;
+
+        while (elapsed < undergroundDuration)
+        {   
+            if(elapsed >= delayBeforeLockTarget && targetPosition == (Vector2)transform.position){
+                targetPosition = player != null ? new Vector2(player.position.x, groundY): new Vector2(transform.position.x, groundY);
+            }
+
+            Vector2 moveDirection = (targetPosition - (Vector2)transform.position).normalized;
+            // Movimiento hacia la posición guardada, NO actualizada en tiempo real y HORIZONTAL
+            Vector2 nextPosition = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            nextPosition.y = groundY;
+            transform.position = nextPosition;
+            if (dustParticles != null)
+            {
+                float angle = Mathf.Atan2(-moveDirection.y, -moveDirection.x) * Mathf.Rad2Deg;
+                dustParticles.transform.rotation = Quaternion.Euler(0, 0, angle);
+            }
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        // Detener partículas
+        if (dustParticles != null)
+        {
+            dustParticles.Stop();
+        }
+        // Emerger cerca de la posición guardada
+        Vector2 direction = ((Vector2)transform.position - targetPosition).normalized;
+        Vector2 emergePosition = targetPosition + direction * emergeDistanceFromPlayer;
+        emergePosition.y = groundY;
+        transform.position = emergePosition;
+
+        // Reactivar sprite y colisión
+        spriteRenderer.enabled = true;
+        arbolliloCollider.enabled = true;
+
+        currentState = EnemyState.Emergido;
+        canTakeDamage = true;
+        hasBeenAggroed = false;
+
+        yield return new WaitForSeconds(stayActiveAfterEmerging);
+
+    }
+
+    IEnumerator UndergroundLoop(){
+        while(true){
+            yield return StartCoroutine(GoUnderground());
+            yield return new WaitForSeconds(1f);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(currentState == EnemyState.Emergido && collision.CompareTag("Player")){
+            collision.GetComponent<Healt>()?.Damage(15);
+        }
     }
 }
