@@ -4,6 +4,8 @@ using static PlayerSkills;
 
 public class InputHandler : MonoBehaviour
 {
+    public bool moveable = true;
+
 	[Header("Acciones referentes al inventario")]
 	public bool pressMenu = false;
 	public bool pressEquip = false;
@@ -36,7 +38,30 @@ public class InputHandler : MonoBehaviour
 
     void Update()
     {
-        if (GameManager.instance.BrushSkill())
+        if (moveable)
+        {
+            if (GameManager.instance.BrushSkill())
+            {
+                attack = playerInput.actions["Attack"].WasPerformedThisFrame();
+                attackPaint = playerInput.actions["AttackPaint"].WasPerformedThisFrame();
+                changeColor = playerInput.actions["ChangeColor"].WasPerformedThisFrame();
+            }
+
+
+
+            //acciones relacionadas al inventario
+            pressMenu = playerInput.actions["OpenMenu"].WasPerformedThisFrame();
+            pressEquip = playerInput.actions["Equip"].WasPerformedThisFrame();
+            useItem = playerInput.actions["UseItem"].WasPerformedThisFrame();
+
+            isNavigatingLeft = playerInput.actions["NavigateLeft"].WasPerformedThisFrame();
+            isNavigatingRight = playerInput.actions["NavigateRight"].WasPerformedThisFrame();
+            isSelecting = playerInput.actions["SelectItem"].WasPerformedThisFrame();
+            pressPause = playerInput.actions["Pause"].WasPerformedThisFrame();
+            interacting = playerInput.actions["Interact"].WasPerformedThisFrame();
+        }
+        /*
+         * if (GameManager.instance.BrushSkill())
         {
             attack = playerInput.actions["Attack"].WasPerformedThisFrame();
             attackPaint = playerInput.actions["AttackPaint"].WasPerformedThisFrame();
@@ -55,5 +80,6 @@ public class InputHandler : MonoBehaviour
 		isSelecting = playerInput.actions["SelectItem"].WasPerformedThisFrame();
         pressPause = playerInput.actions["Pause"].WasPerformedThisFrame();
         interacting = playerInput.actions["Interact"].WasPerformedThisFrame();
+        */
     }
 }

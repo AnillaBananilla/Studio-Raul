@@ -49,7 +49,7 @@ public class SaveFountain : MonoBehaviour
             if (Player.interacting && !inDialog)
             {
                 //Open the Save Game Option.
-
+                Player.moveable = false;
                 OpenDialog();
                 inDialog = true;
                 Time.timeScale = 0f;
@@ -91,7 +91,7 @@ public class SaveFountain : MonoBehaviour
 
     private void EndDialog()
     {
-        
+        Player.moveable = true;
         Time.timeScale = 1f;
         StartCoroutine(ResetDialog());
         GameManager.instance.LoadData();
@@ -123,7 +123,7 @@ public class SaveFountain : MonoBehaviour
 
     private IEnumerator ResetDialog()
     {
-        yield return new WaitForSecondsRealtime(1);
+        yield return new WaitForSecondsRealtime(0.5f);
         inDialog = false;
         YesButton.gameObject.SetActive(true);
         NoButton.gameObject.SetActive(true);

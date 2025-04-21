@@ -41,12 +41,30 @@ public class PlayerData
             ItemAmounts[i] = Game.Inventory.items[i].quantity;
             i++;
         }
-        
-
-
-
         //, int money, bool[] progress, int[] items, bool[] skills
+    }
 
+    public PlayerData()
+    {
+        // This constructor creates an Empty Save File.
+        position[0] = 0;
+        position[1] = 0;
+        position[2] = -1.2563f;
+        SceneIndex = 1;
+
+        //Save the Player's Health and money
+        HP = 100;
+        Money = 0;
+
+        //Save the Player's skills
+        Skills[0] = false;
+
+        //Save the Item Amounts
+        for (int i = 0; i < 9; i++)
+        {
+            ItemAmounts[i] = 0;
+        }
+        //, int money, bool[] progress, int[] items, bool[] skills
     }
 }
 
