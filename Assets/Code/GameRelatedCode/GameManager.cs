@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static PlayerSkills;
+using Unity.VisualScripting;
 
 
 public class GameManager : MonoBehaviour
@@ -21,6 +22,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel; // Referencia al panel de Game Over
     [SerializeField] private Button menuButton; // Botón para volver al menú
     [SerializeField] private Button restartButton; // Botón para reiniciar
+
     private bool isGameOver = false;
 
 
@@ -64,6 +66,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Dead = false;
         score = 0;
         UpdateScore(0);
         key = 0;
@@ -114,6 +117,7 @@ public class GameManager : MonoBehaviour
         lifeBar.fillAmount = healtAmount / 100F;
         if(lifeBar.fillAmount == 0){
             TriggerGameOver();
+            Dead = true;
         }
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
