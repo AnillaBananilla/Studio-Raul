@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
-
+using UnityEngine.UIElements;
 
 public class UIManager : MonoBehaviour
 {
@@ -12,8 +12,8 @@ public class UIManager : MonoBehaviour
     [Header("UI Elements for Quests")]
     public GameObject questOfferUI;
     public TMPro.TextMeshProUGUI questOfferText;
-    public Button acceptButton;
-    public Button declineButton;
+    public UnityEngine.UI.Button acceptButton;
+    public UnityEngine.UI.Button declineButton;
 
     [Header("Quest List UI")]
     public GameObject questListUI;
@@ -22,7 +22,6 @@ public class UIManager : MonoBehaviour
     [Header("Notifications")]
     public GameObject questNotification;
     public TMPro.TextMeshProUGUI questNotificationText;
-
 
     private void Awake()
     {
@@ -33,12 +32,11 @@ public class UIManager : MonoBehaviour
     {
         QM = FindFirstObjectByType<QuestManager>();
         questOfferUI.SetActive(false);
-
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             bool isActive = questListUI.activeSelf;
             questListUI.SetActive(isActive);
@@ -58,10 +56,11 @@ public class UIManager : MonoBehaviour
         acceptButton.gameObject.SetActive(true);
         declineButton.gameObject.SetActive(true);
 
-
+        acceptButton.onClick.RemoveAllListeners();
+        declineButton.onClick.RemoveAllListeners();
 
         acceptButton.onClick.AddListener(() => {
-
+            Debug.Log("Hellooo");
             questOfferUI.SetActive(false);
             acceptButton.gameObject.SetActive(false);
             declineButton.gameObject.SetActive(false);
@@ -101,6 +100,4 @@ public class UIManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         questNotification.SetActive(false);
     }
-
-
 }
