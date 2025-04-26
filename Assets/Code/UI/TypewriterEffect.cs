@@ -19,7 +19,13 @@ public class TypewriterEffect : MonoBehaviour
         foreach (char letter in message)
         {
             dialogueText.text += letter; // Agregar letra por letra
-            yield return new WaitForSeconds(typeSpeed); // Pausa entre letras
+            yield return new WaitForSecondsRealtime(typeSpeed); // Pausa entre letras
+            /* NOTA
+             * Cambié WaitForSeconds a WaitForSecondsRealtime para que el efecto siga ocurriendo
+             * Aunque TimeScale sea 0
+             *  - Emi
+             */
         }
     }
+
 }

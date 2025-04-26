@@ -9,6 +9,8 @@ public class Healt : MonoBehaviour
     public int currentHealt;
     public int maxHealt;
 
+    private bool isImmune = false;
+
     public GameObject coinPrefab;
     public float coinOffsetY = -5f;
     [Range(0, 100)] public float coinSpawnChance = 50f;
@@ -16,6 +18,11 @@ public class Healt : MonoBehaviour
     public GameObject damageTextPrefab; // Prefab del texto de da�o
     public Vector3 damageTextOffset = new Vector3(0, 3f, 0); // Offset para la posici�n del texto
 
+    public IEnumerator Immunity()
+    {
+        yield return new WaitForSeconds(2);
+        isImmune = false;
+    }
     void Start()
     {
 
@@ -36,8 +43,14 @@ public class Healt : MonoBehaviour
          * Meter un switch que cheque el tag del enemigo, y modifique el daño que recibe.
          * 
          */
-        currentHealt -= damage;
-        ShowDamageText(-damage); 
+        if (!isImmune)
+        {
+            currentHealt -= damage;
+            ShowDamageText(-damage);
+            isImmune = true;
+            StartCoroutine(Immunity());
+        }
+        
 
         if (currentHealt <= 0)
         {

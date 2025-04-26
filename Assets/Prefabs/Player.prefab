@@ -325,6 +325,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputHandler: {fileID: 4749155432632805270}
+  PlayerHP: {fileID: 3643443144228755534}
   attackCheck: {fileID: 7791853452807921908}
   attackRadius: 2
   enemyLayer:
@@ -639,7 +640,6 @@ MonoBehaviour:
   coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
   coinOffsetY: -5
   coinSpawnChance: 50
-  animator: {fileID: 0}
   damageTextPrefab: {fileID: 0}
   damageTextOffset: {x: 0, y: 3, z: 0}
 --- !u!1 &3732127342997179822
