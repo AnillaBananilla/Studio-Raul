@@ -21,6 +21,9 @@ public class GameManager : MonoBehaviour
     public PlayerSkills SkillList;
 
     public float pintureAmount = 100f;
+    public float[] paintAmount = { 100f, 100f, 100f }; // Az Ma Am
+    public int paintColorIndex = 0;
+
     public Image pintureBar;
 
 
@@ -132,7 +135,12 @@ public class GameManager : MonoBehaviour
     public void usePinture(float pinture)
     {
         pintureAmount -= pinture;
+
+        paintAmount[paintColorIndex] -= pinture;
+
         pintureBar.fillAmount = pintureAmount / 100F;
+
+        pintureBar.fillAmount = paintAmount[paintColorIndex];
     }
     public void recivePinture(float pinture)
     {

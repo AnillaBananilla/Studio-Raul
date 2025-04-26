@@ -128,16 +128,19 @@ public class PlayerAttack : MonoBehaviour
                 valueToPrint = 10;
                 Debug.Log("Valor impreso: " + valueToPrint);
                 imageToChange.color = Color.cyan;
+                GameManager.instance.paintColorIndex = 0;
                 break;
             case ColorState.Amarillo:
                 valueToPrint = 20;
                 Debug.Log("Valor impreso: " + valueToPrint);
                 imageToChange.color = Color.magenta;
+                GameManager.instance.paintColorIndex = 1;
                 break;
             case ColorState.Rojo:
                 valueToPrint = 30;
                 Debug.Log("Valor impreso: " + valueToPrint);
                 imageToChange.color = Color.yellow;
+                GameManager.instance.paintColorIndex = 2;
                 break;
         }
     }
