@@ -5,18 +5,27 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static PlayerSkills;
+using Unity.VisualScripting;
+
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;           // Asignar aca el unico game manager.
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI keyText;
+    //public TextMeshProUGUI scoreText;
+    //public TextMeshProUGUI keyText;
     public Image lifeBar;
     public float healtAmount = 100f;
     public int score;
     public int key;
 
     public PlayerInventory Inventory;
+    [Header("UI Elements for GameOver")]
+    [SerializeField] private GameObject gameOverPanel; // Referencia al panel de Game Over
+    [SerializeField] private Button menuButton; // Botón para volver al menú
+    [SerializeField] private Button restartButton; // Botón para reiniciar
+
+    private bool isGameOver = false;
+
 
     public PlayerSkills SkillList;
 
@@ -36,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     /*
     TO DO:
-    A�adir una lista de booleanos, o lo que sea, que indiquen el progreso del juego.
+    A�adir una lista de booleanos, o lo que sea, que indiquen el progreso del juego.
     */
 
     public float fadeInDuration = 1.5f;
@@ -60,12 +69,25 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Dead = false;
         score = 0;
         UpdateScore(0);
         key = 0;
         UpdateKey(0);
         fadeSpeed = 1f / fadeInDuration;
         //EventManager.m_Instance.AddListener<EquipItemEvent>(EquipItem);
+
+
+        // Asegurarse de que el panel esté desactivado al inicio
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+
+        // Asignar funciones a los botones
+        if (menuButton != null)
+            menuButton.onClick.AddListener(GoToMenu);
+        
+        if (restartButton != null)
+            restartButton.onClick.AddListener(RestartGame);
 
     }
 
@@ -96,6 +118,10 @@ public class GameManager : MonoBehaviour
         float appliedDamage = damage - playerStats.currentDamageReduction;
         healtAmount -= appliedDamage;
         lifeBar.fillAmount = healtAmount / 100F;
+        if(lifeBar.fillAmount == 0){
+            TriggerGameOver();
+            Dead = true;
+        }
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {
@@ -178,5 +204,43 @@ public class GameManager : MonoBehaviour
     {
         SaveManager.SavePlayerData(instance);
         //SaveManager.SavePlayerData(Drew);
+    }
+
+    public void TriggerGameOver()
+    {
+        if (isGameOver) return;
+
+        isGameOver = true;
+        
+        // Activar panel de Game Over
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(true);
+        
+        // Detener el tiempo
+        Time.timeScale = 0f;
+    }
+
+    private void GoToMenu()
+    {
+        // Restaurar el tiempo
+        Time.timeScale = 1f;
+        
+        // Cambiar a la escena del menú (ajusta "MenuScene" al nombre de tu escena)
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private void RestartGame()
+    {
+        isGameOver = false;
+        
+        // Desactivar panel de Game Over
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+        
+        // Restaurar el tiempo
+        Time.timeScale = 1f;
+        
+        // Recargar la escena actual
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
