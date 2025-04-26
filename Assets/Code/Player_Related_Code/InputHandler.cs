@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using static PlayerSkills;
 
@@ -15,7 +16,7 @@ public class InputHandler : MonoBehaviour
 	public bool isNavigatingRight;
 	public bool isSelecting;
 
-    [Header("Interacción con el entorno")]
+    [Header("Interacciï¿½n con el entorno")]
     public bool interacting = false;
 
 	[Header("Instancia del playerInput del player")]
@@ -27,7 +28,6 @@ public class InputHandler : MonoBehaviour
     public bool changeColor;
     public UnlockPincel unlockPincel;
     public PlayerSkills playerSkills;
-
     public bool pressPause;
 
     void Start()
@@ -67,11 +67,10 @@ public class InputHandler : MonoBehaviour
             attackPaint = playerInput.actions["AttackPaint"].WasPerformedThisFrame();
             changeColor = playerInput.actions["ChangeColor"].WasPerformedThisFrame();
         }
-        
 
 
-		//acciones relacionadas al inventario
-		pressMenu = playerInput.actions["OpenMenu"].WasPerformedThisFrame();
+        //acciones relacionadas al inventario
+        pressMenu = playerInput.actions["OpenMenu"].WasPerformedThisFrame();
    		pressEquip = playerInput.actions["Equip"].WasPerformedThisFrame();
 		useItem = playerInput.actions["UseItem"].WasPerformedThisFrame();
 
@@ -82,4 +81,5 @@ public class InputHandler : MonoBehaviour
         interacting = playerInput.actions["Interact"].WasPerformedThisFrame();
         */
     }
+
 }

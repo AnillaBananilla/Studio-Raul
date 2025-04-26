@@ -37,7 +37,9 @@ public class DialogShop : MonoBehaviour
         {
         "¡Hola viajero, como te ecuentras!?",
         "Te ves algo decaido, pero no te preocupes",
+        "yo te dare una mision para que tengas una gran aventura!",
         "yo te dare una mision para que tengas una gran aventura!"
+
         };
     }
 
