@@ -7,6 +7,8 @@ public class PlayerMovementNew : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    [SerializeField] private InputHandler input;
+
     bool isFacingRight = true;
 
     public Animator animator;
@@ -58,6 +60,8 @@ public class PlayerMovementNew : MonoBehaviour
 
     void Update()
     {
+        if (input.moveable)
+        {
             if (!canMove)
             {
                 rb.velocity = Vector2.zero;
@@ -65,19 +69,25 @@ public class PlayerMovementNew : MonoBehaviour
             }
 
             currSpeed = isRunning ? playerStats.currentRunSpeed : playerStats.currentMoveSpeed;
-            
+
             GroundCheck();
             RoofCheck();
             Gravity();
             Flip();
 
             animator.SetFloat("yVelocity", rb.velocity.y);
-            animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x)); 
+            animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+        }
+           
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontalMovement * currSpeed, rb.velocity.y);
+        if (input.moveable)
+        {
+            rb.velocity = new Vector2(horizontalMovement * currSpeed, rb.velocity.y);
+        }
+        
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -99,7 +109,7 @@ public class PlayerMovementNew : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(jumpsLeft > 0)
+        if(jumpsLeft > 0 && input.moveable)
         {
             if (context.performed && canGetUp)
             {

@@ -2082,6 +2082,10 @@ PrefabInstance:
       propertyPath: isNavigatingRight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6761058616186723206, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 2096748535}
     - target: {fileID: 7406043260029691577, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.308074
@@ -3306,15 +3310,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c833b3ae4b98305478c2a9f4454769dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreText: {fileID: 0}
-  keyText: {fileID: 0}
   lifeBar: {fileID: 70653744}
   healtAmount: 100
   score: 0
   key: 0
   Inventory: {fileID: 11400000, guid: aaf5013f4266fb6408cdc720f9592268, type: 2}
+  gameOverPanel: {fileID: 0}
+  menuButton: {fileID: 0}
+  restartButton: {fileID: 0}
   SkillList: {fileID: 11400000, guid: b3cfeabb160c7a747890bc39bb7f1751, type: 2}
   pintureAmount: 100
+  paintAmount:
+  - 100
+  - 100
+  - 100
+  paintColorIndex: 0
   pintureBar: {fileID: 416097139}
   RespawnPoint: {fileID: 0}
   Dead: 0

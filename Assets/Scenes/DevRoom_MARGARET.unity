@@ -844,7 +844,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 320523751}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b133d4218f2209d4cb1d241ffe43beaa, type: 3}
   m_Name: 
@@ -2091,14 +2091,21 @@ MonoBehaviour:
   healtAmount: 100
   score: 0
   key: 0
+  Inventory: {fileID: 0}
   gameOverPanel: {fileID: 1695469233}
   menuButton: {fileID: 1071820647}
   restartButton: {fileID: 2120625543}
   SkillList: {fileID: 11400000, guid: b3cfeabb160c7a747890bc39bb7f1751, type: 2}
   pintureAmount: 100
+  paintAmount:
+  - 100
+  - 100
+  - 100
+  paintColorIndex: 0
   pintureBar: {fileID: 1645445840}
   RespawnPoint: {fileID: 0}
   Dead: 0
+  PlayerHP: {fileID: 0}
   playerStats: {fileID: 3705579220110742827}
   fadeInDuration: 1
   fadeOutDuration: 1
@@ -3382,9 +3389,10 @@ GameObject:
   - component: {fileID: 1574066759}
   - component: {fileID: 1574066757}
   - component: {fileID: 1574066758}
+  - component: {fileID: 1574066761}
   m_Layer: 6
   m_Name: Margaret_Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3518,6 +3526,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 320523761}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1574066761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1574066755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba909d575f897d44858101ffaa08bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealt: 600
+  maxHealt: 8967867
+  coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
+  coinOffsetY: -5
+  coinSpawnChance: 50
+  damageTextPrefab: {fileID: 0}
+  damageTextOffset: {x: 0, y: 3, z: 0}
 --- !u!1 &1584939939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2930406216059960602, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
@@ -4706,6 +4733,10 @@ PrefabInstance:
       propertyPath: unlockPincel
       value: 
       objectReference: {fileID: 544737999}
+    - target: {fileID: 6761058616186723206, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 1584939966}
     - target: {fileID: 6979550663975489004, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
       propertyPath: baseRunSpeed
       value: 25
