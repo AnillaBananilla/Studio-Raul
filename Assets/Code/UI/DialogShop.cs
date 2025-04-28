@@ -5,7 +5,7 @@ using TMPro;
 
 public class DialogShop : MonoBehaviour
 {
-    public GameObject titleScreen;
+    public GameObject titleScreen; //Es la referencia al Transform vacio de la escena,se usa paraactivarlo y desactivarlo
     public TypewriterEffect typewriterEffect; // Referencia al script del efecto
     public TextMeshProUGUI dialogueText; // Referencia al texto donde se mostrará el diálogo
     private string[] messages; // Array de mensajes
@@ -37,7 +37,9 @@ public class DialogShop : MonoBehaviour
         {
         "¡Hola viajero, como te ecuentras!?",
         "Te ves algo decaido, pero no te preocupes",
+        "yo te dare una mision para que tengas una gran aventura!",
         "yo te dare una mision para que tengas una gran aventura!"
+
         };
     }
 
