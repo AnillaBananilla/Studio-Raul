@@ -190,7 +190,6 @@ public class PlayerMovementNew : MonoBehaviour
             isOnPlatform = false;
         }
     }
-
     private void Gravity()
     {
         if(rb.velocity.y < 0)
@@ -203,7 +202,6 @@ public class PlayerMovementNew : MonoBehaviour
             rb.gravityScale = baseGravity;
         }
     }
-
     private void Flip()
     {
         if(isFacingRight && horizontalMovement < 0 || !isFacingRight && horizontalMovement > 0)
