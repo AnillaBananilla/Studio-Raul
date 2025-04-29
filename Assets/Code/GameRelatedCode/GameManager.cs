@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
 
     public PlayerSkills SkillList;
 
-    public float pintureAmount = 100f;
+    //public float pintureAmount = 100f;
     public float[] paintAmount = { 100f, 100f, 100f }; // Az Ma Am
     public int paintColorIndex = 0;
 
@@ -115,13 +115,15 @@ public class GameManager : MonoBehaviour
 
     public void takeDamage(float damage)
     {   
+        //ACOMODAR PARA QUE USE EL COMPONENTE HEALT DE PLAYER
         float appliedDamage = damage - playerStats.currentDamageReduction;
-        healtAmount -= appliedDamage;
-        lifeBar.fillAmount = healtAmount / 100F;
+        PlayerHP.currentHealt -= (int) appliedDamage;
+        lifeBar.fillAmount = PlayerHP.currentHealt / 100F;
         if(lifeBar.fillAmount == 0){
             TriggerGameOver();
             Dead = true;
         }
+        lifeBar.fillAmount = PlayerHP.currentHealt / 100F;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {
@@ -160,18 +162,27 @@ public class GameManager : MonoBehaviour
 
     public void usePinture(float pinture)
     {
-        pintureAmount -= pinture;
+        //pintureAmount -= pinture;
 
         paintAmount[paintColorIndex] -= pinture;
 
-        pintureBar.fillAmount = pintureAmount / 100F;
+        //pintureBar.fillAmount = pintureAmount / 100F;
 
-        pintureBar.fillAmount = paintAmount[paintColorIndex];
+        pintureBar.fillAmount = paintAmount[paintColorIndex]/100f;
     }
     public void recivePinture(float pinture)
     {
-        pintureAmount += pinture;
-        pintureBar.fillAmount = pintureAmount / 100F;
+        //pintureAmount += pinture;
+        //pintureBar.fillAmount = pintureAmount / 100F;
+
+        for (int i = 0; i>3; i++)
+        {
+            if (paintAmount[i] + pinture <= 100)
+            {
+                paintAmount[i] += pinture;
+            } 
+        }
+        pintureBar.fillAmount = paintAmount[paintColorIndex]/100f;
     }
     
     

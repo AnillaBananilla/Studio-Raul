@@ -3394,14 +3394,20 @@ MonoBehaviour:
   healtAmount: 100
   score: 0
   key: 0
+  Inventory: {fileID: 0}
   gameOverPanel: {fileID: 1695469233}
   menuButton: {fileID: 1071820647}
   restartButton: {fileID: 2120625543}
   SkillList: {fileID: 11400000, guid: b3cfeabb160c7a747890bc39bb7f1751, type: 2}
-  pintureAmount: 100
+  paintAmount:
+  - 100
+  - 100
+  - 100
+  paintColorIndex: 0
   pintureBar: {fileID: 1645445840}
   RespawnPoint: {fileID: 1453409176}
   Dead: 0
+  PlayerHP: {fileID: 3705579220110742832}
   playerStats: {fileID: 3705579220110742827}
   fadeInDuration: 1
   fadeOutDuration: 1
@@ -9562,6 +9568,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4749155432632805270, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: moveable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4749155432632805270, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
       propertyPath: playerSkills
       value: 
       objectReference: {fileID: 11400000, guid: b3cfeabb160c7a747890bc39bb7f1751, type: 2}
@@ -9569,6 +9579,10 @@ PrefabInstance:
       propertyPath: unlockPincel
       value: 
       objectReference: {fileID: 544737999}
+    - target: {fileID: 6761058616186723206, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 1584939966}
     - target: {fileID: 6979550663975489004, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
       propertyPath: baseRunSpeed
       value: 25
@@ -9593,6 +9607,10 @@ PrefabInstance:
       propertyPath: spawnPrefab
       value: 
       objectReference: {fileID: 2136541769}
+    - target: {fileID: 8788348150728157412, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+      propertyPath: inputHandler
+      value: 
+      objectReference: {fileID: 1584939966}
     - target: {fileID: 8788348150728157412, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
       propertyPath: imageToChange
       value: 
@@ -9641,6 +9659,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8a5843b5ee971f4c9e58e670704284d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3705579220110742832 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3643443144228755534, guid: 2264d28cc19855e4ea6741daae77e770, type: 3}
+  m_PrefabInstance: {fileID: 3705579220110742825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1584939939}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba909d575f897d44858101ffaa08bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &4170471495625991517

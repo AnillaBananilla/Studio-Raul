@@ -7,7 +7,7 @@ public class PlayerMovementNew : MonoBehaviour
 {
     public Rigidbody2D rb;
 
-    [SerializeField] private InputHandler input;
+    [SerializeField] public InputHandler input;
 
     bool isFacingRight = true;
 

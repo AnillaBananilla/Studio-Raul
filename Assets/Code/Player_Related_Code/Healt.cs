@@ -9,7 +9,10 @@ public class Healt : MonoBehaviour
     public int currentHealt;
     public int maxHealt;
 
-    private bool isImmune = false;
+    //TODO
+    // Añadir la propiedad de COLOR
+
+    public bool isImmune = false;
 
     public GameObject coinPrefab;
     public float coinOffsetY = -5f;
@@ -75,7 +78,7 @@ public class Healt : MonoBehaviour
         if (this.gameObject.CompareTag("Player"))
         {
             EventManager.m_Instance.InvokeEvent<DieEvent>(new DieEvent());
-            currentHealt = maxHealt;
+            //currentHealt = maxHealt;
         }
         else
         {

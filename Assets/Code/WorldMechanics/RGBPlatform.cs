@@ -11,11 +11,25 @@ public class RGBPlatform : MonoBehaviour
     public void Start()
     {
        child =  this.gameObject.transform.Find("Square");
+        EventManager.m_Instance.AddListener<CanvasColorChangeEvent>(Activate);
+        if (World1_Manager.Instance.CurrentColor() == Color && child != null)
+        {
+            child.gameObject.SetActive(true);
+        }
+        else
+        {
+            child.gameObject.SetActive(false);
+        }
     }
 
     public void Update()
     {
-        if (World1_Manager.Instance.CurrentColor() == Color)
+
+    }
+
+    public void Activate(CanvasColorChangeEvent e)
+    {
+        if (World1_Manager.Instance.CurrentColor() == Color && child != null )
         {
             child.gameObject.SetActive(true);
         }

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skills:
   - name: Pincel
-    isUnlocked: 1
+    isUnlocked: 0

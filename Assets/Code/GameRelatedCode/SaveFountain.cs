@@ -93,6 +93,11 @@ public class SaveFountain : MonoBehaviour
     {
         Player.moveable = true;
         Time.timeScale = 1f;
+        GameManager.instance.SaveData();
+        GameManager.instance.paintAmount[0] = 100f;
+        GameManager.instance.paintAmount[1] = 100f;
+        GameManager.instance.paintAmount[2] = 100f;
+        GameManager.instance.recivePinture(0);
         StartCoroutine(ResetDialog());
         GameManager.instance.LoadData();
     }
@@ -106,8 +111,7 @@ public class SaveFountain : MonoBehaviour
             effect.StartTypewriter("Guardando...");
         }
         NoButton.gameObject.SetActive(false);
-        GameManager.instance.SaveData();
-        GameManager.instance.pintureAmount = 100f;
+        
         StartCoroutine(SaveBuffer());
     }
 

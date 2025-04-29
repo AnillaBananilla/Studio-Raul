@@ -58,13 +58,14 @@ public class PlayerAttack : MonoBehaviour
 
             if (inputHandler.attackPaint)
             {   //si sigue habiendo pintura, entonces se realizan estas acciones
-                if (gameManager.pintureAmount > 0)
+            float CurrentPaint = gameManager.paintAmount[gameManager.paintColorIndex];
+                if (CurrentPaint > 0)
                 {   //se inicia la animación
                     animator.SetTrigger("Attack_Trigger");
-                    gameManager.usePinture(1);
+                    gameManager.usePinture(5);
                     Droplets newBullet = null;
                     //el pool manager spawnea alguna bala
-                    PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects);
+                    PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects); //Checar aca
 
                     //en caso de existir la bala y no ser null se hace lo siguiente
                     if (newBullet != null)
@@ -144,6 +145,7 @@ public class PlayerAttack : MonoBehaviour
                 GameManager.instance.paintColorIndex = 2;
                 break;
         }
+        gameManager.usePinture(0);
     }
     public string GetCurrentColor()
     {
@@ -173,6 +175,7 @@ public class PlayerAttack : MonoBehaviour
         if(collision.gameObject.CompareTag("NellProjectile")){
             //gameManager.takeDamage(25);
             PlayerHP.Damage(25);
+            GameManager.instance.takeDamage(25);
             GameManager.instance.lifeBar.fillAmount = PlayerHP.currentHealt / 100F;
         }
         /*else if(collision.gameObject.CompareTag("ArbolilloPunch")){

@@ -24,5 +24,6 @@ public class RGBCanvas : MonoBehaviour
                     break;
             }
         }
+        EventManager.m_Instance.InvokeEvent<CanvasColorChangeEvent>(new CanvasColorChangeEvent());
     }
 }
