@@ -81,7 +81,7 @@ public class MovProfundidadFondo : MonoBehaviour
         que encuadre en sí misma la imagen 
         (o mejor dicho el plano que se usa para colocar las imágenes), 
         aunque esta ya está encuadrada, se sumaría o restaría en cada valor según coresponda*/
-        transform.position = new Vector3(camara.position.x, camara.position.y + 0.01f, 0.68f);
+        transform.position = new Vector3(camara.position.x-225f, camara.position.y-60f, 56.4f);
 
         for (int i = 0; i < fondos.Length; i++)
         {
