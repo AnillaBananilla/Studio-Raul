@@ -228,10 +228,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba909d575f897d44858101ffaa08bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealt: 0
   maxHealt: 3
   coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
   coinOffsetY: 0
   coinSpawnChance: 50
+  damageTextPrefab: {fileID: 0}
+  damageTextOffset: {x: 0, y: 3, z: 0}
 --- !u!61 &7090623907291698760
 BoxCollider2D:
   m_ObjectHideFlags: 0

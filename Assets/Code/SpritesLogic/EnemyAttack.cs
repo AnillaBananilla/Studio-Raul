@@ -9,6 +9,12 @@ public class EnemyAttack : MonoBehaviour
     public LayerMask Playerlayer;
 
     private bool cooldown = false;
+    
+     private Healt health;
+
+    void Start() {
+        health = GetComponent<Healt>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

@@ -15,6 +15,8 @@ public class Healt : MonoBehaviour
     public float coinOffsetY = -5f;
     [Range(0, 100)] public float coinSpawnChance = 50f;
     
+    public event Action OnDeath;
+    
     public GameObject damageTextPrefab; // Prefab del texto de da�o
     public Vector3 damageTextOffset = new Vector3(0, 3f, 0); // Offset para la posici�n del texto
 
@@ -79,7 +81,10 @@ public class Healt : MonoBehaviour
         }
         else
         {
-
+            if (OnDeath != null) // Alternativa a OnDeath?.Invoke()
+        {
+            OnDeath.Invoke();
+        }
             if (UnityEngine.Random.Range(0f, 100f) <= coinSpawnChance)
             {
                 Vector3 coinPosition = new Vector3(transform.position.x, transform.position.y + coinOffsetY, transform.position.z);
