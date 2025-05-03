@@ -13,10 +13,10 @@ GameObject:
   m_Layer: 0
   m_Name: arearegistro_0 (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6541723312000212280
 Transform:
   m_ObjectHideFlags: 0
@@ -228,10 +228,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba909d575f897d44858101ffaa08bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentHealt: 0
   maxHealt: 3
+  isImmune: 0
   coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
   coinOffsetY: 0
   coinSpawnChance: 50
+  damageTextPrefab: {fileID: 0}
+  damageTextOffset: {x: 0, y: 3, z: 0}
 --- !u!61 &7090623907291698760
 BoxCollider2D:
   m_ObjectHideFlags: 0

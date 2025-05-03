@@ -13,7 +13,7 @@ public class Healt : MonoBehaviour
     // Añadir la propiedad de COLOR
 
     public bool isImmune = false;
-
+    public SpriteRenderer Renderer;
     public GameObject coinPrefab;
     public float coinOffsetY = -5f;
     [Range(0, 100)] public float coinSpawnChance = 50f;
@@ -24,12 +24,14 @@ public class Healt : MonoBehaviour
     public IEnumerator Immunity()
     {
         yield return new WaitForSeconds(2);
+        Renderer.color = Color.white;
         isImmune = false;
     }
     void Start()
     {
 
         currentHealt = maxHealt;
+        Renderer = this.gameObject.GetComponent<SpriteRenderer>();
 
     }
 
@@ -48,10 +50,22 @@ public class Healt : MonoBehaviour
          */
         if (!isImmune)
         {
-            currentHealt -= damage;
-            ShowDamageText(-damage);
-            isImmune = true;
+            
             StartCoroutine(Immunity());
+            Renderer.color = Color.red;
+            isImmune = true;
+
+            if (this.gameObject.CompareTag("Player"))
+            {
+                InputHandler playerinput = this.gameObject.GetComponent<InputHandler>();
+                playerinput.Helpless();
+                GameManager.instance.takeDamage(damage);
+            } else
+            {
+                currentHealt -= damage;
+                ShowDamageText(-damage);
+                
+            }
         }
         
 

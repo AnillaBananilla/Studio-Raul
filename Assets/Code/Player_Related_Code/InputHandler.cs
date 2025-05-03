@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -34,6 +35,17 @@ public class InputHandler : MonoBehaviour
     {
         playerInput = GetComponent<PlayerInput>();
 
+    }
+    IEnumerator Recover()
+    {
+        yield return new WaitForSeconds(1);
+        moveable = true;
+    }
+
+    public void Helpless()
+    {
+        moveable = false;
+        StartCoroutine(Recover());
     }
 
     void Update()

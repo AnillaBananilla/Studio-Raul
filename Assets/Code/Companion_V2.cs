@@ -57,7 +57,7 @@ public class Companion_V2 : MonoBehaviour
             }
             // Comprobación de suelo
             isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
-            Debug.DrawRay(transform.position, Vector2.down * groundCheckDistance, Color.red);
+            //Debug.DrawRay(transform.position, Vector2.down * groundCheckDistance, Color.red);
 
             // Detectar si hay un obstáculo enfrente
             if (isGrounded && CheckForObstacle())
@@ -94,7 +94,7 @@ public class Companion_V2 : MonoBehaviour
     {
         if (collision.CompareTag("Hazard") || collision.CompareTag("Enemy"))
         {
-            Debug.Log("Muerte por daño");
+            //Debug.Log("Muerte por daño");
             Die();
         }
     }
