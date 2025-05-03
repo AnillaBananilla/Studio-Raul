@@ -228,9 +228,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ba909d575f897d44858101ffaa08bc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentHealt: 0
-  maxHealt: 3
+  currentHealt: 20
+  maxHealt: 20
   isImmune: 0
+  Renderer: {fileID: 4386591551777126265}
   coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
   coinOffsetY: 0
   coinSpawnChance: 50
@@ -294,7 +295,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  Recoilforce: 50
+  Recoilforce: 25
   Playerlayer:
     serializedVersion: 2
     m_Bits: 128
