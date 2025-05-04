@@ -9,7 +9,7 @@ public class PlayerData
     public int HP;
     public bool[] Progress = new bool[3]; //Hay 3 misiones
     public int[] ItemAmounts = new int[9];
-    public bool[] Skills = new bool[1]; //Index is to be defined later
+    public bool[] Skills = new bool[4]; //Index is to be defined later
 
     /* WE NEED
      * HP: Found in the Player's Healt
@@ -33,6 +33,9 @@ public class PlayerData
 
         //Save the Player's skills
         Skills[0] = Game.SkillList.skills[0].isUnlocked;
+        Skills[1] = Game.SkillList.skills[1].isUnlocked;
+        Skills[2] = Game.SkillList.skills[2].isUnlocked;
+        Skills[3] = Game.SkillList.skills[3].isUnlocked;
 
         //Save the Item Amounts
         int i = 0;
@@ -57,7 +60,10 @@ public class PlayerData
         Money = 0;
 
         //Save the Player's skills
-        Skills[0] = false;
+        Skills[0] = false; //Brush
+        Skills[1] = false; // Cyan
+        Skills[2] = false; // Magenta
+        Skills[3] = false; // Yellow
 
         //Save the Item Amounts
         for (int i = 0; i < 9; i++)

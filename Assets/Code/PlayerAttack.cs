@@ -70,6 +70,7 @@ public class PlayerAttack : MonoBehaviour
                     //en caso de existir la bala y no ser null se hace lo siguiente
                     if (newBullet != null)
                     {
+                        newBullet.UpdateColor();
                         //se obtiene el RB de la bala
                         Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
                         //al detectarlo, entonces se realizan los pasos de detectar la dirección 

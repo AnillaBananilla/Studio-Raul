@@ -26,7 +26,7 @@ public class PlayerMovementNew : MonoBehaviour
     [Header("Jump")]
     public float jumpForce = 10f;
     public int maxJumps = 2;
-    int jumpsLeft;
+    public int jumpsLeft;
 
     [Header("Ground Check")]
     public Transform groundCheckPos;

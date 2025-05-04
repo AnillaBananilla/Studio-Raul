@@ -49,7 +49,7 @@ public class Droplets : MonoBehaviour
         
     }
 
-    private void UpdateColor()
+    public void UpdateColor()
     {
         if (playerReference == null || spriteRenderer == null) return;
 

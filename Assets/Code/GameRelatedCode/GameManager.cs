@@ -205,6 +205,11 @@ public class GameManager : MonoBehaviour
             Inventory.items[i].quantity = amount;
             i++;
         }
+        //Cargar los Skills
+        SkillList.skills[0].isUnlocked = Save.Skills[0];
+        SkillList.skills[1].isUnlocked = Save.Skills[1];
+        SkillList.skills[2].isUnlocked = Save.Skills[2];
+        SkillList.skills[3].isUnlocked = Save.Skills[3];
         usePinture(0);
 
        //To Do:

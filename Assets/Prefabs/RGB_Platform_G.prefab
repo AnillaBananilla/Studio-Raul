@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6544035666770011801}
   - component: {fileID: 447635772820812722}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RGB_Platform_G
-  m_TagString: Ground
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,9 +57,9 @@ GameObject:
   - component: {fileID: 2235530292545876677}
   - component: {fileID: 2837184826154966074}
   - component: {fileID: 6001859416280009460}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
