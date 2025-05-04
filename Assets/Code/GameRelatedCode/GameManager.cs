@@ -140,16 +140,19 @@ public class GameManager : MonoBehaviour
     }
 
     public void takeDamage(float damage)
-    {   
+    {
         //ACOMODAR PARA QUE USE EL COMPONENTE HEALT DE PLAYER
+
+        
         float appliedDamage = Mathf.Max(0, damage - playerStats.currentDamageReduction);
         PlayerHP.currentHealt -= (int) appliedDamage;
+        Debug.Log("Recibes" + appliedDamage);
         lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
         if(lifeBar.fillAmount == 0){
             TriggerGameOver();
             Dead = true;
         }
-        lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
+        //lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {

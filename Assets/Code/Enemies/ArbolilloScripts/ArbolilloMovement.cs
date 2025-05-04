@@ -203,6 +203,7 @@ public class ArbolilloMovement : MonoBehaviour
     {
         if(currentState == EnemyState.Emergido && collision.CompareTag("Player")){
             playerHP.Damage(15);
+            playerHP.Damage(30);
             direction = (collision.transform.position - transform.position).normalized;
             direction.y = 0.05f;
             Debug.LogWarning(direction);

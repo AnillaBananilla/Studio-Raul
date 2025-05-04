@@ -176,8 +176,8 @@ public class PlayerAttack : MonoBehaviour
         if(collision.gameObject.CompareTag("NellProjectile")){
             //gameManager.takeDamage(25);
             PlayerHP.Damage(25);
-            GameManager.instance.takeDamage(25);
-            GameManager.instance.lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
+            //GameManager.instance.takeDamage(25);
+            //GameManager.instance.lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
         }
     }
 

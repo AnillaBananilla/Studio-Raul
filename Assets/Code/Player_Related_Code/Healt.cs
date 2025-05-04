@@ -60,6 +60,7 @@ public class Healt : MonoBehaviour
                 InputHandler playerinput = this.gameObject.GetComponent<InputHandler>();
                 playerinput.Helpless();
                 GameManager.instance.takeDamage(damage);
+                Debug.LogWarning("Lleeeeevame a chambear");
             } else
             {
                 currentHealt -= damage;
