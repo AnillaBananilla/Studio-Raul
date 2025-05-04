@@ -29,13 +29,17 @@ public class RGBPlatform : MonoBehaviour
 
     public void Activate(CanvasColorChangeEvent e)
     {
-        if (World1_Manager.Instance.CurrentColor() == Color && child != null )
+        if(child != null)
         {
-            child.gameObject.SetActive(true);
+            if (World1_Manager.Instance.CurrentColor() == Color)
+            {
+                child.gameObject.SetActive(true);
+            }
+            else
+            {
+                child.gameObject.SetActive(false);
+            }
         }
-        else
-        {
-            child.gameObject.SetActive(false);
-        }
+        
     }
 }

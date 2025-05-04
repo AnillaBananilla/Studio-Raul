@@ -8,53 +8,21 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class SaveFountain : MonoBehaviour
 {
-    private InputHandler Player;
-    private float textboxspeed = 0f;
-    [SerializeField] private bool inDialog = false;
-
- 
-    private Animator _animator;
-
-    [Header("Texto Del Dialogo")]
-    public TextMeshProUGUI Dialog;
-
-    [Header("Efecto Typewriter")]
-    public TypewriterEffect effect;
-
-
-    [Header("Parent del Dialogo")]
-    public GameObject SaveDialog;
-
-    [Header("Botones")]
-    public Button YesButton; public Button NoButton; public Button OkButton;
-
-
+    public InputHandler Player;
+    private bool _interact = false;
     // Start is called before the first frame update
     void Start()
     {
-        Player = null;
-        if (YesButton != null) YesButton.onClick.AddListener(SaveGame);
-        if (NoButton != null) NoButton.onClick.AddListener(EndDialog);
-        if (OkButton != null) OkButton.onClick.AddListener(EndDialog);
 
-        _animator = SaveDialog.GetComponent<Animator>();
-
+        _interact = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Player != null))
+        if ((Player != null) && Player.interacting)
         {
-            if (Player.interacting && !inDialog)
-            {
-                //Open the Save Game Option.
-                Player.moveable = false;
-                OpenDialog();
-                inDialog = true;
-                Time.timeScale = 0f;
-                Debug.Log("The Dialog Opens");
-            }
+            GameManager.instance.OpenDialog();
         }
         
     }
@@ -64,9 +32,8 @@ public class SaveFountain : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player = collision.gameObject.GetComponent<InputHandler>();
-            Debug.Log("Player Found!");
-            Debug.Log(Player);
+            _interact = true;
+            
         }
     }
 
@@ -74,63 +41,11 @@ public class SaveFountain : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Player = null;
-            inDialog = false;
+            _interact = false;
         }
     }
 
-    private void OpenDialog()
-    {
-        _animator.SetTrigger("OpenDialog");
-        if (effect != null)
-        {
-            effect.StartTypewriter("¿Te gustaría guardar tu partida?");
-        }
+    
 
-    }
 
-    private void EndDialog()
-    {
-        Player.moveable = true;
-        Time.timeScale = 1f;
-        GameManager.instance.SaveData();
-        GameManager.instance.paintAmount[0] = 100f;
-        GameManager.instance.paintAmount[1] = 100f;
-        GameManager.instance.paintAmount[2] = 100f;
-        GameManager.instance.recivePinture(0);
-        StartCoroutine(ResetDialog());
-        GameManager.instance.LoadData();
-    }
-
-    private void SaveGame()
-    {
-        YesButton.gameObject.SetActive(false);
-        //Dialog.text = "Guardando..."; *Viejo
-        if (effect != null)
-        {
-            effect.StartTypewriter("Guardando...");
-        }
-        NoButton.gameObject.SetActive(false);
-        
-        StartCoroutine(SaveBuffer());
-    }
-
-    private IEnumerator SaveBuffer()
-    {
-        yield return new WaitForSecondsRealtime(3);
-        if (effect != null)
-        {
-            effect.StartTypewriter("Partida guardada con éxito.");
-        }
-        OkButton.gameObject.SetActive(true);
-    }
-
-    private IEnumerator ResetDialog()
-    {
-        yield return new WaitForSecondsRealtime(0.5f);
-        inDialog = false;
-        YesButton.gameObject.SetActive(true);
-        NoButton.gameObject.SetActive(true);
-        OkButton.gameObject.SetActive(false);
-    }
 }

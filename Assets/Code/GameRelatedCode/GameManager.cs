@@ -42,6 +42,27 @@ public class GameManager : MonoBehaviour
     public Healt PlayerHP;
     public PlayerStats playerStats;
 
+    [Header("CANVAS DE GUARDADO")]
+    public InputHandler PlayerInput;
+    private float textboxspeed = 0f;
+    [SerializeField] private bool inDialog = false;
+
+
+    private Animator _saveanimator;
+
+    [Header("Texto Del Dialogo")]
+    public TextMeshProUGUI Dialog;
+
+    [Header("Efecto Typewriter")]
+    public TypewriterEffect effect;
+
+
+    [Header("Parent del Dialogo De guardado")]
+    public GameObject SaveDialog;
+
+    [Header("Botones")]
+    public Button YesButton; public Button NoButton; public Button OkButton;
+
 
     /*
     TO DO:
@@ -88,7 +109,11 @@ public class GameManager : MonoBehaviour
         
         if (restartButton != null)
             restartButton.onClick.AddListener(RestartGame);
+        if (YesButton != null) YesButton.onClick.AddListener(SaveGame);
+        if (NoButton != null) NoButton.onClick.AddListener(EndDialog);
+        if (OkButton != null) OkButton.onClick.AddListener(EndDialog);
 
+        _saveanimator = SaveDialog.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -184,8 +209,67 @@ public class GameManager : MonoBehaviour
         }
         pintureBar.fillAmount = paintAmount[paintColorIndex]/100f;
     }
-    
-    
+    private void EndDialog()
+    {
+        PlayerInput.moveable = true;
+        Time.timeScale = 1f;
+        SaveData();
+        paintAmount[0] = 100f;
+        paintAmount[1] = 100f;
+        paintAmount[2] = 100f;
+        recivePinture(0);
+        StartCoroutine(ResetDialog());
+        //LoadData();
+    }
+
+    private void SaveGame()
+    {
+        YesButton.gameObject.SetActive(false);
+        //Dialog.text = "Guardando..."; *Viejo
+        if (effect != null)
+        {
+            effect.StartTypewriter("Guardando...");
+        }
+        NoButton.gameObject.SetActive(false);
+
+        StartCoroutine(SaveBuffer());
+    }
+
+    private IEnumerator SaveBuffer()
+    {
+        yield return new WaitForSecondsRealtime(3);
+        if (effect != null)
+        {
+            effect.StartTypewriter("Partida guardada con éxito.");
+        }
+        OkButton.gameObject.SetActive(true);
+    }
+
+    private IEnumerator ResetDialog()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        inDialog = false;
+        YesButton.gameObject.SetActive(true);
+        NoButton.gameObject.SetActive(true);
+        OkButton.gameObject.SetActive(false);
+    }
+    public void OpenDialog()
+    {
+        if (!inDialog)
+        {
+            _saveanimator.SetTrigger("OpenDialog");
+            if (effect != null)
+            {
+                effect.StartTypewriter("¿Te gustaría guardar tu partida?");
+            }
+            inDialog = true;
+            PlayerInput.moveable = false;
+            Time.timeScale = 0f;
+        }
+        
+    }
+
+
     public void LoadScene()
     {
         
@@ -198,6 +282,7 @@ public class GameManager : MonoBehaviour
         PlayerHP.gameObject.transform.position = new Vector3(Save.position[0], Save.position[1], -1.2563f); //Position
         score = Save.Money;
         PlayerHP.currentHealt = Save.HP;
+        key = Save.Keys;
         //Cargar los items
         int i = 0;
         foreach (int amount in Save.ItemAmounts)

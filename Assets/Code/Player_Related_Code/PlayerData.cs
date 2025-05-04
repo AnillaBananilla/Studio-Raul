@@ -7,6 +7,7 @@ public class PlayerData
     public int SceneIndex;  // I might not need this one for now
     public int Money;
     public int HP;
+    public int Keys;
     public bool[] Progress = new bool[3]; //Hay 3 misiones
     public int[] ItemAmounts = new int[9];
     public bool[] Skills = new bool[4]; //Index is to be defined later
@@ -30,6 +31,7 @@ public class PlayerData
         //Save the Player's Health and money
         HP = Game.PlayerHP.currentHealt;
         Money = Game.score;
+        Keys = Game.key;
 
         //Save the Player's skills
         Skills[0] = Game.SkillList.skills[0].isUnlocked;
@@ -58,6 +60,7 @@ public class PlayerData
         //Save the Player's Health and money
         HP = 100;
         Money = 0;
+        Keys = 0;
 
         //Save the Player's skills
         Skills[0] = false; //Brush
