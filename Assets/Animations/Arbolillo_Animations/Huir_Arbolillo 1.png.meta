@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 80ad5aac8c91afa4a903f3413a6f4515
+guid: 5e0e1a11faa7e8e4e8d839921d0ff435
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Huir_Arbolilloo_0
+      name: Huir_Arbolillo 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,20 +105,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7e6ad0b3508baa4691bc131c52b7faa
-      internalID: -925127838
+      spriteID: 1013eaae6ca775842afebbdd19a02e79
+      internalID: -821821416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_1
+      name: Huir_Arbolillo 1_1
       rect:
         serializedVersion: 2
         x: 1980
@@ -126,20 +126,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d57afefb0bfd9f84d9e4a93e0c25d714
-      internalID: 2032113416
+      spriteID: 02d838f32138beb4985a119e23df3629
+      internalID: -49042923
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_2
+      name: Huir_Arbolillo 1_2
       rect:
         serializedVersion: 2
         x: 3960
@@ -147,20 +147,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c95c61c1f196254c88a9f47bbf63617
-      internalID: 409171899
+      spriteID: c2aff4929b0facf4c80b2c485b296277
+      internalID: -1166447780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_3
+      name: Huir_Arbolillo 1_3
       rect:
         serializedVersion: 2
         x: 5940
@@ -168,41 +168,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c300d4aa4d9a45f47aae55927711d281
-      internalID: -2005198300
+      spriteID: 741d9efed4affad4b9a394362088f532
+      internalID: 1728725379
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_4
-      rect:
-        serializedVersion: 2
-        x: 7920
-        y: 2940
-        width: 1980
-        height: 980
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0093871c012a0464fa5bf941584e1eb4
-      internalID: -1133971850
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Huir_Arbolilloo_5
+      name: Huir_Arbolillo 1_4
       rect:
         serializedVersion: 2
         x: 0
@@ -210,20 +189,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c2910b869801194fb287be61f554e62
-      internalID: 1472482283
+      spriteID: a1da20ed535ac394eb4566cc85445cd3
+      internalID: -915728743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_6
+      name: Huir_Arbolillo 1_5
       rect:
         serializedVersion: 2
         x: 1980
@@ -231,20 +210,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d208255ee23171d45a8de1eba5a9259d
-      internalID: 113408860
+      spriteID: cc1526570e59d504c8f154b3be2a967b
+      internalID: 61653739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_7
+      name: Huir_Arbolillo 1_6
       rect:
         serializedVersion: 2
         x: 3960
@@ -252,20 +231,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eef637f5456d71746816a4ed44bee6e3
-      internalID: -1320621720
+      spriteID: 8e08e4afcafdeb342a0fef9fc30bdc99
+      internalID: 671215874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_8
+      name: Huir_Arbolillo 1_7
       rect:
         serializedVersion: 2
         x: 5940
@@ -273,41 +252,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b63b0cca2730306499f030984a3248e9
-      internalID: -2039262268
+      spriteID: 7b5ffdfa19fa78d4dbc86f44cec22176
+      internalID: 72131087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_9
-      rect:
-        serializedVersion: 2
-        x: 7920
-        y: 1960
-        width: 1980
-        height: 980
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aabd974d44d7e544895e24f38dc4be78
-      internalID: 1067732326
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Huir_Arbolilloo_10
+      name: Huir_Arbolillo 1_8
       rect:
         serializedVersion: 2
         x: 0
@@ -315,20 +273,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3882b240192c0654eb6e568041374242
-      internalID: 1001050260
+      spriteID: 183172ff743f57f44bf6ecf5def61a25
+      internalID: -1663497197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_11
+      name: Huir_Arbolillo 1_9
       rect:
         serializedVersion: 2
         x: 1980
@@ -336,20 +294,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26589dc56fc617745b33ec2c9018b7ff
-      internalID: 778076572
+      spriteID: d91d91dbd6848384dbfd2efda378aa71
+      internalID: 1997160927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_12
+      name: Huir_Arbolillo 1_10
       rect:
         serializedVersion: 2
         x: 3960
@@ -357,20 +315,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f827ea6c6af5934083392d8bc34b874
-      internalID: 985547130
+      spriteID: e236538f30b645e45bfe2539beb1f5fe
+      internalID: -415026689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_13
+      name: Huir_Arbolillo 1_11
       rect:
         serializedVersion: 2
         x: 5940
@@ -378,41 +336,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d688dd66275f290429a280e6a4afbe76
-      internalID: -520214653
+      spriteID: 9751e6ce4b7280b44835258048e6518e
+      internalID: 1427016705
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_14
-      rect:
-        serializedVersion: 2
-        x: 7920
-        y: 980
-        width: 1980
-        height: 980
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 595f796a255f94c4785c3982b0bef47f
-      internalID: -1825542421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Huir_Arbolilloo_15
+      name: Huir_Arbolillo 1_12
       rect:
         serializedVersion: 2
         x: 0
@@ -420,20 +357,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57cbc180ea962af4cbb4baf37a3d54f2
-      internalID: -528605820
+      spriteID: 7546a51405638b74bbb11220745d0712
+      internalID: -88301005
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_16
+      name: Huir_Arbolillo 1_13
       rect:
         serializedVersion: 2
         x: 1980
@@ -441,20 +378,20 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a84ce06f18912d842b92117ba8be9d1d
-      internalID: 457538971
+      spriteID: e25c30f446e2c0f48ad4a9b2e8560d1e
+      internalID: 1794381620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Huir_Arbolilloo_17
+      name: Huir_Arbolillo 1_14
       rect:
         serializedVersion: 2
         x: 3960
@@ -462,14 +399,14 @@ TextureImporter:
         width: 1980
         height: 980
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e80921a37c37e041bb90dc543866f8e
-      internalID: -1950658049
+      spriteID: 1142e024cc239e04c842031f829a358b
+      internalID: 1206070453
       vertices: []
       indices: 
       edges: []
@@ -477,7 +414,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 4fb64acb231e19043a343a50ab95a3da
     internalID: 0
     vertices: []
     indices: 
@@ -485,24 +422,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Huir_Arbolilloo_0: -925127838
-      Huir_Arbolilloo_1: 2032113416
-      Huir_Arbolilloo_10: 1001050260
-      Huir_Arbolilloo_11: 778076572
-      Huir_Arbolilloo_12: 985547130
-      Huir_Arbolilloo_13: -520214653
-      Huir_Arbolilloo_14: -1825542421
-      Huir_Arbolilloo_15: -528605820
-      Huir_Arbolilloo_16: 457538971
-      Huir_Arbolilloo_17: -1950658049
-      Huir_Arbolilloo_2: 409171899
-      Huir_Arbolilloo_3: -2005198300
-      Huir_Arbolilloo_4: -1133971850
-      Huir_Arbolilloo_5: 1472482283
-      Huir_Arbolilloo_6: 113408860
-      Huir_Arbolilloo_7: -1320621720
-      Huir_Arbolilloo_8: -2039262268
-      Huir_Arbolilloo_9: 1067732326
+      Huir_Arbolillo 1_0: -821821416
+      Huir_Arbolillo 1_1: -49042923
+      Huir_Arbolillo 1_10: -415026689
+      Huir_Arbolillo 1_11: 1427016705
+      Huir_Arbolillo 1_12: -88301005
+      Huir_Arbolillo 1_13: 1794381620
+      Huir_Arbolillo 1_14: 1206070453
+      Huir_Arbolillo 1_2: -1166447780
+      Huir_Arbolillo 1_3: 1728725379
+      Huir_Arbolillo 1_4: -915728743
+      Huir_Arbolillo 1_5: 61653739
+      Huir_Arbolillo 1_6: 671215874
+      Huir_Arbolillo 1_7: 72131087
+      Huir_Arbolillo 1_8: -1663497197
+      Huir_Arbolillo 1_9: 1997160927
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
