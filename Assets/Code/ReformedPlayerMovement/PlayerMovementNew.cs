@@ -71,7 +71,7 @@ public class PlayerMovementNew : MonoBehaviour
             currSpeed = isRunning ? playerStats.currentRunSpeed : playerStats.currentMoveSpeed;
 
             GroundCheck();
-            RoofCheck();
+            //RoofCheck();
             Gravity();
             Flip();
 
@@ -111,7 +111,7 @@ public class PlayerMovementNew : MonoBehaviour
     {
         if(jumpsLeft > 0 && input.moveable)
         {
-            if (context.performed && canGetUp)
+            if (context.performed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 jumpsLeft--;
@@ -137,7 +137,7 @@ public class PlayerMovementNew : MonoBehaviour
             isGrounded = false;
         }
     }
-
+    /*
     public void Crouch(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -153,7 +153,7 @@ public class PlayerMovementNew : MonoBehaviour
             animator.SetBool("isCrouching", false);
         }
     }
-
+    
     private void RoofCheck()
     {
         if (Physics2D.OverlapBox(roofCheckPos.position, roofCheckSize, 0, groundLayer))
@@ -171,7 +171,7 @@ public class PlayerMovementNew : MonoBehaviour
                 animator.SetBool("isCrouching", false);
             }
         }
-    } 
+    } */
 
     public void Drop(InputAction.CallbackContext context){
         if(context.performed && isGrounded && isOnPlatform && upColl.enabled){

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static PlayerSkills;
 using Unity.VisualScripting;
+using System;
 
 
 public class GameManager : MonoBehaviour
@@ -141,14 +142,14 @@ public class GameManager : MonoBehaviour
     public void takeDamage(float damage)
     {   
         //ACOMODAR PARA QUE USE EL COMPONENTE HEALT DE PLAYER
-        float appliedDamage = damage - playerStats.currentDamageReduction;
+        float appliedDamage = Mathf.Max(0, damage - playerStats.currentDamageReduction);
         PlayerHP.currentHealt -= (int) appliedDamage;
-        lifeBar.fillAmount = PlayerHP.currentHealt / 100F;
+        lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
         if(lifeBar.fillAmount == 0){
             TriggerGameOver();
             Dead = true;
         }
-        lifeBar.fillAmount = PlayerHP.currentHealt / 100F;
+        lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {

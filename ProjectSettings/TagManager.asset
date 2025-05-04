@@ -15,6 +15,7 @@ TagManager:
   - NellProjectile
   - Projectile
   - Margaret
+  - Arbolillo
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,8 @@ public class ArbolilloMovement : MonoBehaviour
 
     [Header("Info para Localizar al jugador")]
     public Transform player;
+    public Healt playerHP;
+    private Vector3 direction;
 
 
     [Header("Movement")]
@@ -28,6 +30,7 @@ public class ArbolilloMovement : MonoBehaviour
     private Transform target = null;
 
     private SpriteRenderer spriteRenderer;
+    public float Recoilforce;
     
     //Referencias de salud
     private Healt enemyHealth;
@@ -199,7 +202,14 @@ public class ArbolilloMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(currentState == EnemyState.Emergido && collision.CompareTag("Player")){
-            collision.GetComponent<Healt>()?.Damage(15);
+            playerHP.Damage(15);
+            direction = (collision.transform.position - transform.position).normalized;
+            direction.y = 0.05f;
+            Debug.LogWarning(direction);
+            collision.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
+            Debug.LogWarning(direction * Recoilforce);
+            collision.GetComponent<Rigidbody2D>().velocity = direction * Recoilforce;
+            
         }
     }
 }
