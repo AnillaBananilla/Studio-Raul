@@ -316,10 +316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f735ff96e57fea43b3bc9017b9f8500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatSpeed: 10
-  floatHeight: 10
-  rotationSpeed: 30
-  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &163277684
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +392,7 @@ MonoBehaviour:
   - character: {fileID: 11400000, guid: 38c1ba9084c0b7a4997cecb44a9b14ed, type: 2}
     emotion: Neutral
     lineText: '"..."'
-    panelStyle: Texto_Neutral
+    panelStyle: neutral
     isMovementEvent: 0
     moveToPosition: {x: 0, y: 0}
     waitForMovement: 0
@@ -1029,10 +1025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f735ff96e57fea43b3bc9017b9f8500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatSpeed: 10
-  floatHeight: 10
-  rotationSpeed: 30
-  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &446281051
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,10 +2072,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f735ff96e57fea43b3bc9017b9f8500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  floatSpeed: 10
-  floatHeight: 10
-  rotationSpeed: 30
-  startPos: {x: 0, y: 0, z: 0}
 --- !u!1 &1756659275
 GameObject:
   m_ObjectHideFlags: 0
