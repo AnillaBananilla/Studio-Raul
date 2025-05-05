@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//Este es un Scriptable Object, que es para ver las emociones del personaje
-
 [CreateAssetMenu(fileName = "NewDialogueCharacter", menuName = "Dialogue/Character")]
 public class DialogueCharacter : ScriptableObject
 {
@@ -11,22 +9,23 @@ public class DialogueCharacter : ScriptableObject
     public bool isOnLeft = true;
 
     [System.Serializable]
-    public class Emotion
+    public class Expression
     {
-        public string emotionName;
+        public string emotion;
         public Sprite portrait;
     }
 
-    public List<Emotion> expressions = new List<Emotion>();
+    public Expression[] expressions;
 
     public Sprite GetPortrait(string emotion)
     {
-        foreach (Emotion e in expressions)
+        foreach (var expr in expressions)
         {
-            if (e.emotionName.ToLower() == emotion.ToLower())
-                return e.portrait;
+            if (expr.emotion.ToLower() == emotion.ToLower())
+                return expr.portrait;
         }
-        Debug.LogWarning($"Emotion '{emotion}' not found for {characterName}");
+
+        Debug.LogWarning($"Emoción '{emotion}' no encontrada para {characterName}");
         return null;
     }
 }

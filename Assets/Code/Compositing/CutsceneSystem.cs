@@ -1,35 +1,51 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections;
 
 public class CutsceneSystem : MonoBehaviour
 {
     public static CutsceneSystem Instance;
 
-    [Header("UI Elements")]
-    public GameObject dialoguePanel;
+    [Header("Retratos PNG")]
+    public Image leftPortrait;
+    public Image rightPortrait;
+    public CanvasGroup leftGroup;
+    public CanvasGroup rightGroup;
+
+    [Header("Panel Izquierda")]
+    public GameObject panelLeft;
+    public Image panelLeftImage;
+    public Image nameLeftImage;
+    public TextMeshProUGUI speakerLeftText;
+    public TextMeshProUGUI dialogueLeftText;
+
+    [Header("Panel Derecha")]
+    public GameObject panelRight;
+    public Image panelRightImage;
+    public Image nameRightImage;
+    public TextMeshProUGUI speakerRightText;
+    public TextMeshProUGUI dialogueRightText;
+
+    [Header("Background y control")]
     public GameObject backgroundFade;
 
-    public Image dialoguePanelImage;
-    public Image leftPortrait, rightPortrait;
-    public CanvasGroup leftGroup, rightGroup;
+    [Header("Estilos de Panel de Diálogo")]
+    public Sprite textoNeutral;
+    public Sprite textoEnojado;
+    public Sprite textoMelancolico;
+    public Sprite textoPensamiento;
 
-    public TextMeshProUGUI speakerText;
-    public TextMeshProUGUI dialogueText;
+    [Header("Estilos de nombre")]
+    public Sprite nombreNeutral;
+    public Sprite nombreEnojado;
+    public Sprite nombreMelancolico;
 
-    [Header("Panel Styles")]
-    public Sprite Texto_Pensamiento;
-    public Sprite Texto_Neutral;
-    public Sprite Texto_Melancolico;
-    public Sprite Texto_Enojado;
+    [Header("UI ")]
+    public GameObject NextButton;
+    public CanvasGroup NextButtonGroup;
 
 
-    public Image dialoguePanelNameImage;
-    public Sprite Nombre_Neutral;
-    public Sprite Nombre_Melancolico;
-    public Sprite Nombre_Enojado;
 
     private DialogueLine[] currentLines;
     private int lineIndex = 0;
@@ -38,12 +54,10 @@ public class CutsceneSystem : MonoBehaviour
     void Awake()
     {
         if (Instance == null) Instance = this;
-        else
-        {
-            Destroy(gameObject);
-        }
+        else Destroy(gameObject);
 
-        dialoguePanel.SetActive(false);
+        panelLeft.SetActive(false);
+        panelRight.SetActive(false);
         backgroundFade.SetActive(false);
     }
 
@@ -52,11 +66,8 @@ public class CutsceneSystem : MonoBehaviour
         currentLines = lines;
         lineIndex = 0;
 
-        Time.timeScale = 0f; // pausa todo el juego
-
-        dialoguePanel.SetActive(true);
+        Time.timeScale = 0f; // Pausa el juego
         backgroundFade.SetActive(true);
-
         DisplayNextLine();
     }
 
@@ -67,36 +78,53 @@ public class CutsceneSystem : MonoBehaviour
 
     void EndCutscene()
     {
-        dialoguePanel.SetActive(false);
+        panelLeft.SetActive(false);
+        panelRight.SetActive(false);
         backgroundFade.SetActive(false);
+
+        leftPortrait.gameObject.SetActive(false);  
+        rightPortrait.gameObject.SetActive(false);  
+
+        NextButton.SetActive(false);
+        if (buttonBlink != null) StopCoroutine(buttonBlink);
+
         ResumeWorld();
     }
 
+
+
     void Update()
     {
-        if (!dialoguePanel.activeSelf) return;
+        if (!panelLeft.activeSelf && !panelRight.activeSelf) return;
 
-        if (Input.GetKeyDown(KeyCode.Mouse0)) 
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             if (isTyping)
             {
                 StopAllCoroutines();
-                dialogueText.text = currentLines[lineIndex].lineText;
-                isTyping = false;
+                ShowFullText();
             }
             else
             {
                 lineIndex++;
                 if (lineIndex >= currentLines.Length)
-                {
                     EndCutscene();
-                }
                 else
-                {
                     DisplayNextLine();
-                }
             }
         }
+    }
+
+    void ShowFullText()
+    {
+        DialogueLine line = currentLines[lineIndex];
+
+        if (line.character.isOnLeft)
+            dialogueLeftText.text = line.lineText;
+        else
+            dialogueRightText.text = line.lineText;
+
+        isTyping = false;
     }
 
     void DisplayNextLine()
@@ -104,60 +132,140 @@ public class CutsceneSystem : MonoBehaviour
         DialogueLine line = currentLines[lineIndex];
         DialogueCharacter character = line.character;
         Sprite portrait = character.GetPortrait(line.emotion);
+        NextButton.SetActive(false);
+        if (buttonBlink != null) StopCoroutine(buttonBlink);
 
-        speakerText.text = character.characterName;
-        dialogueText.text = "";
 
+        // Muestra retratos
         if (character.isOnLeft)
         {
             leftPortrait.sprite = portrait;
-            leftPortrait.gameObject.SetActive(true);
-            rightPortrait.gameObject.SetActive(true);
             leftGroup.alpha = 1f;
             rightGroup.alpha = 0.4f;
+
+            panelLeft.SetActive(true);
+            panelRight.SetActive(false);
+
+            panelLeftImage.sprite = GetPanelSprite(line.panelStyle);
+            bool isThinking = line.panelStyle.ToLower() == "pensamiento";
+            bool showName = !isThinking && !string.IsNullOrWhiteSpace(character.characterName);
+            nameLeftImage.gameObject.SetActive(showName);
+            speakerLeftText.gameObject.SetActive(showName);
+
+            if (showName)
+            {
+                nameLeftImage.sprite = GetNameSprite(line.panelStyle);
+                speakerLeftText.text = character.characterName;
+            }
+
+
+
+            dialogueLeftText.text = "";
+
+            StartCoroutine(TypeLine(dialogueLeftText, line.lineText));
         }
         else
         {
             rightPortrait.sprite = portrait;
-            rightPortrait.gameObject.SetActive(true);
-            leftPortrait.gameObject.SetActive(true);
             rightGroup.alpha = 1f;
             leftGroup.alpha = 0.4f;
-        }
 
-        switch (line.panelStyle.ToLower())
-        {
-            case "neutral":
-                dialoguePanelImage.sprite = Texto_Neutral;
-                break;
-            case "enojado":
-                dialoguePanelImage.sprite = Texto_Enojado;
-                break;
-            case "melancolico":
-                dialoguePanelImage.sprite = Texto_Melancolico;
-                break;
-            case "pensamiento":
-                dialoguePanelImage.sprite = Texto_Pensamiento;
-                break;
-            default:
-                dialoguePanelImage.sprite = Texto_Neutral;
-                break;
-        }
+            panelLeft.SetActive(false);
+            panelRight.SetActive(true);
 
-        StartCoroutine(TypeLine(line.lineText));
+            panelRightImage.sprite = GetPanelSprite(line.panelStyle);
+            bool isThinking = line.panelStyle.ToLower() == "pensamiento";
+
+            bool showName = !isThinking && !string.IsNullOrWhiteSpace(character.characterName);
+            nameRightImage.gameObject.SetActive(showName);
+            speakerRightText.gameObject.SetActive(showName);
+
+            if (showName)
+            {
+                nameRightImage.sprite = GetNameSprite(line.panelStyle);
+                speakerRightText.text = character.characterName;
+            }
+
+
+
+            dialogueRightText.text = "";
+
+            StartCoroutine(TypeLine(dialogueRightText, line.lineText));
+        }
     }
 
-    IEnumerator TypeLine(string text)
+
+    IEnumerator TypeLine(TextMeshProUGUI textBox, string text)
     {
         isTyping = true;
-        dialogueText.text = "";
+        NextButton.SetActive(false);
+        NextButtonGroup.alpha = 0f;
+        if (buttonBlink != null) StopCoroutine(buttonBlink);
+
+        textBox.text = "";
 
         foreach (char c in text)
         {
-            dialogueText.text += c;
-            yield return new WaitForSecondsRealtime(0.02f); 
+            textBox.text += c;
+            yield return new WaitForSecondsRealtime(0.02f);
         }
 
         isTyping = false;
+        NextButton.SetActive(true);
+        buttonBlink = StartCoroutine(BlinkNextButton());
     }
+
+
+
+
+    Sprite GetPanelSprite(string style)
+    {
+        switch (style.ToLower())
+        {
+            case "neutral": return textoNeutral;
+            case "enojado": return textoEnojado;
+            case "melancolico": return textoMelancolico;
+            case "pensamiento": return textoPensamiento;
+            default: return textoNeutral;
+        }
+    }
+
+
+    Sprite GetNameSprite(string style)
+    {
+        switch (style.ToLower())
+        {
+            case "neutral": return nombreNeutral;
+            case "enojado": return nombreEnojado;
+            case "melancolico": return nombreMelancolico;
+            default: return nombreNeutral;
+        }
+    }
+
+    Coroutine buttonBlink;
+
+    IEnumerator BlinkNextButton()
+    {
+        float t = 0f;
+        bool fadeOut = false;
+
+        while (true)
+        {
+            t += Time.unscaledDeltaTime * 2f;
+
+            float alpha = fadeOut ? 1f - t : t;
+            NextButtonGroup.alpha = Mathf.Clamp01(alpha);
+
+            if (t >= 1f)
+            {
+                t = 0f;
+                fadeOut = !fadeOut;
+            }
+
+            yield return null;
+        }
+    }
+
+
+
 }

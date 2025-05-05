@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueLine : MonoBehaviour
+[System.Serializable]
+public class DialogueLine
 {
     public DialogueCharacter character;
     public string emotion = "Neutral";

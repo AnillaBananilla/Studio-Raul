@@ -11,6 +11,11 @@ public class DialogueActivator : MonoBehaviour
         CutsceneSystem.Instance.StartCutscene(dialogueLines);
     }
 
+    void Start()
+    {
+        TriggerCutscene();
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -18,4 +23,7 @@ public class DialogueActivator : MonoBehaviour
             TriggerCutscene();
         }
     }
+
+   
 }
+
