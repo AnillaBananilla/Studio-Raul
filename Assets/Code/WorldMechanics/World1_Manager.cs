@@ -20,7 +20,7 @@ public class World1_Manager : MonoBehaviour
        
     }
 
-    private char _color = 'r';
+    private char _color = 's';
 
     public char CurrentColor()
     {

@@ -23,11 +23,12 @@ public class pinture : MonoBehaviour
      
         if (other.gameObject.CompareTag("Player"))
         {
-            if (gameManagerX.pintureAmount < 100)
+            gameManagerX.recivePinture(20);
+            /*if (gameManagerX.pintureAmount < 100)
             {
                 gameManagerX.recivePinture(20);
-            }
-            
+            }*/
+
             Destroy(gameObject);
         }
     }

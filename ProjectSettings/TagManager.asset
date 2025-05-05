@@ -13,6 +13,9 @@ TagManager:
   - Coin
   - Platform
   - NellProjectile
+  - Projectile
+  - Margaret
+  - Arbolillo
   layers:
   - Default
   - TransparentFX

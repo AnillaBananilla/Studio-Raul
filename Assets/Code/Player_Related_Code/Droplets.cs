@@ -22,6 +22,11 @@ public class Droplets : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
+
+    public void Awake()
+    {
         StartCoroutine(CR_Countdown());
         spriteRenderer = GetComponent<SpriteRenderer>();
 
@@ -38,14 +43,13 @@ public class Droplets : MonoBehaviour
 
         UpdateColor();
     }
-
     // Update is called once per frame
     void Update()
     {
         
     }
 
-    private void UpdateColor()
+    public void UpdateColor()
     {
         if (playerReference == null || spriteRenderer == null) return;
 

@@ -21,18 +21,48 @@ public class EnemyAttack : MonoBehaviour
 
             // Cambia el color DEL JUGADOR a rojo
             SpriteRenderer playerSprite = Player.GetComponent<SpriteRenderer>();
-            playerSprite.color = Color.red;
+           // playerSprite.color = Color.red;
 
             // Aplica la fuerza de retroceso
             direction = (Player.transform.position - transform.position).normalized;
+            direction.y = 0.05f;
+            Debug.LogWarning(direction);
             Player.GetComponent<Rigidbody2D>().velocity = new Vector3(0,0,0);
-            Debug.Log(direction * Recoilforce);
+            Debug.LogWarning(direction * Recoilforce);
             Player.GetComponent<Rigidbody2D>().velocity = direction * Recoilforce;
 
             // Inicia la corrutina para volver el color a blanco despu�s de 1 segundo
-            StartCoroutine(ResetColor(playerSprite));
+            //StartCoroutine(ResetColor(playerSprite));
             StartCoroutine(AttackCooldown());
             
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            //Debug.Log("I see you");
+            cooldown = true;
+            GameObject Player = collision.gameObject;
+            Player.GetComponent<Healt>().Damage(Damage);
+
+            // Cambia el color DEL JUGADOR a rojo
+            SpriteRenderer playerSprite = Player.GetComponent<SpriteRenderer>();
+            // playerSprite.color = Color.red;
+
+            // Aplica la fuerza de retroceso
+            direction = (Player.transform.position - transform.position).normalized;
+            direction.y = 0.6f;
+            Debug.LogWarning(direction);
+            Player.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+            Debug.LogWarning(direction * Recoilforce);
+            Player.GetComponent<Rigidbody2D>().velocity = direction * Recoilforce;
+
+            // Inicia la corrutina para volver el color a blanco despu�s de 1 segundo
+            //StartCoroutine(ResetColor(playerSprite));
+            StartCoroutine(AttackCooldown());
+
         }
     }
 

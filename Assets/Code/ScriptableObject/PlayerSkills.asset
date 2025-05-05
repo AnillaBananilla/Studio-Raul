@@ -15,3 +15,9 @@ MonoBehaviour:
   skills:
   - name: Pincel
     isUnlocked: 1
+  - name: Cyan
+    isUnlocked: 0
+  - name: Magenta
+    isUnlocked: 0
+  - name: Yellow
+    isUnlocked: 0

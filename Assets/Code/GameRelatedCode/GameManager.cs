@@ -5,35 +5,69 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using static PlayerSkills;
+using Unity.VisualScripting;
+using System;
+
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;           // Asignar aca el unico game manager.
-    public TextMeshProUGUI scoreText;
-    public TextMeshProUGUI keyText;
+    //public TextMeshProUGUI scoreText;
+    //public TextMeshProUGUI keyText;
     public Image lifeBar;
     public float healtAmount = 100f;
     public int score;
     public int key;
 
+    public PlayerInventory Inventory;
+    [Header("UI Elements for GameOver")]
+    [SerializeField] private GameObject gameOverPanel; // Referencia al panel de Game Over
+    [SerializeField] private Button menuButton; // Botón para volver al menú
+    [SerializeField] private Button restartButton; // Botón para reiniciar
+
+    private bool isGameOver = false;
+
 
     public PlayerSkills SkillList;
 
-    public float pintureAmount = 100f;
+    //public float pintureAmount = 100f;
+    public float[] paintAmount = { 100f, 100f, 100f }; // Az Ma Am
+    public int paintColorIndex = 0;
+
     public Image pintureBar;
 
 
 
     public Transform RespawnPoint;
     public bool Dead = false;
+    public Healt PlayerHP;
     public PlayerStats playerStats;
+
+    [Header("CANVAS DE GUARDADO")]
+    public InputHandler PlayerInput;
+    private float textboxspeed = 0f;
+    [SerializeField] private bool inDialog = false;
+
+
+    private Animator _saveanimator;
+
+    [Header("Texto Del Dialogo")]
+    public TextMeshProUGUI Dialog;
+
+    [Header("Efecto Typewriter")]
+    public TypewriterEffect effect;
+
+
+    [Header("Parent del Dialogo De guardado")]
+    public GameObject SaveDialog;
+
+    [Header("Botones")]
+    public Button YesButton; public Button NoButton; public Button OkButton;
 
 
     /*
-    public GameObject AchievementScreen;        //Pendiente por terminar
-    public GameObject MissionScreen;            //Pendiente por terminar
-    public GameObject InventoryScreen;          //Pendiente por terminar
-    public GameObject ShopScreen;               //Pendiente por terminar
+    TO DO:
+    A�adir una lista de booleanos, o lo que sea, que indiquen el progreso del juego.
     */
 
     public float fadeInDuration = 1.5f;
@@ -57,6 +91,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Dead = false;
         score = 0;
         UpdateScore(0);
         key = 0;
@@ -64,6 +99,22 @@ public class GameManager : MonoBehaviour
         fadeSpeed = 1f / fadeInDuration;
         //EventManager.m_Instance.AddListener<EquipItemEvent>(EquipItem);
 
+
+        // Asegurarse de que el panel esté desactivado al inicio
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+
+        // Asignar funciones a los botones
+        if (menuButton != null)
+            menuButton.onClick.AddListener(GoToMenu);
+        
+        if (restartButton != null)
+            restartButton.onClick.AddListener(RestartGame);
+        if (YesButton != null) YesButton.onClick.AddListener(SaveGame);
+        if (NoButton != null) NoButton.onClick.AddListener(EndDialog);
+        if (OkButton != null) OkButton.onClick.AddListener(EndDialog);
+
+        _saveanimator = SaveDialog.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -89,10 +140,19 @@ public class GameManager : MonoBehaviour
     }
 
     public void takeDamage(float damage)
-    {   
-        float appliedDamage = damage - playerStats.currentDamageReduction;
-        healtAmount -= appliedDamage;
-        lifeBar.fillAmount = healtAmount / 100F;
+    {
+        //ACOMODAR PARA QUE USE EL COMPONENTE HEALT DE PLAYER
+
+        
+        float appliedDamage = Mathf.Max(0, damage - playerStats.currentDamageReduction);
+        PlayerHP.currentHealt -= (int) appliedDamage;
+        Debug.Log("Recibes" + appliedDamage);
+        lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
+        if(lifeBar.fillAmount == 0){
+            TriggerGameOver();
+            Dead = true;
+        }
+        //lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {
@@ -129,73 +189,163 @@ public class GameManager : MonoBehaviour
         return pincelSkill.isUnlocked;
     }
 
-    /*
-    public void GoToAchievements()
-    {
-        MissionScreen.SetActive(false);
-        AchievementScreen.SetActive(true);
-        InventoryScreen.SetActive(false);
-    }
-
-    public void GoToMissions()
-    {
-        AchievementScreen.SetActive(false);
-        InventoryScreen.SetActive(false);
-        MissionScreen.SetActive(true);
-    }
-
-    public void GoToInventory()
-    {
-        MissionScreen.SetActive(false);
-        AchievementScreen.SetActive(false);
-        InventoryScreen.SetActive(true);
-    }
-    public void OpenShop()
-    {
-        ShopScreen.SetActive(true);
-    }
-
-    public void CloseMenu()
-    {
-        MissionScreen.SetActive(false);
-        InventoryScreen.SetActive(false);
-        AchievementScreen.SetActive(false);
-        ShopScreen.SetActive(false);
-
-    }
- 
-    public void EquipItem(EquipItemEvent e)
-    {
-        EquippedItem = e.eventItem;
-    }
-    */
-
     public void usePinture(float pinture)
     {
-        pintureAmount -= pinture;
-        pintureBar.fillAmount = pintureAmount / 100F;
+        //pintureAmount -= pinture;
+
+        paintAmount[paintColorIndex] -= pinture;
+
+        //pintureBar.fillAmount = pintureAmount / 100F;
+
+        pintureBar.fillAmount = paintAmount[paintColorIndex]/100f;
     }
     public void recivePinture(float pinture)
     {
-        pintureAmount += pinture;
-        pintureBar.fillAmount = pintureAmount / 100F;
+        //pintureAmount += pinture;
+        //pintureBar.fillAmount = pintureAmount / 100F;
+
+        for (int i = 0; i>3; i++)
+        {
+            if (paintAmount[i] + pinture <= 100)
+            {
+                paintAmount[i] += pinture;
+            } 
+        }
+        pintureBar.fillAmount = paintAmount[paintColorIndex]/100f;
     }
-    
-    
+    private void EndDialog()
+    {
+        PlayerInput.moveable = true;
+        Time.timeScale = 1f;
+        SaveData();
+        paintAmount[0] = 100f;
+        paintAmount[1] = 100f;
+        paintAmount[2] = 100f;
+        recivePinture(0);
+        StartCoroutine(ResetDialog());
+        //LoadData();
+    }
+
+    private void SaveGame()
+    {
+        YesButton.gameObject.SetActive(false);
+        //Dialog.text = "Guardando..."; *Viejo
+        if (effect != null)
+        {
+            effect.StartTypewriter("Guardando...");
+        }
+        NoButton.gameObject.SetActive(false);
+
+        StartCoroutine(SaveBuffer());
+    }
+
+    private IEnumerator SaveBuffer()
+    {
+        yield return new WaitForSecondsRealtime(3);
+        if (effect != null)
+        {
+            effect.StartTypewriter("Partida guardada con éxito.");
+        }
+        OkButton.gameObject.SetActive(true);
+    }
+
+    private IEnumerator ResetDialog()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        inDialog = false;
+        YesButton.gameObject.SetActive(true);
+        NoButton.gameObject.SetActive(true);
+        OkButton.gameObject.SetActive(false);
+    }
+    public void OpenDialog()
+    {
+        if (!inDialog)
+        {
+            _saveanimator.SetTrigger("OpenDialog");
+            if (effect != null)
+            {
+                effect.StartTypewriter("¿Te gustaría guardar tu partida?");
+            }
+            inDialog = true;
+            PlayerInput.moveable = false;
+            Time.timeScale = 0f;
+        }
+        
+    }
+
+
     public void LoadScene()
     {
-        SaveManager.OpenSavedScene();
+        
     }
 
     public void LoadData()
     {
-        PlayerData LoadedData = SaveManager.LoadPlayerData();
-       
+        PlayerData Save = SaveManager.LoadPlayerData();
+        //Cargar los datos del jugador:
+        PlayerHP.gameObject.transform.position = new Vector3(Save.position[0], Save.position[1], -1.2563f); //Position
+        score = Save.Money;
+        PlayerHP.currentHealt = Save.HP;
+        key = Save.Keys;
+        //Cargar los items
+        int i = 0;
+        foreach (int amount in Save.ItemAmounts)
+        {
+            Inventory.items[i].quantity = amount;
+            i++;
+        }
+        //Cargar los Skills
+        SkillList.skills[0].isUnlocked = Save.Skills[0];
+        SkillList.skills[1].isUnlocked = Save.Skills[1];
+        SkillList.skills[2].isUnlocked = Save.Skills[2];
+        SkillList.skills[3].isUnlocked = Save.Skills[3];
+        usePinture(0);
+
+       //To Do:
+       //Cargar los datos de misiones terminadas e items almacenados.
     }
 
     public void SaveData()
     {
-        
+        SaveManager.SavePlayerData(instance);
         //SaveManager.SavePlayerData(Drew);
+    }
+
+    public void TriggerGameOver()
+    {
+        if (isGameOver) return;
+
+        isGameOver = true;
+        
+        // Activar panel de Game Over
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(true);
+        
+        // Detener el tiempo
+        Time.timeScale = 0f;
+    }
+
+    private void GoToMenu()
+    {
+        // Restaurar el tiempo
+        Time.timeScale = 1f;
+        
+        // Cambiar a la escena del menú (ajusta "MenuScene" al nombre de tu escena)
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    private void RestartGame()
+    {
+        isGameOver = false;
+        
+        // Desactivar panel de Game Over
+        if (gameOverPanel != null)
+            gameOverPanel.SetActive(false);
+        
+        // Restaurar el tiempo
+        Time.timeScale = 1f;
+        
+        // Recargar la escena actual
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

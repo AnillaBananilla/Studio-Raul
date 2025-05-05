@@ -9,6 +9,11 @@ public class Healt : MonoBehaviour
     public int currentHealt;
     public int maxHealt;
 
+    //TODO
+    // Añadir la propiedad de COLOR
+
+    public bool isImmune = false;
+    public SpriteRenderer Renderer;
     public GameObject coinPrefab;
     public float coinOffsetY = -5f;
     [Range(0, 100)] public float coinSpawnChance = 50f;
@@ -16,10 +21,17 @@ public class Healt : MonoBehaviour
     public GameObject damageTextPrefab; // Prefab del texto de da�o
     public Vector3 damageTextOffset = new Vector3(0, 3f, 0); // Offset para la posici�n del texto
 
+    public IEnumerator Immunity()
+    {
+        yield return new WaitForSeconds(2);
+        Renderer.color = Color.white;
+        isImmune = false;
+    }
     void Start()
     {
 
         currentHealt = maxHealt;
+        Renderer = this.gameObject.GetComponent<SpriteRenderer>();
 
     }
 
@@ -36,8 +48,27 @@ public class Healt : MonoBehaviour
          * Meter un switch que cheque el tag del enemigo, y modifique el daño que recibe.
          * 
          */
-        currentHealt -= damage;
-        ShowDamageText(-damage); 
+        if (!isImmune)
+        {
+            
+            StartCoroutine(Immunity());
+            Renderer.color = Color.red;
+            isImmune = true;
+
+            if (this.gameObject.CompareTag("Player"))
+            {
+                InputHandler playerinput = this.gameObject.GetComponent<InputHandler>();
+                playerinput.Helpless();
+                GameManager.instance.takeDamage(damage);
+                Debug.LogWarning("Lleeeeevame a chambear");
+            } else
+            {
+                currentHealt -= damage;
+                ShowDamageText(-damage);
+                
+            }
+        }
+        
 
         if (currentHealt <= 0)
         {
@@ -62,7 +93,7 @@ public class Healt : MonoBehaviour
         if (this.gameObject.CompareTag("Player"))
         {
             EventManager.m_Instance.InvokeEvent<DieEvent>(new DieEvent());
-            currentHealt = maxHealt;
+            //currentHealt = maxHealt;
         }
         else
         {

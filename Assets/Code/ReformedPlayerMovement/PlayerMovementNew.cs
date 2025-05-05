@@ -7,6 +7,8 @@ public class PlayerMovementNew : MonoBehaviour
 {
     public Rigidbody2D rb;
 
+    [SerializeField] public InputHandler input;
+
     bool isFacingRight = true;
 
     public Animator animator;
@@ -24,7 +26,7 @@ public class PlayerMovementNew : MonoBehaviour
     [Header("Jump")]
     public float jumpForce = 10f;
     public int maxJumps = 2;
-    int jumpsLeft;
+    public int jumpsLeft;
 
     [Header("Ground Check")]
     public Transform groundCheckPos;
@@ -58,6 +60,8 @@ public class PlayerMovementNew : MonoBehaviour
 
     void Update()
     {
+        if (input.moveable)
+        {
             if (!canMove)
             {
                 rb.velocity = Vector2.zero;
@@ -65,19 +69,25 @@ public class PlayerMovementNew : MonoBehaviour
             }
 
             currSpeed = isRunning ? playerStats.currentRunSpeed : playerStats.currentMoveSpeed;
-            
+
             GroundCheck();
-            RoofCheck();
+            //RoofCheck();
             Gravity();
             Flip();
 
             animator.SetFloat("yVelocity", rb.velocity.y);
-            animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x)); 
+            animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
+        }
+           
     }
 
     void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontalMovement * currSpeed, rb.velocity.y);
+        if (input.moveable)
+        {
+            rb.velocity = new Vector2(horizontalMovement * currSpeed, rb.velocity.y);
+        }
+        
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -99,9 +109,9 @@ public class PlayerMovementNew : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if(jumpsLeft > 0)
+        if(jumpsLeft > 0 && input.moveable)
         {
-            if (context.performed && canGetUp)
+            if (context.performed)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 jumpsLeft--;
@@ -127,7 +137,7 @@ public class PlayerMovementNew : MonoBehaviour
             isGrounded = false;
         }
     }
-
+    /*
     public void Crouch(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -143,7 +153,7 @@ public class PlayerMovementNew : MonoBehaviour
             animator.SetBool("isCrouching", false);
         }
     }
-
+    
     private void RoofCheck()
     {
         if (Physics2D.OverlapBox(roofCheckPos.position, roofCheckSize, 0, groundLayer))
@@ -161,7 +171,7 @@ public class PlayerMovementNew : MonoBehaviour
                 animator.SetBool("isCrouching", false);
             }
         }
-    } 
+    } */
 
     public void Drop(InputAction.CallbackContext context){
         if(context.performed && isGrounded && isOnPlatform && upColl.enabled){

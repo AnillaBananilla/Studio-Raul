@@ -271,12 +271,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newColor: {r: 0.103447914, g: 1, b: 0, a: 0}
   itemsImage:
-  - {fileID: 21300000, guid: 8d678eb3e286dc342af66ed4d466bd72, type: 3}
-  - {fileID: 21300000, guid: f7b029c99ab883a499fdf39b79b83562, type: 3}
-  - {fileID: 21300000, guid: a6d3fd11798875e44a800b54cacbbf85, type: 3}
-  - {fileID: 21300000, guid: 51685ea882fb9fd4c97af952d7bad031, type: 3}
-  - {fileID: 21300000, guid: b3c18dae289c412438de84f1eca894c1, type: 3}
-  - {fileID: 21300000, guid: 00614d20f171a4d44a37b0d0b9842c28, type: 3}
+  - {fileID: 21300000, guid: 5b071fb6c12d58f47a18b30d3ae2d208, type: 3}
+  - {fileID: 21300000, guid: d5c425e0aadf5004f8b5418df5b27c4a, type: 3}
+  - {fileID: 21300000, guid: b1db24e944f42714483f2e04ea20b807, type: 3}
+  - {fileID: 21300000, guid: a67e78db7b856c04bbdae8b3acd335e1, type: 3}
+  - {fileID: 21300000, guid: d56a779ba2b21df4c80e327b4187d128, type: 3}
+  - {fileID: 21300000, guid: 6589febf29db2f945b313c241d7901ef, type: 3}
 --- !u!1 &5949601407150235182
 GameObject:
   m_ObjectHideFlags: 0

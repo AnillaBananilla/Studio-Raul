@@ -36,7 +36,7 @@ public class GhostFollower : MonoBehaviour
             if (safePosition != Vector3.zero)
             {
                 companion.position = safePosition;
-                Debug.Log("Teletransportando a zona segura en posicion " + safePosition);
+               // Debug.Log("Teletransportando a zona segura en posicion " + safePosition);
             }
         }
         else

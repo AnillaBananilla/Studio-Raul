@@ -130,6 +130,7 @@ Transform:
   - {fileID: 7406043260029691577}
   - {fileID: 1606428481335303681}
   - {fileID: 1273090523976436984}
+  - {fileID: 5454161018591264808}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4924099436268133399
@@ -325,6 +326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputHandler: {fileID: 4749155432632805270}
+  PlayerHP: {fileID: 3643443144228755534}
   attackCheck: {fileID: 7791853452807921908}
   attackRadius: 2
   enemyLayer:
@@ -349,12 +351,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e9225a66e2473244849ddab1efdbaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveable: 1
   pressMenu: 0
   pressEquip: 0
   useItem: 0
   isNavigatingLeft: 0
   isNavigatingRight: 0
   isSelecting: 0
+  interacting: 0
   attack: 0
   attackPaint: 0
   changeColor: 0
@@ -580,6 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 638399713906320712}
+  input: {fileID: 0}
   animator: {fileID: 6796437162531345430}
   canMove: 1
   walkSpeed: 15
@@ -636,10 +641,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealt: 100
   maxHealt: 100
+  isImmune: 0
+  Renderer: {fileID: 0}
   coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
   coinOffsetY: -5
   coinSpawnChance: 50
-  animator: {fileID: 0}
   damageTextPrefab: {fileID: 0}
   damageTextOffset: {x: 0, y: 3, z: 0}
 --- !u!1 &3732127342997179822
@@ -670,7 +676,7 @@ Transform:
   m_GameObject: {fileID: 3732127342997179822}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.881808, y: 0, z: -4.237623}
+  m_LocalPosition: {x: 0, y: 0, z: -4.237623}
   m_LocalScale: {x: 0.5924288, y: 0.56065834, z: 0.42376232}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -769,6 +775,37 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &4012748048060023659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5454161018591264808}
+  m_Layer: 0
+  m_Name: CameraFollowTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5454161018591264808
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012748048060023659}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.1577642, y: 6.2250905, z: 1.9328709}
+  m_LocalScale: {x: 0.5924288, y: 0.56065834, z: 0.42376232}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 393053796551810655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5400536216799803500
 GameObject:
   m_ObjectHideFlags: 0

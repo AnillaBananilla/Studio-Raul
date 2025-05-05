@@ -5,12 +5,14 @@ using TMPro;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.XR;
+using Unity.VisualScripting;
 
 public class PlayerAttack : MonoBehaviour
 {
     public InputHandler inputHandler;
 
-    // Start is called before the first frame update
+    public Healt PlayerHP;
+
     public Transform attackCheck;
     public float attackRadius = 2.0f;
     public LayerMask enemyLayer;
@@ -42,6 +44,7 @@ public class PlayerAttack : MonoBehaviour
 
                 for (int counter = 0; counter < enemies.Length; counter++)
                 {
+                    
                     enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
                     enemies[counter].GetComponent<Healt>().Damage(25);
 
@@ -55,17 +58,19 @@ public class PlayerAttack : MonoBehaviour
 
             if (inputHandler.attackPaint)
             {   //si sigue habiendo pintura, entonces se realizan estas acciones
-                if (gameManager.pintureAmount > 0)
+            float CurrentPaint = gameManager.paintAmount[gameManager.paintColorIndex];
+                if (CurrentPaint > 0)
                 {   //se inicia la animación
                     animator.SetTrigger("Attack_Trigger");
-                    gameManager.usePinture(1);
+                    gameManager.usePinture(5);
                     Droplets newBullet = null;
                     //el pool manager spawnea alguna bala
-                    PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects);
+                    PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects); //Checar aca
 
                     //en caso de existir la bala y no ser null se hace lo siguiente
                     if (newBullet != null)
                     {
+                        newBullet.UpdateColor();
                         //se obtiene el RB de la bala
                         Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
                         //al detectarlo, entonces se realizan los pasos de detectar la dirección 
@@ -126,18 +131,22 @@ public class PlayerAttack : MonoBehaviour
                 valueToPrint = 10;
                 Debug.Log("Valor impreso: " + valueToPrint);
                 imageToChange.color = Color.cyan;
+                GameManager.instance.paintColorIndex = 0;
                 break;
             case ColorState.Amarillo:
                 valueToPrint = 20;
                 Debug.Log("Valor impreso: " + valueToPrint);
                 imageToChange.color = Color.magenta;
+                GameManager.instance.paintColorIndex = 1;
                 break;
             case ColorState.Rojo:
                 valueToPrint = 30;
                 Debug.Log("Valor impreso: " + valueToPrint);
                 imageToChange.color = Color.yellow;
+                GameManager.instance.paintColorIndex = 2;
                 break;
         }
+        gameManager.usePinture(0);
     }
     public string GetCurrentColor()
     {
@@ -165,11 +174,11 @@ public class PlayerAttack : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("NellProjectile")){
-            gameManager.takeDamage(25);
+            //gameManager.takeDamage(25);
+            PlayerHP.Damage(25);
+            //GameManager.instance.takeDamage(25);
+            //GameManager.instance.lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
         }
-        /*else if(collision.gameObject.CompareTag("ArbolilloPunch")){
-            gameManager.takeDamage(15);
-        }*/
     }
 
 }
