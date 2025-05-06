@@ -6,7 +6,7 @@ using TMPro;
 public class PaintPillar : MonoBehaviour
 {
     public string requiredColor;
-    public int maxCharge = 5;
+    public int maxCharge = 3;
     public int currentCharge = 0;
     public PuzzleManager connectedDoor;
     public TextMeshProUGUI chargeText;
