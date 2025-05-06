@@ -332,6 +332,9 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  buttonLayer:
+    serializedVersion: 2
+    m_Bits: 256
   animator: {fileID: 6796437162531345430}
   gameManager: {fileID: 0}
   bulletPrefab: {fileID: 4932257948283262647, guid: ee563cce76786da45a8b8c8cd3f9c098, type: 3}
@@ -592,6 +595,7 @@ MonoBehaviour:
   isRunning: 0
   jumpForce: 25
   maxJumps: 2
+  jumpsLeft: 0
   groundCheckPos: {fileID: 1273090523976436984}
   groundCheckSize: {x: 0.5, y: 0.05}
   groundLayer:
