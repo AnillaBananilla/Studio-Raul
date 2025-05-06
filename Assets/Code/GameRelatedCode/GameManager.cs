@@ -273,6 +273,15 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void Freeze()
+    {
+        PlayerInput.moveable = false;
+    }
+    public void Melt()
+    {
+        PlayerInput.moveable = true;
+    }
+
 
     public void LoadScene()
     {
