@@ -9,12 +9,14 @@ public class DialogueActivator : MonoBehaviour
     public void TriggerCutscene()
     {
         CutsceneSystem.Instance.StartCutscene(dialogueLines);
+        this.gameObject.SetActive(false);
     }
 
     void Start()
     {
-        TriggerCutscene();
+        //TriggerCutscene();
     }
+
 
     void OnTriggerEnter2D(Collider2D other)
     {

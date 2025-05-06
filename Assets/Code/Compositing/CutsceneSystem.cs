@@ -7,6 +7,8 @@ public class CutsceneSystem : MonoBehaviour
 {
     public static CutsceneSystem Instance;
 
+    public GameObject DialogueCanvas;
+
     [Header("Retratos PNG")]
     public Image leftPortrait;
     public Image rightPortrait;
@@ -65,8 +67,10 @@ public class CutsceneSystem : MonoBehaviour
     {
         currentLines = lines;
         lineIndex = 0;
+        DialogueCanvas.SetActive(true);
 
         Time.timeScale = 0f; // Pausa el juego
+        GameManager.instance.Freeze(); //Le quita el control al jugador
         backgroundFade.SetActive(true);
         DisplayNextLine();
     }
@@ -74,6 +78,7 @@ public class CutsceneSystem : MonoBehaviour
     void ResumeWorld()
     {
         Time.timeScale = 1f;
+        GameManager.instance.Melt(); //Devuelve el control al jugador.
     }
 
     void EndCutscene()
@@ -81,6 +86,8 @@ public class CutsceneSystem : MonoBehaviour
         panelLeft.SetActive(false);
         panelRight.SetActive(false);
         backgroundFade.SetActive(false);
+
+        DialogueCanvas.SetActive(false);
 
         leftPortrait.gameObject.SetActive(false);  
         rightPortrait.gameObject.SetActive(false);  
@@ -99,6 +106,7 @@ public class CutsceneSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Next");
             if (isTyping)
             {
                 StopAllCoroutines();

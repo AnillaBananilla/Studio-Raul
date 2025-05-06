@@ -16,6 +16,8 @@ TagManager:
   - Projectile
   - Margaret
   - Arbolillo
+  - Pilar
+  - Button
   layers:
   - Default
   - TransparentFX
@@ -25,7 +27,7 @@ TagManager:
   - UI
   - Enemy
   - Player
-  - 
+  - Button
   - 
   - 
   - 
