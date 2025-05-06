@@ -9,15 +9,20 @@ using Unity.VisualScripting;
 
 public class PlayerAttack : MonoBehaviour
 {
+    [Header("Manager del input del jugador")]
     public InputHandler inputHandler;
 
     public Healt PlayerHP;
 
     public Transform attackCheck;
     public float attackRadius = 2.0f;
+
+    [Header("Capas que afecta el ataque")]
     public LayerMask enemyLayer;
+    public LayerMask buttonLayer;
     public Animator animator;
     public GameManager gameManager;
+    [Header("Info de ataques con balas de pintura")]
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
     public Vector2 shootDirection;
@@ -40,6 +45,7 @@ public class PlayerAttack : MonoBehaviour
             if (inputHandler.attack)
             {
                 animator.SetTrigger("Attack_Trigger");
+                //daño a enemigos
                 Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
 
                 for (int counter = 0; counter < enemies.Length; counter++)
@@ -47,12 +53,15 @@ public class PlayerAttack : MonoBehaviour
                     
                     enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
                     enemies[counter].GetComponent<Healt>().Damage(25);
-
-                    // Obtener la posición del enemigo
-                    Vector3 enemyPosition = enemies[counter].transform.position;
-
-                    // Instanciar un objeto en esa posición
-  
+                }
+                //activación de botones/interacción
+                Collider2D[] buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonLayer);
+                for(int i = 0; i < buttons.Length; i++){
+                    ButtonDoors button = buttons[i].GetComponent<ButtonDoors>();
+                    if(button != null){
+                        Debug.Log("Botón detectado por ataque.");
+                        button.Activate();
+                    }
                 }
             }
 
@@ -136,13 +145,13 @@ public class PlayerAttack : MonoBehaviour
             case ColorState.Amarillo:
                 valueToPrint = 20;
                 Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.magenta;
+                imageToChange.color = Color.yellow;
                 GameManager.instance.paintColorIndex = 1;
                 break;
             case ColorState.Rojo:
                 valueToPrint = 30;
                 Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.yellow;
+                imageToChange.color = Color.magenta;
                 GameManager.instance.paintColorIndex = 2;
                 break;
         }
