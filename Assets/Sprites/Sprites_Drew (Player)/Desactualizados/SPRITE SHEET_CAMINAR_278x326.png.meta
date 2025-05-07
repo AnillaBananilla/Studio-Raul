@@ -1,0 +1,769 @@
+fileFormatVersion: 2
+guid: e7f26c4f286052b41b74f644d8f807e6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 241
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc45d8b19e3bd545affd4bd803c3561
+      internalID: -24543129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_1
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 0
+        width: 245
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14c98478bb3b574e8544632235c763b
+      internalID: -1787559346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_2
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 0
+        width: 241
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445aa9f2fcbbb294e92c6d628882ee44
+      internalID: 796601061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_3
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 6
+        width: 260
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f9c8d2d48829844bb8fc86cb533f88
+      internalID: -1478252975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_4
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 6
+        width: 260
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d190c834ff443bd44af61def93bfe9f7
+      internalID: -331607845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_5
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 9
+        width: 271
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f9fe5a6716ef6f42bd6d0c70eb38b18
+      internalID: 585926028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_6
+      rect:
+        serializedVersion: 2
+        x: 1669
+        y: 9
+        width: 268
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbaf01e3f1472240ae6d60a38b6f7b4
+      internalID: 1043146312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_7
+      rect:
+        serializedVersion: 2
+        x: 1948
+        y: 9
+        width: 267
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2ec663bcaa79d499162426395ff3fc
+      internalID: -1661516847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_8
+      rect:
+        serializedVersion: 2
+        x: 2227
+        y: 9
+        width: 267
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf08aa289f265d42a151434d5c64c4f
+      internalID: -429192843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_9
+      rect:
+        serializedVersion: 2
+        x: 2502
+        y: 6
+        width: 271
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bdb4aa89554b814e898e0af013741e9
+      internalID: 527566984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_10
+      rect:
+        serializedVersion: 2
+        x: 2780
+        y: 6
+        width: 271
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 917159f6c159944459b34ce46ac3d5e0
+      internalID: 1589360502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_11
+      rect:
+        serializedVersion: 2
+        x: 3059
+        y: 6
+        width: 271
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5feead86f35b614f872e96be7ab387f
+      internalID: -872178334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_12
+      rect:
+        serializedVersion: 2
+        x: 3337
+        y: 9
+        width: 271
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a630aecb417aa7d4c983c2af480b5e24
+      internalID: 1916807550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_13
+      rect:
+        serializedVersion: 2
+        x: 3616
+        y: 9
+        width: 271
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ea3d1d07443c64e9623d93fa6fa2ba
+      internalID: -314262397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_14
+      rect:
+        serializedVersion: 2
+        x: 3891
+        y: 9
+        width: 271
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12f9c62e3038d344add41d3a722fd16
+      internalID: -1812572030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_15
+      rect:
+        serializedVersion: 2
+        x: 4176
+        y: 13
+        width: 264
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db90f2b83ed6ab4dafd2c4948119523
+      internalID: -2138955360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_16
+      rect:
+        serializedVersion: 2
+        x: 4455
+        y: 13
+        width: 264
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946bcebab3f12794fbc00cb5c2428982
+      internalID: 666314457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_17
+      rect:
+        serializedVersion: 2
+        x: 4733
+        y: 13
+        width: 264
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c12a3520a52534b8f4dcfeb08e112f
+      internalID: -1712188576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_18
+      rect:
+        serializedVersion: 2
+        x: 5012
+        y: 9
+        width: 253
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac251b1240ee83f4eb9cfda7c4a776f2
+      internalID: -1424290756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_19
+      rect:
+        serializedVersion: 2
+        x: 5291
+        y: 9
+        width: 252
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 891d6b0046c39974891122515731d40f
+      internalID: -432485295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_20
+      rect:
+        serializedVersion: 2
+        x: 5569
+        y: 9
+        width: 253
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2186418eb465cd4e835175ed557ac6e
+      internalID: 1421976231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_21
+      rect:
+        serializedVersion: 2
+        x: 5848
+        y: 9
+        width: 252
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb45085018dde1c42a821980e8328f1c
+      internalID: 788926475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_22
+      rect:
+        serializedVersion: 2
+        x: 6126
+        y: 9
+        width: 253
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbf592eda37e5b42a01984b0b4f4824
+      internalID: 712412577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_23
+      rect:
+        serializedVersion: 2
+        x: 6405
+        y: 9
+        width: 252
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6890090d5023748905ff5364f72f23
+      internalID: -1623163736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_24
+      rect:
+        serializedVersion: 2
+        x: 6687
+        y: 6
+        width: 245
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9e9d53aca93fb4e8aebbea58f7db98
+      internalID: 365960822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_25
+      rect:
+        serializedVersion: 2
+        x: 6962
+        y: 6
+        width: 249
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea259952aac490144a07b651cae6d2ee
+      internalID: 1357235300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_26
+      rect:
+        serializedVersion: 2
+        x: 6863
+        y: 2
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64939eb4a9362c94290d6bdd5bc16dcf
+      internalID: 1749422379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SPRITE SHEET_CAMINAR_278x326_27
+      rect:
+        serializedVersion: 2
+        x: 7141
+        y: 2
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdfdea8033bc2b54b9ed4024e98e4b6a
+      internalID: 2093467041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 2596562fb0e81e547bd3fed02e4e31ce
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SPRITE SHEET_CAMINAR_278x326_0: -24543129
+      SPRITE SHEET_CAMINAR_278x326_1: -1787559346
+      SPRITE SHEET_CAMINAR_278x326_10: 1589360502
+      SPRITE SHEET_CAMINAR_278x326_11: -872178334
+      SPRITE SHEET_CAMINAR_278x326_12: 1916807550
+      SPRITE SHEET_CAMINAR_278x326_13: -314262397
+      SPRITE SHEET_CAMINAR_278x326_14: -1812572030
+      SPRITE SHEET_CAMINAR_278x326_15: -2138955360
+      SPRITE SHEET_CAMINAR_278x326_16: 666314457
+      SPRITE SHEET_CAMINAR_278x326_17: -1712188576
+      SPRITE SHEET_CAMINAR_278x326_18: -1424290756
+      SPRITE SHEET_CAMINAR_278x326_19: -432485295
+      SPRITE SHEET_CAMINAR_278x326_2: 796601061
+      SPRITE SHEET_CAMINAR_278x326_20: 1421976231
+      SPRITE SHEET_CAMINAR_278x326_21: 788926475
+      SPRITE SHEET_CAMINAR_278x326_22: 712412577
+      SPRITE SHEET_CAMINAR_278x326_23: -1623163736
+      SPRITE SHEET_CAMINAR_278x326_24: 365960822
+      SPRITE SHEET_CAMINAR_278x326_25: 1357235300
+      SPRITE SHEET_CAMINAR_278x326_26: 1749422379
+      SPRITE SHEET_CAMINAR_278x326_27: 2093467041
+      SPRITE SHEET_CAMINAR_278x326_3: -1478252975
+      SPRITE SHEET_CAMINAR_278x326_4: -331607845
+      SPRITE SHEET_CAMINAR_278x326_5: 585926028
+      SPRITE SHEET_CAMINAR_278x326_6: 1043146312
+      SPRITE SHEET_CAMINAR_278x326_7: -1661516847
+      SPRITE SHEET_CAMINAR_278x326_8: -429192843
+      SPRITE SHEET_CAMINAR_278x326_9: 527566984
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
