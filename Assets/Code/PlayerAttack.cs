@@ -189,5 +189,4 @@ public class PlayerAttack : MonoBehaviour
             //GameManager.instance.lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
         }
     }
-
 }
