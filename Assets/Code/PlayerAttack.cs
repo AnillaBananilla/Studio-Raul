@@ -32,6 +32,9 @@ public class PlayerAttack : MonoBehaviour
     int valueToPrint = 0;
     public Animator[] animators; // Array de Animators de los sprites
     private int currentIndex = 0; // Índice del sprite actual
+    public Sprite blue;
+    public Sprite yellow;
+    public Sprite magenta;
 
 
     void Start()
@@ -138,20 +141,18 @@ public class PlayerAttack : MonoBehaviour
         {
             case ColorState.Azul:
                 valueToPrint = 10;
-                Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.cyan;
+                imageToChange.sprite = blue;
                 GameManager.instance.paintColorIndex = 0;
                 break;
             case ColorState.Amarillo:
                 valueToPrint = 20;
-                Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.yellow;
+
+                imageToChange.sprite = magenta;
                 GameManager.instance.paintColorIndex = 1;
                 break;
             case ColorState.Rojo:
                 valueToPrint = 30;
-                Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.magenta;
+                imageToChange.sprite = yellow;
                 GameManager.instance.paintColorIndex = 2;
                 break;
         }
