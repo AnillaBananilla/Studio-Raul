@@ -141,12 +141,13 @@ public class Healt : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(3f);
 
-        // Restaurar tiempo normal
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f;
 
-        // Cargar pantalla de muerte o reinicio
-        SceneManager.LoadScene("MenuMuerte"); // o el nombre de tu escena
+
+        SceneManager.LoadScene("MenuMuerte"); 
+
+
     }
     private void ShowDamageText(int damage)
     {
