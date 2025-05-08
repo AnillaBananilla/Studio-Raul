@@ -183,7 +183,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_2
+      name: Drew_SpriteSheet_Dead_10
       rect:
         serializedVersion: 2
         x: 776
@@ -204,7 +204,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_4
+      name: Drew_SpriteSheet_Dead_11
       rect:
         serializedVersion: 2
         x: 1543
@@ -225,7 +225,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_6
+      name: Drew_SpriteSheet_Dead_12
       rect:
         serializedVersion: 2
         x: 2310
@@ -246,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_9
+      name: Drew_SpriteSheet_Dead_2
       rect:
         serializedVersion: 2
         x: 853
@@ -267,7 +267,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_11
+      name: Drew_SpriteSheet_Dead_3
       rect:
         serializedVersion: 2
         x: 1730
@@ -288,7 +288,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_13
+      name: Drew_SpriteSheet_Dead_4
       rect:
         serializedVersion: 2
         x: 2420
@@ -309,7 +309,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_14
+      name: Drew_SpriteSheet_Dead_13
       rect:
         serializedVersion: 2
         x: 9
@@ -330,10 +330,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_16
+      name: Drew_SpriteSheet_Dead_5
       rect:
         serializedVersion: 2
-        x: 77
+        x: 106
         y: 721
         width: 613
         height: 526
@@ -351,7 +351,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_17
+      name: Drew_SpriteSheet_Dead_6
       rect:
         serializedVersion: 2
         x: 829
@@ -372,7 +372,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_18
+      name: Drew_SpriteSheet_Dead_7
       rect:
         serializedVersion: 2
         x: 1568
@@ -393,7 +393,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_20
+      name: Drew_SpriteSheet_Dead_8
       rect:
         serializedVersion: 2
         x: 2310
@@ -414,7 +414,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_Dead_22
+      name: Drew_SpriteSheet_Dead_9
       rect:
         serializedVersion: 2
         x: 8
@@ -446,29 +446,22 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Drew_SpriteSheet_Dead_0: -20690554
-      Drew_SpriteSheet_Dead_1: 1054169686
-      Drew_SpriteSheet_Dead_10: 1513397634
-      Drew_SpriteSheet_Dead_11: 1072065030
-      Drew_SpriteSheet_Dead_12: -32951866
-      Drew_SpriteSheet_Dead_13: 655633754
-      Drew_SpriteSheet_Dead_14: 762151508
+      Drew_SpriteSheet_Dead_10: -382525134
+      Drew_SpriteSheet_Dead_11: 2010940110
+      Drew_SpriteSheet_Dead_12: 934247226
+      Drew_SpriteSheet_Dead_13: 762151508
       Drew_SpriteSheet_Dead_15: 843779358
-      Drew_SpriteSheet_Dead_16: -832610893
-      Drew_SpriteSheet_Dead_17: 1445359347
-      Drew_SpriteSheet_Dead_18: 1802073131
       Drew_SpriteSheet_Dead_19: 1296864820
-      Drew_SpriteSheet_Dead_2: -382525134
-      Drew_SpriteSheet_Dead_20: -1615905659
+      Drew_SpriteSheet_Dead_2: -9139065
       Drew_SpriteSheet_Dead_21: -1735415979
-      Drew_SpriteSheet_Dead_22: -1111120873
       Drew_SpriteSheet_Dead_23: -2002952158
-      Drew_SpriteSheet_Dead_3: 514132286
-      Drew_SpriteSheet_Dead_4: 2010940110
-      Drew_SpriteSheet_Dead_5: -1766552322
-      Drew_SpriteSheet_Dead_6: 934247226
-      Drew_SpriteSheet_Dead_7: -352808328
-      Drew_SpriteSheet_Dead_8: 85954934
-      Drew_SpriteSheet_Dead_9: -9139065
+      Drew_SpriteSheet_Dead_3: 1072065030
+      Drew_SpriteSheet_Dead_4: 655633754
+      Drew_SpriteSheet_Dead_5: -832610893
+      Drew_SpriteSheet_Dead_6: 1445359347
+      Drew_SpriteSheet_Dead_7: 1802073131
+      Drew_SpriteSheet_Dead_8: -1615905659
+      Drew_SpriteSheet_Dead_9: -1111120873
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

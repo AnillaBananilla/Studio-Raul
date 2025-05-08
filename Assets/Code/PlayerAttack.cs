@@ -36,6 +36,10 @@ public class PlayerAttack : MonoBehaviour
     public Sprite yellow;
     public Sprite magenta;
 
+    private float lastAttackTime = 0f;
+    public float doubleAttackThreshold = 0.3f;
+    private float doubleTapThreshold = 0.3f;
+
 
     void Start()
     {
@@ -45,30 +49,69 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (inputHandler.attack)
-            {
-                animator.SetTrigger("Attack_Trigger");
-                //daño a enemigos
-                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
+        //     if (inputHandler.attack)
+        //   {
+        // animator.SetTrigger("Attack_Trigger");
+        //daño a enemigos
+        // Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
 
-                for (int counter = 0; counter < enemies.Length; counter++)
-                {
-                    
-                    enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
-                    enemies[counter].GetComponent<Healt>().Damage(25);
-                }
-                //activación de botones/interacción
-                Collider2D[] buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonLayer);
-                for(int i = 0; i < buttons.Length; i++){
-                    ButtonDoors button = buttons[i].GetComponent<ButtonDoors>();
-                    if(button != null){
-                        Debug.Log("Botón detectado por ataque.");
-                        button.Activate();
-                    }
-                }
+        // for (int counter = 0; counter < enemies.Length; counter++)
+        // {
+
+        //    enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
+        //    enemies[counter].GetComponent<Healt>().Damage(25);
+        // }
+        //activación de botones/interacción
+        // Collider2D[] buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonLayer);
+        // for(int i = 0; i < buttons.Length; i++){
+        //     ButtonDoors button = buttons[i].GetComponent<ButtonDoors>();
+        //     if(button != null){
+        //        Debug.Log("Botón detectado por ataque.");
+        //       button.Activate();
+        //   }
+        // }
+        // }
+
+        if (inputHandler.attack)
+        {
+            float currentTime = Time.time;
+
+            if (currentTime - lastAttackTime < doubleTapThreshold)
+            {
+                // Ataque largo (doble toque)
+                animator.SetTrigger("Attack");
+            }
+            else
+            {
+                // Ataque rápido (un solo toque)
+                animator.SetTrigger("AttackLong");
             }
 
-            if (inputHandler.attackPaint)
+            lastAttackTime = currentTime;
+
+            // Daño a enemigos (esto puede mantenerse igual)
+            Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
+            for (int counter = 0; counter < enemies.Length; counter++)
+            {
+                enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
+                enemies[counter].GetComponent<Healt>().Damage(25);
+            }
+
+            // Activación de botones/interacción
+            Collider2D[] buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonLayer);
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                ButtonDoors button = buttons[i].GetComponent<ButtonDoors>();
+                if (button != null)
+                {
+                    Debug.Log("Botón detectado por ataque.");
+                    button.Activate();
+                }
+            }
+        }
+
+
+        if (inputHandler.attackPaint)
             {   //si sigue habiendo pintura, entonces se realizan estas acciones
             float CurrentPaint = gameManager.paintAmount[gameManager.paintColorIndex];
                 if (CurrentPaint > 0)

@@ -162,15 +162,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_0
+      name: Drew_SpriteSheet_LongHit_01
       rect:
         serializedVersion: 2
         x: 146
         y: 1270
         width: 332
         height: 407
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.75, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,15 +183,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_1
+      name: Drew_SpriteSheet_LongHit_10
       rect:
         serializedVersion: 2
         x: 629
-        y: 1311
+        y: 1303
         width: 613
         height: 325
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14783302, y: 0.7599181}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,15 +204,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_2
+      name: Drew_SpriteSheet_LongHit_11
       rect:
         serializedVersion: 2
         x: 1260
         y: 1295
         width: 600
         height: 357
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.14148518, y: 0.8344518}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,15 +225,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_4
+      name: Drew_SpriteSheet_LongHit_12
       rect:
         serializedVersion: 2
         x: 1882
         y: 1326
         width: 605
         height: 298
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.13674136, y: 0.76549554}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,7 +246,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_6
+      name: Drew_SpriteSheet_LongHit_13
       rect:
         serializedVersion: 2
         x: 8
@@ -267,15 +267,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_8
+      name: Drew_SpriteSheet_LongHit_02
       rect:
         serializedVersion: 2
         x: 758
         y: 862
         width: 356
         height: 381
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.38077366, y: 0.55794305}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,15 +288,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_9
+      name: Drew_SpriteSheet_LongHit_03
       rect:
         serializedVersion: 2
         x: 1311
         y: 897
         width: 498
         height: 311
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.13999724, y: 0.6993}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,15 +309,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_10
+      name: Drew_SpriteSheet_LongHit_04
       rect:
         serializedVersion: 2
         x: 1941
         y: 905
         width: 485
         height: 296
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.117403954, y: 0.71775734}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,15 +330,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_11
+      name: Drew_SpriteSheet_LongHit_05
       rect:
         serializedVersion: 2
         x: 67
         y: 460
         width: 491
         height: 345
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4055563, y: 0.7016172}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -351,15 +351,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_12
+      name: Drew_SpriteSheet_LongHit_06
       rect:
         serializedVersion: 2
-        x: 724
+        x: 716
         y: 426
         width: 413
         height: 412
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5031326, y: 0.6130047}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -372,15 +372,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_14
+      name: Drew_SpriteSheet_LongHit_07
       rect:
         serializedVersion: 2
         x: 1356
         y: 434
         width: 407
         height: 395
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7365711, y: 0.5470416}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,15 +393,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_15
+      name: Drew_SpriteSheet_LongHit_08
       rect:
         serializedVersion: 2
         x: 1993
         y: 439
         width: 380
         height: 386
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.7409726, y: 0.5518929}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -414,15 +414,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_SpriteSheet_LongHit_16
+      name: Drew_SpriteSheet_LongHit_09
       rect:
         serializedVersion: 2
         x: 67
         y: 36
         width: 490
         height: 348
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5341085, y: 0.6268026}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -445,23 +445,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Drew_SpriteSheet_LongHit_0: -6643736
-      Drew_SpriteSheet_LongHit_1: -57585936
-      Drew_SpriteSheet_LongHit_10: 982957318
-      Drew_SpriteSheet_LongHit_11: 713098095
-      Drew_SpriteSheet_LongHit_12: -172635171
-      Drew_SpriteSheet_LongHit_13: -1139503487
-      Drew_SpriteSheet_LongHit_14: 2090601517
-      Drew_SpriteSheet_LongHit_15: 403415192
-      Drew_SpriteSheet_LongHit_16: -1888083289
-      Drew_SpriteSheet_LongHit_2: -1670484265
-      Drew_SpriteSheet_LongHit_3: -1413626760
-      Drew_SpriteSheet_LongHit_4: -1696089955
+      Drew_SpriteSheet_LongHit_01: -6643736
+      Drew_SpriteSheet_LongHit_02: 1691226722
+      Drew_SpriteSheet_LongHit_03: 1314209115
+      Drew_SpriteSheet_LongHit_04: 982957318
+      Drew_SpriteSheet_LongHit_05: 713098095
+      Drew_SpriteSheet_LongHit_06: -172635171
+      Drew_SpriteSheet_LongHit_07: 2090601517
+      Drew_SpriteSheet_LongHit_08: 403415192
+      Drew_SpriteSheet_LongHit_09: -1888083289
+      Drew_SpriteSheet_LongHit_10: -57585936
+      Drew_SpriteSheet_LongHit_11: -1670484265
+      Drew_SpriteSheet_LongHit_12: -1696089955
+      Drew_SpriteSheet_LongHit_13: 1418772108
       Drew_SpriteSheet_LongHit_5: 327010852
-      Drew_SpriteSheet_LongHit_6: 1418772108
       Drew_SpriteSheet_LongHit_7: -336394707
-      Drew_SpriteSheet_LongHit_8: 1691226722
-      Drew_SpriteSheet_LongHit_9: 1314209115
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

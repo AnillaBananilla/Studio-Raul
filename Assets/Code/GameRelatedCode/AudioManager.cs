@@ -1,35 +1,46 @@
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.UI;
+using System;
+using Unity.VisualScripting;
 
 public class AudioManager : MonoBehaviour
 {
-    public AudioMixer audioMixer;
-    public Slider musicSlider;
-    public Slider sfxSlider;
+    public static AudioManager Instance;
 
-    void Start()
+    public Sound[] sounds;
+
+    void Awake()
     {
-        // Cargar valores guardados o usar por defecto
-        musicSlider.value = PlayerPrefs.GetFloat("VolumeMusic", 0.45f);
-        sfxSlider.value = PlayerPrefs.GetFloat("VolumeSFX", 0.45f);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // Opcional: si quieres que siga entre escenas
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-        SetMusicVolume(musicSlider.value);
-        SetSFXVolume(sfxSlider.value);
+        foreach (Sound s in sounds)
+        {
+            s.source = gameObject.AddComponent<AudioSource>();
+            s.source.clip = s.clip;
 
-        musicSlider.onValueChanged.AddListener(SetMusicVolume);
-        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+            s.source.volume = s.volume;
+            s.source.pitch = s.pitch;
+            s.source.loop = s.loop;
+        }
     }
 
-    public void SetMusicVolume(float volume)
+    public void Play(string name)
     {
-        audioMixer.SetFloat("VolumeMusic", Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1)) * 20);
-        PlayerPrefs.SetFloat("VolumeMusic", volume);
-    }
-
-    public void SetSFXVolume(float volume)
-    {
-        audioMixer.SetFloat("VolumeSFX", Mathf.Log10(Mathf.Clamp(volume, 0.0001f, 1)) * 20);
-        PlayerPrefs.SetFloat("VolumeSFX", volume);
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sonido: " + name + " no encontrado!");
+            return;
+        }
+        s.source.Play();
     }
 }

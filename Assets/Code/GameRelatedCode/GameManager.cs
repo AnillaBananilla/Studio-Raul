@@ -64,6 +64,17 @@ public class GameManager : MonoBehaviour
     [Header("Botones")]
     public Button YesButton; public Button NoButton; public Button OkButton;
 
+    public Image redOverlay;
+
+    public void TintScreenRed()
+    {
+        if (redOverlay != null)
+        {
+            redOverlay.gameObject.SetActive(true);
+            redOverlay.color = new Color(1, 0, 0, 0.5f); 
+        }
+    }
+
 
     /*
     TO DO:

@@ -162,15 +162,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_0
+      name: Drew_SS_Salto_11
       rect:
         serializedVersion: 2
         x: 775
         y: 1800
         width: 387
         height: 246
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -183,15 +183,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_2
+      name: Drew_SS_Salto_12
       rect:
         serializedVersion: 2
         x: 1173
         y: 1766
         width: 411
         height: 281
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 1, y: 0, z: 0, w: 3}
       outline: []
       physicsShape: []
@@ -204,15 +204,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_8
+      name: Drew_SS_Salto_10
       rect:
         serializedVersion: 2
         x: 1600
         y: 1736
         width: 396
         height: 309
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,15 +225,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_9
+      name: Drew_SS_Salto_14
       rect:
         serializedVersion: 2
         x: 9
         y: 1398
         width: 394
         height: 331
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -246,15 +246,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_11
+      name: Drew_SS_Salto_02
       rect:
         serializedVersion: 2
         x: 414
         y: 1384
         width: 363
         height: 341
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -267,15 +267,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_12
+      name: Drew_SS_Salto_13
       rect:
         serializedVersion: 2
         x: 788
         y: 1385
         width: 403
         height: 342
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -288,15 +288,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_14
+      name: Drew_SS_Salto_04
       rect:
         serializedVersion: 2
         x: 1202
         y: 1383
         width: 361
         height: 342
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -309,15 +309,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_15
+      name: Drew_SS_Salto_08
       rect:
         serializedVersion: 2
         x: 1574
         y: 1383
         width: 422
         height: 342
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -330,15 +330,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_26
+      name: Drew_SS_Salto_03
       rect:
         serializedVersion: 2
         x: 26
         y: 1022
         width: 368
         height: 349
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -351,15 +351,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_27
+      name: Drew_SS_Salto_06
       rect:
         serializedVersion: 2
-        x: 416
+        x: 410
         y: 1019
         width: 401
         height: 352
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -372,15 +372,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_28
+      name: Drew_SS_Salto_07
       rect:
         serializedVersion: 2
         x: 831
         y: 1015
         width: 390
         height: 356
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -393,15 +393,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_29
+      name: 000000000000
       rect:
         serializedVersion: 2
         x: 1234
         y: 1015
         width: 389
         height: 356
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -414,15 +414,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_30
+      name: Drew_SS_Salto_16
       rect:
         serializedVersion: 2
         x: 1635
         y: 1013
         width: 360
         height: 358
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -435,15 +435,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_33
+      name: Drew_SS_Salto_01
       rect:
         serializedVersion: 2
         x: 28
         y: 644
         width: 363
         height: 358
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -456,15 +456,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_34
+      name: Drew_SS_Salto_15
       rect:
         serializedVersion: 2
         x: 404
         y: 644
         width: 368
         height: 358
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -477,15 +477,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_35
+      name: 000000000000000000000
       rect:
         serializedVersion: 2
         x: 789
         y: 638
         width: 421
         height: 360
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -498,15 +498,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_38
+      name: Drew_SS_Salto_05
       rect:
         serializedVersion: 2
         x: 1223
         y: 616
         width: 391
         height: 390
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -519,15 +519,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Drew_spritesheet_salto_40
+      name: Drew_SS_Salto_09
       rect:
         serializedVersion: 2
         x: 1627
         y: 600
         width: 368
         height: 394
-      alignment: 1
-      pivot: {x: 0, y: 1}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -535,27 +535,6 @@ TextureImporter:
       bones: []
       spriteID: 767d27f6287ded342970eca8939f22bd
       internalID: 1517315122
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Drew_spritesheet_salto_41
-      rect:
-        serializedVersion: 2
-        x: 1661
-        y: 978
-        width: 17
-        height: 24
-      alignment: 1
-      pivot: {x: 0, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 794a323a97eb10f47917c5ae522a98b6
-      internalID: -645924548
       vertices: []
       indices: 
       edges: []
@@ -571,42 +550,44 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Drew_spritesheet_salto_0: -31022010
+      000000000000: 942296520
+      000000000000000000000: 1840996231
+      Drew_SS_Salto_01: 1679480574
+      Drew_SS_Salto_02: 1411957965
+      Drew_SS_Salto_03: -1633112004
+      Drew_SS_Salto_04: -1000499386
+      Drew_SS_Salto_05: 1277554111
+      Drew_SS_Salto_06: 1388526852
+      Drew_SS_Salto_07: -2004852053
+      Drew_SS_Salto_08: -18341627
+      Drew_SS_Salto_09: 1517315122
+      Drew_SS_Salto_10: -1141185714
+      Drew_SS_Salto_11: -31022010
+      Drew_SS_Salto_12: -1425428326
+      Drew_SS_Salto_13: -748343245
+      Drew_SS_Salto_14: 777579509
+      Drew_SS_Salto_15: 849185218
+      Drew_SS_Salto_16: -65780124
       Drew_spritesheet_salto_1: 1446975647
       Drew_spritesheet_salto_10: -1932217741
-      Drew_spritesheet_salto_11: 1411957965
-      Drew_spritesheet_salto_12: -748343245
       Drew_spritesheet_salto_13: -769580386
-      Drew_spritesheet_salto_14: -1000499386
-      Drew_spritesheet_salto_15: -18341627
       Drew_spritesheet_salto_16: -71426192
       Drew_spritesheet_salto_17: 580210366
       Drew_spritesheet_salto_18: -1261675244
       Drew_spritesheet_salto_19: -1177929039
-      Drew_spritesheet_salto_2: -1425428326
       Drew_spritesheet_salto_20: 146282065
       Drew_spritesheet_salto_21: -91355122
       Drew_spritesheet_salto_22: -743984526
       Drew_spritesheet_salto_23: -1327443667
       Drew_spritesheet_salto_24: 1787253128
       Drew_spritesheet_salto_25: -736124184
-      Drew_spritesheet_salto_26: -1633112004
-      Drew_spritesheet_salto_27: 1388526852
-      Drew_spritesheet_salto_28: -2004852053
-      Drew_spritesheet_salto_29: 942296520
       Drew_spritesheet_salto_3: 2097227720
-      Drew_spritesheet_salto_30: -65780124
       Drew_spritesheet_salto_31: -642821424
       Drew_spritesheet_salto_32: 749060857
-      Drew_spritesheet_salto_33: 1679480574
-      Drew_spritesheet_salto_34: 849185218
-      Drew_spritesheet_salto_35: 1840996231
       Drew_spritesheet_salto_36: 1468347616
       Drew_spritesheet_salto_37: -1211695364
-      Drew_spritesheet_salto_38: 1277554111
       Drew_spritesheet_salto_39: 1805238189
       Drew_spritesheet_salto_4: 1637562113
-      Drew_spritesheet_salto_40: 1517315122
       Drew_spritesheet_salto_41: -645924548
       Drew_spritesheet_salto_42: 1697568415
       Drew_spritesheet_salto_43: -1441801661
@@ -615,8 +596,6 @@ TextureImporter:
       Drew_spritesheet_salto_5: 299970430
       Drew_spritesheet_salto_6: 237494313
       Drew_spritesheet_salto_7: -2021983357
-      Drew_spritesheet_salto_8: -1141185714
-      Drew_spritesheet_salto_9: 777579509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
