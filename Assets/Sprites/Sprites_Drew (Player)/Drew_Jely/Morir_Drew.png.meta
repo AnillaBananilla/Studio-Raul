@@ -1,0 +1,840 @@
+fileFormatVersion: 2
+guid: 92bfd5072e7cc264c8e576f288b6b134
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Morir_Drew_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5400
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd97b193b30115c4b91d6ba78f2d9683
+      internalID: -218546437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_1
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 5400
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2616348ffeb72ce4fa35094c8e070bab
+      internalID: -889138994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_2
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 5400
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40eb22b89b4c8d34185eba88a4a5aaed
+      internalID: -369392830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_3
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 5400
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32d5c96c9d9f6ff42b806ef5b510f2e3
+      internalID: 1563785087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_4
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 5400
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60949b548c40c734e9b13e10906d51e8
+      internalID: 586176537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_5
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 5400
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b256d828940bb34bbd93c9a91ecdf8b
+      internalID: -541168507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374b7c2b1f73cf6428d05ad44e88e02c
+      internalID: 1792146456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_7
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a6947cd36a27244bcdb3bb3ea99d16
+      internalID: 421845855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_8
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab039b252abda3b4ea35a0c6d3291ae2
+      internalID: -1540904933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_9
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e27dbc5e8bee5e4d892ec92daef49b5
+      internalID: 1517677499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_10
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44464e54fda0a446a795013f1d0d29f
+      internalID: 1456036647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_11
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69660006063459747be0d7438a566e77
+      internalID: 122856501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94805792a82870a4a9044b697c8e45f0
+      internalID: 1840974290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_13
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ad03c187ef45e4186a6a773c16e706
+      internalID: 1081944072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_14
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 645bc50eb3e3d4f4a80325b8065e9db3
+      internalID: -1412654305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_15
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5677eda0343d74eafe82fa822aed0b
+      internalID: -1594526159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_16
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46e35a2d95960f54a87caa3469144164
+      internalID: 1913878929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_17
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ee4c3fa051711d4baa1026d5c92184f
+      internalID: -1892083540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25ea1669f597b74bb7bb2d4a5344efd
+      internalID: -2029858930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_19
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7e5a3978fc6fd24893ea226cb38a5b8
+      internalID: -233572816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_20
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58474b2a742a381428d2fa51622cec28
+      internalID: 402481786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_21
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 632e9ce7607789140abffd81d0e0fa26
+      internalID: -1737004395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_22
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f2577e0631016458fb172e0bc637c9
+      internalID: -219766346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_23
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036c19b3c7328074a9602d5ba44f4c3d
+      internalID: 1961197572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd265b9497d6fa945ab6500646eb3f23
+      internalID: 1976479616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_25
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5263d1b592ee9bf4c9f38e31b08fc157
+      internalID: -1856133201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_26
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec9ba64b21bd26946b6cc7172a06a268
+      internalID: -1347599464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_27
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 825b53cd9ed943d41a4610a333d1d0fe
+      internalID: 996528879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_28
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9528ec349e44e6e43999c787aba099f9
+      internalID: 1795193497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_29
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff36f48fa6bbc74c8ec57bdf5674ad5
+      internalID: 828131605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6be5724ab04d8054dbbc7fcf956dd602
+      internalID: -178215867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_31
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafb8321ce3306e4abea86defb24719d
+      internalID: -502399840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morir_Drew_32
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c2b683aa9cf894fb6ee380735459fb
+      internalID: -1568719845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Morir_Drew_0: -218546437
+      Morir_Drew_1: -889138994
+      Morir_Drew_10: 1456036647
+      Morir_Drew_11: 122856501
+      Morir_Drew_12: 1840974290
+      Morir_Drew_13: 1081944072
+      Morir_Drew_14: -1412654305
+      Morir_Drew_15: -1594526159
+      Morir_Drew_16: 1913878929
+      Morir_Drew_17: -1892083540
+      Morir_Drew_18: -2029858930
+      Morir_Drew_19: -233572816
+      Morir_Drew_2: -369392830
+      Morir_Drew_20: 402481786
+      Morir_Drew_21: -1737004395
+      Morir_Drew_22: -219766346
+      Morir_Drew_23: 1961197572
+      Morir_Drew_24: 1976479616
+      Morir_Drew_25: -1856133201
+      Morir_Drew_26: -1347599464
+      Morir_Drew_27: 996528879
+      Morir_Drew_28: 1795193497
+      Morir_Drew_29: 828131605
+      Morir_Drew_3: 1563785087
+      Morir_Drew_30: -178215867
+      Morir_Drew_31: -502399840
+      Morir_Drew_32: -1568719845
+      Morir_Drew_4: 586176537
+      Morir_Drew_5: -541168507
+      Morir_Drew_6: 1792146456
+      Morir_Drew_7: 421845855
+      Morir_Drew_8: -1540904933
+      Morir_Drew_9: 1517677499
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
