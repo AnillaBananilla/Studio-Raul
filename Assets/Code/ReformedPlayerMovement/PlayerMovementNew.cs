@@ -137,7 +137,7 @@ public class PlayerMovementNew : MonoBehaviour
             isGrounded = false;
         }
     }
-    /*
+    
     public void Crouch(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -171,7 +171,7 @@ public class PlayerMovementNew : MonoBehaviour
                 animator.SetBool("isCrouching", false);
             }
         }
-    } */
+    } 
 
     public void Drop(InputAction.CallbackContext context){
         if(context.performed && isGrounded && isOnPlatform && upColl.enabled){

@@ -357,15 +357,15 @@ public class GameManager : MonoBehaviour
     private void RestartGame()
     {
         isGameOver = false;
-        
-        // Desactivar panel de Game Over
+
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
-        
-        // Restaurar el tiempo
+
         Time.timeScale = 1f;
-        
-        // Recargar la escena actual
+
+        PlayerInput.moveable = true;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
 }
