@@ -7,6 +7,7 @@ using UnityEngine.UI;
 using static PlayerSkills;
 using Unity.VisualScripting;
 using System;
+using Unity.VisualScripting.Dependencies.Sqlite;
 
 
 public class GameManager : MonoBehaviour
@@ -15,6 +16,11 @@ public class GameManager : MonoBehaviour
     //public TextMeshProUGUI scoreText;
     //public TextMeshProUGUI keyText;
     public Image lifeBar;
+    public Sprite fullLife;
+    public Sprite mediumLife;
+    public Sprite lowLife;
+    public Sprite noLife;
+    public Animator animatorHeart;
     public float healtAmount = 100f;
     public int score;
     public int key;
@@ -159,11 +165,29 @@ public class GameManager : MonoBehaviour
         PlayerHP.currentHealt -= (int) appliedDamage;
         Debug.Log("Recibes" + appliedDamage);
         lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
-        if(lifeBar.fillAmount == 0){
+        animatorHeart.SetTrigger("DamageHeart");
+        switch (PlayerHP.currentHealt)
+        {
+            case int n when (n > 75 && n <= 100):
+                lifeBar.sprite = fullLife;
+                break;
+            case int n when (n > 50 && n <= 75):
+                lifeBar.sprite = mediumLife;
+                break;
+            case int n when (n > 25 && n <= 50):
+                lifeBar.sprite = lowLife; 
+                break;
+            case int n when (n >= 0 && n <= 25):
+                lifeBar.sprite = noLife;
+                break;
+            default:
+                Debug.LogWarning("Health value out of expected range.");
+                break;
+        }
+        if (lifeBar.fillAmount == 0){
             TriggerGameOver();
             Dead = true;
         }
-        //lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {
