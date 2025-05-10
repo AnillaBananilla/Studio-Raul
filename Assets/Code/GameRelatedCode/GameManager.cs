@@ -64,6 +64,17 @@ public class GameManager : MonoBehaviour
     [Header("Botones")]
     public Button YesButton; public Button NoButton; public Button OkButton;
 
+    public Image redOverlay;
+
+    public void TintScreenRed()
+    {
+        if (redOverlay != null)
+        {
+            redOverlay.gameObject.SetActive(true);
+            redOverlay.color = new Color(1, 0, 0, 0.5f); 
+        }
+    }
+
 
     /*
     TO DO:
@@ -346,15 +357,15 @@ public class GameManager : MonoBehaviour
     private void RestartGame()
     {
         isGameOver = false;
-        
-        // Desactivar panel de Game Over
+
         if (gameOverPanel != null)
             gameOverPanel.SetActive(false);
-        
-        // Restaurar el tiempo
+
         Time.timeScale = 1f;
-        
-        // Recargar la escena actual
+
+        PlayerInput.moveable = true;
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
 }

@@ -2353,6 +2353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809547f2733c05f4a9fcd932d2284e66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DialogueCanvas: {fileID: 0}
   leftPortrait: {fileID: 313440852}
   rightPortrait: {fileID: 959282338}
   leftGroup: {fileID: 313440854}

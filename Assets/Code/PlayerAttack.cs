@@ -32,6 +32,13 @@ public class PlayerAttack : MonoBehaviour
     int valueToPrint = 0;
     public Animator[] animators; // Array de Animators de los sprites
     private int currentIndex = 0; // Índice del sprite actual
+    public Sprite blue;
+    public Sprite yellow;
+    public Sprite magenta;
+
+    private float lastAttackTime = 0f;
+    public float doubleAttackThreshold = 0.3f;
+    private float doubleTapThreshold = 0.3f;
 
 
     void Start()
@@ -42,30 +49,69 @@ public class PlayerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if (inputHandler.attack)
-            {
-                animator.SetTrigger("Attack_Trigger");
-                //daño a enemigos
-                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
+        //     if (inputHandler.attack)
+        //   {
+        // animator.SetTrigger("Attack_Trigger");
+        //daño a enemigos
+        // Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
 
-                for (int counter = 0; counter < enemies.Length; counter++)
-                {
-                    
-                    enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
-                    enemies[counter].GetComponent<Healt>().Damage(25);
-                }
-                //activación de botones/interacción
-                Collider2D[] buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonLayer);
-                for(int i = 0; i < buttons.Length; i++){
-                    ButtonDoors button = buttons[i].GetComponent<ButtonDoors>();
-                    if(button != null){
-                        Debug.Log("Botón detectado por ataque.");
-                        button.Activate();
-                    }
-                }
+        // for (int counter = 0; counter < enemies.Length; counter++)
+        // {
+
+        //    enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
+        //    enemies[counter].GetComponent<Healt>().Damage(25);
+        // }
+        //activación de botones/interacción
+        // Collider2D[] buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonLayer);
+        // for(int i = 0; i < buttons.Length; i++){
+        //     ButtonDoors button = buttons[i].GetComponent<ButtonDoors>();
+        //     if(button != null){
+        //        Debug.Log("Botón detectado por ataque.");
+        //       button.Activate();
+        //   }
+        // }
+        // }
+
+        if (inputHandler.attack)
+        {
+            float currentTime = Time.time;
+
+            if (currentTime - lastAttackTime < doubleTapThreshold)
+            {
+                // Ataque largo (doble toque)
+                animator.SetTrigger("Attack");
+            }
+            else
+            {
+                // Ataque rápido (un solo toque)
+                animator.SetTrigger("AttackLong");
             }
 
-            if (inputHandler.attackPaint)
+            lastAttackTime = currentTime;
+
+            // Daño a enemigos (esto puede mantenerse igual)
+            Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
+            for (int counter = 0; counter < enemies.Length; counter++)
+            {
+                enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
+                enemies[counter].GetComponent<Healt>().Damage(25);
+            }
+
+            // Activación de botones/interacción
+            Collider2D[] buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonLayer);
+            for (int i = 0; i < buttons.Length; i++)
+            {
+                ButtonDoors button = buttons[i].GetComponent<ButtonDoors>();
+                if (button != null)
+                {
+                    Debug.Log("Botón detectado por ataque.");
+                    button.Activate();
+                }
+            }
+        }
+
+
+        if (inputHandler.attackPaint)
             {   //si sigue habiendo pintura, entonces se realizan estas acciones
             float CurrentPaint = gameManager.paintAmount[gameManager.paintColorIndex];
                 if (CurrentPaint > 0)
@@ -138,20 +184,18 @@ public class PlayerAttack : MonoBehaviour
         {
             case ColorState.Azul:
                 valueToPrint = 10;
-                Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.cyan;
+                imageToChange.sprite = blue;
                 GameManager.instance.paintColorIndex = 0;
                 break;
             case ColorState.Amarillo:
                 valueToPrint = 20;
-                Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.yellow;
+
+                imageToChange.sprite = magenta;
                 GameManager.instance.paintColorIndex = 1;
                 break;
             case ColorState.Rojo:
                 valueToPrint = 30;
-                Debug.Log("Valor impreso: " + valueToPrint);
-                imageToChange.color = Color.magenta;
+                imageToChange.sprite = yellow;
                 GameManager.instance.paintColorIndex = 2;
                 break;
         }
@@ -189,5 +233,4 @@ public class PlayerAttack : MonoBehaviour
             //GameManager.instance.lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
         }
     }
-
 }
