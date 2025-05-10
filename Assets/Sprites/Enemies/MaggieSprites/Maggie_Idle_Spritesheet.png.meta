@@ -1,0 +1,1587 @@
+fileFormatVersion: 2
+guid: 28810ce1c9de6c14997e804814068ac4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6622
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 124fd562d4d5be94e939189a2b063882
+      internalID: 1213768916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 6622
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8488d4e6f57bc9040bc26ce6a0d95532
+      internalID: 230581749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 6622
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473ba2d202a9f664c8b4335ede4ec0cb
+      internalID: -1904674059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 6622
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88265e1f9c257ee4aa2be2950ebbc7d1
+      internalID: 966122427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 6622
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f777482493b59c498f75f2e0f4486be
+      internalID: -662879467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 6622
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff403db6a150887469a55f9defab330e
+      internalID: -181868775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 6622
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a95045cfda779c4d94f09ba301f0a3a
+      internalID: 1507633685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 5222
+        y: 6622
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f4367d291a5b6b48b7142e808c8ca3d
+      internalID: -1015060822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5676
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cd74dd114a3fa34f87c74371c8bcb78
+      internalID: -94094245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 5676
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe9f3811ae511545bbd7e7ae30cbe5f
+      internalID: 1373373558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 5676
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6d2cc422985a0741869b733c1cc6f0e
+      internalID: -541212582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 5676
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e51c6594af54d143a7f712524adfa93
+      internalID: -116770248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 5676
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 225da6e65344db44dbeaf4ec9487ff77
+      internalID: -2078011601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 5676
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe2227253a4d88f4da7363f20643b047
+      internalID: 1776114473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 5676
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1118d4d9733168c46ab6cb1cc3467039
+      internalID: -816835896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 5222
+        y: 5676
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f0e09e8e88a424495347e075a802f3
+      internalID: 405581988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4730
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e406d7275206a4284c5dafa042500b
+      internalID: -425099264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 4730
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7549e37bf85ddee4fa77d2609507de1a
+      internalID: -882600282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 4730
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72834ff6cde76f94988f19b2d5a71e00
+      internalID: -1570445673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 4730
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372708dc7cf1b5c49af3e6d80c11e9ec
+      internalID: -177498395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 4730
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c25696dc410a446aa9f25b6b351cdf
+      internalID: 918090147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 4730
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af45bc9a928ab924eb9b969f556c2035
+      internalID: -501925704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 4730
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d6dc61088f2d14fba717a1802282e8
+      internalID: 754958510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 5222
+        y: 4730
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f984f0199ed2741a0e7ea5713fc6a9
+      internalID: 1382294270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3784
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0abff8fdc10ad04f84e08953cfe8c6d
+      internalID: 1999273395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 3784
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9772abca0c2502949a688a76a5415da2
+      internalID: 1325719090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 3784
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3425798a110c6d479f1bd4c75596596
+      internalID: 2082428936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 3784
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c899e23ef7a390b45a1fcfb5d6d325de
+      internalID: 746134999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 3784
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5270baa8f18d3474989b3ce2deb7071f
+      internalID: -2090886322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 3784
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf5cefc8c2568a44ad54dedacde0248
+      internalID: -1650680954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 3784
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d744e95d32924ab42a48ef945b4fe5d5
+      internalID: -1291652251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 5222
+        y: 3784
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53774fbcbc770644997059ccb435c64c
+      internalID: -325537820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2838
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf794eb33ca4ff248acf481316d1cb1a
+      internalID: -827714802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 2838
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc55c60b245e6d4e861589e6ee70c6e
+      internalID: 271843702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 2838
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e550a0413aec4ad4780dd7ac3719a338
+      internalID: -981261411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 2838
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4abf5c24fea409246a8f22372ac46e20
+      internalID: 997622439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 2838
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 143749615d5c4594ebf6631e0c1bb865
+      internalID: 1853542926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 2838
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0d792c66dd98e4e8308ca10d0690f0
+      internalID: 1545017093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 2838
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e5929811f975c458286ab80781060f
+      internalID: 1314229251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 5222
+        y: 2838
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f8e15d145da8e428628e551f159573
+      internalID: -223365311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1892
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4e24b7c3a1e564aa4b119cd0664d86
+      internalID: -492336421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 1892
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93692efb94775844f95f4f40abbbe201
+      internalID: 1562700669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 1892
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d176df353c88f489cc334cd09c4886
+      internalID: -1015240087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 1892
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8833c20b891779240b4c0cc1b6be52f8
+      internalID: 630474347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 1892
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139e4ca3ff9975048a752f657e3d42aa
+      internalID: 1414403309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 1892
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0564d0b599269c040ac20a2793f74aa2
+      internalID: 381207912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 1892
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7143928a3fe64054b9b3bcf851cc1eef
+      internalID: -1858403822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 5222
+        y: 1892
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0af6fa1cf83c14cb0a164f278719a3
+      internalID: 366631542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 946
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b6a10c1b2961b44940f3bcff459ba1
+      internalID: 1304535755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 946
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16a9b927eacf99f4fac6ef8d113f85d6
+      internalID: 535072569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 946
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e7b78840197f747911026ad2e28d32
+      internalID: 193687351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 946
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf7049d02443df84dba67cf2c1165ad8
+      internalID: 642913171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 946
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 163a9b31baf4e9f4ebb506b7d2b525ab
+      internalID: -1909406243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 946
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e355180119853de46985413fdfe1157b
+      internalID: -2113206588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 946
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1ec57b9ca5aab4c9e2e465082e21f1
+      internalID: 1302192394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 5222
+        y: 946
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ce5fc5e566b3c48a7b4e2eefe173f5
+      internalID: 1262344650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e661b7eca4078264990b87de9f371fdb
+      internalID: 296510024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 0
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fb9d55eb224c841adbe887968987e6
+      internalID: -822372629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 0
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46cbb55ec3da6ab4f9d05798fa0477a9
+      internalID: -1436216444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 2238
+        y: 0
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0edd21ed8336048b085e28413cbc88
+      internalID: 283803437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 2984
+        y: 0
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81a4681c13855404a876fc02a2a756eb
+      internalID: 374228441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 0
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91af607e903328b4b85ece7807300a5e
+      internalID: -1946009573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 0
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49d03b0b3d2a144b9d2ed2a8c534cd3
+      internalID: -1439750910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Idle_Spritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 5222
+        y: 0
+        width: 746
+        height: 946
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8e4d03a28f439488bd230eedd11d65
+      internalID: -425204601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 040be997c43a52041bfd1e1626755cd1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Maggie_Idle_Spritesheet_0: 1213768916
+      Maggie_Idle_Spritesheet_1: 230581749
+      Maggie_Idle_Spritesheet_10: -541212582
+      Maggie_Idle_Spritesheet_11: -116770248
+      Maggie_Idle_Spritesheet_12: -2078011601
+      Maggie_Idle_Spritesheet_13: 1776114473
+      Maggie_Idle_Spritesheet_14: -816835896
+      Maggie_Idle_Spritesheet_15: 405581988
+      Maggie_Idle_Spritesheet_16: -425099264
+      Maggie_Idle_Spritesheet_17: -882600282
+      Maggie_Idle_Spritesheet_18: -1570445673
+      Maggie_Idle_Spritesheet_19: -177498395
+      Maggie_Idle_Spritesheet_2: -1904674059
+      Maggie_Idle_Spritesheet_20: 918090147
+      Maggie_Idle_Spritesheet_21: -501925704
+      Maggie_Idle_Spritesheet_22: 754958510
+      Maggie_Idle_Spritesheet_23: 1382294270
+      Maggie_Idle_Spritesheet_24: 1999273395
+      Maggie_Idle_Spritesheet_25: 1325719090
+      Maggie_Idle_Spritesheet_26: 2082428936
+      Maggie_Idle_Spritesheet_27: 746134999
+      Maggie_Idle_Spritesheet_28: -2090886322
+      Maggie_Idle_Spritesheet_29: -1650680954
+      Maggie_Idle_Spritesheet_3: 966122427
+      Maggie_Idle_Spritesheet_30: -1291652251
+      Maggie_Idle_Spritesheet_31: -325537820
+      Maggie_Idle_Spritesheet_32: -827714802
+      Maggie_Idle_Spritesheet_33: 271843702
+      Maggie_Idle_Spritesheet_34: -981261411
+      Maggie_Idle_Spritesheet_35: 997622439
+      Maggie_Idle_Spritesheet_36: 1853542926
+      Maggie_Idle_Spritesheet_37: 1545017093
+      Maggie_Idle_Spritesheet_38: 1314229251
+      Maggie_Idle_Spritesheet_39: -223365311
+      Maggie_Idle_Spritesheet_4: -662879467
+      Maggie_Idle_Spritesheet_40: -492336421
+      Maggie_Idle_Spritesheet_41: 1562700669
+      Maggie_Idle_Spritesheet_42: -1015240087
+      Maggie_Idle_Spritesheet_43: 630474347
+      Maggie_Idle_Spritesheet_44: 1414403309
+      Maggie_Idle_Spritesheet_45: 381207912
+      Maggie_Idle_Spritesheet_46: -1858403822
+      Maggie_Idle_Spritesheet_47: 366631542
+      Maggie_Idle_Spritesheet_48: 1304535755
+      Maggie_Idle_Spritesheet_49: 535072569
+      Maggie_Idle_Spritesheet_5: -181868775
+      Maggie_Idle_Spritesheet_50: 193687351
+      Maggie_Idle_Spritesheet_51: 642913171
+      Maggie_Idle_Spritesheet_52: -1909406243
+      Maggie_Idle_Spritesheet_53: -2113206588
+      Maggie_Idle_Spritesheet_54: 1302192394
+      Maggie_Idle_Spritesheet_55: 1262344650
+      Maggie_Idle_Spritesheet_56: 296510024
+      Maggie_Idle_Spritesheet_57: -822372629
+      Maggie_Idle_Spritesheet_58: -1436216444
+      Maggie_Idle_Spritesheet_59: 283803437
+      Maggie_Idle_Spritesheet_6: 1507633685
+      Maggie_Idle_Spritesheet_60: 374228441
+      Maggie_Idle_Spritesheet_61: -1946009573
+      Maggie_Idle_Spritesheet_62: -1439750910
+      Maggie_Idle_Spritesheet_63: -425204601
+      Maggie_Idle_Spritesheet_7: -1015060822
+      Maggie_Idle_Spritesheet_8: -94094245
+      Maggie_Idle_Spritesheet_9: 1373373558
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

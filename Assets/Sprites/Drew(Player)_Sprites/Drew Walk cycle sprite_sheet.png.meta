@@ -1,0 +1,861 @@
+fileFormatVersion: 2
+guid: 1a833cbd8c3716d429d59ed35e4a8f8c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 5132
+        width: 984
+        height: 1268
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b61ae6765c9ce7348a55a6694af500cc
+      internalID: 1710790822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 5132
+        width: 981
+        height: 1268
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023b2f2d8873beb4cacaabc888fda4d8
+      internalID: 16001244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 4205
+        y: 5116
+        width: 1063
+        height: 1284
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd7c1d67e76e8c4797b499b1b576a2e
+      internalID: -1851523199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 6123
+        y: 5116
+        width: 1063
+        height: 1284
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441639c74453c6342acf0018de49b338
+      internalID: -1622336953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 8055
+        y: 5115
+        width: 1045
+        height: 1285
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f15766825fc62341b79103be9caf530
+      internalID: -1233639445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 9987
+        y: 5115
+        width: 1069
+        height: 1285
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2158d75ac226f09478dab39d1a4f1296
+      internalID: -1828401964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 3833
+        width: 1074
+        height: 1091
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61add28a2292d5b4d8a76c92acd8c8b7
+      internalID: -862811705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 2298
+        y: 3833
+        width: 1074
+        height: 1091
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25cb19e681f5d7d43b7c2f15a909d535
+      internalID: 785131263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 4182
+        y: 3833
+        width: 1114
+        height: 1096
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f9b4c8abdd4ed14fb392b00586efb54
+      internalID: -1060596286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 6158
+        y: 3833
+        width: 1061
+        height: 1096
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400089741932d604da47ada689c94496
+      internalID: -285678268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 8114
+        y: 3833
+        width: 1018
+        height: 1079
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cef8e792b432ae140b4a94f60ddeb3b2
+      internalID: 357011823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 10032
+        y: 3833
+        width: 1018
+        height: 1079
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14bfa2c89e6ca9e44bbd399b6b4bd81a
+      internalID: 1056870230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 2551
+        width: 1074
+        height: 1083
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7ea07300fe82114aaa3635529e8c1b4
+      internalID: 758854407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 2303
+        y: 2551
+        width: 1046
+        height: 1079
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b77025e037c9a47bc6e95211cbb91a
+      internalID: -1427652114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 4267
+        y: 2551
+        width: 1001
+        height: 1079
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99efa37e8717ec4c913daada31282dc
+      internalID: -58888118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 2551
+        width: 978
+        height: 1102
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059df38e4aa72b643b41500ad244164d
+      internalID: 2091155462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 8097
+        y: 2551
+        width: 984
+        height: 1102
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6b3fabf87658c4b92034684c2391b1
+      internalID: 398264557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 9965
+        y: 2551
+        width: 1035
+        height: 1102
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f0dca238bc387429627ac2e10600d4
+      internalID: -2094216313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 1274
+        width: 1052
+        height: 1108
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d1f97a7f52eeb4ba653536ff128a7c
+      internalID: 1283564008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 1274
+        width: 1033
+        height: 1108
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e8b4c27b861bc94cad437178c44946c
+      internalID: 1689073031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 4227
+        y: 1274
+        width: 1029
+        height: 1108
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3075a4d3b282234d9377e8b3ea2903a
+      internalID: 1656771792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 6140
+        y: 1274
+        width: 1035
+        height: 1108
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1f9496eb95ca9479a772a14880206b
+      internalID: -1813203979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 8058
+        y: 1274
+        width: 1063
+        height: 1119
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd351f3cc7d690d439e1f857e5f3f625
+      internalID: 584671668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 9942
+        y: 1274
+        width: 1097
+        height: 1119
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 700e42a81b70dc245965ffc1553788ae
+      internalID: 1681575262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 0
+        width: 1069
+        height: 1156
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6620fa52ab12aaf4fb1ddd15eb9a2f30
+      internalID: -1690160191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 0
+        width: 1007
+        height: 1156
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822d2fcb744b260479f79eb4c64d1463
+      internalID: -284757912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 4273
+        y: 0
+        width: 972
+        height: 1156
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ee3e99cbba5f440932e360acc30ac7
+      internalID: 1249227498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 5580
+        y: 304
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec157528257cb7b4abf134ced854f5ae
+      internalID: 447142427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 6140
+        y: 0
+        width: 1023
+        height: 1156
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e9595f27f7d13408f04286ddd77264
+      internalID: 1755849494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 8063
+        y: 0
+        width: 1019
+        height: 1155
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8585f304ec2d7429e8c80fdcdece36
+      internalID: -2028721590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew Walk cycle sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 9982
+        y: 0
+        width: 1023
+        height: 1156
+      alignment: 9
+      pivot: {x: 0.6260135, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380187112796c4a489b20550a0753098
+      internalID: -1352251329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 6655c0b0c2dffdd47a6cb5127001e036
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Drew Walk cycle sprite_sheet_0: 1710790822
+      Drew Walk cycle sprite_sheet_1: 16001244
+      Drew Walk cycle sprite_sheet_10: 357011823
+      Drew Walk cycle sprite_sheet_11: 1056870230
+      Drew Walk cycle sprite_sheet_12: 758854407
+      Drew Walk cycle sprite_sheet_13: -1427652114
+      Drew Walk cycle sprite_sheet_14: -58888118
+      Drew Walk cycle sprite_sheet_15: 2091155462
+      Drew Walk cycle sprite_sheet_16: 398264557
+      Drew Walk cycle sprite_sheet_17: -2094216313
+      Drew Walk cycle sprite_sheet_18: 1283564008
+      Drew Walk cycle sprite_sheet_19: 1689073031
+      Drew Walk cycle sprite_sheet_2: -1851523199
+      Drew Walk cycle sprite_sheet_20: 1656771792
+      Drew Walk cycle sprite_sheet_21: -1813203979
+      Drew Walk cycle sprite_sheet_22: 584671668
+      Drew Walk cycle sprite_sheet_23: 1681575262
+      Drew Walk cycle sprite_sheet_24: -1690160191
+      Drew Walk cycle sprite_sheet_25: -284757912
+      Drew Walk cycle sprite_sheet_26: 1249227498
+      Drew Walk cycle sprite_sheet_27: 447142427
+      Drew Walk cycle sprite_sheet_28: 1755849494
+      Drew Walk cycle sprite_sheet_29: -2028721590
+      Drew Walk cycle sprite_sheet_3: -1622336953
+      Drew Walk cycle sprite_sheet_30: -1352251329
+      Drew Walk cycle sprite_sheet_4: -1233639445
+      Drew Walk cycle sprite_sheet_5: -1828401964
+      Drew Walk cycle sprite_sheet_6: -862811705
+      Drew Walk cycle sprite_sheet_7: 785131263
+      Drew Walk cycle sprite_sheet_8: -1060596286
+      Drew Walk cycle sprite_sheet_9: -285678268
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

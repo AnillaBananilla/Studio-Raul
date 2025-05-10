@@ -1,0 +1,1856 @@
+fileFormatVersion: 2
+guid: 6cfbb978b62f3dc45a0bf151b3404604
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7512
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf263c3ea5c9e14a9d2ab80c5404a08
+      internalID: -2073870802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_1
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 7512
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ffcc82bec1cd374c95ade30c79a0750
+      internalID: 1810722227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_2
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 7512
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b06ef4be55b784a8600e35810f371c
+      internalID: 42860123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_3
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 7512
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91959513333843348886483e59465db6
+      internalID: 1197662955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_4
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 7512
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60aec92747ba7ed41b06a757111749ff
+      internalID: -993985034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_5
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 7512
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8092d4959bb78489b8b86b600d7402
+      internalID: -226998506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_6
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 7512
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d393d4afd282e94cab07333a9c17f33
+      internalID: -590277532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_7
+      rect:
+        serializedVersion: 2
+        x: 5957
+        y: 7512
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2c3471ab0838534db017eca01259ff5
+      internalID: 42470424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_8
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 7512
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b6c6e9c3bc7634aae7051a5234443d
+      internalID: 638483759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6573
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aa94b9eeca3dbd4390e6f8c0f326c4d
+      internalID: 64223037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_10
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 6573
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a772f94897bbe2a4fb3e60c22d6b41c9
+      internalID: -1231930654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_11
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 6573
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8750039c4b942eb49b98002ee4525c03
+      internalID: -569891441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_12
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 6573
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ddc0c08fc91ed47947967f5360817f
+      internalID: -1250399388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_13
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 6573
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf853cfed6579ac40b2efbafae2896b3
+      internalID: -18633416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_14
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 6573
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5682dcf68aab6e44986e146265788852
+      internalID: -652167654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_15
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 6573
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c1303e95a5947428192ace015ebd8e
+      internalID: 1251392774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_16
+      rect:
+        serializedVersion: 2
+        x: 5957
+        y: 6573
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 833ca29cf2db4d94c8a0af7abc397b93
+      internalID: -175189616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_17
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 6573
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b5eb48f4e7fa79419ab93bcfa68a5ae
+      internalID: -508841311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5634
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f3f862b283fe0458f18528bc7ddaf6
+      internalID: -1119713487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_19
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 5634
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e971dd8cd5dbfa4d9e4e54d517522cd
+      internalID: -1602288958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_20
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 5634
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c5416ba0be5a74cb3be40172240aa9
+      internalID: 1615440682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_21
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 5634
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d818b4cac516cd2469d9a823db98a3ff
+      internalID: -1655576058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_22
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 5634
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be44f53db2fecf34fb093f1a7010ba87
+      internalID: 1151485896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_23
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 5634
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8913462002fd3842a4448bfb1faece6
+      internalID: -616389053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_24
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 5634
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 334f1c0fd3d25e74087a5bf85e5dc5e4
+      internalID: -957182241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_25
+      rect:
+        serializedVersion: 2
+        x: 5957
+        y: 5634
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16d13b13bb943724a9cc1e3445d32958
+      internalID: -671135968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_26
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 5634
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5242890e0ebcd4194a019d6848a483
+      internalID: -548932788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4695
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893e9a1bc5513c044beada66d09e056d
+      internalID: 937775789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_28
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 4695
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c10239ac1f868e42977f145613b512c
+      internalID: -1192740787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_29
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 4695
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 932dbdff40cbe654fa71a7e210b12ed0
+      internalID: -444743461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_30
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 4695
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7bedbfd5febee4fba10903a6e92b4f
+      internalID: 1049118999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_31
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 4695
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae98debb470b20644b47476fb75004e9
+      internalID: 1859006809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_32
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 4695
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3c2cfeaf61d4e47acae6f680752764
+      internalID: 1007003944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_33
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 4695
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c974636e5626ea240849976c45042ec3
+      internalID: -816307803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_34
+      rect:
+        serializedVersion: 2
+        x: 5957
+        y: 4695
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 115339f80ea19914bb9d737bf8296aec
+      internalID: 673794229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_35
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 4695
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f0a4c84fe392c47bca774e075d0909
+      internalID: -1708472112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3756
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4976380fb2810468f0764827342cb0
+      internalID: -1225224574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_37
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 3756
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db47780f79a1c004bb85c7fef8a0c31c
+      internalID: 515105574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_38
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 3756
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd203e37743fe04795eca6ea2a8f3f4
+      internalID: 612131034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_39
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 3756
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8852c69a1b96ac84daa47e6435b3a1cd
+      internalID: -2145166885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_40
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 3756
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55897e0ee991d484292d65c7e70fff31
+      internalID: 407779363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_41
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 3756
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05931dada6692e44893b981e17af7294
+      internalID: -1834435373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_42
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 3756
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae3c267e70092f43841450c79bd8eac
+      internalID: 381331858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_43
+      rect:
+        serializedVersion: 2
+        x: 5957
+        y: 3756
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8270b7ef754367041bcb492416f94e3f
+      internalID: -1391582949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_44
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 3756
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 332247fca5090e548adb9452de61cbfe
+      internalID: -1164071264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2817
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e9bc09279a406640b5bf3d0baa923ed
+      internalID: -533250388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_46
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 2817
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db492dbed1cd124f9f2c042f2158aef
+      internalID: 957760431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_47
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 2817
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6486e6562320a3f4a96cb604d89444c3
+      internalID: 698504339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_48
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 2817
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f86643e622246d469614ff6eb12ef67
+      internalID: -1722057661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_49
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 2817
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37487151a795d243871b54dace79cce
+      internalID: -1483542648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_50
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 2817
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff00b65f579c76043b80ba042c5c09e6
+      internalID: 738833051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_51
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 2817
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 856e045203851524980307552e2e1b1c
+      internalID: 771000015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_52
+      rect:
+        serializedVersion: 2
+        x: 5957
+        y: 2817
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7f83110c4998a47a9ecb1155467020
+      internalID: 785789902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_53
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 2817
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ff251fb40c5c514c826470f411ff4ee
+      internalID: 1800428217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1878
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fcf61f0affcc9e43abd03206ddf0585
+      internalID: -485042477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_55
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 1878
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9dc8b09e9c44014a8d459b7a0b6c3b4
+      internalID: 298623316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_56
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 1878
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f578c5cf7de54944593fb47f711dc172
+      internalID: 1868523322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_57
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 1878
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0314ab0f36fac04fb0fb97c6288e550
+      internalID: 1664551205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_58
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 1878
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b3721de2da365419a5b5baba1915e2
+      internalID: 1268594477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_59
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 1878
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0cf7c9bd5d4bc4e8f9f98ab0a27db1
+      internalID: 1555493884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_60
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 1878
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ef1da5cdf6a5842bd3037ecd1a5a46
+      internalID: -1974911186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_61
+      rect:
+        serializedVersion: 2
+        x: 5957
+        y: 1878
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de321d8cb9e31c4483bdbe45108afef
+      internalID: -2025711795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_62
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 1878
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c0dc691d32a7e4696ad5ae6a56620d
+      internalID: -2008011111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 939
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07682fff2e4efd94abf47d7932ee9827
+      internalID: 1014888051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_64
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 939
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2db748b7085406645aa5029688a9aa93
+      internalID: -535654445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_65
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 939
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892c001b55f4fbe40887aeba26709e58
+      internalID: 617874839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_66
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 939
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2a052bf01f43644997e4babff802c8
+      internalID: 693930326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_67
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 939
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7cd02b66a3f43745a13684877b631f3
+      internalID: 1056831891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_68
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 939
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d619b3a3416eb4795ef84f25f1f942
+      internalID: 1566825009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_69
+      rect:
+        serializedVersion: 2
+        x: 5106
+        y: 939
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f0a8e0a1b4d4d49b052b2cb2aa33a2
+      internalID: -1304514585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_70
+      rect:
+        serializedVersion: 2
+        x: 5957
+        y: 939
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4470df245fb45c64e94545a2dd3c4a97
+      internalID: -438962902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_71
+      rect:
+        serializedVersion: 2
+        x: 6808
+        y: 939
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5badac6a6e33f394a9c4a84a96028e52
+      internalID: 1377479252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ef8c2e62f341d468edefabca25ac04
+      internalID: -1541429667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_73
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 0
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dab3a407e1063ef408bfda30467364a7
+      internalID: -1793561461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_74
+      rect:
+        serializedVersion: 2
+        x: 1702
+        y: 0
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d87c646727dce449bd0aa2f82e6079e
+      internalID: 1014801917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maggie_Hipnotizada_Spritesheet_final_75
+      rect:
+        serializedVersion: 2
+        x: 2553
+        y: 0
+        width: 851
+        height: 939
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6407d9c907fcc1148b787c9bcc00cacc
+      internalID: 1019390986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: adb4efa3862484547bfea859098e335c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Maggie_Hipnotizada_Spritesheet_final_0: -2073870802
+      Maggie_Hipnotizada_Spritesheet_final_1: 1810722227
+      Maggie_Hipnotizada_Spritesheet_final_10: -1231930654
+      Maggie_Hipnotizada_Spritesheet_final_11: -569891441
+      Maggie_Hipnotizada_Spritesheet_final_12: -1250399388
+      Maggie_Hipnotizada_Spritesheet_final_13: -18633416
+      Maggie_Hipnotizada_Spritesheet_final_14: -652167654
+      Maggie_Hipnotizada_Spritesheet_final_15: 1251392774
+      Maggie_Hipnotizada_Spritesheet_final_16: -175189616
+      Maggie_Hipnotizada_Spritesheet_final_17: -508841311
+      Maggie_Hipnotizada_Spritesheet_final_18: -1119713487
+      Maggie_Hipnotizada_Spritesheet_final_19: -1602288958
+      Maggie_Hipnotizada_Spritesheet_final_2: 42860123
+      Maggie_Hipnotizada_Spritesheet_final_20: 1615440682
+      Maggie_Hipnotizada_Spritesheet_final_21: -1655576058
+      Maggie_Hipnotizada_Spritesheet_final_22: 1151485896
+      Maggie_Hipnotizada_Spritesheet_final_23: -616389053
+      Maggie_Hipnotizada_Spritesheet_final_24: -957182241
+      Maggie_Hipnotizada_Spritesheet_final_25: -671135968
+      Maggie_Hipnotizada_Spritesheet_final_26: -548932788
+      Maggie_Hipnotizada_Spritesheet_final_27: 937775789
+      Maggie_Hipnotizada_Spritesheet_final_28: -1192740787
+      Maggie_Hipnotizada_Spritesheet_final_29: -444743461
+      Maggie_Hipnotizada_Spritesheet_final_3: 1197662955
+      Maggie_Hipnotizada_Spritesheet_final_30: 1049118999
+      Maggie_Hipnotizada_Spritesheet_final_31: 1859006809
+      Maggie_Hipnotizada_Spritesheet_final_32: 1007003944
+      Maggie_Hipnotizada_Spritesheet_final_33: -816307803
+      Maggie_Hipnotizada_Spritesheet_final_34: 673794229
+      Maggie_Hipnotizada_Spritesheet_final_35: -1708472112
+      Maggie_Hipnotizada_Spritesheet_final_36: -1225224574
+      Maggie_Hipnotizada_Spritesheet_final_37: 515105574
+      Maggie_Hipnotizada_Spritesheet_final_38: 612131034
+      Maggie_Hipnotizada_Spritesheet_final_39: -2145166885
+      Maggie_Hipnotizada_Spritesheet_final_4: -993985034
+      Maggie_Hipnotizada_Spritesheet_final_40: 407779363
+      Maggie_Hipnotizada_Spritesheet_final_41: -1834435373
+      Maggie_Hipnotizada_Spritesheet_final_42: 381331858
+      Maggie_Hipnotizada_Spritesheet_final_43: -1391582949
+      Maggie_Hipnotizada_Spritesheet_final_44: -1164071264
+      Maggie_Hipnotizada_Spritesheet_final_45: -533250388
+      Maggie_Hipnotizada_Spritesheet_final_46: 957760431
+      Maggie_Hipnotizada_Spritesheet_final_47: 698504339
+      Maggie_Hipnotizada_Spritesheet_final_48: -1722057661
+      Maggie_Hipnotizada_Spritesheet_final_49: -1483542648
+      Maggie_Hipnotizada_Spritesheet_final_5: -226998506
+      Maggie_Hipnotizada_Spritesheet_final_50: 738833051
+      Maggie_Hipnotizada_Spritesheet_final_51: 771000015
+      Maggie_Hipnotizada_Spritesheet_final_52: 785789902
+      Maggie_Hipnotizada_Spritesheet_final_53: 1800428217
+      Maggie_Hipnotizada_Spritesheet_final_54: -485042477
+      Maggie_Hipnotizada_Spritesheet_final_55: 298623316
+      Maggie_Hipnotizada_Spritesheet_final_56: 1868523322
+      Maggie_Hipnotizada_Spritesheet_final_57: 1664551205
+      Maggie_Hipnotizada_Spritesheet_final_58: 1268594477
+      Maggie_Hipnotizada_Spritesheet_final_59: 1555493884
+      Maggie_Hipnotizada_Spritesheet_final_6: -590277532
+      Maggie_Hipnotizada_Spritesheet_final_60: -1974911186
+      Maggie_Hipnotizada_Spritesheet_final_61: -2025711795
+      Maggie_Hipnotizada_Spritesheet_final_62: -2008011111
+      Maggie_Hipnotizada_Spritesheet_final_63: 1014888051
+      Maggie_Hipnotizada_Spritesheet_final_64: -535654445
+      Maggie_Hipnotizada_Spritesheet_final_65: 617874839
+      Maggie_Hipnotizada_Spritesheet_final_66: 693930326
+      Maggie_Hipnotizada_Spritesheet_final_67: 1056831891
+      Maggie_Hipnotizada_Spritesheet_final_68: 1566825009
+      Maggie_Hipnotizada_Spritesheet_final_69: -1304514585
+      Maggie_Hipnotizada_Spritesheet_final_7: 42470424
+      Maggie_Hipnotizada_Spritesheet_final_70: -438962902
+      Maggie_Hipnotizada_Spritesheet_final_71: 1377479252
+      Maggie_Hipnotizada_Spritesheet_final_72: -1541429667
+      Maggie_Hipnotizada_Spritesheet_final_73: -1793561461
+      Maggie_Hipnotizada_Spritesheet_final_74: 1014801917
+      Maggie_Hipnotizada_Spritesheet_final_75: 1019390986
+      Maggie_Hipnotizada_Spritesheet_final_76: -508209272
+      Maggie_Hipnotizada_Spritesheet_final_77: -21625332
+      Maggie_Hipnotizada_Spritesheet_final_78: 512199330
+      Maggie_Hipnotizada_Spritesheet_final_79: 77917460
+      Maggie_Hipnotizada_Spritesheet_final_8: 638483759
+      Maggie_Hipnotizada_Spritesheet_final_80: -2024909164
+      Maggie_Hipnotizada_Spritesheet_final_9: 64223037
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

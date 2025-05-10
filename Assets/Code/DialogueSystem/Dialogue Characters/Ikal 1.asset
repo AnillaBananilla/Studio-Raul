@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e185d1eba27efad43b01970a596459d3, type: 3}
+  m_Name: Ikal 1
+  m_EditorClassIdentifier: 
+  characterName: Ikal
+  isOnLeft: 0
+  expressions:
+  - emotion: neutral
+    portrait: {fileID: 21300000, guid: c0b8a09f6da4c434d897dedabe56e457, type: 3}
+  - emotion: molestoso
+    portrait: {fileID: 21300000, guid: 16f111fb3ac37d44ba1050d1504c30c4, type: 3}
+  - emotion: incredulo
+    portrait: {fileID: 21300000, guid: cdc590ac464041a4e8eaff54db82005e, type: 3}
+  - emotion: harto
+    portrait: {fileID: 21300000, guid: 471d28039a401b841aa0ce1dea170d60, type: 3}
+  - emotion: fastidiado
+    portrait: {fileID: 21300000, guid: 92a41fe4052ce4543ad4a82791731409, type: 3}
+  - emotion: confundido
+    portrait: {fileID: 21300000, guid: 335e487bc6f3a0b4994b351f77dea12f, type: 3}

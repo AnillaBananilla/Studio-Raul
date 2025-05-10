@@ -1,0 +1,791 @@
+fileFormatVersion: 2
+guid: 92a403752b6176e469d1febfb4f7f11a
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 95
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_1
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 2525
+        width: 256
+        height: 271
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47232473}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df756d3d893fe2f40bdc549add1700a9
+      internalID: 2025965444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_0
+      rect:
+        serializedVersion: 2
+        x: 2254
+        y: 2524
+        width: 256
+        height: 268
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47761193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563461f4efb801443b64abdafcc587ab
+      internalID: -1953617745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_2
+      rect:
+        serializedVersion: 2
+        x: 2767
+        y: 2525
+        width: 256
+        height: 261
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49042144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39165617e2de35941b8747dfdc872ba7
+      internalID: 1731581289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_4
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 2269
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a6d9043d61a16409eb4286bf4f0ef7
+      internalID: -2088120041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_3
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 2269
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0edc69b3e3891484f8f76b9eb26008aa
+      internalID: 414731550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_5
+      rect:
+        serializedVersion: 2
+        x: 2767
+        y: 2269
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd09d6a76b69095438296b9999aab186
+      internalID: 1782386777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_6
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 1972
+        width: 256
+        height: 297
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43097642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9fcdc0eb8036a245814e0a418f5e4d2
+      internalID: -1041345113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_7
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 1972
+        width: 256
+        height: 297
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43097642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a7d19b52cc6b6a468d210b24f141394
+      internalID: -403420032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_8
+      rect:
+        serializedVersion: 2
+        x: 2767
+        y: 1972
+        width: 256
+        height: 297
+      alignment: 9
+      pivot: {x: 0.5, y: 0.43097642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e709b82f12e1948b5f1e9cdc487ba9
+      internalID: -2124225078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_9
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2008
+        width: 270
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6395ce4faa0c89a46bd0b35a1696d111
+      internalID: -553103509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_10
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 2264
+        width: 270
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2018cbce664729345ae4f72dd705e1af
+      internalID: 1859152680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_11
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 2269
+        width: 256
+        height: 256
+      alignment: 9
+      pivot: {x: -7.2640443, y: -3.1752882}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db1718ad706a9d149bca89fd51aac8b0
+      internalID: 562314662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_12
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 1501
+        width: 264
+        height: 264
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23fb5a5cb89edc458454ecfb6e03890
+      internalID: -1095441750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_13
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 1009
+        width: 186
+        height: 269
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7612d30122858834a9fdba388a478ff1
+      internalID: -1187751045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_14
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 1002
+        width: 131
+        height: 171
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5b37f89614b4940b4a3b13c99351b2
+      internalID: 1565218342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_15
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 1006
+        width: 178
+        height: 278
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 743857cfbcdf3c14e821ae5cc244b2d6
+      internalID: 662020778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_16
+      rect:
+        serializedVersion: 2
+        x: 1264
+        y: 8
+        width: 170
+        height: 710
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f94d00f5635f348ae1f8ac22e7f240
+      internalID: 1885778803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_17
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 8
+        width: 170
+        height: 657
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdc487bbaade7747bbd8df640e92819
+      internalID: 1647378269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_18
+      rect:
+        serializedVersion: 2
+        x: 1801
+        y: 8
+        width: 170
+        height: 414
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f94555d054af84eb5c456697b39739
+      internalID: -1271047783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_19
+      rect:
+        serializedVersion: 2
+        x: 2036
+        y: 0
+        width: 170
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7503e107157d03f46885261225e431ae
+      internalID: -1464646346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_20
+      rect:
+        serializedVersion: 2
+        x: 2305
+        y: 2
+        width: 141
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e98818df1cf06bd439839f8d01b26eff
+      internalID: 1551602040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_21
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 6
+        width: 267
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6f03cc922698f48a58788a9bf9d80b
+      internalID: -100239265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_22
+      rect:
+        serializedVersion: 2
+        x: 2889
+        y: 6
+        width: 273
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1a31beaf979c34d81b1f478479b935
+      internalID: -465709493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_23
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 10
+        width: 167
+        height: 399
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdbfc9bd371ff364cbaf5d19916b63ff
+      internalID: 1726843637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_24
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 8
+        width: 225
+        height: 628
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2dd097c46c304d4b8eab2ef8baf3b6d
+      internalID: 961860300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_25
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 0
+        width: 463
+        height: 974
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d26d01230436654683cb65b1bd736d8
+      internalID: -445044047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_26
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 730
+        width: 284
+        height: 1249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c331bc67b2646d4d95840c34b76971b
+      internalID: -1625086737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_27
+      rect:
+        serializedVersion: 2
+        x: 1309
+        y: 726
+        width: 327
+        height: 1305
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0bbebce18dfbf4d89f149bb4794073
+      internalID: 1362952217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SpriteSheet_Margaret_Zona_28
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 735
+        width: 321
+        height: 1220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6be9498091ca5444b86dd8797a04df4
+      internalID: 1012446367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 64642c801024a6b4fa1c74ad5b648a06
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      SpriteSheet_Margaret_Zona_0: -1953617745
+      SpriteSheet_Margaret_Zona_1: 2025965444
+      SpriteSheet_Margaret_Zona_10: 1859152680
+      SpriteSheet_Margaret_Zona_11: 562314662
+      SpriteSheet_Margaret_Zona_12: -1095441750
+      SpriteSheet_Margaret_Zona_13: -1187751045
+      SpriteSheet_Margaret_Zona_14: 1565218342
+      SpriteSheet_Margaret_Zona_15: 662020778
+      SpriteSheet_Margaret_Zona_16: 1885778803
+      SpriteSheet_Margaret_Zona_17: 1647378269
+      SpriteSheet_Margaret_Zona_18: -1271047783
+      SpriteSheet_Margaret_Zona_19: -1464646346
+      SpriteSheet_Margaret_Zona_2: 1731581289
+      SpriteSheet_Margaret_Zona_20: 1551602040
+      SpriteSheet_Margaret_Zona_21: -100239265
+      SpriteSheet_Margaret_Zona_22: -465709493
+      SpriteSheet_Margaret_Zona_23: 1726843637
+      SpriteSheet_Margaret_Zona_24: 961860300
+      SpriteSheet_Margaret_Zona_25: -445044047
+      SpriteSheet_Margaret_Zona_26: -1625086737
+      SpriteSheet_Margaret_Zona_27: 1362952217
+      SpriteSheet_Margaret_Zona_28: 1012446367
+      SpriteSheet_Margaret_Zona_3: 414731550
+      SpriteSheet_Margaret_Zona_4: -2088120041
+      SpriteSheet_Margaret_Zona_5: 1782386777
+      SpriteSheet_Margaret_Zona_6: -1041345113
+      SpriteSheet_Margaret_Zona_7: -403420032
+      SpriteSheet_Margaret_Zona_8: -2124225078
+      SpriteSheet_Margaret_Zona_9: -553103509
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

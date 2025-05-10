@@ -46,7 +46,7 @@ public class ArbolilloMovement : MonoBehaviour
     public ParticleSystem dustParticles;
 
     //estados arbolillo y collider
-    private enum EnemyState { Pasivo, Enterrado, Emergido }
+    private enum EnemyState {Pasivo, Enterrado, Emergido}
     private EnemyState currentState = EnemyState.Pasivo;
     private bool hasBeenAggroed = false;
     private CapsuleCollider2D arbolliloCollider;

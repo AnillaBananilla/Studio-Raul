@@ -71,7 +71,7 @@ public class PlayerMonedas : MonoBehaviour
     // Función para actualizar la UI
     private void ActualizarUI()
     {
-        textoMonedasTotales.text = "Coin: " + monedasTotales.ToString();
+        textoMonedasTotales.text = monedasTotales.ToString();
         textoMonedasSumadas.text = "+" + monedasSumadas.ToString();
     }
 }
