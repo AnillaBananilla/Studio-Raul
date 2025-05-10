@@ -128,8 +128,26 @@ public class Healt : MonoBehaviour
         else
         {
             Destroy(gameObject);
+            //gameObject.SetActive(false);
         }
     }
+
+    public void Revive()
+{
+    currentHealt = maxHealt;
+    isImmune = false;
+
+    if (Renderer != null)
+        Renderer.color = Color.white;
+
+    // Si el enemigo tiene animador con estado de muerte, puedes resetearlo aquí si quieres
+    Animator anim = GetComponent<Animator>();
+    if (anim != null)
+        anim.ResetTrigger("Die"); // o puedes usar anim.Play("Idle") si usas mecanim
+
+    // Reactiva comportamientos si los desactivaste (opcional)
+}
+
 
     public IEnumerator PlayLandDeath()
     {
