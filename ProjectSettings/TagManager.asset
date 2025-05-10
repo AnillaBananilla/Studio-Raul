@@ -55,3 +55,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Back
+    uniqueID: 3098855909
+    locked: 0
+  - name: Piso
+    uniqueID: 3233244023
+    locked: 0
+  - name: Fore
+    uniqueID: 1652583265
+    locked: 0
