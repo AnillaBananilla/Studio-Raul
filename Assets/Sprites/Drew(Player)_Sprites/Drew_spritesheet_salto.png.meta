@@ -1,0 +1,603 @@
+fileFormatVersion: 2
+guid: 66ad76a87f51c574983e4cb97489ebf2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Drew_SS_Salto_11
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 1800
+        width: 387
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b034b57e0072d96439505ca36d14ae65
+      internalID: -31022010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_12
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 1766
+        width: 411
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 1, y: 0, z: 0, w: 3}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aed8b6c2a54618419d2c161468c7adc
+      internalID: -1425428326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_10
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1736
+        width: 396
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c2636f55d9863428c06f28e10754c5
+      internalID: -1141185714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_14
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1398
+        width: 394
+        height: 331
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480a798f2b0e553448e459f57b346f9f
+      internalID: 777579509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_02
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 1384
+        width: 363
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2ba616cafcc1c14d806061af1d4c4a7
+      internalID: 1411957965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_13
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 1385
+        width: 403
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 034441f77707dd44ca1c40ed8b5b17ac
+      internalID: -748343245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_04
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 1383
+        width: 361
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2b888bb8a362454cbc3a2dfe9c34fd5
+      internalID: -1000499386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_08
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 1383
+        width: 422
+        height: 342
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd546d392779454680e6ce9b7114574
+      internalID: -18341627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_03
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 1022
+        width: 368
+        height: 349
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a84a254134d72f8418667a140eab5eb1
+      internalID: -1633112004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_06
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1019
+        width: 401
+        height: 352
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c496557d73e19459b746df8a55030a
+      internalID: 1388526852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_07
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 1015
+        width: 390
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319a1f9761db047449ddbd51e84549ae
+      internalID: -2004852053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000000000000
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 1015
+        width: 389
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c91a223e84dd54c9102106395c7c7a
+      internalID: 942296520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_16
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 1013
+        width: 360
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf06c4c5987b9794f9fdad09266a8ed4
+      internalID: -65780124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_01
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 644
+        width: 363
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43be92c52941fde438d084ae767f3a92
+      internalID: 1679480574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_15
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 644
+        width: 368
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 170fcf4446170bd41ab5e5fe694f1acb
+      internalID: 849185218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 000000000000000000000
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 638
+        width: 421
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd17e878cfd658e4bad9870bbb83c848
+      internalID: 1840996231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_05
+      rect:
+        serializedVersion: 2
+        x: 1223
+        y: 616
+        width: 391
+        height: 390
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95f67721198977489d937e38a306d1d
+      internalID: 1277554111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drew_SS_Salto_09
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 600
+        width: 368
+        height: 394
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767d27f6287ded342970eca8939f22bd
+      internalID: 1517315122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3d9ac5d9a718da94fbf1b9b54199baeb
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      000000000000: 942296520
+      000000000000000000000: 1840996231
+      Drew_SS_Salto_01: 1679480574
+      Drew_SS_Salto_02: 1411957965
+      Drew_SS_Salto_03: -1633112004
+      Drew_SS_Salto_04: -1000499386
+      Drew_SS_Salto_05: 1277554111
+      Drew_SS_Salto_06: 1388526852
+      Drew_SS_Salto_07: -2004852053
+      Drew_SS_Salto_08: -18341627
+      Drew_SS_Salto_09: 1517315122
+      Drew_SS_Salto_10: -1141185714
+      Drew_SS_Salto_11: -31022010
+      Drew_SS_Salto_12: -1425428326
+      Drew_SS_Salto_13: -748343245
+      Drew_SS_Salto_14: 777579509
+      Drew_SS_Salto_15: 849185218
+      Drew_SS_Salto_16: -65780124
+      Drew_spritesheet_salto_1: 1446975647
+      Drew_spritesheet_salto_10: -1932217741
+      Drew_spritesheet_salto_13: -769580386
+      Drew_spritesheet_salto_16: -71426192
+      Drew_spritesheet_salto_17: 580210366
+      Drew_spritesheet_salto_18: -1261675244
+      Drew_spritesheet_salto_19: -1177929039
+      Drew_spritesheet_salto_20: 146282065
+      Drew_spritesheet_salto_21: -91355122
+      Drew_spritesheet_salto_22: -743984526
+      Drew_spritesheet_salto_23: -1327443667
+      Drew_spritesheet_salto_24: 1787253128
+      Drew_spritesheet_salto_25: -736124184
+      Drew_spritesheet_salto_3: 2097227720
+      Drew_spritesheet_salto_31: -642821424
+      Drew_spritesheet_salto_32: 749060857
+      Drew_spritesheet_salto_36: 1468347616
+      Drew_spritesheet_salto_37: -1211695364
+      Drew_spritesheet_salto_39: 1805238189
+      Drew_spritesheet_salto_4: 1637562113
+      Drew_spritesheet_salto_41: -645924548
+      Drew_spritesheet_salto_42: 1697568415
+      Drew_spritesheet_salto_43: -1441801661
+      Drew_spritesheet_salto_44: 1787042293
+      Drew_spritesheet_salto_45: -1434960719
+      Drew_spritesheet_salto_5: 299970430
+      Drew_spritesheet_salto_6: 237494313
+      Drew_spritesheet_salto_7: -2021983357
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
