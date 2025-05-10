@@ -30,6 +30,8 @@ public class PlayerAttack : MonoBehaviour
     private ColorState currentColor = ColorState.Azul; // Color inicial
     public Image imageToChange; // Arrástralo desde el Inspector
     public Image rainDropToChange; // Arrástralo desde el Inspector
+    public Image rainDropToChange1; // Arrástralo desde el Inspector
+    public Image rainDropToChange2; // Arrástralo desde el Inspector
     int valueToPrint = 0;
     public Animator[] animators; // Array de Animators de los sprites
     private int currentIndex = 0; // Índice del sprite actual
@@ -189,18 +191,24 @@ public class PlayerAttack : MonoBehaviour
                 valueToPrint = 10;
                 imageToChange.sprite = blue;
                 rainDropToChange.sprite = rainDropblue;
+                rainDropToChange1.sprite = rainDropmagenta;
+                rainDropToChange2.sprite = rainDropyellow;
                 GameManager.instance.paintColorIndex = 0;
                 break;
             case ColorState.Amarillo:
                 valueToPrint = 20;
                 imageToChange.sprite = magenta;
                 rainDropToChange.sprite = rainDropmagenta;
+                rainDropToChange1.sprite = rainDropyellow;
+                rainDropToChange2.sprite = rainDropblue;
                 GameManager.instance.paintColorIndex = 1;
                 break;
             case ColorState.Rojo:
                 valueToPrint = 30;
                 imageToChange.sprite = yellow;
                 rainDropToChange.sprite = rainDropyellow;
+                rainDropToChange1.sprite = rainDropblue;
+                rainDropToChange2.sprite = rainDropmagenta;
                 GameManager.instance.paintColorIndex = 2;
                 break;
         }
