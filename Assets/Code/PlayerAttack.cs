@@ -112,6 +112,12 @@ public class PlayerAttack : MonoBehaviour
                     Debug.Log("Botón detectado por ataque.");
                     button.Activate();
                 }
+                else{
+                    FinalButton finalButton = buttons[i].GetComponent<FinalButton>();
+                    if(finalButton != null){
+                        finalButton.Activate();
+                    }
+                }
             }
         }
 
