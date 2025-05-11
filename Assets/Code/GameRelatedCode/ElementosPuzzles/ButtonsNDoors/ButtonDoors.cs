@@ -14,10 +14,11 @@ public class ButtonDoors : MonoBehaviour
     [Header("Color Puzzle")]
     public bool isColorButton = false;
     public ColorType buttonColor;
+    public FinalButton isFinalButton;
 
     
     public void Activate(){
-        if(!isPressed){
+        if(!isPressed && !isColorButton){
             isPressed = true;
             if (!moved)
             {
@@ -25,11 +26,15 @@ public class ButtonDoors : MonoBehaviour
                 moved = true;
             }
             buttonManager.CheckPuzzleState();
+        }
 
-            if(isColorButton){
+        else if(!isPressed && isColorButton){
                 Debug.Log($"Color button pressed: {buttonColor}");
                 ColorToggleManager.Instance.SetActiveColor(buttonColor);
-            }
+        }
+        else if(!isPressed && isFinalButton != null){
+            isFinalButton.Trigger();
+            return;
         }
     }
 }

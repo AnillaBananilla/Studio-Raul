@@ -8,29 +8,44 @@ public class TogglePlatform : MonoBehaviour
     public ColorType platformColor;
     public PlatformGroup platformGroup;
 
-    private void OnEnable(){
-        ColorToggleManager.OnColorChanged += HandleColorChange;
-        ColorToggleManager.OnClearPlatforms += HandleClear;
-    }
+    private bool lastState = true;
 
-    private void OnDisable()
+    private void Start()
     {
-        ColorToggleManager.OnColorChanged -= HandleColorChange;
-        ColorToggleManager.OnClearPlatforms -= HandleClear;
+        // Desactiva las plataformas cyan al iniciar el juego
+        if (platformGroup == PlatformGroup.PuzzleRoom && platformColor == ColorType.Cyan)
+        {
+            gameObject.SetActive(false);
+            lastState = false;
+        }
+
+        // También desactiva todas las plataformas del OtherRoom si el puzzle aún no está completo
+        if (platformGroup == PlatformGroup.OtherRoom)
+        {
+            gameObject.SetActive(false);
+            lastState = false;
+        }
     }
 
-    private void HandleColorChange(ColorType activeColor){
+    private void Update()
+    {
+        if (ColorToggleManager.Instance == null) return;
+        bool shouldBeActive = false;
+        
         if(platformGroup == PlatformGroup.PuzzleRoom){
-            gameObject.SetActive(platformColor == activeColor);
+            if(!ColorToggleManager.Instance.PuzzleCompleted){
+                shouldBeActive = platformColor == ColorToggleManager.Instance.CurrentColor;
+            }
         }
         else if(platformGroup == PlatformGroup.OtherRoom){
-            gameObject.SetActive(platformColor == ColorType.Cyan);
+            if(ColorToggleManager.Instance.PuzzleCompleted){
+                shouldBeActive = platformColor == ColorType.Cyan;
+            }
         }
-    }
 
-    private void HandleClear(){
-        if(platformGroup == PlatformGroup.PuzzleRoom){
-            gameObject.SetActive(false);
+        if(shouldBeActive != lastState){
+            gameObject.SetActive(shouldBeActive);
+            lastState = shouldBeActive;
         }
     }
 

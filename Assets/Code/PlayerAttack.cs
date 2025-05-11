@@ -115,7 +115,7 @@ public class PlayerAttack : MonoBehaviour
                 else{
                     FinalButton finalButton = buttons[i].GetComponent<FinalButton>();
                     if(finalButton != null){
-                        finalButton.Activate();
+                        finalButton.Trigger();
                     }
                 }
             }
