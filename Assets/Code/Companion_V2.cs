@@ -24,6 +24,11 @@ public class Companion_V2 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         isDead = false;
+
+        // Asegura visibilidad correcta desde el inicio
+        spriteRenderer.enabled = true;
+        ghostSpriteRenderer.enabled = false;
+
         Collider2D col1 = GetComponent<Collider2D>();
         Collider2D col2 = player.GetComponent<Collider2D>();
 
@@ -42,22 +47,38 @@ public class Companion_V2 : MonoBehaviour
 
         if (!isDead)
         {
-            if (distanceToPlayer > followDistance)
+            Vector2 direction = player.transform.position - transform.position;
+            float horizontalDistance = direction.x;
+
+            if (Mathf.Abs(horizontalDistance) > followDistance)
             {
-                Vector2 direction = (player.transform.position - transform.position).normalized;
-                rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+                float moveDirection = Mathf.Sign(horizontalDistance);
+                rb.velocity = new Vector2(moveDirection * speed, rb.velocity.y);
+
+                // Orientar sprite
+                if (moveDirection > 0)
+                {
+                    spriteRenderer.flipX = false;
+                    ghostSpriteRenderer.flipX = false;
+                }
+                else
+                {
+                    spriteRenderer.flipX = true;
+                    ghostSpriteRenderer.flipX = true;
+                }
             }
             else
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
+
             if (distanceToPlayer > deathDistance)
             {
                 Die();
             }
+
             // Comprobación de suelo
             isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);
-            //Debug.DrawRay(transform.position, Vector2.down * groundCheckDistance, Color.red);
 
             // Detectar si hay un obstáculo enfrente
             if (isGrounded && CheckForObstacle())
@@ -94,7 +115,6 @@ public class Companion_V2 : MonoBehaviour
     {
         if (collision.CompareTag("Hazard") || collision.CompareTag("Enemy"))
         {
-            //Debug.Log("Muerte por daño");
             Die();
         }
     }

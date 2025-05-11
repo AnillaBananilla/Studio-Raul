@@ -41,5 +41,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TheDevRoom2.unity
     guid: a0824eecd05fab04baf83ff6b28b39f2
+  - enabled: 0
+    path: Assets/Scenes/DevRoom_Compositing.unity
+    guid: 6015506b92e65864bbacbfda9ee43a9c
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/Continuara.unity
+    guid: 372e4bb89e2725c458e488d3f47c23c5
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: cff59c40c3eb3ea4fae1665614ba7aec, type: 3}
