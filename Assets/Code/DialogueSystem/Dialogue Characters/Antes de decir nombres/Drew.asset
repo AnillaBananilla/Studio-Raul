@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e185d1eba27efad43b01970a596459d3, type: 3}
   m_Name: Drew
   m_EditorClassIdentifier: 
-  characterName: Drew
+  characterName: ' '
   isOnLeft: 1
   expressions:
   - emotion: neutral

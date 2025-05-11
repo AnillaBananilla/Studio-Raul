@@ -167,7 +167,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 785
+        width: 773
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -186,9 +186,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_1
       rect:
         serializedVersion: 2
-        x: 785
+        x: 792
         y: 0
-        width: 785
+        width: 780
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -207,9 +207,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_2
       rect:
         serializedVersion: 2
-        x: 1570
+        x: 1567
         y: 0
-        width: 785
+        width: 798
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -228,9 +228,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_3
       rect:
         serializedVersion: 2
-        x: 2355
+        x: 2349
         y: 0
-        width: 785
+        width: 798
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -249,9 +249,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_4
       rect:
         serializedVersion: 2
-        x: 3140
+        x: 3136
         y: 0
-        width: 785
+        width: 794
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -270,9 +270,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_5
       rect:
         serializedVersion: 2
-        x: 3925
+        x: 3918
         y: 0
-        width: 785
+        width: 794
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -291,9 +291,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_6
       rect:
         serializedVersion: 2
-        x: 4710
+        x: 4701
         y: 0
-        width: 785
+        width: 798
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -312,9 +312,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_7
       rect:
         serializedVersion: 2
-        x: 5495
+        x: 5491
         y: 0
-        width: 785
+        width: 796
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -333,9 +333,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_8
       rect:
         serializedVersion: 2
-        x: 6280
+        x: 6281
         y: 0
-        width: 785
+        width: 794
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -354,9 +354,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_9
       rect:
         serializedVersion: 2
-        x: 7065
+        x: 7063
         y: 0
-        width: 785
+        width: 794
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -375,9 +375,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_10
       rect:
         serializedVersion: 2
-        x: 7850
+        x: 7851
         y: 0
-        width: 785
+        width: 793
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -396,9 +396,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_11
       rect:
         serializedVersion: 2
-        x: 8635
+        x: 8639
         y: 0
-        width: 785
+        width: 793
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -417,9 +417,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_12
       rect:
         serializedVersion: 2
-        x: 9420
+        x: 9421
         y: 0
-        width: 785
+        width: 798
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -438,9 +438,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_13
       rect:
         serializedVersion: 2
-        x: 10205
+        x: 10209
         y: 0
-        width: 785
+        width: 798
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -459,9 +459,9 @@ TextureImporter:
       name: Maggie_Correr_Sprite_14
       rect:
         serializedVersion: 2
-        x: 10990
+        x: 10984
         y: 0
-        width: 785
+        width: 791
         height: 957
       alignment: 0
       pivot: {x: 0, y: 0}
