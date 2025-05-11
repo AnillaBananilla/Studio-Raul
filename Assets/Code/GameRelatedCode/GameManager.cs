@@ -7,7 +7,6 @@ using UnityEngine.UI;
 using static PlayerSkills;
 using Unity.VisualScripting;
 using System;
-using Unity.VisualScripting.Dependencies.Sqlite;
 
 
 public class GameManager : MonoBehaviour
@@ -16,11 +15,6 @@ public class GameManager : MonoBehaviour
     //public TextMeshProUGUI scoreText;
     //public TextMeshProUGUI keyText;
     public Image lifeBar;
-    public Sprite fullLife;
-    public Sprite mediumLife;
-    public Sprite lowLife;
-    public Sprite noLife;
-    public Animator animatorHeart;
     public float healtAmount = 100f;
     public int score;
     public int key;
@@ -37,7 +31,7 @@ public class GameManager : MonoBehaviour
     public PlayerSkills SkillList;
 
     //public float pintureAmount = 100f;
-    public float[] paintAmount = { 100f, 100f, 100f }; // Az Ma Am
+    public float[] paintAmount = { 0f, 0f, 0f }; // Az Ma Am
     public int paintColorIndex = 0;
 
     public Image pintureBar;
@@ -77,14 +71,14 @@ public class GameManager : MonoBehaviour
         if (redOverlay != null)
         {
             redOverlay.gameObject.SetActive(true);
-            redOverlay.color = new Color(1, 0, 0, 0.5f); 
+            redOverlay.color = new Color(1, 0, 0, 0.5f);
         }
     }
 
 
     /*
     TO DO:
-    A�adir una lista de booleanos, o lo que sea, que indiquen el progreso del juego.
+    A adir una lista de booleanos, o lo que sea, que indiquen el progreso del juego.
     */
 
     public float fadeInDuration = 1.5f;
@@ -113,6 +107,7 @@ public class GameManager : MonoBehaviour
         UpdateScore(0);
         key = 0;
         UpdateKey(0);
+        usePinture(0f);
         fadeSpeed = 1f / fadeInDuration;
         //EventManager.m_Instance.AddListener<EquipItemEvent>(EquipItem);
 
@@ -124,7 +119,7 @@ public class GameManager : MonoBehaviour
         // Asignar funciones a los botones
         if (menuButton != null)
             menuButton.onClick.AddListener(GoToMenu);
-        
+
         if (restartButton != null)
             restartButton.onClick.AddListener(RestartGame);
         if (YesButton != null) YesButton.onClick.AddListener(SaveGame);
@@ -137,13 +132,17 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdatePintureBar();
     }
     public void UpdateScore(int scoreToAdd)
     {
         score += scoreToAdd;
         //scoreText.text = "score: " + score;
-       
+
+    }
+    public void UpdatePintureBar()
+    {
+        pintureBar.fillAmount = paintAmount[paintColorIndex] / 100f;
     }
     public void UpdateKey(int keyToAdd)
     {
@@ -160,38 +159,21 @@ public class GameManager : MonoBehaviour
     {
         //ACOMODAR PARA QUE USE EL COMPONENTE HEALT DE PLAYER
 
-        
+
         float appliedDamage = Mathf.Max(0, damage - playerStats.currentDamageReduction);
-        PlayerHP.currentHealt -= (int) appliedDamage;
+        PlayerHP.currentHealt -= (int)appliedDamage;
         Debug.Log("Recibes" + appliedDamage);
         lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
-        animatorHeart.SetTrigger("DamageHeart");
-        switch (PlayerHP.currentHealt)
+        if (lifeBar.fillAmount == 0)
         {
-            case int n when (n > 75 && n <= 100):
-                lifeBar.sprite = fullLife;
-                break;
-            case int n when (n > 50 && n <= 75):
-                lifeBar.sprite = mediumLife;
-                break;
-            case int n when (n > 25 && n <= 50):
-                lifeBar.sprite = lowLife; 
-                break;
-            case int n when (n >= 0 && n <= 25):
-                lifeBar.sprite = noLife;
-                break;
-            default:
-                Debug.LogWarning("Health value out of expected range.");
-                break;
-        }
-        if (lifeBar.fillAmount == 0){
             TriggerGameOver();
             Dead = true;
         }
+        //lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
     }
     IEnumerator FadeIn(CanvasGroup canvasGroup, float waitTime)
     {
-        yield return new WaitForSeconds(waitTime); 
+        yield return new WaitForSeconds(waitTime);
 
         float currentAlpha = 0f;
         float fadeSpeed = 1f / fadeInDuration;
@@ -232,31 +214,43 @@ public class GameManager : MonoBehaviour
 
         //pintureBar.fillAmount = pintureAmount / 100F;
 
-        pintureBar.fillAmount = paintAmount[paintColorIndex]/100f;
+        pintureBar.fillAmount = paintAmount[paintColorIndex] / 100f;
     }
-    public void recivePinture(float pinture)
+    public void recivePinture(float pinture, int color)
     {
         //pintureAmount += pinture;
         //pintureBar.fillAmount = pintureAmount / 100F;
 
-        for (int i = 0; i>3; i++)
-        {
-            if (paintAmount[i] + pinture <= 100)
+    
+            if (paintAmount[color] + pinture <= 100)
             {
-                paintAmount[i] += pinture;
-            } 
-        }
-        pintureBar.fillAmount = paintAmount[paintColorIndex]/100f;
+                paintAmount[color] += pinture;
+            }
+        
+        pintureBar.fillAmount = paintAmount[color] / 100f;
     }
     private void EndDialog()
     {
         PlayerInput.moveable = true;
         Time.timeScale = 1f;
         SaveData();
-        paintAmount[0] = 100f;
-        paintAmount[1] = 100f;
-        paintAmount[2] = 100f;
-        recivePinture(0);
+
+        if (SkillList.skills[1].isUnlocked)
+        {
+            paintAmount[0] = 100f;
+        }
+        if (SkillList.skills[2].isUnlocked)
+        {
+            paintAmount[1] = 100f;
+        }
+        if (SkillList.skills[3].isUnlocked)
+        {
+            paintAmount[2] = 100f;
+        }
+
+        recivePinture(0f, 0);
+        recivePinture(0f, 1);
+        recivePinture(0f, 2);
         StartCoroutine(ResetDialog());
         //LoadData();
     }
@@ -303,9 +297,11 @@ public class GameManager : MonoBehaviour
             }
             inDialog = true;
             PlayerInput.moveable = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
         }
-        
+
     }
 
     public void Freeze()
@@ -320,7 +316,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene()
     {
-        
+
     }
 
     public void LoadData()
@@ -345,8 +341,8 @@ public class GameManager : MonoBehaviour
         SkillList.skills[3].isUnlocked = Save.Skills[3];
         usePinture(0);
 
-       //To Do:
-       //Cargar los datos de misiones terminadas e items almacenados.
+        //To Do:
+        //Cargar los datos de misiones terminadas e items almacenados.
     }
 
     public void SaveData()
@@ -360,11 +356,11 @@ public class GameManager : MonoBehaviour
         if (isGameOver) return;
 
         isGameOver = true;
-        
+
         // Activar panel de Game Over
         if (gameOverPanel != null)
             gameOverPanel.SetActive(true);
-        
+
         // Detener el tiempo
         Time.timeScale = 0f;
     }
@@ -373,7 +369,7 @@ public class GameManager : MonoBehaviour
     {
         // Restaurar el tiempo
         Time.timeScale = 1f;
-        
+
         // Cambiar a la escena del menú (ajusta "MenuScene" al nombre de tu escena)
         SceneManager.LoadScene("MainMenu");
     }

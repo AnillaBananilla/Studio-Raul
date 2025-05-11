@@ -26,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform Spawnpoint;
     public Vector2 shootDirection;
-    private enum ColorState { Azul, Amarillo, Rojo } // Enumerador de colores
+    private enum ColorState { Azul, Amarillo, Magenta } // Enumerador de colores
     private ColorState currentColor = ColorState.Azul; // Color inicial
     public Image imageToChange; // Arrástralo desde el Inspector
     public Image rainDropToChange; // Arrástralo desde el Inspector
@@ -203,15 +203,15 @@ public class PlayerAttack : MonoBehaviour
                 break;
             case ColorState.Amarillo:
                 valueToPrint = 20;
-                imageToChange.sprite = magenta;
+                imageToChange.sprite = yellow;
                 rainDropToChange.sprite = rainDropmagenta;
                 rainDropToChange1.sprite = rainDropyellow;
                 rainDropToChange2.sprite = rainDropblue;
                 GameManager.instance.paintColorIndex = 1;
                 break;
-            case ColorState.Rojo:
+            case ColorState.Magenta:
                 valueToPrint = 30;
-                imageToChange.sprite = yellow;
+                imageToChange.sprite = magenta;
                 rainDropToChange.sprite = rainDropyellow;
                 rainDropToChange1.sprite = rainDropblue;
                 rainDropToChange2.sprite = rainDropmagenta;

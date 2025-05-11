@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class pinture : MonoBehaviour
 {
-    private GameManager gameManagerX;
+    public GameManager gameManagerX;
 
 
     public int pointValue;
+    public int color;
     void Start()
     {
         gameManagerX = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -23,7 +24,7 @@ public class pinture : MonoBehaviour
      
         if (other.gameObject.CompareTag("Player"))
         {
-            gameManagerX.recivePinture(20);
+            gameManagerX.paintAmount[color] = 20f; ;
             /*if (gameManagerX.pintureAmount < 100)
             {
                 gameManagerX.recivePinture(20);

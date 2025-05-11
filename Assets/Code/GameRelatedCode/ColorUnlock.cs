@@ -6,10 +6,11 @@ using static PlayerSkills;
 public class ColorUnlock : MonoBehaviour
 {
     public PlayerSkills playerSkills;
-
+    public GameManager gameManagerX;
     [Header("Color")]
     public string ColorName;
     public Skill UColor;
+    public int color;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +28,7 @@ public class ColorUnlock : MonoBehaviour
         if (collision.CompareTag("Player") && UColor != null)
         {
             UColor.isUnlocked = true;
+            gameManagerX.recivePinture(20, color);
             Destroy(gameObject);
         }
     }

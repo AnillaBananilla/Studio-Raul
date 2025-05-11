@@ -58,10 +58,10 @@ public class Droplets : MonoBehaviour
             case "Azul":
                 spriteRenderer.color = Color.cyan;
                 break;
-            case "Rojo":
+            case "Amarillo":
                 spriteRenderer.color = Color.magenta;
                 break;
-            case "Amarillo":
+            case "Magenta":
                 spriteRenderer.color = Color.yellow;
                 break;
         }
