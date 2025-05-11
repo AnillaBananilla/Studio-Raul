@@ -229,9 +229,20 @@ public class GameManager : MonoBehaviour
         PlayerInput.moveable = true;
         Time.timeScale = 1f;
         SaveData();
-        paintAmount[0] = 100f;
-        paintAmount[1] = 100f;
-        paintAmount[2] = 100f;
+
+        if (SkillList.skills[1].isUnlocked)
+        {
+            paintAmount[0] = 100f;
+        }
+        if (SkillList.skills[2].isUnlocked)
+        {
+            paintAmount[1] = 100f;
+        }
+        if (SkillList.skills[3].isUnlocked)
+        {
+            paintAmount[2] = 100f;
+        }
+
         recivePinture(0);
         StartCoroutine(ResetDialog());
         //LoadData();
@@ -279,6 +290,8 @@ public class GameManager : MonoBehaviour
             }
             inDialog = true;
             PlayerInput.moveable = false;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             Time.timeScale = 0f;
         }
         
