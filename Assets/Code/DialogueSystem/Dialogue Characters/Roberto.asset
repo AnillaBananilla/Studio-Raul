@@ -16,4 +16,4 @@ MonoBehaviour:
   isOnLeft: 0
   expressions:
   - emotion: a
-    portrait: {fileID: -6832905752529493592, guid: 124aa277383dfb94f9c68794e844682d, type: 3}
+    portrait: {fileID: 21300000, guid: 8301048d4d05e7c44b0e17d29cba4592, type: 3}
