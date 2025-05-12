@@ -150,9 +150,13 @@ public class CutsceneSystem : MonoBehaviour
             leftPortrait.sprite = portrait;
             leftGroup.alpha = 1f;
             rightGroup.alpha = 0.4f;
+            Debug.Log(character.isOnLeft);
 
             panelLeft.SetActive(true);
             panelRight.SetActive(false);
+
+            leftPortrait.gameObject.SetActive(true);
+            rightPortrait.gameObject.SetActive(false);
 
             panelLeftImage.sprite = GetPanelSprite(line.panelStyle);
             bool isThinking = line.panelStyle.ToLower() == "pensamiento";
@@ -180,6 +184,9 @@ public class CutsceneSystem : MonoBehaviour
 
             panelLeft.SetActive(false);
             panelRight.SetActive(true);
+
+            leftPortrait.gameObject.SetActive(false);
+            rightPortrait.gameObject.SetActive(true);
 
             panelRightImage.sprite = GetPanelSprite(line.panelStyle);
             bool isThinking = line.panelStyle.ToLower() == "pensamiento";

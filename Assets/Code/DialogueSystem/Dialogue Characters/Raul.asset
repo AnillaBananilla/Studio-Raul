@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Raul
   m_EditorClassIdentifier: 
   characterName: 
-  isOnLeft: 1
-  expressions: []
+  isOnLeft: 0
+  expressions:
+  - emotion: a
+    portrait: {fileID: 21300000, guid: 88c05b44807b4f048a53ba6e27ff27e9, type: 3}
