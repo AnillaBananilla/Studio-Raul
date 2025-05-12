@@ -29,13 +29,18 @@ public class PlayerAttack : MonoBehaviour
     private enum ColorState { Azul, Amarillo, Magenta } // Enumerador de colores
     private ColorState currentColor = ColorState.Azul; // Color inicial
     public Image imageToChange; // Arrástralo desde el Inspector
+    public Image rainDropToChange; // Arrástralo desde el Inspector
+    public Image rainDropToChange1; // Arrástralo desde el Inspector
+    public Image rainDropToChange2; // Arrástralo desde el Inspector
     int valueToPrint = 0;
     public Animator[] animators; // Array de Animators de los sprites
     private int currentIndex = 0; // Índice del sprite actual
     public Sprite blue;
     public Sprite yellow;
     public Sprite magenta;
-
+    public Sprite rainDropblue;
+    public Sprite rainDropyellow;
+    public Sprite rainDropmagenta;
     private float lastAttackTime = 0f;
     public float doubleAttackThreshold = 0.3f;
     private float doubleTapThreshold = 0.3f;
@@ -107,9 +112,11 @@ public class PlayerAttack : MonoBehaviour
                     Debug.Log("Botón detectado por ataque.");
                     button.Activate();
                 }
-                else{
+                else
+                {
                     FinalButton finalButton = buttons[i].GetComponent<FinalButton>();
-                    if(finalButton != null){
+                    if (finalButton != null)
+                    {
                         finalButton.Activate();
                     }
                 }
@@ -118,54 +125,54 @@ public class PlayerAttack : MonoBehaviour
 
 
         if (inputHandler.attackPaint)
-            {   //si sigue habiendo pintura, entonces se realizan estas acciones
+        {   //si sigue habiendo pintura, entonces se realizan estas acciones
             float CurrentPaint = gameManager.paintAmount[gameManager.paintColorIndex];
-                if (CurrentPaint > 0)
-                {   //se inicia la animación
-                    animator.SetTrigger("Attack_Trigger");
-                    gameManager.usePinture(5);
-                    Droplets newBullet = null;
-                    //el pool manager spawnea alguna bala
-                    PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects); //Checar aca
+            if (CurrentPaint > 0)
+            {   //se inicia la animación
+                animator.SetTrigger("Attack_Trigger");
+                gameManager.usePinture(5);
+                Droplets newBullet = null;
+                //el pool manager spawnea alguna bala
+                PoolManager.Instance.SpawnObject<Droplets>(out newBullet, bulletPrefab, Spawnpoint.position, Spawnpoint.rotation, PoolManager.PoolType.GameObjects); //Checar aca
 
-                    //en caso de existir la bala y no ser null se hace lo siguiente
-                    if (newBullet != null)
-                    {
-                        newBullet.UpdateColor();
-                        //se obtiene el RB de la bala
-                        Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
-                        //al detectarlo, entonces se realizan los pasos de detectar la dirección 
-                        // del personaje y aplicarle fuerza en esa dirección a la bala
-                        if (rb != null)
-                        {
-                            // Detectar dirección del personaje
-                            float direction = transform.localScale.x > 0 ? 1f : -1f;
-
-                            // Aplicar fuerza en la dirección correcta
-                            Vector2 forceDirection = new Vector2(1f * direction, 0.5f) * 20f;
-                            rb.AddForce(forceDirection, ForceMode2D.Impulse);
-                            
-                        }
-                    }
-                    
-                }
-                else
+                //en caso de existir la bala y no ser null se hace lo siguiente
+                if (newBullet != null)
                 {
-                    animator.SetTrigger("Attack_Trigger");
-                    Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
-
-                    for (int counter = 0; counter < enemies.Length; counter++)
+                    newBullet.UpdateColor();
+                    //se obtiene el RB de la bala
+                    Rigidbody2D rb = newBullet.GetComponent<Rigidbody2D>();
+                    //al detectarlo, entonces se realizan los pasos de detectar la dirección 
+                    // del personaje y aplicarle fuerza en esa dirección a la bala
+                    if (rb != null)
                     {
-                        enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
-                        enemies[counter].GetComponent<Healt>().Damage(25);
+                        // Detectar dirección del personaje
+                        float direction = transform.localScale.x > 0 ? 1f : -1f;
 
-                        // Obtener la posición del enemigo
-                        Vector3 enemyPosition = enemies[counter].transform.position;
+                        // Aplicar fuerza en la dirección correcta
+                        Vector2 forceDirection = new Vector2(1f * direction, 0.5f) * 20f;
+                        rb.AddForce(forceDirection, ForceMode2D.Impulse);
 
                     }
+                }
+
+            }
+            else
+            {
+                animator.SetTrigger("Attack_Trigger");
+                Collider2D[] enemies = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, enemyLayer);
+
+                for (int counter = 0; counter < enemies.Length; counter++)
+                {
+                    enemies[counter].GetComponent<SpriteRenderer>().color = Color.red;
+                    enemies[counter].GetComponent<Healt>().Damage(25);
+
+                    // Obtener la posición del enemigo
+                    Vector3 enemyPosition = enemies[counter].transform.position;
+
                 }
             }
-        
+        }
+
         if (inputHandler.changeColor)
         {
             ChangeColor();
@@ -176,14 +183,14 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-        private void OnDrawGizmosSelected()
-        {
-            Gizmos.color = Color.yellow;
-            Gizmos.DrawWireSphere(attackCheck.position, attackRadius);
-        }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(attackCheck.position, attackRadius);
+    }
     private void ChangeColor()
     {
-       
+
         currentColor = (ColorState)(((int)currentColor + 1) % 3);
         PlayNextAnimation();
         switch (currentColor)
@@ -191,6 +198,9 @@ public class PlayerAttack : MonoBehaviour
             case ColorState.Azul:
                 valueToPrint = 10;
                 imageToChange.sprite = blue;
+                rainDropToChange.sprite = rainDropblue;
+                rainDropToChange1.sprite = rainDropmagenta;
+                rainDropToChange2.sprite = rainDropyellow;
                 GameManager.instance.paintColorIndex = 0;
                 break;
             case ColorState.Amarillo:
@@ -222,22 +232,13 @@ public class PlayerAttack : MonoBehaviour
         int previousIndex = currentIndex;
 
         // Avanzar al siguiente sprite en la secuencia
-        currentIndex = (currentIndex + 1) % animators.Length;
-
-        // Asegurar que los triggers anteriores no interfieran
-        animators[currentIndex].ResetTrigger("decrecerGota");
-        animators[previousIndex].ResetTrigger("crecerGota");
-
-        // Activar la animación de crecimiento de la nueva gota
-        animators[currentIndex].SetTrigger("crecerGota");
-
-        // Activar la animación de reducción de la gota anterior
-        animators[previousIndex].SetTrigger("decrecerGota");
+       
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("NellProjectile")){
+        if (collision.gameObject.CompareTag("NellProjectile"))
+        {
             //gameManager.takeDamage(25);
             PlayerHP.Damage(25);
             //GameManager.instance.takeDamage(25);

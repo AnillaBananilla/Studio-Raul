@@ -66,6 +66,7 @@ public class Droplets : MonoBehaviour
                 break;
         }
     }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
