@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &105237057
 RectTransform:
   m_ObjectHideFlags: 0
@@ -652,10 +652,10 @@ RectTransform:
   - {fileID: 1561228045}
   m_Father: {fileID: 1205191776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 426.85498, y: -319.81686}
-  m_SizeDelta: {x: 853.70996, y: 127.92675}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297476921
 MonoBehaviour:
@@ -758,19 +758,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 297476918}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd8b9758c54bc94dac2a7954e3c1318, type: 3}
+  m_Script: {fileID: 11500000, guid: eeb8de9fe574f114eb3f9e7baf90a7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questOfferUI: {fileID: 0}
-  questOfferText: {fileID: 0}
-  acceptButton: {fileID: 0}
-  declineButton: {fileID: 0}
-  questListUI: {fileID: 0}
-  questItemPrefab: {fileID: 0}
-  questNotification: {fileID: 0}
-  questNotificationText: {fileID: 0}
+  mainPanel: {fileID: 1205191775}
+  newGamePanel: {fileID: 1030740721}
+  loadGamePanel: {fileID: 1122644902}
+  settingsPanel: {fileID: 1820339942}
 --- !u!1 &312023271
 GameObject:
   m_ObjectHideFlags: 0
@@ -1552,10 +1548,10 @@ RectTransform:
   - {fileID: 1241618406}
   m_Father: {fileID: 1205191776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 426.85498, y: -63.963375}
-  m_SizeDelta: {x: 853.70996, y: 127.92675}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &627212855
 MonoBehaviour:
@@ -2344,6 +2340,7 @@ GameObject:
   - component: {fileID: 1021180559}
   - component: {fileID: 1021180558}
   - component: {fileID: 1021180561}
+  - component: {fileID: 1021180562}
   m_Layer: 5
   m_Name: LoadGameButton
   m_TagString: Untagged
@@ -2366,10 +2363,10 @@ RectTransform:
   - {fileID: 616485629}
   m_Father: {fileID: 1205191776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 426.85498, y: -191.89012}
-  m_SizeDelta: {x: 853.70996, y: 127.92675}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1021180558
 MonoBehaviour:
@@ -2415,16 +2412,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1021180561}
-        m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
-        m_MethodName: ShowLoadGamePanel
-        m_Mode: 1
+      - m_Target: {fileID: 1021180562}
+        m_TargetAssemblyTypeName: LevelLoadButton, Assembly-CSharp
+        m_MethodName: LoadLevelByName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: DevRoom_Compositing
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1021180559
@@ -2472,19 +2469,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1021180555}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd8b9758c54bc94dac2a7954e3c1318, type: 3}
+  m_Script: {fileID: 11500000, guid: eeb8de9fe574f114eb3f9e7baf90a7d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questOfferUI: {fileID: 0}
-  questOfferText: {fileID: 0}
-  acceptButton: {fileID: 0}
-  declineButton: {fileID: 0}
-  questListUI: {fileID: 0}
-  questItemPrefab: {fileID: 0}
-  questNotification: {fileID: 0}
-  questNotificationText: {fileID: 0}
+  mainPanel: {fileID: 1205191775}
+  newGamePanel: {fileID: 1030740721}
+  loadGamePanel: {fileID: 1122644902}
+  settingsPanel: {fileID: 1820339942}
+--- !u!114 &1021180562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1021180555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a14d8770a2b80744aacb6fb31aa4c39e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1030740721
 GameObject:
   m_ObjectHideFlags: 0
@@ -2576,7 +2581,7 @@ GameObject:
   - component: {fileID: 1031066432}
   - component: {fileID: 1031066431}
   - component: {fileID: 1031066430}
-  - component: {fileID: 1031066429}
+  - component: {fileID: 1031066433}
   m_Layer: 5
   m_Name: GoBack
   m_TagString: Untagged
@@ -2604,26 +2609,6 @@ RectTransform:
   m_AnchoredPosition: {x: 426.85498, y: -426.4225}
   m_SizeDelta: {x: 853.70996, y: 170.569}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1031066429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031066427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd8b9758c54bc94dac2a7954e3c1318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questOfferUI: {fileID: 0}
-  questOfferText: {fileID: 0}
-  acceptButton: {fileID: 0}
-  declineButton: {fileID: 0}
-  questListUI: {fileID: 0}
-  questItemPrefab: {fileID: 0}
-  questNotification: {fileID: 0}
-  questNotificationText: {fileID: 0}
 --- !u!114 &1031066430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2668,9 +2653,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1031066429}
+      - m_Target: {fileID: 1031066427}
         m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
-        m_MethodName: ShowMainPanel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2718,6 +2703,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031066427}
   m_CullTransparentMesh: 1
+--- !u!114 &1031066433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031066427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb8de9fe574f114eb3f9e7baf90a7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPanel: {fileID: 1205191775}
+  newGamePanel: {fileID: 1030740721}
+  loadGamePanel: {fileID: 1122644902}
+  settingsPanel: {fileID: 1820339942}
 --- !u!1 &1058919387
 GameObject:
   m_ObjectHideFlags: 0
@@ -2736,7 +2737,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1058919388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2801,9 +2802,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1506320520}
         m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
-        m_MethodName: ShowLoadGamePanel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3000,7 +3001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1122644903
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3336,7 +3337,7 @@ GameObject:
   - component: {fileID: 1246527760}
   - component: {fileID: 1246527759}
   - component: {fileID: 1246527758}
-  - component: {fileID: 1246527757}
+  - component: {fileID: 1246527761}
   m_Layer: 5
   m_Name: LoadGameButton
   m_TagString: Untagged
@@ -3364,26 +3365,6 @@ RectTransform:
   m_AnchoredPosition: {x: 426.85498, y: -319.81686}
   m_SizeDelta: {x: 853.70996, y: 127.92675}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1246527757
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246527755}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd8b9758c54bc94dac2a7954e3c1318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questOfferUI: {fileID: 0}
-  questOfferText: {fileID: 0}
-  acceptButton: {fileID: 0}
-  declineButton: {fileID: 0}
-  questListUI: {fileID: 0}
-  questItemPrefab: {fileID: 0}
-  questNotification: {fileID: 0}
-  questNotificationText: {fileID: 0}
 --- !u!114 &1246527758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3428,9 +3409,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1246527757}
+      - m_Target: {fileID: 1246527755}
         m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
-        m_MethodName: ShowLoadGamePanel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3478,6 +3459,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246527755}
   m_CullTransparentMesh: 1
+--- !u!114 &1246527761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246527755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb8de9fe574f114eb3f9e7baf90a7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPanel: {fileID: 1205191775}
+  newGamePanel: {fileID: 1030740721}
+  loadGamePanel: {fileID: 1122644902}
+  settingsPanel: {fileID: 1820339942}
 --- !u!1 &1336945788
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,7 +4133,7 @@ GameObject:
   - component: {fileID: 1506320525}
   - component: {fileID: 1506320524}
   - component: {fileID: 1506320523}
-  - component: {fileID: 1506320522}
+  - component: {fileID: 1506320526}
   m_Layer: 5
   m_Name: GoBack
   m_TagString: Untagged
@@ -4164,26 +4161,6 @@ RectTransform:
   m_AnchoredPosition: {x: 426.85498, y: -426.4225}
   m_SizeDelta: {x: 853.70996, y: 170.569}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1506320522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506320520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd8b9758c54bc94dac2a7954e3c1318, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questOfferUI: {fileID: 0}
-  questOfferText: {fileID: 0}
-  acceptButton: {fileID: 0}
-  declineButton: {fileID: 0}
-  questListUI: {fileID: 0}
-  questItemPrefab: {fileID: 0}
-  questNotification: {fileID: 0}
-  questNotificationText: {fileID: 0}
 --- !u!114 &1506320523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4228,9 +4205,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1506320522}
+      - m_Target: {fileID: 1506320520}
         m_TargetAssemblyTypeName: MainMenuUIManager, Assembly-CSharp
-        m_MethodName: ShowMainPanel
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4278,6 +4255,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506320520}
   m_CullTransparentMesh: 1
+--- !u!114 &1506320526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506320520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeb8de9fe574f114eb3f9e7baf90a7d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainPanel: {fileID: 1205191775}
+  newGamePanel: {fileID: 1030740721}
+  loadGamePanel: {fileID: 1122644902}
+  settingsPanel: {fileID: 1820339942}
 --- !u!1 &1561228044
 GameObject:
   m_ObjectHideFlags: 0
@@ -4995,10 +4988,10 @@ RectTransform:
   - {fileID: 111895019}
   m_Father: {fileID: 1205191776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 426.85498, y: -447.74362}
-  m_SizeDelta: {x: 853.70996, y: 127.92675}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1838996772
 MonoBehaviour:
@@ -5055,7 +5048,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838996775}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1838996772}
+        m_TargetAssemblyTypeName: ExitButton, Assembly-CSharp
+        m_MethodName: QuitGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1838996775
 MonoBehaviour:
   m_ObjectHideFlags: 0

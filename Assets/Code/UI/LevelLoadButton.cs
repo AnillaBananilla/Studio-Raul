@@ -20,6 +20,10 @@ public class LevelLoadButton : MonoBehaviour
     /// <param name="levelToLoadName">The name of the level to load</param>
     public void LoadLevelByName(string levelToLoadName)
     {
+        if(levelToLoadName == "VideoIntro")
+        {
+            SaveManager.NewGame();
+        }
         Time.timeScale = 1;
         SceneManager.LoadScene(levelToLoadName);
     }
