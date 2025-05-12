@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
@@ -7,32 +8,19 @@ public class TogglePlatform : MonoBehaviour
 {
     public ColorType platformColor;
     public PlatformGroup platformGroup;
+    public bool childActive;
 
-    private void OnEnable(){
-        ColorToggleManager.OnColorChanged += HandleColorChange;
-        ColorToggleManager.OnClearPlatforms += HandleClear;
-    }
-
-    private void OnDisable()
-    {
-        ColorToggleManager.OnColorChanged -= HandleColorChange;
-        ColorToggleManager.OnClearPlatforms -= HandleClear;
-    }
-
-    private void HandleColorChange(ColorType activeColor){
-        if(platformGroup == PlatformGroup.PuzzleRoom){
-            gameObject.SetActive(platformColor == activeColor);
+    public void ActivateChildren(){
+        foreach(Transform child in gameObject.transform){
+            child.gameObject.SetActive(true);
         }
-        else if(platformGroup == PlatformGroup.OtherRoom){
-            gameObject.SetActive(platformColor == ColorType.Cyan);
-        }
+        childActive = true;
     }
-
-    private void HandleClear(){
-        if(platformGroup == PlatformGroup.PuzzleRoom){
-            gameObject.SetActive(false);
+    public void DeactivateChildren(){
+        foreach(Transform child in gameObject.transform){
+            child.gameObject.SetActive(false);
         }
+        childActive = false;
     }
-
 
 }

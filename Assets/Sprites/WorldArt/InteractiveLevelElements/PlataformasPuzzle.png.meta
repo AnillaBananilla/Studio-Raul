@@ -126,19 +126,19 @@ TextureImporter:
       name: PlataformasPuzzle_0
       rect:
         serializedVersion: 2
-        x: 34
-        y: 428
-        width: 33
-        height: 151
+        x: 35
+        y: 429
+        width: 30
+        height: 149
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 1, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d758740aa7261a2479d0647d63ec3fd7
-      internalID: -1433577690
+      spriteID: 9f68808beb2cc7147be13a2529486670
+      internalID: 1893949274
       vertices: []
       indices: 
       edges: []
@@ -147,10 +147,10 @@ TextureImporter:
       name: PlataformasPuzzle_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 227
-        width: 30
-        height: 153
+        x: 36
+        y: 229
+        width: 27
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ffa59224a5c1934f86c63e442533d75
-      internalID: 1274106205
+      spriteID: 405b1c16c9e49244896bb3b60e2296bb
+      internalID: 6523184
       vertices: []
       indices: 
       edges: []
@@ -168,10 +168,10 @@ TextureImporter:
       name: PlataformasPuzzle_2
       rect:
         serializedVersion: 2
-        x: 36
-        y: 34
-        width: 28
-        height: 140
+        x: 37
+        y: 36
+        width: 25
+        height: 138
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82eedda4042afb340b382740cae63aaa
-      internalID: 1993725332
+      spriteID: 796cdf4aa624a0b448c20f1320c2d7b4
+      internalID: -931721417
       vertices: []
       indices: 
       edges: []
@@ -188,7 +188,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 2385ff96ae59cb64d80ba394f7296ee0
+    spriteID: 5012c82e0718bb141848043d4a4199f3
     internalID: 0
     vertices: []
     indices: 
@@ -196,9 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlataformasPuzzle_0: -1433577690
-      PlataformasPuzzle_1: 1274106205
-      PlataformasPuzzle_2: 1993725332
+      PlataformasPuzzle_0: 1893949274
+      PlataformasPuzzle_1: 6523184
+      PlataformasPuzzle_2: -931721417
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

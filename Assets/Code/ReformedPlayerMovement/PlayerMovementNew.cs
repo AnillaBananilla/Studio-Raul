@@ -115,7 +115,7 @@ public class PlayerMovementNew : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 jumpsLeft--;
-                //animator.SetTrigger("Jump");
+                animator.SetTrigger("Jump");
             }
             else if (context.canceled)
             {

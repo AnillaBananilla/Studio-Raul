@@ -6,11 +6,13 @@ public class FinalButton : MonoBehaviour
 {
     private bool triggered = false;
 
-    public void Activate(){
-        if(triggered) return;
-        triggered = true;
+    void Update()
+    {
+        
+    }
 
-        Debug.Log("Final button triggered!");
-        ColorToggleManager.Instance.CompletePuzzle();
+    public void Trigger()
+    {
+
     }
 }

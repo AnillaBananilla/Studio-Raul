@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e185d1eba27efad43b01970a596459d3, type: 3}
   m_Name: Lilia
   m_EditorClassIdentifier: 
-  characterName: 
+  characterName: Lilia
   isOnLeft: 1
-  expressions: []
+  expressions:
+  - emotion: a
+    portrait: {fileID: 2910705208462270133, guid: 9c00cbd9d3240dd4183839b9d74a21a5, type: 3}

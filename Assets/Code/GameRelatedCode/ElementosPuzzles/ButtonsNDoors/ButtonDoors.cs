@@ -10,11 +10,6 @@ public class ButtonDoors : MonoBehaviour
     
     public Vector3 pressedOffset = new Vector3(0, -0.5f, 0); // se hunde ligeramente
     private bool moved = false;
-
-    [Header("Color Puzzle")]
-    public bool isColorButton = false;
-    public ColorType buttonColor;
-
     
     public void Activate(){
         if(!isPressed){
@@ -25,11 +20,6 @@ public class ButtonDoors : MonoBehaviour
                 moved = true;
             }
             buttonManager.CheckPuzzleState();
-
-            if(isColorButton){
-                Debug.Log($"Color button pressed: {buttonColor}");
-                ColorToggleManager.Instance.SetActiveColor(buttonColor);
-            }
         }
     }
 }

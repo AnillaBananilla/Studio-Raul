@@ -59,13 +59,14 @@ public class Droplets : MonoBehaviour
                 spriteRenderer.color = Color.cyan;
                 break;
             case "Amarillo":
-                spriteRenderer.color = Color.magenta;
+                spriteRenderer.color = Color.yellow;
                 break;
             case "Magenta":
-                spriteRenderer.color = Color.yellow;
+                spriteRenderer.color = Color.magenta;
                 break;
         }
     }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

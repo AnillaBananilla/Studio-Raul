@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e185d1eba27efad43b01970a596459d3, type: 3}
   m_Name: Alejandro
   m_EditorClassIdentifier: 
-  characterName: 
-  isOnLeft: 1
-  expressions: []
+  characterName: Alex
+  isOnLeft: 0
+  expressions:
+  - emotion: a
+    portrait: {fileID: 5872264066814485899, guid: 6bc5340365e05744f99c03ad33acc4f6, type: 3}

@@ -1,0 +1,752 @@
+fileFormatVersion: 2
+guid: 396facdc009e23f418d10ff5a17051c6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Salto_Abajo_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2a0d93a8601684dbac6a4c5cac61e8
+      internalID: 2037275721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_1
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a54facaa82274364eb8c3ff93e9fa1f4
+      internalID: 1954226367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_2
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 928bb506e8528024682783c3c122645e
+      internalID: -1499237095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_3
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4706fb489c6bc18479fda2a39ecddf0b
+      internalID: 2094721583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_4
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776cefc2e1ecc3d40865d704505092f6
+      internalID: -1279811368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_5
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 263f9b8c5f4bc4247bd9cf2cfedba075
+      internalID: 886186891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f3c5259df900a946bd7420b714eb241
+      internalID: 1433658574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_7
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d1b81b695416c41a093467d303c456
+      internalID: -1335330950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_8
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5b68dde357878447b8986148690c895
+      internalID: 1088001849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_9
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15a9b8cd5c83964db6bae0b86dcb7ac
+      internalID: 1717825832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_10
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a200a65f58f3a6d45a7fc9bedc532385
+      internalID: 2144669963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_11
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a8d5b80c092f81488aac0d254dccd58
+      internalID: -1625605332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddb9845c1f493644dbcc7e79069ba7f1
+      internalID: -705918479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_13
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaede3bc4fa6e1f4c846814f14ff350d
+      internalID: 1039509227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_14
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc04ed1dfba43f246bdae6c878da0ac2
+      internalID: -179764875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_15
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a8b5b498fc36247860b96e32cee8d6
+      internalID: -987730247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_16
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d89aef1673d7c48853ba77aa78d305
+      internalID: 287833550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_17
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a47e028497e92ae4eb2cb73f57c226ab
+      internalID: -1657455944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a0ca71000f1f445a962c2a57b7fdfa
+      internalID: -1162221112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_19
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50fa061280f4b884090b9a5a3942e89d
+      internalID: -403216910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_20
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a7676e6036c42408fe69e312c1556c
+      internalID: 865706750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_21
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bad5df0fb7845499e0084e882d0a27
+      internalID: 1267618339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_22
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590503f1f1cd438469f564ad4806e7ef
+      internalID: 1296232484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_23
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab5884eb913f3f2469d26d91ae069ace
+      internalID: 564860239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb732d958934a845bd43b2cbd525f53
+      internalID: -1190365151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_25
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df206a651f85d940a2fedfeaaa4b615
+      internalID: 1969434020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_26
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d86f5d1e8cc1c499378b8c0dda33ef
+      internalID: 1078031646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_27
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e34c98cbf529b64cb3676d015004a3d
+      internalID: -536014229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Salto_Abajo_28
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca15e56f381402440afd5f91ed94b859
+      internalID: 1792402601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Salto_Abajo_0: 2037275721
+      Salto_Abajo_1: 1954226367
+      Salto_Abajo_10: 2144669963
+      Salto_Abajo_11: -1625605332
+      Salto_Abajo_12: -705918479
+      Salto_Abajo_13: 1039509227
+      Salto_Abajo_14: -179764875
+      Salto_Abajo_15: -987730247
+      Salto_Abajo_16: 287833550
+      Salto_Abajo_17: -1657455944
+      Salto_Abajo_18: -1162221112
+      Salto_Abajo_19: -403216910
+      Salto_Abajo_2: -1499237095
+      Salto_Abajo_20: 865706750
+      Salto_Abajo_21: 1267618339
+      Salto_Abajo_22: 1296232484
+      Salto_Abajo_23: 564860239
+      Salto_Abajo_24: -1190365151
+      Salto_Abajo_25: 1969434020
+      Salto_Abajo_26: 1078031646
+      Salto_Abajo_27: -536014229
+      Salto_Abajo_28: 1792402601
+      Salto_Abajo_3: 2094721583
+      Salto_Abajo_4: -1279811368
+      Salto_Abajo_5: 886186891
+      Salto_Abajo_6: 1433658574
+      Salto_Abajo_7: -1335330950
+      Salto_Abajo_8: 1088001849
+      Salto_Abajo_9: 1717825832
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

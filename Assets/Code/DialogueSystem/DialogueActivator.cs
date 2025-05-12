@@ -12,10 +12,10 @@ public class DialogueActivator : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    //void Start()
-    //{
+    void Start()
+    {
         //TriggerCutscene();
-   // }
+    }
 
 
     void OnTriggerEnter2D(Collider2D other)

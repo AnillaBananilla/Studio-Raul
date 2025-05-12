@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: b4641b2c428c2aa48a71cb832629bcce
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 300
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Caminar_Drew_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbda1df24a9ce94e9bcfb9f663a1785
+      internalID: 1242423564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_1
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4efce8bea8d7142a61ce62647701a4
+      internalID: -926969974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_2
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46ce821eed86c6488c4425eb67c1286
+      internalID: -842366129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_3
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b6123c57033cee418d56c239da1aa03
+      internalID: 448768371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_4
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc6e3481df47d3419960c926e065641
+      internalID: 1674204746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_5
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 4320
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2eddba6c12c8145b6cfcd6b9016c85
+      internalID: -947290622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42aba301e2683ab4c8102b935fdec9bf
+      internalID: 2123232979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_7
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6d04ca8e1885a49a3cde788f51d57e
+      internalID: -1866891229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_8
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08c1a557d93f11e448e212ba4be8be8a
+      internalID: 604054125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_9
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b78827eef440ca4b98ef60e1b87fffa
+      internalID: -1500342647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_10
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485f259c328558943b87b9f5ab6f9bd5
+      internalID: 714781698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_11
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 3240
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87f19c65b09fe5647911ba362a2e0ed7
+      internalID: 691472834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edf665783407b40449785d8e454c3607
+      internalID: 368485509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_13
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6001adf7b9ac8d4db54a507c8b4f16d
+      internalID: -1292289572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_14
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489af82144bd5af4896f908b6dbcc7e5
+      internalID: -1789223074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_15
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04efd9e13c1db84db97ee05b90e2be8
+      internalID: -577325569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_16
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ebb48f6679611479caf7af5891ab07
+      internalID: -968665444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_17
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 2160
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb1f68aefd56d241a4fe89893ab05b2
+      internalID: 1390991904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caeb3a5e5823afe47a3c230cf372e21a
+      internalID: -1880224027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_19
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d83130766ef814cbefc5035379b071
+      internalID: -1653535986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_20
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2a298ccabbd95245ab35b4e145d1621
+      internalID: -1946242236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_21
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0977c6d1666f31e4c973339e035cc8d3
+      internalID: -1345365622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_22
+      rect:
+        serializedVersion: 2
+        x: 7280
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a63b67a0ab4dd44e8e7a79480b284e6
+      internalID: -1561774172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_23
+      rect:
+        serializedVersion: 2
+        x: 9100
+        y: 1080
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f28b51e0b72ab4d8ac075fe73c9786
+      internalID: -1677543036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cec0584bfbd0f744b5c203b8c4c27b1
+      internalID: 947097546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_25
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094dc4113407d0942ad0ac8214859536
+      internalID: 2106922768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_26
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97475e67192e558418cc5c0d98a8d4ce
+      internalID: 49533160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Caminar_Drew_27
+      rect:
+        serializedVersion: 2
+        x: 5460
+        y: 0
+        width: 1820
+        height: 1080
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3558a570fd0da343a7b6c5e6481094c
+      internalID: -120504904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Caminar_Drew_0: 1242423564
+      Caminar_Drew_1: -926969974
+      Caminar_Drew_10: 714781698
+      Caminar_Drew_11: 691472834
+      Caminar_Drew_12: 368485509
+      Caminar_Drew_13: -1292289572
+      Caminar_Drew_14: -1789223074
+      Caminar_Drew_15: -577325569
+      Caminar_Drew_16: -968665444
+      Caminar_Drew_17: 1390991904
+      Caminar_Drew_18: -1880224027
+      Caminar_Drew_19: -1653535986
+      Caminar_Drew_2: -842366129
+      Caminar_Drew_20: -1946242236
+      Caminar_Drew_21: -1345365622
+      Caminar_Drew_22: -1561774172
+      Caminar_Drew_23: -1677543036
+      Caminar_Drew_24: 947097546
+      Caminar_Drew_25: 2106922768
+      Caminar_Drew_26: 49533160
+      Caminar_Drew_27: -120504904
+      Caminar_Drew_3: 448768371
+      Caminar_Drew_4: 1674204746
+      Caminar_Drew_5: -947290622
+      Caminar_Drew_6: 2123232979
+      Caminar_Drew_7: -1866891229
+      Caminar_Drew_8: 604054125
+      Caminar_Drew_9: -1500342647
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
