@@ -20,6 +20,7 @@ public class PlayerAttack : MonoBehaviour
     [Header("Capas que afecta el ataque")]
     public LayerMask enemyLayer;
     public LayerMask buttonLayer;
+    public LayerMask buttonsRoom7;
     public Animator animator;
     public GameManager gameManager;
     [Header("Info de ataques con balas de pintura")]
@@ -112,12 +113,16 @@ public class PlayerAttack : MonoBehaviour
                     Debug.Log("Botón detectado por ataque.");
                     button.Activate();
                 }
-                else
+            }
+
+            Collider2D[] room7buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonsRoom7);
+            for (int i = 0; i < room7buttons.Length; i++)
+            {
+                PuzzleButtons button = room7buttons[i].GetComponent<PuzzleButtons>();
+                if (button != null)
                 {
-                    FinalButton finalButton = buttons[i].GetComponent<FinalButton>();
-                    if(finalButton != null){
-                        finalButton.Trigger();
-                    }
+                    Debug.Log("Botón cuarto 7 activado");
+                    button.toggleColor();
                 }
             }
         }

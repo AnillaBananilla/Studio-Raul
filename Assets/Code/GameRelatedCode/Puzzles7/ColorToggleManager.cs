@@ -5,19 +5,16 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
- public enum ColorType {Magenta, Cyan}
+public enum ColorType {Magenta, Cyan}
 
 public enum PlatformGroup{PuzzleRoom, OtherRoom}
 
 public class ColorToggleManager : MonoBehaviour
 {
-   public static ColorToggleManager Instance;
-
-   private ColorType currentColor = ColorType.Magenta;
-   public ColorType CurrentColor => currentColor;
-   private bool puzzleCompleted = false;
-   public bool PuzzleCompleted => puzzleCompleted;
-
+    public static ColorToggleManager Instance;
+    public ColorType currentColor;
+    public TogglePlatform [] cyanPlatforms;
+    public TogglePlatform [] magentaPlatforms;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -28,18 +25,46 @@ public class ColorToggleManager : MonoBehaviour
 
         Instance = this;
     }
-    
-    public void SetActiveColor(ColorType newColor){
-        if(puzzleCompleted || newColor == currentColor)  return;
 
-        currentColor = newColor;
-        Debug.Log($"Color cambiado a: {currentColor}");
+    void Start()
+    {
+        currentColor = ColorType.Magenta;
+        UpdatePlatforms();
     }
 
-    public void CompletePuzzle(){
-        if(puzzleCompleted) return; 
+    public void ChangeCurrColor(ColorType buttonColor){
+        
+        if(buttonColor == ColorType.Magenta){
+            Debug.Log("Cambiando color actual a cyan...");
+            currentColor = ColorType.Cyan;
+            UpdatePlatforms();
+        }
+        else if(buttonColor == ColorType.Cyan){
+            currentColor = ColorType.Magenta;
+            UpdatePlatforms();
+        }
+    }
 
-        puzzleCompleted = true;
-        Debug.Log("Puzzle completado"); 
+    public void UpdatePlatforms(){
+        if(currentColor == ColorType.Magenta){
+            foreach(TogglePlatform platform in magentaPlatforms){
+                Debug.Log("Plataforma magenta activada");
+                platform.ActivateChildren();
+            }
+            foreach(TogglePlatform platform in cyanPlatforms){
+                Debug.Log("Plataforma cyan desactivada");
+                platform.DeactivateChildren();
+            }
+        }
+        else if(currentColor == ColorType.Cyan){
+            foreach(TogglePlatform platform in cyanPlatforms){
+                Debug.Log("Plataforma cyan activada");
+                platform.ActivateChildren();
+            }
+            foreach(TogglePlatform platform in magentaPlatforms){
+                Debug.Log("Plataforma magenta desactivada");
+                platform.DeactivateChildren();
+            }
+        }
     }
 }

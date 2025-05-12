@@ -27,14 +27,5 @@ public class ButtonDoors : MonoBehaviour
             }
             buttonManager.CheckPuzzleState();
         }
-
-        else if(!isPressed && isColorButton){
-                Debug.Log($"Color button pressed: {buttonColor}");
-                ColorToggleManager.Instance.SetActiveColor(buttonColor);
-        }
-        else if(!isPressed && isFinalButton != null){
-            isFinalButton.Trigger();
-            return;
-        }
     }
 }
