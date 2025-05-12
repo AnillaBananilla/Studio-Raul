@@ -21,6 +21,7 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask enemyLayer;
     public LayerMask buttonLayer;
     public LayerMask buttonsRoom7;
+    public LayerMask buttonsRoom9;
     public Animator animator;
     public GameManager gameManager;
     [Header("Info de ataques con balas de pintura")]
@@ -123,6 +124,17 @@ public class PlayerAttack : MonoBehaviour
                 {
                     Debug.Log("Botón cuarto 7 activado");
                     button.toggleColor();
+                }
+            }
+
+            Collider2D[] room9buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonsRoom9);
+            for (int i = 0; i < room9buttons.Length; i++)
+            {
+                SequenceButton button = room9buttons[i].GetComponent<SequenceButton>();
+                if (button != null)
+                {
+                    Debug.Log("Botón cuarto 7 activado");
+                    button.PressButton();
                 }
             }
         }
