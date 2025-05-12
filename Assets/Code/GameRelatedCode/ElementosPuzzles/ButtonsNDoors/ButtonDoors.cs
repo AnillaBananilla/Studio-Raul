@@ -10,15 +10,9 @@ public class ButtonDoors : MonoBehaviour
     
     public Vector3 pressedOffset = new Vector3(0, -0.5f, 0); // se hunde ligeramente
     private bool moved = false;
-
-    [Header("Color Puzzle")]
-    public bool isColorButton = false;
-    public ColorType buttonColor;
-    public FinalButton isFinalButton;
-
     
     public void Activate(){
-        if(!isPressed && !isColorButton){
+        if(!isPressed){
             isPressed = true;
             if (!moved)
             {

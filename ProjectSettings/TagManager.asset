@@ -18,6 +18,7 @@ TagManager:
   - Arbolillo
   - Pilar
   - Button
+  - DeathTrigger
   layers:
   - Default
   - TransparentFX

@@ -222,17 +222,17 @@ public class PlayerAttack : MonoBehaviour
             case ColorState.Amarillo:
                 valueToPrint = 20;
                 imageToChange.sprite = yellow;
-                rainDropToChange.sprite = rainDropmagenta;
-                rainDropToChange1.sprite = rainDropyellow;
+                rainDropToChange.sprite = rainDropyellow;
+                rainDropToChange1.sprite = rainDropmagenta;
                 rainDropToChange2.sprite = rainDropblue;
                 GameManager.instance.paintColorIndex = 1;
                 break;
             case ColorState.Magenta:
                 valueToPrint = 30;
                 imageToChange.sprite = magenta;
-                rainDropToChange.sprite = rainDropyellow;
+                rainDropToChange.sprite = rainDropmagenta;
                 rainDropToChange1.sprite = rainDropblue;
-                rainDropToChange2.sprite = rainDropmagenta;
+                rainDropToChange2.sprite = rainDropyellow;
                 GameManager.instance.paintColorIndex = 2;
                 break;
         }
@@ -259,6 +259,10 @@ public class PlayerAttack : MonoBehaviour
             PlayerHP.Damage(25);
             //GameManager.instance.takeDamage(25);
             //GameManager.instance.lifeBar.fillAmount = PlayerHP.currentHealt / (float)PlayerHP.maxHealt;
+        }
+
+        if(collision.gameObject.CompareTag("DeathTrigger")){
+            PlayerHP.Die();
         }
     }
 }

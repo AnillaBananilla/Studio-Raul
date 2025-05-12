@@ -49,8 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkablePlatform: {fileID: 7169359200988028504}
   transparentPlatform: {fileID: 2561385140085908104}
-  deactivateDelay: 1
+  activeDuration: 5
   reactivateDelay: 3
+  shakeDuration: 2
+  shakeAmount: 0.05
 --- !u!70 &7539403536506853883
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -241,8 +243,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1061723273
+  m_SortingLayer: 5
   m_SortingOrder: 4
   m_Sprite: {fileID: -1031340306, guid: 788c61b6e0acbad4f8913ae7d84d5ca5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
