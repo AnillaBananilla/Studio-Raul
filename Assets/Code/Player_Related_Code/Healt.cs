@@ -127,8 +127,8 @@ public class Healt : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
-            //gameObject.SetActive(false);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
