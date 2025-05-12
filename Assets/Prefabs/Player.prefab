@@ -416,7 +416,6 @@ GameObject:
   - component: {fileID: 6979550663975489004}
   - component: {fileID: 3643443144228755534}
   - component: {fileID: 269184361015241697}
-  - component: {fileID: 4044593888308484178}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -621,7 +620,7 @@ Animator:
   m_GameObject: {fileID: 2930406216059960602}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 01890b51ce8edc940b957806e1e70319, type: 2}
+  m_Controller: {fileID: 9100000, guid: 17d99ccb62432bd4e906d5d7fcdd38ec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -654,6 +653,12 @@ MonoBehaviour:
   buttonLayer:
     serializedVersion: 2
     m_Bits: 256
+  buttonsRoom7:
+    serializedVersion: 2
+    m_Bits: 512
+  buttonsRoom9:
+    serializedVersion: 2
+    m_Bits: 1024
   animator: {fileID: 6796437162531345430}
   gameManager: {fileID: 0}
   bulletPrefab: {fileID: 4932257948283262647, guid: ee563cce76786da45a8b8c8cd3f9c098, type: 3}
@@ -668,8 +673,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   blue: {fileID: 21300000, guid: be76f41f1fcd01e4caf718d6be7c93ec, type: 3}
-  yellow: {fileID: 21300000, guid: b45c6b7e05f36b94185498019d1f3924, type: 3}
-  magenta: {fileID: 21300000, guid: df88ac269c8e6574ab35eed111f8818f, type: 3}
+  yellow: {fileID: 21300000, guid: df88ac269c8e6574ab35eed111f8818f, type: 3}
+  magenta: {fileID: 21300000, guid: b45c6b7e05f36b94185498019d1f3924, type: 3}
   rainDropblue: {fileID: 21300000, guid: 42346ba797a4cfb49aff8db2cb57d587, type: 3}
   rainDropyellow: {fileID: 21300000, guid: c067da3e88299c2488d55bf52a856e76, type: 3}
   rainDropmagenta: {fileID: 21300000, guid: f3a6fc14d133f234194b8ef28e79dd6d, type: 3}
@@ -998,20 +1003,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textoMonedasTotales: {fileID: 0}
   textoMonedasSumadas: {fileID: 0}
---- !u!114 &4044593888308484178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2930406216059960602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eef4def31282be040bef855289cf3109, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textoMonedasTotales: {fileID: 0}
-  textoMonedasSumadas: {fileID: 0}
 --- !u!1 &2972411730151566782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1228,8 +1219,8 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 0
-  m_BlendUpdateMethod: 0
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 1
     m_Time: 2
