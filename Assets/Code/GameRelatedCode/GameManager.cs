@@ -127,6 +127,8 @@ public class GameManager : MonoBehaviour
         if (OkButton != null) OkButton.onClick.AddListener(EndDialog);
 
         _saveanimator = SaveDialog.GetComponent<Animator>();
+
+        LoadData();
     }
 
     // Update is called once per frame

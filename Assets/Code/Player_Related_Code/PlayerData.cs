@@ -52,8 +52,8 @@ public class PlayerData
     public PlayerData()
     {
         // This constructor creates an Empty Save File.
-        position[0] = 0;
-        position[1] = 0;
+        position[0] = -1688.63f;
+        position[1] = -83.95f;
         position[2] = -1.2563f;
         SceneIndex = 1;
 
