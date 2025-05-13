@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Healt : MonoBehaviour
 {
@@ -90,23 +91,80 @@ public class Healt : MonoBehaviour
 
     public void Die()
     {
+        //if (this.gameObject.CompareTag("Player"))
+        // {
+        // EventManager.m_Instance.InvokeEvent<DieEvent>(new DieEvent());
+        //currentHealt = maxHealt;
+        //}
+        //else
+        //{
+
+        // if (UnityEngine.Random.Range(0f, 100f) <= coinSpawnChance)
+        // {
+        // Vector3 coinPosition = new Vector3(transform.position.x, transform.position.y + coinOffsetY, transform.position.z);
+        // Instantiate(coinPrefab, coinPosition, Quaternion.identity);
+        // }
+        // Destroy(gameObject);
+        // }
+        // }
+        
         if (this.gameObject.CompareTag("Player"))
         {
-            EventManager.m_Instance.InvokeEvent<DieEvent>(new DieEvent());
-            //currentHealt = maxHealt;
+            InputHandler playerInput = GetComponent<InputHandler>();
+            playerInput.moveable = false;
+
+            Animator animator = GetComponent<Animator>();
+            animator.SetTrigger("Die");
+
+            
+            GetComponent<SpriteRenderer>().color = new Color(1, 0.2f, 0.2f);
+            Time.timeScale = 0.2f;
+            Time.fixedDeltaTime = 0.02f * Time.timeScale;
+
+            //FindObjectOfType<AudioManager>().Play("Death");
+            StartCoroutine(PlayLandDeath());
+            StartCoroutine(DeathScreen());
         }
         else
         {
-
-            if (UnityEngine.Random.Range(0f, 100f) <= coinSpawnChance)
-            {
-                Vector3 coinPosition = new Vector3(transform.position.x, transform.position.y + coinOffsetY, transform.position.z);
-                Instantiate(coinPrefab, coinPosition, Quaternion.identity);
-            }
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
+    public void Revive()
+{
+    currentHealt = maxHealt;
+    isImmune = false;
+
+    if (Renderer != null)
+        Renderer.color = Color.white;
+
+    // Si el enemigo tiene animador con estado de muerte, puedes resetearlo aquí si quieres
+    Animator anim = GetComponent<Animator>();
+    if (anim != null)
+        anim.ResetTrigger("Die"); // o puedes usar anim.Play("Idle") si usas mecanim
+
+    // Reactiva comportamientos si los desactivaste (opcional)
+}
+
+
+    public IEnumerator PlayLandDeath()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        GetComponent<Animator>().SetTrigger("Landed");
+    }
+
+    public IEnumerator DeathScreen()
+    {
+        yield return new WaitForSecondsRealtime(3f);
+
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = 0.02f;
+        SceneManager.LoadScene("MenuMuerte"); 
+
+
+    }
     private void ShowDamageText(int damage)
     {
         if (damageTextPrefab != null)
@@ -123,4 +181,10 @@ public class Healt : MonoBehaviour
             Destroy(damageTextInstance, 1f); // Destruir el texto despu�s de 1 segundo
         }
     }
+    private IEnumerator ResetTimeScaleAfterDelay(float delay)
+    {
+        yield return new WaitForSecondsRealtime(delay); // Espera en tiempo real
+        Time.timeScale = 1f;
+    }
+
 }

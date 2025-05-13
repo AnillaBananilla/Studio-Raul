@@ -59,13 +59,14 @@ public class Droplets : MonoBehaviour
                 spriteRenderer.color = Color.cyan;
                 break;
             case "Amarillo":
-                spriteRenderer.color = Color.magenta;
-                break;
-            case "Rojo":
                 spriteRenderer.color = Color.yellow;
+                break;
+            case "Magenta":
+                spriteRenderer.color = Color.magenta;
                 break;
         }
     }
+    
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -82,6 +83,16 @@ public class Droplets : MonoBehaviour
                     puddleSpriteRenderer.color = spriteRenderer.color;
                 }
             }
+            else if(collision.gameObject.CompareTag("Pilar")){
+                //aquí la pintura si cae en un pilar y es del color adecuado, este la recibe 
+                //para abrir la puerta que corresponda
+                PaintPillar pillar = collision.gameObject.GetComponent<PaintPillar>();
+                if(pillar !=null){
+                    string colorName = playerReference.GetCurrentColor();
+                    pillar.ReceivePaint(colorName);
+                }
+                PoolManager.Instance.ReturnObjectToPool(this.gameObject);
+            }
             else
             {
                 //En este método, al tocar la gota de pintura a una entidad con
@@ -94,8 +105,6 @@ public class Droplets : MonoBehaviour
                 PoolManager.Instance.ReturnObjectToPool(this.gameObject);
 
             }
-                
-
         }
 
     }

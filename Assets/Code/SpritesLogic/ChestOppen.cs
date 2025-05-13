@@ -24,8 +24,8 @@ public class ChestOppen : MonoBehaviour
             anim.SetTrigger("chestTrigger");
             Vector3 coinPosition = new Vector3(transform.position.x + prefabOffsetX, transform.position.y + prefabOffsetY, transform.position.z);
             GameObject coin = Instantiate(prefab, coinPosition, Quaternion.identity);
+            Destroy(gameObject);
 
-           
             Debug.Log("Cofre abierto");
         }
     }

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5498693536660317869}
   m_Layer: 0
   m_Name: Spike
-  m_TagString: Untagged
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1061723273
+  m_SortingLayer: 5
   m_SortingOrder: 9
   m_Sprite: {fileID: -305772019, guid: 07f0a0a49d910f742876282e1a5f6e54, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

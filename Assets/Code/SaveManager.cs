@@ -15,7 +15,6 @@ public static class SaveManager
         binaryFormatter.Serialize(fileStream, playerData); //Escribe los datos.
         fileStream.Close(); // Cierra el archivo.
 
-        Debug.Log("GuardadoCompleto");
     }
 
     public static PlayerData LoadPlayerData()
@@ -37,6 +36,16 @@ public static class SaveManager
             return null;
         }
         
+    }
+
+    public static void NewGame()
+    {
+        PlayerData playerData = new PlayerData();
+        string dataPath = Application.persistentDataPath + "/player.save"; //Puede tener la terminacion que quiera, porque es binario
+        FileStream fileStream = new FileStream(dataPath, FileMode.Create); //Crea el archivo
+        BinaryFormatter binaryFormatter = new BinaryFormatter();
+        binaryFormatter.Serialize(fileStream, playerData); //Escribe los datos.
+        fileStream.Close(); // Cierra el archivo.
     }
 
     public static void OpenSavedScene() //Might Have to delete.

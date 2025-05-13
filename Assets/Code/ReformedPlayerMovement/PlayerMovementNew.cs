@@ -115,7 +115,7 @@ public class PlayerMovementNew : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
                 jumpsLeft--;
-                //animator.SetTrigger("Jump");
+                animator.SetTrigger("Jump");
             }
             else if (context.canceled)
             {
@@ -137,7 +137,7 @@ public class PlayerMovementNew : MonoBehaviour
             isGrounded = false;
         }
     }
-    /*
+    
     public void Crouch(InputAction.CallbackContext context)
     {
         if (context.performed)
@@ -171,7 +171,7 @@ public class PlayerMovementNew : MonoBehaviour
                 animator.SetBool("isCrouching", false);
             }
         }
-    } */
+    } 
 
     public void Drop(InputAction.CallbackContext context){
         if(context.performed && isGrounded && isOnPlatform && upColl.enabled){
@@ -200,7 +200,6 @@ public class PlayerMovementNew : MonoBehaviour
             isOnPlatform = false;
         }
     }
-
     private void Gravity()
     {
         if(rb.velocity.y < 0)
@@ -213,7 +212,6 @@ public class PlayerMovementNew : MonoBehaviour
             rb.gravityScale = baseGravity;
         }
     }
-
     private void Flip()
     {
         if(isFacingRight && horizontalMovement < 0 || !isFacingRight && horizontalMovement > 0)

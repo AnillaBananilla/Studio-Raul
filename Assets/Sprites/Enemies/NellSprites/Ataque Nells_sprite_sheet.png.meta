@@ -1,0 +1,1308 @@
+fileFormatVersion: 2
+guid: 7edd99d204431a24abf19abb4f8f91a1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: tvOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 8117
+        width: 690
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d68241fc67ce26040b0df47917943904
+      internalID: -2069202538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 8117
+        width: 690
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2d978debd8a9749a37ff91324adf32
+      internalID: 831455451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 4594
+        y: 8117
+        width: 690
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a0777646f21ba74897403deed541761
+      internalID: 672556926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 6514
+        y: 8117
+        width: 690
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc60af7489570694fa3f340bf9fb7dd2
+      internalID: -1807241227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 8434
+        y: 8117
+        width: 690
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9aa56a22f278a4eac21a76917f7b9c
+      internalID: -228215057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 10354
+        y: 8117
+        width: 690
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6810edad106784642b543fdaca314549
+      internalID: 2079134673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 12274
+        y: 8117
+        width: 690
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73b1f63e886d1b49b675b70f098e86e
+      internalID: 1031874440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 14194
+        y: 8117
+        width: 690
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f4e47093902a244b2324eaf96b03f4
+      internalID: 207195300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 6834
+        width: 690
+        height: 620
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a25c01aebd80c43b58cb9b3abd992d
+      internalID: -2112631973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2660
+        y: 6812
+        width: 719
+        height: 645
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15e26680c05e6047a30cf24fb39b1ab
+      internalID: -1077688987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 4556
+        y: 6804
+        width: 743
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9d55837a58e6924c9141a61724446e2
+      internalID: 170422962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 6506
+        y: 6805
+        width: 720
+        height: 621
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 773dd0935eabb9e478dc7c664c81e543
+      internalID: 2078294169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 8486
+        y: 6789
+        width: 615
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6726826e7302c8e4f99bd7d2ac827d6b
+      internalID: 1981435880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 10452
+        y: 6767
+        width: 547
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3449aede24f3f844a5644ce84f94938
+      internalID: -206934508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 12372
+        y: 6774
+        width: 539
+        height: 653
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1a00de8918a30f4b8d86155b4e4688b
+      internalID: -200390722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 14344
+        y: 6767
+        width: 449
+        height: 705
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae92e745c5beb7f428549bad03083751
+      internalID: 2097142500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 5455
+        width: 468
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44935416f5f7ca447bffb12751a82ca5
+      internalID: 1582952237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2779
+        y: 5432
+        width: 577
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57a83996d450ea54dacb331b9430e03b
+      internalID: -1009607708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 4699
+        y: 5417
+        width: 585
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cfd3237c2b2b0c47899a8d4278cb598
+      internalID: -1446231091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 6649
+        y: 5417
+        width: 577
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd19092f750820d49ae11c9321048ef1
+      internalID: 10829836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 8569
+        y: 5417
+        width: 600
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5855603f79c651f47b2a0c89437135d0
+      internalID: -716491295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 10474
+        y: 5417
+        width: 615
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9619bf443916540b3feb851f75ffe4
+      internalID: 1927976529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 12394
+        y: 5417
+        width: 615
+        height: 548
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ccd7586cb28b574eb88527f83ab3f5d
+      internalID: 1290327078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 14300
+        y: 5395
+        width: 636
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e7379c571220ef439933a02c0b57067
+      internalID: 430045381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 8441
+        y: 4195
+        width: 712
+        height: 801
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63f4eb65fef56e649b965517ac01de48
+      internalID: 257328670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 4113
+        width: 606
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1fcc93b0b80254c8fa3b6c3346b719
+      internalID: -375253838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 4113
+        width: 585
+        height: 637
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 868c82d93fa2a8f48a0703ecb396f821
+      internalID: -1330210864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 4819
+        y: 4113
+        width: 472
+        height: 704
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ad82937e859b140825be764bf82af3
+      internalID: 629720714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 6634
+        y: 4173
+        width: 480
+        height: 659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e522fe3a8be44bc42962f0729660c324
+      internalID: -910708211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 10234
+        y: 4053
+        width: 607
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7aa38fe6b7292f46942d2d40ea060a4
+      internalID: -892114002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 12124
+        y: 4038
+        width: 517
+        height: 813
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdb3ece9c1e9b7458bb9779beb10d6e
+      internalID: -2055000699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 14014
+        y: 3971
+        width: 570
+        height: 839
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221c25d8c473c6a40870a76e967ad61c
+      internalID: 331002511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 2667
+        width: 548
+        height: 846
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1620ae9fd20ef2a4d8832f57172e75af
+      internalID: -2096730472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 2479
+        y: 2666
+        width: 547
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ca53cff7c1146408d6065e345322a7
+      internalID: -770621001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 4399
+        y: 2644
+        width: 532
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77adbbf758a579b488082fca881a456e
+      internalID: 388112558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 6319
+        y: 2644
+        width: 532
+        height: 824
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6881b208b42a0904f9e9a3ebcf89f81e
+      internalID: 1380175290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 8239
+        y: 2644
+        width: 603
+        height: 786
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a536e492a2774343b5ccedaefb6ead3
+      internalID: 1166300692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 10159
+        y: 2644
+        width: 547
+        height: 815
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e7e1f0bf0e8c934ab4651220f06050c
+      internalID: 355192155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 12041
+        y: 2621
+        width: 651
+        height: 809
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49046f45de2214840a4b8cb245e4f79f
+      internalID: 1123361829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 14006
+        y: 2667
+        width: 608
+        height: 831
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f41f5c264f9ac04297c8dc7c81c7abd
+      internalID: 1485909380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1466
+        width: 555
+        height: 712
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a266a5489928f32469f1ceb3d9ccd7b7
+      internalID: -233726136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 1578
+        width: 607
+        height: 630
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964a9c3910cf08346ba8457d150fcdf6
+      internalID: 1902510235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 4511
+        y: 1668
+        width: 570
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af4cfb8ad0d4f244b9ad0193529b405
+      internalID: -1985054179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 6431
+        y: 1668
+        width: 570
+        height: 555
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e44b089df9414341a1bcc292ef52a8a
+      internalID: 763183612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 8442
+        y: 1676
+        width: 479
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ea1f020ce1c8c48bf52959ed8a3ceb
+      internalID: -1275788344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 10362
+        y: 1653
+        width: 584
+        height: 683
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7633ae7c100b7d44c81b0fd0bbe1a11c
+      internalID: -921091491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 12296
+        y: 1653
+        width: 615
+        height: 690
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea78a795e4f2d4f4694b1c5b83b5a021
+      internalID: 1740573294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 14201
+        y: 1650
+        width: 548
+        height: 671
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00f99c8527a43264496bff8bc6082cca
+      internalID: -1189398358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 431
+        width: 690
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b78272f2102a547bd3b5fcbe30d13d
+      internalID: -320154745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 2674
+        y: 431
+        width: 690
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea062d233ab11044b79e5bbe4247143
+      internalID: 1431448863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ataque Nells_sprite_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 4594
+        y: 431
+        width: 690
+        height: 622
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bba560a6c892148bb65e4a751f9857
+      internalID: -1056615422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: b2bd47cb6c2d3964b9b8ab5f63a2369f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Ataque Nells_sprite_sheet_0: -2069202538
+      Ataque Nells_sprite_sheet_1: 831455451
+      Ataque Nells_sprite_sheet_10: -1077688987
+      Ataque Nells_sprite_sheet_11: 170422962
+      Ataque Nells_sprite_sheet_12: 2078294169
+      Ataque Nells_sprite_sheet_13: 1981435880
+      Ataque Nells_sprite_sheet_14: -206934508
+      Ataque Nells_sprite_sheet_15: -200390722
+      Ataque Nells_sprite_sheet_16: 2097142500
+      Ataque Nells_sprite_sheet_17: -847901024
+      Ataque Nells_sprite_sheet_18: 1582952237
+      Ataque Nells_sprite_sheet_19: -1009607708
+      Ataque Nells_sprite_sheet_2: 672556926
+      Ataque Nells_sprite_sheet_20: -1446231091
+      Ataque Nells_sprite_sheet_21: 10829836
+      Ataque Nells_sprite_sheet_22: -716491295
+      Ataque Nells_sprite_sheet_23: 1927976529
+      Ataque Nells_sprite_sheet_24: 1290327078
+      Ataque Nells_sprite_sheet_25: 430045381
+      Ataque Nells_sprite_sheet_26: 257328670
+      Ataque Nells_sprite_sheet_27: 889033038
+      Ataque Nells_sprite_sheet_28: -375253838
+      Ataque Nells_sprite_sheet_29: -1330210864
+      Ataque Nells_sprite_sheet_3: -1807241227
+      Ataque Nells_sprite_sheet_30: 629720714
+      Ataque Nells_sprite_sheet_31: -910708211
+      Ataque Nells_sprite_sheet_32: -892114002
+      Ataque Nells_sprite_sheet_33: -2055000699
+      Ataque Nells_sprite_sheet_34: 331002511
+      Ataque Nells_sprite_sheet_35: -2096730472
+      Ataque Nells_sprite_sheet_36: -770621001
+      Ataque Nells_sprite_sheet_37: 388112558
+      Ataque Nells_sprite_sheet_38: 1380175290
+      Ataque Nells_sprite_sheet_39: 1166300692
+      Ataque Nells_sprite_sheet_4: -228215057
+      Ataque Nells_sprite_sheet_40: 355192155
+      Ataque Nells_sprite_sheet_41: 1123361829
+      Ataque Nells_sprite_sheet_42: 1485909380
+      Ataque Nells_sprite_sheet_43: 178047684
+      Ataque Nells_sprite_sheet_44: -1271399989
+      Ataque Nells_sprite_sheet_45: 1294853005
+      Ataque Nells_sprite_sheet_46: -853918710
+      Ataque Nells_sprite_sheet_47: -233726136
+      Ataque Nells_sprite_sheet_48: 1902510235
+      Ataque Nells_sprite_sheet_49: -1985054179
+      Ataque Nells_sprite_sheet_5: 2079134673
+      Ataque Nells_sprite_sheet_50: 763183612
+      Ataque Nells_sprite_sheet_51: -1275788344
+      Ataque Nells_sprite_sheet_52: -921091491
+      Ataque Nells_sprite_sheet_53: 1740573294
+      Ataque Nells_sprite_sheet_54: -1189398358
+      Ataque Nells_sprite_sheet_55: -320154745
+      Ataque Nells_sprite_sheet_56: 1431448863
+      Ataque Nells_sprite_sheet_57: -1056615422
+      Ataque Nells_sprite_sheet_6: 1031874440
+      Ataque Nells_sprite_sheet_7: 207195300
+      Ataque Nells_sprite_sheet_8: -2112631973
+      Ataque Nells_sprite_sheet_9: -34932586
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

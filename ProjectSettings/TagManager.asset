@@ -16,6 +16,9 @@ TagManager:
   - Projectile
   - Margaret
   - Arbolillo
+  - Pilar
+  - Button
+  - DeathTrigger
   layers:
   - Default
   - TransparentFX
@@ -25,10 +28,10 @@ TagManager:
   - UI
   - Enemy
   - Player
-  - 
-  - 
-  - 
-  - 
+  - Button
+  - buttonsRoom7
+  - buttonsRoom9
+  - KeyDoor
   - 
   - 
   - 
@@ -52,4 +55,31 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background 4
+    uniqueID: 4108908549
+    locked: 0
+  - name: Background 3
+    uniqueID: 2570538007
+    locked: 0
+  - name: Background 2
+    uniqueID: 4280207203
+    locked: 0
+  - name: Background 1
+    uniqueID: 3098855909
+    locked: 0
+  - name: Ground
+    uniqueID: 3233244023
+    locked: 0
+  - name: Foreground 1
+    uniqueID: 1652583265
+    locked: 0
+  - name: Foreground 2
+    uniqueID: 1090419035
+    locked: 0
+  - name: Foreground 3
+    uniqueID: 1566428199
+    locked: 0
+  - name: Foreground 4
+    uniqueID: 2745923607
     locked: 0

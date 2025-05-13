@@ -6580,6 +6580,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifeBar: {fileID: 978496227}
+  fullLife: {fileID: 0}
+  mediumLife: {fileID: 0}
+  lowLife: {fileID: 0}
+  noLife: {fileID: 0}
+  animatorHeart: {fileID: 0}
   healtAmount: 100
   score: 0
   key: 0
@@ -6588,7 +6593,6 @@ MonoBehaviour:
   menuButton: {fileID: 1134264911}
   restartButton: {fileID: 1547679078}
   SkillList: {fileID: 11400000, guid: b3cfeabb160c7a747890bc39bb7f1751, type: 2}
-  pintureAmount: 100
   paintAmount:
   - 100
   - 100
@@ -6599,6 +6603,15 @@ MonoBehaviour:
   Dead: 0
   PlayerHP: {fileID: 1650479177}
   playerStats: {fileID: 1650479173}
+  PlayerInput: {fileID: 0}
+  inDialog: 0
+  Dialog: {fileID: 0}
+  effect: {fileID: 0}
+  SaveDialog: {fileID: 0}
+  YesButton: {fileID: 0}
+  NoButton: {fileID: 0}
+  OkButton: {fileID: 0}
+  redOverlay: {fileID: 0}
   fadeInDuration: 1
   fadeOutDuration: 1
 --- !u!4 &571154887
@@ -9042,6 +9055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acd8f89012513c44a66b1f2ddda7afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerX: {fileID: 0}
   pointValue: 0
 --- !u!212 &799476233
 SpriteRenderer:
@@ -10672,6 +10686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acd8f89012513c44a66b1f2ddda7afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerX: {fileID: 0}
   pointValue: 0
 --- !u!212 &925550211
 SpriteRenderer:
@@ -15552,6 +15567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acd8f89012513c44a66b1f2ddda7afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerX: {fileID: 0}
   pointValue: 0
 --- !u!212 &1297668225
 SpriteRenderer:
@@ -22109,7 +22125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1842419901
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22128,7 +22144,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 55, y: -7}
+  m_AnchoredPosition: {x: 94, y: 230}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1844060317
@@ -23564,6 +23580,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3acd8f89012513c44a66b1f2ddda7afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManagerX: {fileID: 0}
   pointValue: 0
 --- !u!212 &2025706105
 SpriteRenderer:
