@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5650207103799509790}
   - component: {fileID: 6383698160538862309}
   - component: {fileID: 2187556444508238105}
+  - component: {fileID: 1826954807163904217}
   m_Layer: 6
   m_Name: Nell
   m_TagString: Enemy
@@ -197,10 +198,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHealt: 50
   maxHealt: 50
+  isImmune: 0
+  Renderer: {fileID: 0}
   coinPrefab: {fileID: 2243951049823549254, guid: 553a1b16300f2b34885be31f17358e48, type: 3}
   coinOffsetY: 0
   coinSpawnChance: 50
-  animator: {fileID: 0}
   damageTextPrefab: {fileID: 0}
   damageTextOffset: {x: 0, y: 3, z: 0}
 --- !u!114 &6383698160538862309
@@ -242,3 +244,24 @@ MonoBehaviour:
   projectileOrigin: {fileID: 7092871261310696087}
   fireRate: 1
   player: {fileID: 0}
+--- !u!95 &1826954807163904217
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7374494510678099290}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d02f4c458bcba6d4d99adda748b902c9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

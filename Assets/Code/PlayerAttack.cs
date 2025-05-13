@@ -22,6 +22,7 @@ public class PlayerAttack : MonoBehaviour
     public LayerMask buttonLayer;
     public LayerMask buttonsRoom7;
     public LayerMask buttonsRoom9;
+    public LayerMask KeyDoor;
     public Animator animator;
     public GameManager gameManager;
     [Header("Info de ataques con balas de pintura")]
@@ -115,7 +116,7 @@ public class PlayerAttack : MonoBehaviour
                     button.Activate();
                 }
             }
-
+            //para pulsar botones del cuarto 7
             Collider2D[] room7buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonsRoom7);
             for (int i = 0; i < room7buttons.Length; i++)
             {
@@ -126,15 +127,26 @@ public class PlayerAttack : MonoBehaviour
                     button.toggleColor();
                 }
             }
-
+            //para pulsar los botones del cuarto 9
             Collider2D[] room9buttons = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, buttonsRoom9);
             for (int i = 0; i < room9buttons.Length; i++)
             {
                 SequenceButton button = room9buttons[i].GetComponent<SequenceButton>();
                 if (button != null)
                 {
-                    Debug.Log("Botón cuarto 7 activado");
+                    Debug.Log("Botón cuarto 9 activado");
                     button.PressButton();
+                }
+            }
+            //para abrir puertas con llave
+            Collider2D[] keyDoors = Physics2D.OverlapCircleAll(attackCheck.position, attackRadius, KeyDoor);
+            for (int i = 0; i < keyDoors.Length; i++)
+            {
+                KeyDoor door = keyDoors[i].GetComponent<KeyDoor>();
+                if (door != null && gameManager.key == 1)
+                {
+                    Debug.Log("Puerta con llave abierta");
+                    door.OpenDoor();
                 }
             }
         }

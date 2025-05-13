@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Animations;
-using UnityEditor.U2D.Aseprite;
 using UnityEngine;
 
 public class TogglePlatform : MonoBehaviour

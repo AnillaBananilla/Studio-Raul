@@ -71,11 +71,11 @@ public class Companion_V2 : MonoBehaviour
             {
                 rb.velocity = new Vector2(0, rb.velocity.y);
             }
-
+            /*
             if (distanceToPlayer > deathDistance)
             {
                 Die();
-            }
+            }*/
 
             // Comprobación de suelo
             isGrounded = Physics2D.Raycast(transform.position, Vector2.down, groundCheckDistance, groundLayer);

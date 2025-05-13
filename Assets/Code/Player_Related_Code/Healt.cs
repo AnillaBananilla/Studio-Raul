@@ -121,7 +121,7 @@ public class Healt : MonoBehaviour
             Time.timeScale = 0.2f;
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
 
-            FindObjectOfType<AudioManager>().Play("Death");
+            //FindObjectOfType<AudioManager>().Play("Death");
             StartCoroutine(PlayLandDeath());
             StartCoroutine(DeathScreen());
         }
@@ -151,7 +151,7 @@ public class Healt : MonoBehaviour
 
     public IEnumerator PlayLandDeath()
     {
-        yield return new WaitForSecondsRealtime(1.5f);
+        yield return new WaitForSecondsRealtime(1f);
         GetComponent<Animator>().SetTrigger("Landed");
     }
 
@@ -161,8 +161,6 @@ public class Healt : MonoBehaviour
 
         Time.timeScale = 1f;
         Time.fixedDeltaTime = 0.02f;
-
-
         SceneManager.LoadScene("MenuMuerte"); 
 
 
